@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	color: #363041;
 	background: #f3f2ee repeat-x;
+	background-attachment: fixed;
 	background-image: url(http://methylblue.com/images/gradient.png);
 	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0.0, #eee5d7), color-stop(1.0, #f3f2ee));
 	-webkit-background-size: 230px;
