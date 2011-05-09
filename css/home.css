@@ -1,47 +1,61 @@
+#tdios { margin-top: 55px; }
+#droid { margin-top: 70px; }
+#hbrew { margin-top: 80px; }
+#asapp { margin-top: 90px; }
+#ppane { margin-top: 80px; }
+#bofin { margin-top: 90px; }
 
-#txt_td { top: 113px; }
-#txt_hb { top: 400px; }
-#txt_as { top: 588px; }
-#txt_pp { top: 778px; }
-#txt_bf { top: 1008px; }
+#tdios img { left: 690; top: -60; }
+#droid img { left: 30;  top: -45; }
+#hbrew img { left: 655; top: -13; }
+#asapp img { left: -2;   top: -100; }
+#ppane img { left: 627; top: -20; }
+#bofin img { left: 25;  top: -39; }
 
-#img_td { top: 65px; left: 32px; }
-#img_hb { top: 390px; left: 642px; }
-#img_as { top: 500px; left: -5px; }
-#img_pp { top: 770px; left: 614px}
-#img_bf { top: 980px; left: 25px }
-
-
-#masthead {	left: 306px; top: 20px; }
-
+#masthead {
+	margin: 20px auto;
+	display: block
+}
 
 #footer {
-	position: absolute;
 	text-align: center;
-	bottom: 6px;
-	width: 900px;
+	margin-top: 90px;
 	font-size: 8pt;
 	display: block;
-	padding: 0 12pt 5pt 0;
-	word-spacing: 5pt
+	padding: 0 12pt 20px 0;
+	word-spacing: 5pt;
 }
+
 #mxcl {
 	width: 900px;
-	position: relative;
 	margin: 0 auto;
 	height: 100%;
-	min-height: 1300px;
 }
 
-#mxcl h2 { font-size: 11pt; margin-bottom: 0 }
-#mxcl h2 a { color: #363041; }
-#mxcl img { position: absolute; }
-#mxcl div a { text-decoration: none; }
-
 #mxcl div {
-	position: absolute;
-	left: 305px;
-	width: 290px;
-	text-align: justify;
+	position: relative;
 	line-height: 1.65;
+}
+
+#mxcl div a {
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 11pt;
+	margin-bottom: 0;
+}
+
+h2 a {
+	color: #363041;
+}
+
+#mxcl div div {
+	text-align: justify;
+	width: 290px;
+	margin: auto;
+}
+
+#mxcl div img {
+	position: absolute;
 }
