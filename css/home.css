@@ -65,7 +65,7 @@ h2 a {
 	width: 595;
 	font-size: 8pt;
 	color: #6d535d;
-	border-bottom: 1px dashed #c8b496;
+	border-bottom: 1px dashed #D6CDC3;
 }
 
 .brief h2 {
@@ -75,7 +75,7 @@ h2 a {
 
 .brief h2 a {
 	font-weight: normal;
-	color: #ae8e65;
+	color: #A89F94;
 }
 
 .brief h2 a:hover {
