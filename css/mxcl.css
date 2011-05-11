@@ -10,7 +10,5 @@ body {
 	font-family: "Lucida Grande", sans-serif;
 	font-size: 10pt;
 }
-a img { border: 0; }
-
 a { color: #6b5c6a }
-a:hover { background: #e8e0f7; }
+a img { border: 0; }
