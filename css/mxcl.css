@@ -10,5 +10,11 @@ body {
 	font-family: "Lucida Grande", sans-serif;
 	font-size: 10pt;
 }
+
 a { color: #6b5c6a }
 a img { border: 0; }
+
+#masthead {
+	margin: 20px auto;
+	display: block;
+}
