@@ -15,6 +15,18 @@ a { color: #6b5c6a }
 a img { border: 0; }
 
 #masthead {
-	margin: 20px auto;
+	margin: 3pt auto;
 	display: block;
+	font-family: "Open Sans Condensed", sans-serif;
+}
+
+#masthead #a {
+	font-size: 48pt;
+	color: #312b3a;
+}
+
+#masthead #b {
+	padding-left: 0.65em;
+	font-size: 10.5pt;
+	color: #655568;
 }
