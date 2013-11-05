@@ -4,11 +4,15 @@ body {
 	color: #363041;
 	background: #f3f2ee repeat-x;
 	background-attachment: fixed;
-	background-image: url(http://methylblue.com/images/gradient.png);
-	background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0.0, #eee5d7), color-stop(1.0, #f3f2ee));
-	-webkit-background-size: 230px;
-	font-family: "Lucida Grande", sans-serif;
+	background-image: linear-gradient(to bottom, #eee5d7, #f3f2ee);
+	background-size: 230px;
+	font-family: "Lucida Grande", Arial, sans-serif;
 	font-size: 10pt;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+	font-family: "HelveticaNeue-Thin", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-size: 100px;
 }
 
 a { color: #6b5c6a }

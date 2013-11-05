@@ -1,9 +1,9 @@
 #tdios { margin-top: 75px; }
-#droid { margin-top: 70px; }
-#hbrew { margin-top: 80px; }
+#droid { margin-top: 70px; margin-bottom: 30px; }
+#hbrew { margin-top: 80px; margin-bottom: 55px; }
 #asapp { margin-top: 70px; }
-#ppane { margin-top: 80px; }
-#bofin { margin-top: 90px; }
+#ppane { margin-top: 80px; margin-bottom: 45px; }
+#bofin { margin-top: 90px; margin-bottom: 105px; }
 
 #tdios img { left: 690; top: -60; }
 #droid img { left: 30;  top: -45; }
@@ -65,14 +65,18 @@
 }
 
 .brief {
-	margin-top: 45px;
+    margin-top: 20px;
 	width: 595;
 	border-bottom: 1px dashed #D6CDC3;
 }
 
-.brief_right {
+.brief:first-child {
+	margin-top: 45px;
+}
+
+.brief.right {
 	text-align: right;
-	margin-left: 305;
+	margin-left: 305px;
 }
 
 #mxcl h3 {
@@ -88,4 +92,52 @@
 
 #mxcl h3 a:hover {
 	background: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .brief.right, .brief {
+        margin: 10px 25px;
+    }
+    .brief {
+        margin-right: 0px;
+    	width: auto;
+    	border-bottom: 1px dashed #D6CDC3;
+    }
+    .brief.right {
+        margin-right: 25px;
+        margin-left: 0px;
+    	text-align: right;
+    }
+    #mxcl {
+    	width: auto;
+    	margin: auto;
+    }
+    #mxcl div img {
+        display: block;
+        position: static;
+        margin: 10px auto;
+    }
+    #masthead #a {
+        font-size: 43pt;
+    }
+    #masthead #b {
+        font-size: 9pt;
+    }
+    #mxcl p, #mxcl h2 {
+        margin: 0 25px;
+    }
+    #mxcl h2 {
+        margin-top: 30px;
+    }
+    #mxcl p {
+        width: auto;
+    }
+    
+    #tdios { margin: auto; }
+    #droid { margin: auto; }
+    #hbrew { margin: auto; }
+    #asapp { margin: auto; }
+    #ppane { margin: auto; }
+    #bofin { margin: auto; }
+    
 }
