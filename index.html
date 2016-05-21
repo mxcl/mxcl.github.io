@@ -13,7 +13,7 @@
         text-transform: uppercase;
       }
       div {
-        padding: 2vh 4vh;
+        padding: 1.5vh 3vh;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -28,6 +28,28 @@
       }
       h2 {
         color: #E9423A;
+      }
+      /* iPhone 6 landscape */
+      @media only screen and (min-device-width: 375px)
+        and (max-device-width: 667px)
+        and (orientation: landscape)
+        and (-webkit-min-device-pixel-ratio: 2)
+      {
+        h1, h2 {
+          font-size: 7vh;
+        }
+      }
+
+      /* iPhone 6 portrait */
+      @media only screen
+        and (min-device-width: 375px)
+        and (max-device-width: 667px)
+        and (orientation: portrait)
+        and (-webkit-min-device-pixel-ratio: 2)
+      {
+        h1, h2 {
+          font-size: 6.5vh;
+        }    
       }
     </style>
   </head>
