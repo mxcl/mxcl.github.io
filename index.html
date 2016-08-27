@@ -6,67 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300' type='text/css'>
     <style>
-      html {
-        background: #EF645E;
-        color: white;
-        font-family: 'Raleway', sans-serif;
-        text-transform: uppercase;
+      html { 
+        background: url(bg.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+      }
+      img {
+        position: absolute;
+        top: 35%;
+        right: 50%;
+        left: 50%;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        border-color: rgba(255,255,255,0.2);
+        border-width: 1px;
+        border-style: solid;
+        transform: translate(-50%, -50%);
       }
       div {
-        padding: 1.5vh 3vh;
         position: absolute;
-        bottom: 0;
-        left: 0;
+        top: 45%;
+        bottom: 55%;
+        right: 50%;
+        left: 50%;
+        color: white;
+        transform: translate(-45%, -50%);
+        font-family: 'Raleway', sans-serif;
+        font-size: 3vw;
+        width: 10vw;
       }
-      h1, h2 {
-        font-size: 7.45vh;
-        margin: 0;
-        padding: 0;
-      }
-      h1 {
-        color: rgba(255,255,255,0.618);
-      }
-      h2 {
-        color: #E9423A;
-      }
-
-      /* iPhone 6 landscape */
-      @media only screen and (min-device-width: 375px)
-        and (max-device-width: 667px)
-        and (orientation: landscape)
-        and (-webkit-min-device-pixel-ratio: 2)
-      {
-        h1, h2 {
-          font-size: 7vh;
-        }
-      }
-
-      /* iPhone 6 portrait */
-      @media only screen
-        and (min-device-width: 375px)
-        and (max-device-width: 667px)
-        and (orientation: portrait)
-        and (-webkit-min-device-pixel-ratio: 2)
-      {
-        h1, h2 {
-          font-size: 6.5vh;
-        }    
+      .fade {
+        color: rgba(255,255,255,0.33);
       }
     </style>
   </head>
   <body>
-    <div>
-      <h2>Tinkerer</h2>
-      <h1>Max&nbsp;Howell</h1>
-      <h2>Lone Wolf</h2>
-      <h2>Inventor</h2>
-      <h2>Scientist</h2>
-      <h1>Max&nbsp;Howell</h1>
-      <h2>Detailer</h2>
-      <h2>Sleuth</h2>
-      <h2>Coder</h2>
-      <h1>Max&nbsp;Howell</h1>
-      <h2 title="42">Mostly&nbsp;Harmless</h2>
-    </div>
+    <img src="mxcl.jpg">
+    <div>Max Howell<br><span class='fade'>Tinkerer<br>Artisan<br>Indie</div>
   </body>
 </html>
