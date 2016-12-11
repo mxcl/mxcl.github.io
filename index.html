@@ -1,52 +1,82 @@
 <html>
   <head>
     <title>mxcl</title>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300' type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300'>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
     <style>
-      html { 
-        background: url(bg.jpg) no-repeat center center fixed; 
+      html {
+        background: url(bg.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        font-family: 'Raleway', sans-serif;
+				margin: 0;
+				padding: 0;
+				position: relative;
       }
       body {
-        position: relative;
+        position: absolute;
+				margin: 0;
+				padding: 0;
+				top: 25%;
+				left: 50%;
+				right: 50%;
+        transform: translate(-3vh, 0);
       }
       img {
-        position: absolute;
-        top: 35%;
-        right: 50%;
-        left: 50%;
         width: 15vh;
-        height: 15vh;
+				height: 15vh;
         border-radius: 50%;
         border-color: rgba(255,255,255,0.2);
         border-width: 1px;
         border-style: solid;
-        transform: translate(-50%, -50%);
+				margin-bottom: 2.5vh;
       }
-      div {
-        position: absolute;
-        top: 45%;
-        bottom: 55%;
-        right: 50%;
-        left: 50%;
+      #tagline, #mxcl {
         color: white;
-        transform: translate(-50%, -50%);
-        font-family: 'Raleway', sans-serif;
         font-size: 3.5vh;
         width: 10vh;
+				transform: translate(2.6vh, 0);
       }
-      span {
+      #tagline {
         color: rgba(255,255,255,0.33);
       }
+      #changelog {
+				margin-top: 8vh;
+        transform: translate(-6.8vh, 0);
+        width: 30vh;
+      }
+			a, small {
+        text-align: center;
+				display: block;
+				font-family: 'Abel', Arial, sans-serif;
+				white-space: nowrap;
+			}
+			a {
+				font-size: 3vh;
+				color: rgba(255,255,255,0.4);
+				text-decoration: none;
+			}
+			a:hover {
+				color: white;
+			}
+			small {
+				display: block;
+				font-size: 1.6vh;
+				color: rgba(255,255,255,0.33);
+			}
     </style>
   </head>
   <body>
     <img src="mxcl.jpg">
-    <div>Max Howell<br><span>Tinkerer<br>Artisan<br>Indie</span></div>
+    <div id="mxcl">Max Howell</div>
+		<div id="tagline">Tinkerer<br>Artisan<br>Indie</span></div>
+		<div id="changelog">
+      <a href="https://changelog.com/podcast/232">▶ CHANGELOG#232</a>
+      <small>Homebrew and Swift <i>with Max Howell</i></small>
+    </div>
   </body>
 </html>
