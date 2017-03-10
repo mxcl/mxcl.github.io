@@ -48,22 +48,25 @@
 				margin-top: 8vh;
         transform: translate(-7.2vh, 0);
         width: 30vh;
+        color: rgba(255,255,255,0.4);
       }
-			a, small {
+			#changelog a, #changelog small {
         text-align: center;
 				display: block;
 				font-family: 'Abel', Arial, sans-serif;
 				white-space: nowrap;
 			}
-			a {
-				font-size: 3vh;
-				color: rgba(255,255,255,0.4);
+      a {
 				text-decoration: none;
+      }
+			#changelog a {
+				font-size: 3vh;
+				color: inherit;
 			}
-			a:hover {
+			#changelog a:hover {
 				color: white;
 			}
-			small {
+			#changelog small {
 				display: block;
 				font-size: 1.6vh;
 				color: rgba(255,255,255,0.33);
@@ -71,6 +74,18 @@
       #play::after {
         content: "\25B6 \FE0E";
         font-size: 90%;
+      }
+      #codebase {
+        font-size: 3vh;
+        margin-top: 4rem;
+        width: 100%;
+        transform: translate(-7vh, 0);
+      }
+      #codebase a {
+        color: white;
+      }
+      #codebase span {
+        color: rgba(255,255,255,0.4);
       }
     </style>
   </head>
@@ -82,5 +97,6 @@
       <a href="https://changelog.com/podcast/232"><span id="play"></span> CHANGELOG#232</a>
       <small>Homebrew and Swift <i>with Max Howell</i></small>
     </div>
+    <div id="codebase"><a href="http://codebasesav.com"><b>CODE</b>BASE&thinsp;<span>Savannah</span></a></div>
   </body>
 </html>
