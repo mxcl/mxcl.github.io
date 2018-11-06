@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300'>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
     <style>
       html {
-        background: url(bg.jpg) no-repeat center center fixed;
+        background: url(bg.png) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -42,35 +42,35 @@
 				transform: translate(2.6vh, 0);
       }
       #tagline {
-        color: rgba(255,255,255,0.33);
+        color: rgba(255,255,255,0.4);
       }
       #changelog {
 				margin-top: 8vh;
         transform: translate(-7.2vh, 0);
         width: 30vh;
-        color: rgba(255,255,255,0.4);
+        color: rgba(255,255,255,0.66);
       }
-			#changelog a, #changelog small {
+      #changelog a, #changelog small {
         text-align: center;
 				display: block;
 				font-family: 'Abel', Arial, sans-serif;
 				white-space: nowrap;
-			}
-      a {
-				text-decoration: none;
       }
-			#changelog a {
-				font-size: 3vh;
-				color: inherit;
-			}
-			#changelog a:hover {
-				color: white;
-			}
-			#changelog small {
-				display: block;
-				font-size: 1.6vh;
-				color: rgba(255,255,255,0.33);
-			}
+      a {
+        text-decoration: none;
+      }
+      #changelog a {
+        font-size: 3vh;
+        color: inherit;
+      }
+      #changelog a:hover {
+        color: white;
+      }
+    	#changelog small {
+    		display: block;
+    		font-size: 1.6vh;
+    		color: rgba(255,255,255,0.33);
+    	}
       #play::after {
         content: "\25B6 \FE0E";
         font-size: 90%;
@@ -90,13 +90,15 @@
     </style>
   </head>
   <body>
-    <a href="mailto:mxcl@me.com"><img src="mxcl.jpg"></a>
     <div id="mxcl">Max Howell</div>
 		<div id="tagline">Tinkerer<br>Artisan<br>Indie</span></div>
+		<div id="changelog">
+      <a href="https://www.youtube.com/watch?v=WMMPRS58n-o"><span id="play"></span> brew create</a>
+      <small>Talk at FrenchKit 2018</small>
+    </div>
 		<div id="changelog">
       <a href="https://changelog.com/podcast/232"><span id="play"></span> CHANGELOG#232</a>
       <small>Homebrew and Swift <i>with Max Howell</i></small>
     </div>
-    <div id="codebase"><a href="http://codebasesav.com"><b>CODE</b>BASE&thinsp;<span>Savannah</span></a></div>
   </body>
 </html>
