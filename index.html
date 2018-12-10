@@ -4,57 +4,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300'>
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
     <style>
       html {
+        background-color: #464646;
         background: url(bg.png) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         font-family: 'Raleway', sans-serif;
-				margin: 0;
-				padding: 0;
-				position: relative;
+        margin: 0;
+        padding: 0;
       }
       body {
-        position: absolute;
-				margin: 0;
-				padding: 0;
-				top: 25%;
-				left: 50%;
-				right: 50%;
-        transform: translate(-7.8vh, 0);
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      body > * {
+         padding: 1rem;
       }
       img {
-        width: 15vh;
-				height: 15vh;
+        width: 8rem;
+        height: 8rem;
         border-radius: 50%;
-        border-color: rgba(255,255,255,0.2);
-        border-width: 1px;
-        border-style: solid;
-				margin-bottom: 2.5vh;
+        margin-right: 3rem;
       }
       #tagline, #mxcl {
         color: white;
         font-size: 3.5vh;
-        width: 10vh;
-				transform: translate(2.6vh, 0);
       }
       #tagline {
         color: rgba(255,255,255,0.4);
       }
       #changelog {
-				margin-top: 8vh;
-        transform: translate(-7.2vh, 0);
-        width: 30vh;
         color: rgba(255,255,255,0.66);
       }
+      #changelog:not(:last-child) {
+        margin-bottom: 2rem;
+      }
       #changelog a, #changelog small {
-        text-align: center;
-				display: block;
-				font-family: 'Abel', Arial, sans-serif;
-				white-space: nowrap;
+        display: block;
+        font-family: 'Abel', Arial, sans-serif;
+        white-space: nowrap;
       }
       a {
         text-decoration: none;
@@ -66,11 +61,11 @@
       #changelog a:hover {
         color: white;
       }
-    	#changelog small {
-    		display: block;
-    		font-size: 1.6vh;
-    		color: rgba(255,255,255,0.33);
-    	}
+      #changelog small {
+        display: block;
+        font-size: 1.6vh;
+        color: rgba(255,255,255,0.33);
+      }
       #play::after {
         content: "\25B6 \FE0E";
         font-size: 90%;
@@ -87,22 +82,62 @@
       #codebase span {
         color: rgba(255,255,255,0.4);
       }
+      #p2 {
+        margin-left: 3rem
+      }
+      @media all and (max-width: 800px) {
+        body {
+          flex-direction: column;
+        }
+        #p2 {
+          margin-left: inherit;
+          margin-top: 2rem;
+        }
+        img {
+          margin-right: inherit;
+        }
+        body {
+          padding: 1rem;
+        }
+      }
+      h2 {
+        margin-top: 2rem;
+        color: white;
+        font-size: small;
+      }
     </style>
   </head>
   <body>
-    <div id="mxcl">Max Howell</div>
-		<div id="tagline">Tinkerer<br>Artisan<br>Indie</span></div>
-		<div id="changelog">
-      <a href="https://www.swiftbysundell.com/podcast/36"><span id="play"></span> Swift by Sundell №36</a>
-      <small>“Promises everywhere”, with special guest Max Howell</small>
+    <img src="mxcl.jpg">
+    <div>
+      <div id="mxcl">Max Howell</div>
+      <div id="tagline">Tinkerer<br>Artisan<br>Indie</span></div>
     </div>
-		<div id="changelog">
-      <a href="https://www.youtube.com/watch?v=WMMPRS58n-o"><span id="play"></span> brew create</a>
-      <small>Talk at FrenchKit 2018</small>
-    </div>
-		<div id="changelog">
-      <a href="https://changelog.com/podcast/232"><span id="play"></span> CHANGELOG#232</a>
-      <small>Homebrew and Swift <i>with Max Howell</i></small>
+    <div id="p2">
+      <h2 style='margin-top: 0'>2018</h2>
+      <div id="changelog">
+        <a href="https://www.swiftbysundell.com/podcast/36"><span id="play"></span> Swift by Sundell №36</a>
+        <small>“Promises everywhere”, with special guest Max Howell</small>
+      </div>
+      <div id="changelog">
+        <a href="https://www.youtube.com/watch?v=WMMPRS58n-o"><span id="play"></span> brew create</a>
+        <small>Talk at FrenchKit 2018</small>
+      </div>
+      <div id="changelog">
+        <a href="https://www.youtube.com/watch?v=e8HrKgYOqeQ"><span id="play"></span> TEDx</a>
+        <small>How I learned to stop worrying and love artificial superintelligence</small>
+      </div>
+      <h2>2016</h2>
+      <div id="changelog">
+        <a href="https://changelog.com/podcast/232"><span id="play"></span> CHANGELOG#232</a>
+        <small>Homebrew and Swift <i>with Max Howell</i></small>
+      </div>
+      <h2>2010</h2>
+      <div id="changelog">
+        <a href="https://changelog.com/podcast/35"><span id="play"></span> CHANGELOG#35</a>
+        <small>Homebrew and OSX Package Management</small>
+      </div>
+      
     </div>
   </body>
 </html>
