@@ -1,162 +1,75 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>mxcl</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
-    <style>
-      html {
-        background-color: #464646;
-        background: url(bg.png) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        font-family: 'Raleway', sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        margin: 0;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      body > * {
-         padding: 1rem;
-      }
-      img#me {
-        width: 8rem;
-        height: 8rem;
-        border-radius: 50%;
-        margin-right: 3rem;
-      }
-      #tagline, #mxcl {
-        color: white;
-        font-size: 3.5vh;
-      }
-      #tagline {
-        color: rgba(255,255,255,0.4);
-      }
-      #line {
-        color: rgba(255,255,255,0.66);
-      }
-      #line:not(:last-child) {
-        margin-bottom: 2rem;
-      }
-      #line a, #line small {
-        display: block;
-        font-family: 'Abel', Arial, sans-serif;
-        white-space: nowrap;
-      }
-      #line a {
-        text-decoration: none;
-        font-size: 3vh;
-        color: inherit;
-      }
-      #line a:hover {
-        color: white;
-      }
-      #line small {
-        display: block;
-        font-size: 1.6vh;
-        color: rgba(255,255,255,0.33);
-      }
-      #play::after {
-        content: "\25B6";
-        font-size: 90%;
-      }
-      #app::after {
-        content: "\2A53";
-        font-size: 130%;
-      }
-      #p2 {
-        margin-left: 3rem
-      }
-      #patreon {
-        position: fixed;
-        left: 2rem;
-        bottom: 2rem;
-      }
-      @media all and (max-width: 800px) {
-        body {
-          flex-direction: column;
-        }
-        #p2 {
-          margin-left: inherit;
-          margin-top: 2rem;
-        }
-        img {
-          margin-right: inherit;
-        }
-        body {
-          padding: 1rem;
-        }
-        #patreon {
-          position: static;
-        }
-        #patreon > * {
-          margin: auto;
-        }
-      }
-      h2 {
-        margin-top: 2rem;
-        color: white;
-        font-size: small;
-      }
-    </style>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css">
+    <link rel="stylesheet" href="/css/mxcl.css">
   </head>
   <body>
-    <img id=me src="mxcl.jpg">
-    <div>
-      <div id="mxcl">Max Howell</div>
-      <div id="tagline">Tinkerer<br>Artisan<br>Indie</span></div>
-    </div>
-    <div id="p2">
-      <h2 style='margin-top: 0'>2018</h2>
-      <div id="line">
-        <a href="https://www.swiftbysundell.com/podcast/36"><span id="play"></span> Swift by Sundell №36</a>
-        <small>“Promises everywhere”, with special guest Max Howell</small>
-      </div>
-      <div id="line">
-        <a href="https://codebasesaga.com/canopy/"><span id="app"></span> Canopy</a>
-        <small>Push notifications for GitHub; an app</small>
-      </div>
-      <div id="line">
-        <a href="https://www.youtube.com/watch?v=WMMPRS58n-o"><span id="play"></span> brew create</a>
-        <small>Talk at FrenchKit 2018</small>
-      </div>
-      <div id="line">
-        <a href="https://www.youtube.com/watch?v=e8HrKgYOqeQ"><span id="play"></span> TEDx</a>
-        <small>How I learned to stop worrying and love artificial superintelligence</small>
-      </div>
-      <h2>2016</h2>
-      <div id="line">
-        <a href="https://changelog.com/podcast/232"><span id="play"></span> CHANGELOG#232</a>
-        <small>Homebrew and Swift <i>with Max Howell</i></small>
-      </div>
-      <h2>2012</h2>
-      <div id="line">
-        <a href="https://github.com/mxcl/PromiseKit"><span id="app"></span> PromiseKit</a>
-        <small>Promises for Swift & ObjC; a top‑100 pod</small>
-      </div>
-      <h2>2010</h2>
-      <div id="line">
-        <a href="https://changelog.com/podcast/35"><span id="play"></span> CHANGELOG#35</a>
-        <small>Homebrew and OSX Package Management</small>
-      </div>
-      <h2>2009</h2>
-      <div id="line">
-        <a href="https://brew.sh"><span id="app"></span> Homebrew</a>
-        <small>The missing package manager for Mac</small>
-      </div>
-    </div>
-    <div id="patreon">
+    <h1>Hi there, I’m Max Howell</h1>
+    <p>I make open source used by millions of people.</p>
+    <p>I’m a big believer in Swift and focus on making tools and libraries for the Swift community.</p>
+    <p>I created <a href="https://brew.sh">Homebrew</a>, and if you want to say thanks, <a href="https://www.patreon.com/mxcl">you can buy me a beer</a>.</p>
+    <img class='flair' src='/images/mxcl.jpg'>
+    <img class='flair' src='/images/xcode.jpg'>
+    
+    <h1>Presence</h1>
+    <ul>
+      <li><a href='https://twitter.com/mxcl'>twitter.com/mxcl</a>
+      <li><a href='https://github.com/mxcl'>github.com/mxcl</a>
+      <li><a href='https://medium.com/@mxcl'>medium.com/mxcl</a>
+      <li><a href='https://stackoverflow.com/users/6444/mxcl'>stackoverflow.com/mxcl</a>
+    </ul>
+    
+    <h1><a name='donate'>Supporting mxcl</a></h1>
+    <p>I am a prolific creator of open source, but in order to spend so much
+      time giving away my work, I need your support. Please <i>enable</i> me to
+      work full-time on open source software. Any help is much appreciated 🙏.</p>      
+    <h2>Donate</h2>
+    <p>
       <a href="https://www.patreon.com/mxcl">
         <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
       </a>
+    </p>
+    <script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+    <a class="dbox-donation-button" href="https://donorbox.org/mxcl?default_interval=m&amount=10&hide_donation_meter=true" style="background:#2d81c5 url(https://d1iczxrky3cnb2.cloudfront.net/red_logo.png) no-repeat 37px center; color: #fff;text-decoration: none;font-family: Verdana,sans-serif;display: inline-block;font-size: 16px;padding: 15px 38px 15px 75px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; box-shadow: 0 1px 0 0 #1f5a89; text-shadow: 0 1px rgba(0, 0, 0, 0.3);" >Donate</a>
+    <h2>Tip</h2>
+    <p>
+      <a id="paypal" href="https://paypal.me/mxcl/20"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" width=100 height="25.5" alt="PayPal"></a>
+    </p>
+
+    <h1 class="timeline">Timeline</h1>
+    <div class='timeline'>
+      <h2>2018</h2>
+      <h3><a href="https://www.swiftbysundell.com/podcast/36">Swift by Sundell №36</a></h3>
+      <p>“Promises everywhere”, with special guest Max Howell.</p>
+
+      <h3><a href="https://www.youtube.com/watch?v=WMMPRS58n-o" style='font-family: monospace; font-size: 1.5rem'>$ brew create</a></h3>
+      <p>Talk at FrenchKit 2018.</p>
+
+      <h3><a href="/canopy">Canopy</a></h3>
+      <p>Push notifications for GitHub events.</p>
+
+      <h3><a href="https://www.youtube.com/watch?v=e8HrKgYOqeQ">TEDx</a></h3>
+      <p>How I learned to stop worrying and love artificial superintelligence.</p>
+
+      <h2>2016</h2>
+      <h3><a href="https://changelog.com/podcast/232">CHANGELOG#232</a></h3>
+      <p>Homebrew and Swift <i>with Max Howell</i>.</p>
+
+      <h2>2014</h2>
+      <h3><a href="https://github.com/mxcl/PromiseKit">PromiseKit</a></h3>
+      <p>Promises for Swift & ObjC; a top‑100 pod.</p>
+
+      <h2>2010</h2>
+      <h3><a href="https://changelog.com/podcast/35">CHANGELOG#35</a></h3>
+      <p>Homebrew and OSX Package Management.</p>
+
+      <h2>2009</h2>
+      <h3><a href="https://brew.sh">Homebrew</a></h3>
+      <p>The missing package manager for Mac.</p>
     </div>
   </body>
 </html>
