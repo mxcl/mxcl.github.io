@@ -21,8 +21,9 @@ body {
   padding: 0;
 }
 
-p {
+p, li {
   max-width: 45em;
+  line-height: 1.4;
 }
 
 h1, h2, h3, h4 {
@@ -53,9 +54,6 @@ h1 {
 .timeline p, .timeline h3, .timeline h4 {
   margin-left: 1.5rem;
 }
-p {
-  line-height: 1.4;
-}
 .timeline code {
   font-size: 1.35em
 }
@@ -65,7 +63,7 @@ a:link, a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: #0083B0;
+  color: #dbaf00;
 }
 
 h1:not(:first-child) {
