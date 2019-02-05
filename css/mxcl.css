@@ -117,4 +117,7 @@ img.flair {
     width: 100%;
     margin-right: 0;
   }
+  #paypal {
+    margin-top: 2rem;
+  }
 }
