@@ -16,6 +16,10 @@ html {
   color: white;
 }
 
+::selection {
+  background: rgba(255,255,255,0.2);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -54,15 +58,19 @@ h1 {
 .timeline p, .timeline h3, .timeline h4 {
   margin-left: 1.5rem;
 }
+.timeline h3 code {
+  font-weight: 500;
+  margin-right: 0.45rem;
+}
 .timeline code {
-  font-size: 1.35em
+  font-size: 1.25em;
 }
 
 a:link, a:visited {
   color: #37deff;
   text-decoration: none;
 }
-a:hover {
+a:link:hover, a:visited:hover {
   color: #dbaf00;
 }
 
@@ -72,6 +80,15 @@ h1:not(:first-child) {
 
 li {
   margin-bottom: 0.3rem;
+}
+
+#donate-tray, .label, .flair {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -o-user-select: none;
+  -moz-user-select: none;
 }
 
 #donate-tray > * {
@@ -118,4 +135,19 @@ img.flair {
   #paypal {
     margin-top: 2rem;
   }
+}
+
+.label {
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: white;
+  background-color: rgba(55, 222, 255, 0.4);
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  font-family: 'MetropolisThin';
+  padding: 0.2rem;
+  padding-bottom: 0.16rem;
+  padding-left: 0.25rem;
+  mix-blend-mode: overlay;
+  vertical-align: middle;
 }
