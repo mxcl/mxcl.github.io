@@ -94,6 +94,15 @@ li {
   margin-bottom: 0.3rem;
 }
 
+h1#donate::before, h1#consultancy::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -4rem; 
+  height: 4rem; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
 #donate-tray {
   display: flex;
   flex-wrap: wrap;
