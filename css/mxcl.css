@@ -103,6 +103,11 @@ h1#donate::before, h1#consultancy::before {
   pointer-events: none;
 }
 
+h1:target {
+  text-shadow: 0 3px var(--dark-blue);
+  font-family: 'MetropolisRegular';
+}
+
 #donate-tray {
   display: flex;
   flex-wrap: wrap;
