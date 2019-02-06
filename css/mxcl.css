@@ -198,11 +198,34 @@ img.flair {
     width: 100%;
     margin-right: 0;
   }
+}
+  
+@media all and (max-width: 414px) {
   #paypal {
     margin-top: 2rem;
   }
   #bitcoin {
     margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  html {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media all and (max-width: 375px) {
+  #bitcoin {
+    font-size: 0.95rem;
+  }
+}
+
+@media all and (max-width: 320px) {
+  html {
+    font-size: 10pt;
+    padding: 1rem 1.5rem;
+  }
+  #bitcoin {
+    font-size: 0.8rem;
   }
 }
 
