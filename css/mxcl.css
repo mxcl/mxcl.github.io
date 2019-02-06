@@ -127,21 +127,20 @@ h1:target {
   -moz-user-select: none;
 }
 
-#donate-tray > * {
-  display: inline-block;
-  position: relative;
+#donate-tray a img, #bitcoin {
   border-radius: 0.15rem;
 }
 #donate-tray > *:not(:last-child) {
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
-
 #donate-tray img {
   width: 160px;
   height: var(--donate-button-height);
 }
-
+#paypal {
+  position: relative;
+}
 #tip-footnote {
   text-align: center;
   font-size: 0.7em;
