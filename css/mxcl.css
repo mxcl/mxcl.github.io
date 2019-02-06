@@ -1,6 +1,16 @@
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --vibrant-blue: #37deff;
+  --light-blue: #00B4DB;
+  --dark-blue: #0083B0;
+  --yellow: #eeff37;
+  --complement-blue: #21c1f7;
+  --donate-button-height: 37.5px;
+}
+
 html {
   font-family: 'MetropolisRegular';
   font-weight: normal;
@@ -11,13 +21,13 @@ html {
   background-size: cover;
   background: #00B4DB;
   background-repeat: no-repeat;
-  background: linear-gradient( to right bottom, #00B4DB, #0083B0);
+  background: linear-gradient( to right bottom, var(--light-blue), var(--dark-blue));
   
   color: white;
 }
 
 ::selection {
-  background: rgba(255,255,255,0.2);
+  background: rgba(0,0,30,0.15);
 }
 
 body {
@@ -67,11 +77,13 @@ h1 {
 }
 
 a:link, a:visited {
-  color: #37deff;
+  color: var(--vibrant-blue);
   text-decoration: none;
 }
 a:link:hover, a:visited:hover {
-  color: #dbaf00;
+  background-image: -webkit-linear-gradient(left, #ffd737 0%, var(--yellow) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 h1:not(:first-child) {
@@ -80,6 +92,12 @@ h1:not(:first-child) {
 
 li {
   margin-bottom: 0.3rem;
+}
+
+#donate-tray {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0.6rem;
 }
 
 #donate-tray, .label, .flair {
@@ -92,15 +110,18 @@ li {
 }
 
 #donate-tray > * {
-  margin-right: 1rem;
   display: inline-block;
   position: relative;
-  margin-top: 0.6rem;
-}
-#donate-tray img {
   border-radius: 0.15rem;
+}
+#donate-tray > *:not(:last-child) {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+#donate-tray img {
   width: 160px;
-  height: 37.5px;
+  height: var(--donate-button-height);
 }
 
 #tip-footnote {
@@ -111,6 +132,33 @@ li {
   bottom: -1.35em;
   left: 0;
   right: 0;
+}
+
+#bitcoin {
+  background-color: var(--complement-blue);
+  height: var(--donate-button-height);
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center
+}
+#bitcoin img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+#bitcoin code {
+  user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  -webkit-touch-callout: text;
+  -o-user-select: text;
+  -moz-user-select: text;
+}
+
+.shadowed {
+  box-shadow: 0 2px 5px rgba(0,131,176,0.2)
 }
 
 img.flair {
@@ -133,6 +181,9 @@ img.flair {
     margin-right: 0;
   }
   #paypal {
+    margin-top: 2rem;
+  }
+  #bitcoin {
     margin-top: 2rem;
   }
 }
