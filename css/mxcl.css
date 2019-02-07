@@ -242,3 +242,17 @@ img.flair {
   mix-blend-mode: overlay;
   vertical-align: middle;
 }
+
+.frame {
+  position: relative;
+}
+.frame .caption {
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  font-size: 70%;
+  text-align: center;
+  font-family: "MetropolisLight";
+  opacity: 0.7;
+}
