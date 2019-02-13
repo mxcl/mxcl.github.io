@@ -42,7 +42,7 @@ p, li {
 }
 
 li {
-  max-width: 33em;
+  max-width: 36em;
 }
 
 h1, h2, h3, h4 {
@@ -256,4 +256,13 @@ img.flair {
   text-align: center;
   font-family: "MetropolisLight", sans-serif;
   opacity: 0.7;
+}
+
+#past-work {
+  margin-top: 0.5rem;
+}
+#past-work img {
+  border-radius: 17%;
+  margin: 0.3rem;
+  box-shadow: 0 2px 5px rgba(0,131,176,0.4)
 }
