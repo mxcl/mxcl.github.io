@@ -22,7 +22,7 @@ html {
   background: #00B4DB;
   background-repeat: no-repeat;
   background: linear-gradient( to right bottom, var(--light-blue), var(--dark-blue));
-  
+
   color: white;
 }
 
@@ -99,12 +99,12 @@ li {
   margin-bottom: 0.3rem;
 }
 
-h1#donate::before, h1#consultancy::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -4rem; 
-  height: 4rem; 
-  visibility: hidden; 
+h1#donate::before, h1#consultancy::before, h1#career::before, h1#presence::before, h1#timeline::before {
+  display: block;
+  content: " ";
+  margin-top: -4rem;
+  height: 4rem;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -199,7 +199,7 @@ img.flair {
     margin-right: 0;
   }
 }
-  
+
 @media all and (max-width: 414px) {
   #paypal {
     margin-top: 2rem;
