@@ -24,6 +24,8 @@ html {
   background: linear-gradient( to right bottom, var(--light-blue), var(--dark-blue));
 
   color: white;
+  
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -186,6 +188,7 @@ img.flair {
   margin-top: 1rem;
 }
 
+/* the 4px is a fudge */
 @media all and (max-width: calc(600px + 1rem + 5rem + 4px)) {
   img.flair {
     width: calc(50% - 1rem);
