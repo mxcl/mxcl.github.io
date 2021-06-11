@@ -19,12 +19,12 @@ html {
   margin: 0;
 
   background-size: cover;
-  background: #00B4DB;
+  background-color: #00B4DB;
   background-repeat: no-repeat;
   background: linear-gradient( to right bottom, var(--light-blue), var(--dark-blue));
 
   color: white;
-  
+
   scroll-behavior: smooth;
 }
 
