@@ -13,7 +13,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image:alt" content="Stay on top of development with Canopy.">
   <style>
-    /* #3ec23b #26c62b */ 
+    /* #3ec23b #26c62b */
     dt, #tagline {
       color: rgba(255,255,255,0.5);
     }
@@ -106,17 +106,8 @@
 
 <div class="pad">
 
-<p>Tapping Canopy’s notifications opens the relevant GitHub page in your web-browser;
-  no more hunting through emails for the link.</p>
-
-<p>Canopy for Mac is free for open source (public repos) with a subscription for
-  private repos. Canopy for iOS is $5 for life-time notifications on
-  public repos; private repos require a subscription. A subscription in
-  either app works in the other.</p>
-  
-<p><small><i>Canopy operates using <b>webhooks</b>, you need to be admin on the
-  repositories for which you want notifications, or you need to ask an admin to install
-  the hook via the Canopy app or manually</i>.</small></p>
+<p>Tapping Canopy’s notifications opens the relevant GitHub page in your web-browser
+  so you react to development notifications immediately and get to work.</p>
 
 <a href="https://itunes.apple.com/us/app/canopy/id1419224245?ls=1&mt=8"><img src="app-store-badge.svg"></a>
 <a href="https://itunes.apple.com/us/app/canopy-real-time-development/id1420665080?ls=1&mt=8"><img src="app-store-ios-badge.svg"></a>
@@ -127,64 +118,18 @@
 
 <img id="screenshot-configure" src="screenshot-configure.png">
 <p>Configure precisely which notifications you want to receive on a per-repository basis.</p>
-  
-<a name="news"><h2 style="clear: both">News</h2></a>
-
-<p>How does Canopy work? <A href="https://medium.com/@mxcl/server-side-swift-making-canopy-2ed586b7f5a9">Max Howell writes about Canopy’s technology stack</a> as part of a six part series.
 
 
 <a name="faq"><h2>FAQ</h2></a>
 
 <dl>
-  <dt><p>Why does Canopy ask for <b>full</b> access to my repositories?</p></dt>
-  <dd>
-    <p>GitHub does not provide sufficient granularity in its permissions system, thus in order
-  to receive events for your private repositories we have to ask for full-access permissions.</p>
-    <p>Needless to say Canopy does not write to your repos.</p>
-  </dd>
-  <dt><p>New repositories on my username are not automatically enrolled</p></dt>
-  <dd><p>There is no webhook for new repositories on usernames (unlike organizations) so we cannot know
-    when you create new repositories. In future we can run a lookup server-side at regular intervals but
-    this even this method will introduce some lag time. Hopefully github will add username-hooks.</p></dd>
-
   <dt><p>I don’t get notifications when my Mac is off</p></dt>
   <dd><p>Apple buffer an undefined number of notifications while devices are off, so some notifications
     will be lost while your device is unpowered. Note this condition also applies to iOS, it’s just
     that your iOS device is almost never off; instead it is usually in stand-by.</p></dd>
 
-  <dt><p>I don’t get any notifications</p></dt>
-  <dd>
-    <p>Ensure you have enabled some, in the app select repositories for which
-      you want to receive notifications and tap the checkbox.
-    <p>If you still don’t receive notifications visit that repository on GitHub
-      and ensure the Canopy webhook is enabled, Canopy does this for you, but it
-      may have been disabled by another user or tool. Alternatively turning
-      notifications off and on again for that repository will reinstall the hook.</p>
-    <p>If you still don’t get notifications, rebooting your Mac will restart the
-      APNs service, which may help.</p>
-  </dd>
-
-  <dt><p>I can’t enable notifications</p></dt>
-  <dd>
-    <p>Ensure you have selected the repository you want notifications for and tap the “Receive push notifications” checkbox.</p>
-    <p>Canopy will not be able to install webhooks unless you are admin for that repository, contact the admin and ask them to
-      install the webhook. They do not need to use Canopy to install the hook, there are instructions for doing it manually below,
-      but the most simple way is for them to install Canopy and then tap “Receive push notifications”.</p>
-    <p>You can still enroll for notifications in advance, when the admin creates the hook you will receive a notification about it.</p>
-    <p>You cannot get notifications for private repositories unless you create a Canopy subscription.</p>
-  </dd>
-
   <dt><p>Do I need to leave the app open?</p></dt>
   <dd><p>No, your push notifications will arrive even if the app has been quit.</p></dd>
-
-  <dt><p>I cannot see a particular private repo.</p></dt>
-  <dd>
-    <p>The GitHub API does not return results for private repositories that are forked
-      from private repositories (for OAuth apps like Canopy).</p>
-    <p>We plan to fix this by updating our backend to be a proper GitHub app.</p>
-    <p>In the meantime you can add repositories that are not visible in the Canopy
-      app manually via the “File” menu.</p>
-  </dd>
 
   <dt><p>I do not get certain notifications I was expecting</p></dt>
   <dd><p>Canopy can only report activity that is supported by GitHub’s webhook system,
@@ -197,61 +142,26 @@
     </ul>
     <p>Notably, we also don’t send notifications for your <em>own</em>
       activity.</p>
-    <p>† Unless the repository owner installs the Canopy webhook <em>and</em> you
-      manually add that repository to Canopy (though in the future we will add the
-      option to automatically send these notifications, provided the webhook is
-      installed still).</p>
-  </dd>
-  
-  <dt><p>Can I get notifications for repositories unrelated to my account?</p><dt>
-  <dd><p>Yes, <strong>if</strong> they are open source and <strong>if</strong> they have the 
-    Canopy webhook installed, if they don’t have the hook installed you can ask them to
-    install it (see the above FAQ), really, there’s no reason they shouldn’t.</p>
-    <p>If the above conditions are met you can enroll in notifications manually using the
-      ”Add Repository” entry in the “File” menu.</p></dd>
-
-  <dt><p><a name="manual-install"></a>Can I install the Canopy webhook without the app?</p></dt>
-  <dd>
-    <p>If someone has asked you to install the Canopy webhook so they can receive
-      notifications, you don’t need to install Canopy to do this.</p>
-    <p>Simply add <code>https://canopy.mxcl.dev/github</code> to any
-      repository’s webhooks, ensure its content‐type is <code>application/json</code>) and
-      tick “Send me everything”. See the screenshot below.</p>
-      <img width='462.5' height='644.5' src="screenshot-webhook-settings.png">
-    <p>The URL for a repository’s webhooks is of this form:</p>
-    <p><b>https://github.com/YOU/REPO/settings/hooks</b></p>
-    <p><em>Note, if you do it this way we cannot install a “secret” which means we
-      cannot be fully sure that the payloads we receive are from GitHub and not
-      someone pretending to be GitHub. If this worries you, install the hook
-      using the app.</em></p>
-    <p><b>Important</b>, for organizations install the organization webhook. Webhooks on repos
-      for organizations have issues with with our apps.</p>
+    <p>† in the future we can possibly improve this somewhat with cleverness.</p>
   </dd>
 
   <dt><p>How does Canopy ensure that only people with access get notifications about my private repositories?</p></dt>
   <dd>
-    <p>When users enroll in notifications for a private repository our backend sends a HEAD request for that user to
-      check they actually have access.</p>
-    <p>We do an additional HEAD request for all <i>enrolled</i> users before sending push notifications in response to
-      webhook events.</p>
-    <p>This means we will stop sending notifications for team members you remove from a repository the
-      moment you do so.</p>
-    <p>If the HEAD request fails we delete that user’s enrollment. If in the future you 
-      give them access back, they will have to re-enroll using the Canopy app.</p>
+    GitHub secures the webhook data communication and we only send that data onwards to the accounts that have enabled it.
   </dd>
-  
+
   <dt><p>Will my subscription in the macOS app work with the iOS app?</p></dt>
   <dd><p>Yes, your subscription in either app will apply the same benefits to the other.</p></dd>
-  
+
   <dt><p>How about GitHub Enterprise?</p></dt>
-  <dd><p>Feature coming soon!</p>
+  <dd><p>Email us and we’ll start working on this. We want to know there is demand first ofc.</p></dd>
 
   <dt><p>Our company requires that <em>we</em> run the server&hyphen;side component</p></dt>
   <dd><p>We are happy to provide the server-side binary, compiled for your
     platform, so that your data never leaves your control if you are serious
     in your needs <a href="mailto:mxcl@me.com">contact us</a> for
     terms.</p></dd>
-    
+
   <dt><p>How about Android, Linux and Windows?</p></dt>
   <dd><p>If Canopy is successful (and not Sherlocked) we will make apps for the
     other platforms</p></dd>
@@ -260,7 +170,7 @@
   <dd><p>The App Store updates your apps automatically, but if you want
     informational updates: follow <a href="https://twitter.com/mxcl">@mxcl</a>
     on Twitter.</p></dd>
-  
+
   <dt><p>I have a suggestion</p></dt>
   <dd><p>Ask <a href="https://twitter.com/mxcl">@mxcl</a> about it.</p></dd>
 </dl>
@@ -269,37 +179,35 @@
 
 <p>Canopy listens to GitHub events and passes a small subset of this data through to
   Apple’s APNs service.</p>
-<p>Canopy does not read your code, nor does it persist any data about your notifications,
-  your activity or your code. Canopy does not submit any of your data that it persists to
-  third parties.</p>
+<p>
+  Canopy does not read your code.
+  Canopy only persists the content of the notifications it sends you.
+  Canopy does not submit any of your data that it persists to third parties.</p>
 
 <dl>
   <dt>What “cloud” data does Canopy keep?</dt>
   <dd>
     <ul>
       <li>The identifiers of the repositories for which you receive notifications</li>
-      <li>Your GitHub OAuth token, AES encrypted with unique initialization vectors†</li>
+      <li>Your GitHub app installation id</li>
       <li>Your device tokens for Apple’s APNs service</li>
     </ul>
     <p>Your data is held securely and cannot be accessed by third‐parties.</p>
-    <p><em>† we are encrypting your token, <strong>not</strong> your password, we <strong>never</strong> have access to your password.</em></p>
+    <p>We do not keep a GitHub token beyond the initial authorization request and thus cannot do anything to your GitHub data.</p>
   </dd>
-  
+
   <dt>Why does Canopy collect this data?</dt>
   <dd><p>GitHub sends Canopy webhooks for repository events, Canopy must know for which repositories you wish to
-    receive notifications and which devices you wish these notifications sent. Your GitHub OAuth token is
-    required so Canopy can check you <strong>still</strong> have access to private repositories, and so Canopy’s backend can install
-    webhooks at GitHub.</p></dd>
-    
+    receive notifications and which devices you wish these notifications sent.</p></dd>
+
   <dt>How can I be forgotten?</dt>
   <dd>
-    <p>Signing out of the Canopy app deletes all your tokens from our database, but we persist your enrollment choices in case you later sign back in.</p>
-    <p>If you also want this data deleted, <a href="mailto:mxcl@me.com">Email us</a> and we can completely delete your account.</p>
+    <p>If you want your data deleted, <a href="mailto:mxcl@me.com">email us</a> and we can completely delete your account.</p>
   </dd>
 </dl>
 
 <a name="support"><h2>Support</h2></a>
-<p><a href="mailto:mxcl+support@me.com">Email us</a> and we’ll get right back to you.</p>
+<p><a href="mailto:mxcl@me.com">Email us</a> and we’ll get right back to you.</p>
 
 <a name="terms-of-use"><h2>Terms of Use</h2></a>
 
@@ -322,7 +230,7 @@
 <p>You retain all rights to your content and we retain all rights to ours
   (for example the Canopy icon, website, design language, source code,
   trademarks, copyrights, patents and other intellectual property).</p>
-  
+
 <p>We reserve the right to end your access to Canopy at any time and
   for any reason. If your use is ended, any pending subscription periods will be
   refunded.</p>
