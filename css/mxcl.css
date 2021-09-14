@@ -83,11 +83,11 @@ h1 {
   margin: 0;
 }
 
-a:link, a:visited {
+a, a:visited {
   color: var(--vibrant);
   text-decoration: none;
 }
-a:link:hover, a:visited:hover {
+a:hover, a:visited:hover {
   color: #F7567C;
   /* background-image: -webkit-linear-gradient(left, var(--vibrant-blue) 0%, var(--yellow) 100%); */
   /* color: transparent; */
@@ -175,6 +175,10 @@ h1:target {
   -webkit-touch-callout: text;
   -o-user-select: text;
   -moz-user-select: text;
+}
+
+#bitcoin code::selection {
+  background-color: #FC6471;
 }
 
 .shadowed {
@@ -266,10 +270,6 @@ img.flair {
   box-shadow: 0 2px 5px rgba(0,131,176,0.4)
 }
 
-h1, h2, h3, h4 {
-
-}
-
 h1 {
   font-family: var(--font-title);
 }
@@ -291,25 +291,25 @@ pre {
   padding: 1rem;
   border-radius: 0.3em;
   border: 1px solid rgba(var(--fg-triplet), 0.05);
-  display: inline-block;
+  max-width: fit-content;
 }
 
 p {
   line-height: 1.6;
 }
 
-a.button:link {
+a.button {
   background-color: rgba(var(--vib-trip), 0.9);
   padding: 0.5rem 1rem;
   border-radius: 0.3em;
   display: inline-block;
   color: white;
 }
-a.button:link:hover {
+a.button:hover {
   color: white;
   background-color: rgba(var(--vib-trip), 0.75);
 }
-a.button:link:active {
+a.button:active {
   background-color: #FC6471;
 }
 
