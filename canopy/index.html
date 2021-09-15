@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
   <meta charset="utf-8">
   <title>Canopy - Stay on top of development</title>
@@ -14,41 +16,53 @@
   <meta name="twitter:image:alt" content="Stay on top of development with Canopy.">
   <style>
     /* #3ec23b #26c62b */
-    dt, #tagline {
-      color: rgba(255,255,255,0.5);
+    dt,
+    #tagline {
+      color: rgba(255, 255, 255, 0.5);
     }
-    html, body {
+
+    html,
+    body {
       padding: 0;
       margin: 0;
     }
+
     html {
       background: linear-gradient(#434E58, #3b444d) #434E58;
       background-attachment: fixed;
       color: white;
       font-family: "MetropolisRegular", sans-serif;
     }
+
     h1 {
       margin-top: 4rem;
       font-family: "Big Caslon", "Baskerville", serif;
       text-align: center;
       color: white;
     }
+
     h2 {
       margin-top: 3rem;
     }
+
     #tagline {
       text-align: center;
       margin-top: -0.8rem;
     }
+
     a {
       color: white;
     }
+
     li {
       margin-bottom: 0.3rem;
     }
-    p, li {
+
+    p,
+    li {
       line-height: 1.4;
     }
+
     #screenshot {
       width: 70%;
       margin: 0 15%;
@@ -56,18 +70,21 @@
       margin-bottom: -1rem;
       text-align: center;
     }
+
     #screenshot-pr {
       width: 382px;
       height: 101px;
       float: right;
       transform: translate(0, -12px);
     }
+
     #screenshot-configure {
       width: 295px;
       height: 264.5px;
       float: right;
       transform: translate(0, -20px);
     }
+
     @media only screen and (min-width: 500px) {
       .pad {
         max-width: 38rem;
@@ -75,19 +92,24 @@
         padding: 0 2rem;
       }
     }
+
     @media only screen and (max-width: 500px) {
       .pad {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
+
       #screenshot {
         width: 100%;
         margin: 0;
       }
-      #screenshot-pr, #screenshot-configure {
+
+      #screenshot-pr,
+      #screenshot-configure {
         width: 100%;
         height: auto;
       }
+
       h1 {
         margin-top: 2rem;
       }
@@ -95,155 +117,223 @@
   </style>
 </head>
 
-<h1>Stay on top of development.</h1>
-<div class="pad">
-<p>Canopy brings real‐time notifications to GitHub. Respond to people promptly;
-  have real‐time conversations on pull‐requests and issues; get the job done
-  faster and more efficiently; and—most importantly—stay on top of development.</p>
-</div>
+<body>
 
-<img src="devices.png" id="screenshot">
+  <h1>Stay on top of development.</h1>
+  <div class="pad">
+    <p>Canopy brings real‐time notifications to GitHub. Respond to people promptly;
+      have real‐time conversations on pull‐requests and issues; get the job done
+      faster and more efficiently; and—most importantly—stay on top of development.</p>
+  </div>
 
-<div class="pad">
+  <img src="devices.png" id="screenshot">
 
-<p>Tapping Canopy’s notifications opens the relevant GitHub page in your web-browser
-  so you react to development notifications immediately and get to work.</p>
+  <div class="pad">
 
-<a href="https://itunes.apple.com/us/app/canopy/id1419224245?ls=1&mt=8"><img src="app-store-badge.svg"></a>
-<a href="https://itunes.apple.com/us/app/canopy-real-time-development/id1420665080?ls=1&mt=8"><img src="app-store-ios-badge.svg"></a>
+    <p>Tapping Canopy’s notifications opens the relevant GitHub page in your web-browser
+      so you react to development notifications immediately and get to work.</p>
 
-<h2 style="clear: both">Tuned For Your Workflow</h2>
-<img id="screenshot-pr" src="screenshot-pr.png">
-<p>Canopy detects when you push new branches and immediately prompts you to create a pull-request, streamlining your workflow so you can get on with the work that matters.</p>
+    <a href="https://itunes.apple.com/us/app/canopy/id1419224245?ls=1&mt=8"><img src="app-store-badge.svg"></a>
+    <a href="https://itunes.apple.com/us/app/canopy-real-time-development/id1420665080?ls=1&mt=8"><img
+        src="app-store-ios-badge.svg"></a>
 
-<img id="screenshot-configure" src="screenshot-configure.png">
-<p>Configure precisely which notifications you want to receive on a per-repository basis.</p>
+    <h2 style="clear: both">Tuned For Your Workflow</h2>
+    <img id="screenshot-pr" src="screenshot-pr.png">
+    <p>Canopy detects when you push new branches and immediately prompts you to create a pull-request, streamlining your
+      workflow so you can get on with the work that matters.</p>
+
+    <img id="screenshot-configure" src="screenshot-configure.png">
+    <p>Configure precisely which notifications you want to receive on a per-repository basis.</p>
 
 
-<a name="faq"><h2>FAQ</h2></a>
+    <a name="faq">
+      <h2>FAQ</h2>
+    </a>
 
-<dl>
-  <dt><p>I don’t get notifications when my Mac is off</p></dt>
-  <dd><p>Apple buffer an undefined number of notifications while devices are off, so some notifications
-    will be lost while your device is unpowered. Note this condition also applies to iOS, it’s just
-    that your iOS device is almost never off; instead it is usually in stand-by.</p></dd>
+    <dl>
+      <dt>
+        <p>I don’t get notifications when my Mac is off</p>
+      </dt>
+      <dd>
+        <p>Apple buffer an undefined number of notifications while devices are off, so some notifications
+          will be lost while your device is unpowered. Note this condition also applies to iOS, it’s just
+          that your iOS device is almost never off; instead it is usually in stand-by.</p>
+      </dd>
 
-  <dt><p>Do I need to leave the app open?</p></dt>
-  <dd><p>No, your push notifications will arrive even if the app has been quit.</p></dd>
+      <dt>
+        <p>Do I need to leave the app open?</p>
+      </dt>
+      <dd>
+        <p>No, your push notifications will arrive even if the app has been quit.</p>
+      </dd>
 
-  <dt><p>I do not get certain notifications I was expecting</p></dt>
-  <dd><p>Canopy can only report activity that is supported by GitHub’s webhook system,
-    notably this does not include:</p>
-    <ul>
-      <li>Activity on other people’s repositories that you are watching†</li>
-      <li>Activity on tickets (at other people’s repositories) where you participated†</li>
-      <li>Activity on your gists</li>
-      <li>Repository rename events</li>
-    </ul>
-    <p>Notably, we also don’t send notifications for your <em>own</em>
-      activity.</p>
-    <p>† in the future we can possibly improve this somewhat with cleverness.</p>
-  </dd>
+      <dt>
+        <p>I do not get certain notifications I was expecting</p>
+      </dt>
+      <dd>
+        <p>Canopy can only report activity that is supported by GitHub’s webhook system,
+          notably this does not include:</p>
+        <ul>
+          <li>Activity on other people’s repositories that you are watching†</li>
+          <li>Activity on tickets (at other people’s repositories) where you participated†</li>
+          <li>Activity on your gists</li>
+          <li>Repository rename events</li>
+        </ul>
+        <p>Notably, we also don’t send notifications for your <em>own</em>
+          activity.</p>
+        <p>† in the future we can possibly improve this somewhat with cleverness.</p>
+      </dd>
 
-  <dt><p>How does Canopy ensure that only people with access get notifications about my private repositories?</p></dt>
-  <dd>
-    GitHub secures the webhook data communication and we only send that data onwards to the accounts that have enabled it.
-  </dd>
+      <dt>
+        <p>How does Canopy ensure that only people with access get notifications about my private repositories?</p>
+      </dt>
+      <dd>
+        GitHub secures the webhook data communication and we only send that data onwards to the accounts that have
+        enabled it.
+      </dd>
 
-  <dt><p>Will my subscription in the macOS app work with the iOS app?</p></dt>
-  <dd><p>Yes, your subscription in either app will apply the same benefits to the other.</p></dd>
+      <dt>
+        <p>Will my subscription in the macOS app work with the iOS app?</p>
+      </dt>
+      <dd>
+        <p>Yes, your subscription in either app will apply the same benefits to the other.</p>
+      </dd>
 
-  <dt><p>How about GitHub Enterprise?</p></dt>
-  <dd><p>Email us and we’ll start working on this. We want to know there is demand first ofc.</p></dd>
+      <dt>
+        <p>How about GitHub Enterprise?</p>
+      </dt>
+      <dd>
+        <p>Email us and we’ll start working on this. We want to know there is demand first ofc.</p>
+      </dd>
 
-  <dt><p>Our company requires that <em>we</em> run the server&hyphen;side component</p></dt>
-  <dd><p>We are happy to provide the server-side binary, compiled for your
-    platform, so that your data never leaves your control if you are serious
-    in your needs <a href="mailto:mxcl@me.com">contact us</a> for
-    terms.</p></dd>
+      <dt>
+        <p>Our company requires that <em>we</em> run the server&hyphen;side component</p>
+      </dt>
+      <dd>
+        <p>We are happy to provide the server-side binary, compiled for your
+          platform, so that your data never leaves your control if you are serious
+          in your needs <a href="mailto:mxcl@me.com">contact us</a> for
+          terms.</p>
+      </dd>
 
-  <dt><p>How about Android, Linux and Windows?</p></dt>
-  <dd><p>If Canopy is successful (and not Sherlocked) we will make apps for the
-    other platforms</p></dd>
+      <dt>
+        <p>How about Android, Linux and Windows?</p>
+      </dt>
+      <dd>
+        <p>If Canopy is successful (and not Sherlocked) we will make apps for the
+          other platforms</p>
+      </dd>
 
-  <dt><p>How can I stay updated?</p></dt>
-  <dd><p>The App Store updates your apps automatically, but if you want
-    informational updates: follow <a href="https://twitter.com/mxcl">@mxcl</a>
-    on Twitter.</p></dd>
+      <dt>
+        <p>How can I stay updated?</p>
+      </dt>
+      <dd>
+        <p>The App Store updates your apps automatically, but if you want
+          informational updates: follow <a href="https://twitter.com/mxcl">@mxcl</a>
+          on Twitter.</p>
+      </dd>
 
-  <dt><p>I have a suggestion</p></dt>
-  <dd><p>Ask <a href="https://twitter.com/mxcl">@mxcl</a> about it.</p></dd>
-</dl>
+      <dt>
+        <p>I have a suggestion</p>
+      </dt>
+      <dd>
+        <p>Ask <a href="https://twitter.com/mxcl">@mxcl</a> about it.</p>
+      </dd>
+    </dl>
 
-<a name="privacy-policy"><h2>Privacy Policy</h2></a>
+    <a name="privacy-policy">
+      <h2>Privacy Policy</h2>
+    </a>
 
-<p>Canopy listens to GitHub events and passes a small subset of this data through to
-  Apple’s APNs service.</p>
-<p>
-  Canopy does not read your code.
-  Canopy only persists the content of the notifications it sends you.
-  Canopy does not submit any of your data that it persists to third parties.</p>
+    <p>Canopy listens to GitHub events and passes a small subset of this data through to
+      Apple’s APNs service.</p>
+    <p>
+      Canopy does not read your code.
+      Canopy only persists the content of the notifications it sends you.
+      Canopy does not submit any of your data that it persists to third parties.</p>
 
-<dl>
-  <dt>What “cloud” data does Canopy keep?</dt>
-  <dd>
-    <ul>
-      <li>The identifiers of the repositories for which you receive notifications</li>
-      <li>Your GitHub app installation id</li>
-      <li>Your device tokens for Apple’s APNs service</li>
-    </ul>
-    <p>Your data is held securely and cannot be accessed by third‐parties.</p>
-    <p>We do not keep a GitHub token beyond the initial authorization request and thus cannot do anything to your GitHub data.</p>
-  </dd>
+    <dl>
+      <dt>What “cloud” data does Canopy keep?</dt>
+      <dd>
+        <ul>
+          <li>The identifiers of the repositories for which you receive notifications</li>
+          <li>Your GitHub app installation id</li>
+          <li>Your device tokens for Apple’s APNs service</li>
+        </ul>
+        <p>Your data is held securely and cannot be accessed by third‐parties.</p>
+        <p>We do not keep a GitHub token beyond the initial authorization request and thus cannot do anything to your
+          GitHub data.</p>
+      </dd>
 
-  <dt>Why does Canopy collect this data?</dt>
-  <dd><p>GitHub sends Canopy webhooks for repository events, Canopy must know for which repositories you wish to
-    receive notifications and which devices you wish these notifications sent.</p></dd>
+      <dt>Why does Canopy collect this data?</dt>
+      <dd>
+        <p>GitHub sends Canopy webhooks for repository events, Canopy must know for which repositories you wish to
+          receive notifications and which devices you wish these notifications sent.</p>
+      </dd>
 
-  <dt>How can I be forgotten?</dt>
-  <dd>
-    <p>If you want your data deleted, <a href="mailto:mxcl@me.com">email us</a> and we can completely delete your account.</p>
-  </dd>
-</dl>
+      <dt>How can I be forgotten?</dt>
+      <dd>
+        <p>If you want your data deleted, <a href="mailto:mxcl@me.com">email us</a> and we can completely delete your
+          account.</p>
+      </dd>
+    </dl>
 
-<a name="support"><h2>Support</h2></a>
-<p><a href="mailto:mxcl@me.com">Email us</a> and we’ll get right back to you.</p>
+    <a name="support">
+      <h2>Support</h2>
+    </a>
+    <p><a href="mailto:mxcl@me.com">Email us</a> and we’ll get right back to you.</p>
 
-<a name="terms-of-use"><h2>Terms of Use</h2></a>
+    <a name="terms-of-use">
+      <h2>Terms of Use</h2>
+    </a>
 
-<p>Your access to and use of Canopy is conditioned on your acceptance of and
-  compliance with the following terms. <strong>By using Canopy you agree to be
-  bound by these terms. If you disagree with any part of the terms then you may
-  not use Canopy.</strong></p>
+    <p>Your access to and use of Canopy is conditioned on your acceptance of and
+      compliance with the following terms. <strong>By using Canopy you agree to be
+        bound by these terms. If you disagree with any part of the terms then you may
+        not use Canopy.</strong></p>
 
-<p>Use of Canopy requires signing‐in with a valid GitHub account. Use of GitHub
-  is bound by the
-  <a href="https://help.github.com/articles/github-terms-of-service/">GitHub terms of service</a>.</p>
+    <p>Use of Canopy requires signing‐in with a valid GitHub account. Use of GitHub
+      is bound by the
+      <a href="https://help.github.com/articles/github-terms-of-service/">GitHub terms of service</a>.</p>
 
-<p>You agree to not attempt access via Canopy to content to which you knowingly
-  have no right.</p>
+    <p>You agree to not attempt access via Canopy to content to which you knowingly
+      have no right.</p>
 
-<p>Codebase, LLC. reserves the right, at its sole discretion to change, limit, or
-  discontinue any aspect, content, or feature of Canopy, as well as any aspect
-  pertainning to the use of Canopy.</p>
+    <p>Codebase, LLC. reserves the right, at its sole discretion to change, limit, or
+      discontinue any aspect, content, or feature of Canopy, as well as any aspect
+      pertainning to the use of Canopy.</p>
 
-<p>You retain all rights to your content and we retain all rights to ours
-  (for example the Canopy icon, website, design language, source code,
-  trademarks, copyrights, patents and other intellectual property).</p>
+    <p>You retain all rights to your content and we retain all rights to ours
+      (for example the Canopy icon, website, design language, source code,
+      trademarks, copyrights, patents and other intellectual property).</p>
 
-<p>We reserve the right to end your access to Canopy at any time and
-  for any reason. If your use is ended, any pending subscription periods will be
-  refunded.</p>
+    <p>We reserve the right to end your access to Canopy at any time and
+      for any reason. If your use is ended, any pending subscription periods will be
+      refunded.</p>
 
-<p>Canopy may contain links to third‐party services that are not owned or
-  controlled by us. We​ has no control over, and assumes no responsibility for,
-  the content, privacy policies, or practices of any third‐party service. You
-  further acknowledge and agree that ​we​ shall not be responsible or liable,
-  directly or indirectly, for any damage or loss caused or alleged to be caused
-  by or in connection with use of or reliance on any such content, goods or
-  services available on or through any such web sites or services.</p>
+    <p>Canopy may contain links to third‐party services that are not owned or
+      controlled by us. We​ has no control over, and assumes no responsibility for,
+      the content, privacy policies, or practices of any third‐party service. You
+      further acknowledge and agree that ​we​ shall not be responsible or liable,
+      directly or indirectly, for any damage or loss caused or alleged to be caused
+      by or in connection with use of or reliance on any such content, goods or
+      services available on or through any such web sites or services.</p>
 
-<p>We reserve the right, at our sole discretion, to modify or replace these
-  terms at any time.</p>
+    <p>We reserve the right, at our sole discretion, to modify or replace these
+      terms at any time.</p>
 
-</div>
+  </div>
+</body>
+
+</html>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-36JRFY9GL7');
+</script>
