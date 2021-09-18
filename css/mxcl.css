@@ -131,7 +131,7 @@ h1:target {
   -moz-user-select: none;
 }
 
-#donate-tray a img, #bitcoin {
+#donate-tray a img, #bitcoin, #eth {
   border-radius: 0.15rem;
 }
 #donate-tray > *:not(:last-child) {
@@ -155,7 +155,7 @@ h1:target {
   right: 0;
 }
 
-#bitcoin {
+#bitcoin, #eth {
   background-color: var(--complement-blue);
   height: var(--donate-button-height);
   font-size: 1.1rem;
@@ -164,12 +164,17 @@ h1:target {
   flex-wrap: nowrap;
   align-items: center
 }
-#bitcoin img {
+#bitcoin img, #eth img {
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
 }
-#bitcoin code {
+
+#eth img {
+  transform: scale(1.25);
+}
+
+#bitcoin code, #eth code {
   user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;
@@ -178,7 +183,7 @@ h1:target {
   -moz-user-select: text;
 }
 
-#bitcoin code::selection {
+#bitcoin code::selection, #eth code::selection {
   background-color: #FC6471;
 }
 
@@ -345,6 +350,18 @@ a.button:active {
 .q3:after { background-color:#FC6471;  }
 .q4:after { background-color:#F6AE2D; }
 
+
+
+/* back to the normal stuff */
+
+video {
+  width: 100%;
+  aspect-ratio: 1920/1080;
+  object-fit: cover;
+  border: 5px solid black;
+  border-radius: 3px
+}
+
 @media (max-width: 574.98px) {
   .main-logo {
     visibility: hidden;
@@ -354,6 +371,16 @@ a.button:active {
   }
   html {
     padding-top: 0;
+  }
+  video {
+    margin: 1em calc(var(--padding) * -1);
+    width: 100vw;
+  }
+  a.button {
+    display: block;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
 
@@ -377,11 +404,4 @@ html {
   scroll-behavior: smooth;
 }
 
-video {
-  width: 100%;
-  aspect-ratio: 1920/1080;
-  object-fit: cover;
-  border: 5px solid black;
-  border-radius: 3px
-}
 
