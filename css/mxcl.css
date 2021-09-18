@@ -26,6 +26,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(30em, 100vw - 2 * var(--padding)), 1fr));
   grid-column-gap: 2em;
+  max-width: 80em;
 }
 
 body {
@@ -375,3 +376,12 @@ html {
   color: var(--fg);
   scroll-behavior: smooth;
 }
+
+video {
+  width: 100%;
+  aspect-ratio: 1920/1080;
+  object-fit: cover;
+  border: 5px solid black;
+  border-radius: 3px
+}
+
