@@ -27,6 +27,7 @@
   grid-template-columns: repeat(auto-fit, minmax(min(30em, 100vw - 2 * var(--padding)), 1fr));
   grid-column-gap: 2em;
   max-width: 80em;
+  margin-bottom: 4rem;
 }
 
 body {

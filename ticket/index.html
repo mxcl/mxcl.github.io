@@ -1,0 +1,273 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>
+<style>
+  body {
+	background-color: #f1c073;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 600;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.ticket {
+	width: 400px;
+	height: 775px;
+	background-color: white;
+	margin: 0 auto;
+	position: relative;
+}
+
+.holes-top {
+	height: 50px;
+	width: 50px;
+	background-color: #f1c073;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	margin-left: -25px;
+	top: -25px;
+}
+
+.holes-top:before, .holes-top:after {
+	content: '';
+	height: 50px;
+	width: 50px;
+	background-color: #f1c073;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.holes-top:before {
+	left: -200px;
+}
+
+.holes-top:after {
+	left: 200px;
+}
+
+.holes-lower {
+	position: relative;
+	margin: 25px;
+	border: 1px dashed #aaa;
+}
+
+.holes-lower:before, .holes-lower:after {
+	content: '';
+	height: 50px;
+	width: 50px;
+	background-color: #f1c073;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.holes-lower:before {
+	top: -25px;
+	left: -50px;
+}
+
+.holes-lower:after {
+	top: -25px;
+	left: 350px;
+}
+
+.title {
+	padding: 50px 25px 10px;
+}
+
+.cinema {
+	color: #aaa;
+	font-size: 22px;
+}
+
+.movie-title {
+	font-size: 50px;
+}
+
+.info {
+	padding: 15px 25px;
+}
+
+table {
+	width: 100%;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+table tr {
+	margin-bottom: 10px;
+}
+
+table th {
+	text-align: left;
+}
+
+table th:nth-of-type(1) {
+	width: 38%;
+}
+
+table th:nth-of-type(2) {
+	width: 40%;
+}
+
+table th:nth-of-type(3) {
+	width: 15%;
+}
+
+table td {
+	width: 33%;
+	font-size: 32px;
+}
+
+.bigger {
+	font-size: 48px;
+}
+
+.serial {
+	padding: 25px;
+}
+
+.serial table {
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+.serial td {
+	width: 3px;
+	height: 50px;
+}
+
+.numbers td {
+	font-size: 16px;
+	text-align: center;
+}
+</style>
+<div class="ticket">
+	<div class="holes-top"></div>
+	<div class="title">
+		<p class="cinema">BOOTSTRAP CLUB</p>
+		<p class="movie-title">BREW INSTALL OPENSSL</p>
+	</div>
+	<div class="poster">
+		<img src="https://img2.helpnetsecurity.com/posts2021/openssl-650-hns.jpg" />
+	</div>
+	<div class="info">
+	<table>
+		<tr>
+			<th>version</th>
+			<th>installs</th>
+			<th>license</th>
+		</tr>
+		<tr>
+			<td class="bigger">1.1.1l</td>
+			<td class="bigger">9.43M</td>
+			<td class="bigger">OpenSSL</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th colspan=3>meta</th>
+		</tr>
+		<tr>
+			<td colspan=3>Cryptography and SSL/TLS Toolkit</td>
+		</tr>
+	</table>
+	</div>
+	<div class="holes-lower"></div>
+	<div class="serial">
+		<table class="barcode"><tr></tr></table>
+		<table class="numbers">
+			<tr>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>1</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<script   src="https://code.jquery.com/jquery-3.6.0.slim.min.js"   integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="   crossorigin="anonymous"></script>
+
+<script>
+  let code = ''
+for (let i = 0; i < 200; ++i) {
+	const foo = Math.random() > 0.5 ? 1 : 0
+	code += `${foo}`
+}
+
+table = $('.barcode tr');
+for(var i = 0; i < code.length; i++) {
+	if( code[i]==1 ) {
+		table.append('<td bgcolor="black">')
+	} else {
+		table.append('<td bgcolor="white">')
+	}
+}
+</script>
