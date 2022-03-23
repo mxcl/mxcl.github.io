@@ -405,4 +405,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
+.shadowed code a {
+  color: white;
+}
