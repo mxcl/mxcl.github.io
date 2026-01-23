@@ -77,7 +77,7 @@
 
     .header {
       display: flex;
-      align-items: flex-start;
+      align-items: stretch;
       gap: 2.5rem;
       margin-bottom: 3rem;
       flex-wrap: wrap;
@@ -86,6 +86,7 @@
     .portrait {
       width: 207px;
       height: auto;
+      object-fit: cover;
       border: 3px solid var(--copper);
       border-radius: 0.5em;
       box-shadow:
@@ -145,17 +146,6 @@
     p strong {
       color: var(--golden);
       font-weight: 600;
-    }
-
-    p strong a {
-      color: var(--golden);
-      border-bottom: 1px solid transparent;
-    }
-
-    p strong a:hover {
-      color: var(--golden);
-      text-shadow: none;
-      border-bottom-color: var(--golden);
     }
 
     h2 {
@@ -289,8 +279,8 @@
         <p class="tagline">Open Source Legend</p>
         <p>
           <strong>MAX HOWELL</strong> is a legendary open source developer.
-          Creator of <strong><a href="https://brew.sh">Homebrew</a></strong>, used by tens of millions of developers around the world.
-          Founder of <strong><a href="https://tea.xyz">tea protocol</a></strong>, a decentralized technology protocol that enables open source developers to be rewarded for their software contributions for the benefit of all humanity.
+          Creator of <strong>Homebrew</strong>, used by tens of millions of developers around the world.
+          Founder of <strong>tea protocol</strong>, a decentralized technology protocol that enables open source developers to be rewarded for their software contributions for the benefit of all humanity.
         </p>
         <p>
           He is known for his careful approach to software development that results in delightful products that solve their niches perfectly.
