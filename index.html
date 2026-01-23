@@ -41,12 +41,12 @@
 
     html {
       min-height: 100%;
-    }
-
-    body {
       font-family: 'Source Serif Pro', Georgia, serif;
       background: linear-gradient(135deg, var(--bg-deep) 0%, #0f1f21 40%, #162526 100%);
       color: var(--cream);
+    }
+
+    body {
       min-height: 100vh;
       padding: 3rem;
       padding: max(3rem, env(safe-area-inset-top)) max(3rem, env(safe-area-inset-right)) max(3rem, env(safe-area-inset-bottom)) max(3rem, env(safe-area-inset-left));
@@ -246,13 +246,28 @@
       }
 
       .header {
+        position: relative;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         text-align: center;
+        gap: 2rem;
       }
 
       .portrait {
-        width: 173px;
+        width: 100%;
+      }
+
+      .hero-text {
+        position: absolute;
+        left: 1.5rem;
+        right: 1.5rem;
+        top: 1.5rem;
+        z-index: 1;
+      }
+
+      .hero-text h1,
+      .hero-text .tagline {
+        text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
       }
 
       h1 {
@@ -279,8 +294,10 @@
     <header class="header">
       <img src="mxcl.webp" alt="Max Howell" class="portrait">
       <div class="intro">
-        <h1>Max <span>Howell</span></h1>
-        <p class="tagline">Open Source Legend</p>
+        <div class="hero-text">
+          <h1>Max <span>Howell</span></h1>
+          <p class="tagline">Open Source Legend</p>
+        </div>
         <p class="prose">
           <strong>MAX HOWELL</strong> is a legendary open source developer.
           Creator of <strong>Homebrew</strong>, used by tens of millions of developers around the world.
