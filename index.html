@@ -1,346 +1,335 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-  <title>mxcl — Max Howell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Be One w/the Slop</title>
+  <meta name="description"
+    content="Enter the glow and play Game Studio Simulator.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Be One w/the Slop">
+  <meta property="og:description"
+    content="Enter the glow and play Game Studio Simulator.">
+  <meta property="og:url" content="https://mxcl.dev">
+  <meta property="og:image" content="https://mxcl.dev/images/be-one-sword.webp">
+  <meta name="theme-color" content="#090616">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&family=Prociono&family=Source+Serif+Pro:wght@300;400;600&display=swap">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="mxcl">
-  <meta property="og:description" content="Big‑web Expat">
-  <meta property="og:image" content="https://mxcl.dev/apple-touch-icon.png" />
-  <meta property="og:url" content="http://mxcl.dev">
-  <meta property="og:image:width" content="180" />
-  <meta property="og:image:height" content="180" />
-  <meta name="twitter:card" content="summary">
-  <meta name="theme-color" content="#0C1819">
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Sora:wght@300;400;600;800&display=swap">
   <style>
+    :root {
+      --bg-ink: #06040d;
+      --bg-violet: #1a1030;
+      --glow-pink: #f743d2;
+      --glow-cyan: #47d9ff;
+      --glow-sand: #fff1cb;
+      --panel: rgba(7, 7, 18, 0.72);
+      --text: #f4f5ff;
+      --muted: #b8bada;
+      --border: rgba(241, 246, 255, 0.2);
+      --shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    :root {
-      --bg-deep: #0C1819;
-      --amber: #975D31;
-      --copper: #AF7449;
-      --teal: #59919B;
-      --cream: #D3CAB9;
-      --golden: #CD8F60;
-      --warm-highlight: #E8D5C4;
-    }
-
-    ::selection {
-      background: rgba(89, 145, 155, 0.5);
-    }
-
-    html {
+    html,
+    body {
       min-height: 100%;
-      font-family: 'Source Serif Pro', Georgia, serif;
-      background: linear-gradient(135deg, var(--bg-deep) 0%, #0f1f21 40%, #162526 100%);
-      color: var(--cream);
+      background: radial-gradient(circle at 80% 5%, #3a1566 0%, #0f0a1d 28%,
+        #090611 56%, #06040d 100%);
+      color: var(--text);
+      font-family: "Sora", "Avenir Next", "Segoe UI", sans-serif;
     }
 
     body {
-      min-height: 100vh;
-      padding: 3rem;
-      padding: max(3rem, env(safe-area-inset-top)) max(3rem, env(safe-area-inset-right)) max(3rem, env(safe-area-inset-bottom)) max(3rem, env(safe-area-inset-left));
-      line-height: 1.7;
+      display: grid;
+      place-items: center;
+      padding: clamp(1.2rem, 4vw, 2.6rem);
+      overflow-x: hidden;
       position: relative;
+      isolation: isolate;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 55vmax;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.25;
+      z-index: -2;
+      animation: orbit 38s linear infinite;
+      pointer-events: none;
     }
 
     body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background:
-        radial-gradient(ellipse at 20% 20%, rgba(89, 145, 155, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(151, 93, 49, 0.06) 0%, transparent 50%);
-      pointer-events: none;
-      z-index: 0;
+      left: -14vmax;
+      top: -16vmax;
+      background: radial-gradient(circle at 40% 40%, var(--glow-cyan),
+        transparent 64%);
     }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+    body::after {
+      right: -14vmax;
+      bottom: -20vmax;
+      animation-direction: reverse;
+      animation-duration: 50s;
+      background: radial-gradient(circle at 40% 40%, var(--glow-pink),
+        transparent 65%);
+    }
+
+    .site {
+      width: min(1080px, 100%);
+      display: grid;
+      grid-template-columns: minmax(280px, 1.1fr) minmax(260px, 0.9fr);
+      gap: clamp(1rem, 3vw, 2rem);
+      background: linear-gradient(140deg, rgba(11, 9, 23, 0.86),
+        rgba(10, 8, 19, 0.7));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+      overflow: clip;
+    }
+
+    .visual {
+      padding: clamp(1rem, 2.2vw, 1.8rem);
+      display: grid;
+      place-items: center;
+      background: linear-gradient(160deg, rgba(18, 14, 36, 0.85),
+        rgba(8, 8, 19, 0.55));
+    }
+
+    .hero-link {
+      width: min(100%, 460px);
+      display: block;
       position: relative;
-      z-index: 1;
+      border-radius: 24px;
+      outline: none;
+      transition: transform 260ms ease;
     }
 
-    .header {
-      display: flex;
-      align-items: stretch;
-      gap: 2.5rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
+    .hero-link:hover,
+    .hero-link:focus-visible {
+      transform: translateY(-4px) scale(1.01);
     }
 
-    .portrait {
-      width: 207px;
+    .hero-link::before,
+    .hero-link::after {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border-radius: 28px;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .hero-link::before {
+      background: conic-gradient(from 0deg, rgba(247, 67, 210, 0),
+        rgba(247, 67, 210, 0.5), rgba(71, 217, 255, 0.52),
+        rgba(255, 241, 203, 0.36), rgba(247, 67, 210, 0));
+      filter: blur(14px);
+      opacity: 0.65;
+      animation: spin 18s linear infinite;
+    }
+
+    .hero-link::after {
+      background: radial-gradient(circle at 50% 20%, rgba(255, 241, 203, 0.25),
+        rgba(247, 67, 210, 0.1) 45%, transparent 75%);
+      animation: pulse 9s ease-in-out infinite;
+    }
+
+    .poster {
+      width: 100%;
       height: auto;
-      object-fit: cover;
-      border: 3px solid var(--copper);
-      border-radius: 0.5em;
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.5),
-        0 2px 8px rgba(89, 145, 155, 0.2),
-        inset 0 0 0 1px rgba(211, 202, 185, 0.1);
-      flex-shrink: 0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 28px 46px rgba(2, 0, 8, 0.62);
     }
 
-    .portrait:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 12px 40px rgba(0, 0, 0, 0.6),
-        0 4px 16px rgba(89, 145, 155, 0.25),
-        inset 0 0 0 1px rgba(211, 202, 185, 0.15);
+    .content {
+      padding: clamp(1.4rem, 4vw, 2.8rem) clamp(1.2rem, 3vw, 2.1rem);
+      display: grid;
+      align-content: center;
+      gap: 1.25rem;
+      background: linear-gradient(180deg, rgba(10, 10, 22, 0.6),
+        rgba(8, 8, 17, 0.85));
     }
 
-    .intro {
-      flex: 1;
-      min-width: 280px;
+    .eyebrow {
+      color: var(--glow-cyan);
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      font-family: "Chakra Petch", "Eurostile", sans-serif;
+      font-size: 0.78rem;
+      text-shadow: 0 0 14px rgba(71, 217, 255, 0.42);
     }
 
     h1 {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: 2.5rem;
-      font-weight: 400;
-      color: var(--warm-highlight);
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.05em;
-      text-shadow: 0 2px 20px rgba(175, 116, 73, 0.3);
+      font-size: clamp(2rem, 4.3vw, 3.3rem);
+      line-height: 1.06;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      text-wrap: balance;
+      text-shadow: 0 0 28px rgba(247, 67, 210, 0.28);
     }
 
-    h1 span {
-      color: var(--teal);
-    }
-
-    p.tagline {
-      font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.9rem;
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      margin-bottom: 1.5rem;
-      margin-top: -0.8em;
-      opacity: 0.9;
+    .accent {
+      color: var(--glow-sand);
+      text-shadow: 0 0 18px rgba(255, 241, 203, 0.5);
+      font-style: italic;
     }
 
     p {
-      font-size: 1.1rem;
-      color: var(--cream);
-      max-width: 600px;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      color: var(--muted);
+      max-width: 42ch;
+      line-height: 1.65;
+      font-size: clamp(0.95rem, 2vw, 1.08rem);
+      text-wrap: pretty;
     }
 
-    p strong {
-      color: var(--golden);
-      font-weight: 600;
-    }
-
-    p.prose {
-      color: inherit;
-      text-shadow: none;
-    }
-
-    p.prose strong {
-      color: inherit;
-    }
-
-    h2 {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      margin-top: 4.5rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.2rem;
-      border-bottom: 1px solid rgba(107, 74, 43, 0.4);
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 0.6rem;
-      padding-left: 1.2rem;
-      position: relative;
-    }
-
-    li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: var(--amber);
-      font-weight: bold;
-    }
-
-    a {
-      color: var(--teal);
-      text-decoration: none;
-      transition: color 0.2s ease, text-shadow 0.2s ease;
-      border-bottom: 1px solid transparent;
-    }
-
-    a:hover {
-      color: var(--golden);
-      text-shadow: 0 0 12px rgba(205, 143, 96, 0.4);
-      border-bottom-color: var(--golden);
-    }
-
-    section {
-      margin-left: calc(207px + 2.5rem);
-    }
-
-    h2, .links-section {
-      color: rgba(211, 202, 185, 0.7);
-    }
-
-    .links-section a {
-      font-weight: 400;
-      color: color-mix(in srgb, var(--golden) 70%, transparent 30%);
-    }
-
-    .links-section a:hover {
-      color: var(--golden);
-    }
-
-    .social-links {
+    .actions {
       display: flex;
-      gap: 1.5rem;
+      gap: 0.9rem;
       flex-wrap: wrap;
-      margin-top: 0.5rem;
+      margin-top: 0.25rem;
     }
 
-    .social-links li {
-      padding-left: 0;
-      margin-bottom: 0;
+    .btn {
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.78rem 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: transform 200ms ease, box-shadow 200ms ease,
+        background-color 200ms ease;
+      font-size: 0.95rem;
     }
 
-    .social-links li::before {
-      display: none;
+    .btn-primary {
+      color: #05050d;
+      background: linear-gradient(100deg, var(--glow-sand), #fcd8ff);
+      box-shadow: 0 8px 28px rgba(247, 67, 210, 0.34);
     }
 
-    .social-links a {
-      display: inline-block;
-      padding: 0.4rem 0.8rem;
-      background: rgba(89, 145, 155, 0.15);
-      border: 1px solid rgba(89, 145, 155, 0.3);
-      border-radius: 4px;
-      font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
+    .btn-secondary {
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid rgba(71, 217, 255, 0.35);
+      box-shadow: inset 0 0 0 1px rgba(71, 217, 255, 0.08);
     }
 
-    .social-links a:hover {
-      background: rgba(175, 116, 73, 0.25);
-      border-color: var(--copper);
-      color: var(--golden);
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(6, 4, 18, 0.45);
     }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 2rem 1.5rem;
+    .foot-note {
+      color: rgba(198, 202, 231, 0.85);
+      font-size: 0.83rem;
+      letter-spacing: 0.02em;
+      margin-top: 0.2rem;
+    }
+
+    @media (max-width: 900px) {
+      .site {
+        grid-template-columns: 1fr;
       }
 
-      .header {
-        position: relative;
-        flex-direction: column;
-        align-items: stretch;
+      .content {
         text-align: center;
-        gap: 2rem;
+        justify-items: center;
       }
 
-      .portrait {
-        width: 100%;
-      }
-
-      .hero-text {
-        position: absolute;
-        left: 1.5rem;
-        right: 1.5rem;
-        top: 1.5rem;
-        z-index: 1;
-      }
-
-      .hero-text h1,
-      .hero-text .tagline {
-        text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .social-links {
+      .actions {
         justify-content: center;
       }
+    }
 
-      section {
-        margin-left: 0;
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
       }
 
-      p.prose {
-        text-align: justify;
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        opacity: 0.58;
+      }
+
+      50% {
+        opacity: 0.9;
+      }
+    }
+
+    @keyframes orbit {
+      from {
+        transform: rotate(0deg) scale(1);
+      }
+
+      50% {
+        transform: rotate(180deg) scale(1.06);
+      }
+
+      to {
+        transform: rotate(360deg) scale(1);
       }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <header class="header">
-      <img src="mxcl.webp" alt="Max Howell" class="portrait">
-      <div class="intro">
-        <div class="hero-text">
-          <h1>Max <span>Howell</span></h1>
-          <p class="tagline">Open Source Legend</p>
-        </div>
-        <p class="prose">
-          <strong>MAX HOWELL</strong> is a legendary open source developer.
-          Creator of <strong>Homebrew</strong>, used by tens of millions of developers around the world.
-        </p>
-        <p class="prose">
-          He is known for his careful approach to software development that results in delightful products that solve their niches perfectly.
-        </p>
-        <ul class="social-links">
-          <li><a href="https://github.com/mxcl">GitHub</a></li>
-          <li><a href="https://www.twitter.com/mxcl">Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/mxcl">LinkedIn</a></li>
-        </ul>
-      </div>
-    </header>
-
-    <section>
-      <h2>Links I Like</h2>
-      <ul class="links-section">
-        <li><a href="https://gamestudiosimulator.com">Game Studio Simulator</a></li>
-        <li><a href="https://inthebook.co">In The Book</a> — Custom children’s books with your kids in them</li>
-        <li><a href="https://nextbookafter.com">NextBookAfter</a> — Specific book recs for previously loved reads</li>
-        <li><a href="https://getchorale.com">Chorale</a> — Scheduling for small businesses with AI assistance</li>
-        <li><a href="https://stageofplay.com">Stage of Play</a> — Montessori-inspired play kits</li>
-      </ul>
+  <main class="site">
+    <section class="visual">
+      <a class="hero-link" href="https://gamestudiosimulator.com" target="_blank"
+        rel="noopener noreferrer" aria-label="Open Game Studio Simulator">
+        <img class="poster" src="images/be-one-sword.webp"
+          alt="Be One w/the Slop key art glowing in neon style">
+      </a>
     </section>
-  </div>
+
+    <section class="content">
+      <p class="eyebrow">Game Studio Simulator</p>
+      <h1>Be One with the <span class="accent">Slop</span></h1>
+      <p>
+        The whole vibe points to one destination. Follow the glow, click through,
+        and dive into <strong>Game Studio Simulator</strong>.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="https://gamestudiosimulator.com"
+          target="_blank" rel="noopener noreferrer">Launch Game Studio Simulator</a>
+        <a class="btn btn-secondary" href="https://gamestudiosimulator.com"
+          target="_blank" rel="noopener noreferrer">Visit Official Site</a>
+      </div>
+
+      <p class="foot-note">
+        Every major interaction on this page routes to
+        gamestudiosimulator.com.
+      </p>
+    </section>
+  </main>
 </body>
-
 </html>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-36JRFY9GL7');
-</script>
