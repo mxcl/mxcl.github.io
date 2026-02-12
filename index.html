@@ -260,19 +260,26 @@
 
     .slop-section {
       position: relative;
+      margin-top: 1.6rem;
     }
 
     .slop-card {
-      margin-top: 1.2rem;
       display: grid;
-      gap: 1rem;
-      max-width: 420px;
-      padding: 0.9rem;
-      border-radius: 14px;
+      grid-template-columns: minmax(220px, 0.95fr) minmax(240px, 1.05fr);
+      align-items: center;
+      gap: 1.1rem;
+      max-width: 760px;
+      padding: 1rem;
+      border-radius: 16px;
       background: linear-gradient(160deg, rgba(10, 10, 22, 0.82),
         rgba(8, 8, 18, 0.65));
       border: 1px solid rgba(211, 202, 185, 0.16);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .slop-visual {
+      display: grid;
+      place-items: center;
     }
 
     .slop-link {
@@ -311,6 +318,31 @@
       border-radius: 10px;
       border: 1px solid rgba(211, 202, 185, 0.22);
       box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5);
+    }
+
+    .slop-content {
+      display: grid;
+      align-content: center;
+      gap: 0.7rem;
+    }
+
+    .slop-eyebrow {
+      margin: 0;
+      font-family: 'Hind Madurai', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 10px rgba(71, 217, 255, 0.4);
+    }
+
+    .slop-title {
+      margin: 0;
+      font-family: 'Prociono', Georgia, serif;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      color: var(--warm-highlight);
+      text-shadow: 0 0 18px rgba(247, 67, 210, 0.2);
     }
 
     .slop-copy {
@@ -397,7 +429,13 @@
       }
 
       .slop-card {
+        grid-template-columns: 1fr;
         max-width: none;
+      }
+
+      .slop-content {
+        justify-items: center;
+        text-align: center;
       }
     }
 
@@ -436,23 +474,28 @@
     </header>
 
     <section class="slop-section">
-      <h2>Be One w/the Slop</h2>
       <div class="slop-card">
-        <a class="slop-link" href="https://gamestudiosimulator.com"
-          target="_blank" rel="noopener noreferrer"
-          aria-label="Open Game Studio Simulator">
-          <img src="images/be-one-sword.webp" class="slop-poster"
-            alt="Be One w/the Slop key art glowing in neon style">
-        </a>
-        <p class="slop-copy">
-          This neon portal leads directly to Game Studio Simulator.
-        </p>
-        <p>
-          <a class="slop-cta" href="https://gamestudiosimulator.com"
-            target="_blank" rel="noopener noreferrer">
-            Launch Game Studio Simulator
+        <div class="slop-visual">
+          <a class="slop-link" href="https://gamestudiosimulator.com"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Open Game Studio Simulator">
+            <img src="images/be-one-sword.webp" class="slop-poster"
+              alt="Be One w/the Slop key art glowing in neon style">
           </a>
-        </p>
+        </div>
+        <div class="slop-content">
+          <p class="slop-eyebrow">Game Studio Simulator</p>
+          <p class="slop-title">Be One w/the Slop</p>
+          <p class="slop-copy">
+            This neon portal leads directly to Game Studio Simulator.
+          </p>
+          <p>
+            <a class="slop-cta" href="https://gamestudiosimulator.com"
+              target="_blank" rel="noopener noreferrer">
+              Launch Game Studio Simulator
+            </a>
+          </p>
+        </div>
       </div>
     </section>
 
