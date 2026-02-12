@@ -49,8 +49,7 @@
     html {
       min-height: 100%;
       font-family: 'Source Serif Pro', Georgia, serif;
-      background: linear-gradient(135deg, var(--bg-deep) 0%, #0f1f21 40%,
-        #162526 100%);
+      background: var(--bg-deep);
       color: var(--cream);
     }
 
@@ -62,6 +61,8 @@
         max(3rem, env(safe-area-inset-left));
       line-height: 1.7;
       position: relative;
+      background: linear-gradient(135deg, var(--bg-deep) 0%, #0f1f21 40%,
+        #162526 100%);
     }
 
     body::before {
@@ -360,7 +361,7 @@
     .slop-title {
       margin: 0;
       font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
-      font-size: clamp(2rem, 4.3vw, 3.3rem);
+      font-size: clamp(2rem, 3.3vw, 2.65rem);
       line-height: 1.06;
       font-weight: 800;
       letter-spacing: 0.01em;
@@ -590,27 +591,28 @@
         </div>
         <div class="slop-content">
           <p class="slop-eyebrow">Game Studio Simulator</p>
-          <p class="slop-title">Be One with the
+          <p class="slop-title">Be One w/the
             <span class="slop-accent">Slop</span></p>
           <p class="slop-copy">
-            The whole vibe points to one destination. Follow the glow, click
-            through, and dive into <strong>Game Studio Simulator</strong>.
+            You have a game idea.
+          </p>
+          <p class="slop-copy" style="margin-top: -0.6em;">
+            We have the agents.
+          </p>
+          <p class="slop-copy" style="margin-top: -0.6em;">
+            Prompt it, watch it come to life, iterate like crazy, and actually
+            finish something for once in your pathetic, <i>human</i> life.
           </p>
           <div class="slop-actions">
-            <a class="slop-btn slop-btn-primary"
-              href="https://gamestudiosimulator.com"
-              target="_blank" rel="noopener noreferrer">
-              Launch Game Studio Simulator
-            </a>
             <a class="slop-btn slop-btn-secondary"
               href="https://gamestudiosimulator.com"
-              target="_blank" rel="noopener noreferrer">
+              target="_blank">
               Visit Official Site
             </a>
           </div>
           <p class="slop-note">
-            Every major interaction on this panel routes to
-            gamestudiosimulator.com.
+            <b>Prompt. Play. Publish.</b>
+            Build the game of your dreams.
           </p>
         </div>
       </div>
