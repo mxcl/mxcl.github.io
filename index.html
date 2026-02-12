@@ -448,6 +448,125 @@
       margin: 0;
     }
 
+    .tea-section {
+      margin-top: 1rem;
+    }
+
+    .tea-card {
+      width: min(680px, 100%);
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 1rem;
+      align-items: center;
+      background: linear-gradient(140deg, rgba(11, 9, 23, 0.8),
+        rgba(10, 8, 19, 0.65));
+      border: 1px solid rgba(241, 246, 255, 0.16);
+      border-radius: 20px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+      padding: 0.9rem 1rem;
+    }
+
+    .tea-badge {
+      width: 72px;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      background: linear-gradient(160deg, rgba(18, 14, 36, 0.9),
+        rgba(8, 8, 19, 0.62));
+      position: relative;
+      transition: transform 220ms ease;
+      outline: none;
+    }
+
+    .tea-badge:hover,
+    .tea-badge:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .tea-badge::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 20px;
+      background: conic-gradient(from 0deg, rgba(247, 67, 210, 0),
+        rgba(247, 67, 210, 0.55), rgba(71, 217, 255, 0.42),
+        rgba(255, 241, 203, 0.34), rgba(247, 67, 210, 0));
+      filter: blur(10px);
+      opacity: 0.55;
+      z-index: -1;
+      animation: spin 20s linear infinite;
+      pointer-events: none;
+    }
+
+    .tea-mark {
+      font-family: 'Chakra Petch', 'Eurostile', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--neon-sand);
+      text-shadow: 0 0 12px rgba(247, 67, 210, 0.38);
+    }
+
+    .tea-content {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .tea-eyebrow {
+      margin: 0;
+      color: var(--neon-cyan);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: 'Chakra Petch', 'Eurostile', sans-serif;
+      font-size: 0.72rem;
+      text-shadow: 0 0 12px rgba(71, 217, 255, 0.34);
+    }
+
+    .tea-title {
+      margin: 0;
+      font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
+      font-size: clamp(1.1rem, 2.6vw, 1.55rem);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: #f4f5ff;
+    }
+
+    .tea-title-link {
+      color: inherit;
+      border-bottom: 0;
+      text-decoration: none;
+    }
+
+    .tea-title-link:hover,
+    .tea-title-link:focus-visible {
+      color: var(--neon-sand);
+      border-bottom-color: transparent;
+      text-shadow: 0 0 14px rgba(255, 241, 203, 0.35);
+    }
+
+    .tea-copy {
+      margin: 0;
+      color: #b8bada;
+      max-width: 48ch;
+      line-height: 1.5;
+      font-size: 0.95rem;
+      text-wrap: pretty;
+    }
+
+    .tea-actions {
+      margin-top: 0.2rem;
+    }
+
+    .tea-btn {
+      padding: 0.56rem 0.95rem;
+      font-size: 0.84rem;
+    }
+
     @media (max-width: 900px) {
       .slop-card {
         grid-template-columns: 1fr;
@@ -460,6 +579,10 @@
 
       .slop-actions {
         justify-content: center;
+      }
+
+      .tea-card {
+        width: 100%;
       }
     }
 
@@ -539,11 +662,18 @@
         justify-items: center;
         text-align: center;
       }
+
+      .tea-card {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
       .slop-link::before,
       .slop-link::after,
+      .tea-badge::before,
       .slop-btn,
       .slop-link {
         animation: none;
@@ -613,6 +743,31 @@
           <p class="slop-note">
             <b>Prompt. Play. Publish.</b>
             Build the game of your dreams.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tea-section">
+      <div class="tea-card">
+        <a class="tea-badge" href="https://tea.xyz"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Open Tea Protocol website">
+          <span class="tea-mark">tea</span>
+        </a>
+        <div class="tea-content">
+          <p class="tea-eyebrow">Tea Protocol</p>
+          <p class="tea-title">
+            <a class="tea-title-link" href="https://tea.xyz"
+              target="_blank" rel="noopener noreferrer">tea.xyz</a>
+          </p>
+          <p class="tea-copy">
+            Max Howell founded the protocol, but is no longer a part of it.
+          </p>
+          <p class="tea-actions">
+            <a class="slop-btn slop-btn-secondary tea-btn"
+              href="https://tea.xyz" target="_blank"
+              rel="noopener noreferrer">Visit Tea Protocol</a>
           </p>
         </div>
       </div>
