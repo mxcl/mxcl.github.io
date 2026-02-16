@@ -513,6 +513,8 @@
     }
 
     .bookhole-section .tea-card {
+      grid-template-columns: 120px 1fr;
+      gap: 1.25rem;
       background: linear-gradient(165deg, rgba(10, 9, 22, 0.98),
         rgba(27, 37, 91, 0.9) 52%, rgba(12, 18, 45, 0.98));
       border: 1px solid rgba(93, 161, 200, 0.42);
@@ -520,6 +522,7 @@
     }
 
     .bookhole-section .tea-badge {
+      width: 120px;
       border-color: rgba(93, 161, 200, 0.62);
       background: linear-gradient(170deg, rgba(27, 37, 91, 0.94),
         rgba(59, 90, 157, 0.76));
@@ -534,6 +537,11 @@
 
     .bookhole-section .tea-logo {
       filter: drop-shadow(0 0 10px rgba(93, 161, 200, 0.35));
+    }
+
+    .bookhole-section .bookhole-logo {
+      width: 92px;
+      height: 92px;
     }
 
     .bookhole-section .tea-content {
@@ -656,6 +664,19 @@
 
       .tea-card {
         width: 100%;
+      }
+
+      .bookhole-section .tea-card {
+        grid-template-columns: 96px 1fr;
+      }
+
+      .bookhole-section .tea-badge {
+        width: 96px;
+      }
+
+      .bookhole-section .bookhole-logo {
+        width: 74px;
+        height: 74px;
       }
     }
 
