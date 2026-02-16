@@ -513,6 +513,7 @@
     }
 
     .bookhole-section .tea-card {
+      --bookhole-logo-height: 9.5rem;
       grid-template-columns: max-content 1fr;
       align-items: stretch;
       gap: 1.4rem;
@@ -524,9 +525,9 @@
 
     .bookhole-section .tea-badge {
       width: auto;
-      height: 100%;
+      height: var(--bookhole-logo-height);
       aspect-ratio: auto;
-      align-self: stretch;
+      align-self: start;
       border: 0;
       border-radius: 0;
       background: transparent;
@@ -543,8 +544,7 @@
 
     .bookhole-section .bookhole-logo {
       width: auto;
-      height: 100%;
-      max-height: none;
+      height: var(--bookhole-logo-height);
     }
 
     .bookhole-section .tea-content {
@@ -679,7 +679,7 @@
 
       .bookhole-section .bookhole-logo {
         width: auto;
-        height: 100%;
+        height: var(--bookhole-logo-height);
       }
     }
 
@@ -936,6 +936,31 @@
 
 </html>
 
+<script>
+  (() => {
+    const section = document.querySelector('.bookhole-section');
+    if (!section) return;
+
+    const content = section.querySelector('.tea-content');
+    if (!content) return;
+
+    const syncBookholeLogoHeight = () => {
+      const contentHeight = Math.ceil(content.getBoundingClientRect().height);
+      if (contentHeight > 0) {
+        section.style.setProperty('--bookhole-logo-height', `${contentHeight}px`);
+      }
+    };
+
+    syncBookholeLogoHeight();
+
+    if ('ResizeObserver' in window) {
+      const observer = new ResizeObserver(syncBookholeLogoHeight);
+      observer.observe(content);
+    }
+
+    window.addEventListener('load', syncBookholeLogoHeight, { once: true });
+  })();
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
