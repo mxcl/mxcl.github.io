@@ -513,8 +513,9 @@
     }
 
     .bookhole-section .tea-card {
-      grid-template-columns: 120px 1fr;
-      gap: 1.25rem;
+      grid-template-columns: max-content 1fr;
+      align-items: stretch;
+      gap: 1.4rem;
       background: linear-gradient(165deg, rgba(10, 9, 22, 0.98),
         rgba(27, 37, 91, 0.9) 52%, rgba(12, 18, 45, 0.98));
       border: 1px solid rgba(93, 161, 200, 0.42);
@@ -522,17 +523,18 @@
     }
 
     .bookhole-section .tea-badge {
-      width: 120px;
-      border-color: rgba(93, 161, 200, 0.62);
-      background: linear-gradient(170deg, rgba(27, 37, 91, 0.94),
-        rgba(59, 90, 157, 0.76));
+      width: auto;
+      height: 100%;
+      aspect-ratio: auto;
+      align-self: stretch;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      padding: 0;
     }
 
     .bookhole-section .tea-badge::before {
-      background: conic-gradient(from 0deg, rgba(187, 109, 94, 0),
-        rgba(187, 109, 94, 0.55), rgba(93, 161, 200, 0.48),
-        rgba(229, 239, 236, 0.3), rgba(187, 109, 94, 0));
-      opacity: 0.62;
+      content: none;
     }
 
     .bookhole-section .tea-logo {
@@ -540,8 +542,9 @@
     }
 
     .bookhole-section .bookhole-logo {
-      width: 92px;
-      height: 92px;
+      width: auto;
+      height: 100%;
+      max-height: none;
     }
 
     .bookhole-section .tea-content {
@@ -667,16 +670,16 @@
       }
 
       .bookhole-section .tea-card {
-        grid-template-columns: 96px 1fr;
+        grid-template-columns: max-content 1fr;
       }
 
       .bookhole-section .tea-badge {
-        width: 96px;
+        width: auto;
       }
 
       .bookhole-section .bookhole-logo {
-        width: 74px;
-        height: 74px;
+        width: auto;
+        height: 100%;
       }
     }
 
