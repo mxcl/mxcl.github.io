@@ -727,12 +727,18 @@
         width: 100%;
       }
 
+      .intro {
+        min-width: 0;
+        padding-top: 1.35rem;
+      }
+
       .hero-text {
-        position: absolute;
-        left: 1.5rem;
-        right: 1.5rem;
-        top: 1.5rem;
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
         z-index: 1;
+        margin: -6.35rem 1rem 1rem;
         padding: 0.35rem 0.55rem 0.65rem;
         border-radius: 0.5rem;
         background: linear-gradient(180deg, rgba(4, 9, 13, 0.72),
@@ -788,7 +794,28 @@
         text-align: center;
       }
 
+      .bookhole-section .tea-card {
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+        text-align: left;
+      }
+
+      .bookhole-section .tea-badge {
+        width: 100%;
+        height: auto;
+      }
+
+      .bookhole-section .bookhole-logo {
+        width: 100%;
+        height: auto;
+      }
+
       .tea-content {
+        padding: 0.15rem 0 0 0;
+      }
+
+      .bookhole-section .tea-content {
+        width: 100%;
         padding: 0.15rem 0 0 0;
       }
     }
