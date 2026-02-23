@@ -98,8 +98,14 @@
       flex-wrap: wrap;
     }
 
-    .portrait {
+    .portrait-wrap {
       width: 290px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .portrait {
+      width: 100%;
       height: auto;
       object-fit: cover;
       border: 3px solid var(--copper);
@@ -108,7 +114,6 @@
         0 8px 32px rgba(0, 0, 0, 0.5),
         0 2px 8px rgba(89, 145, 155, 0.2),
         inset 0 0 0 1px rgba(211, 202, 185, 0.1);
-      flex-shrink: 0;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       max-height: 600px;
     }
@@ -124,6 +129,10 @@
     .intro {
       flex: 1;
       min-width: 280px;
+    }
+
+    .hero-text-mobile {
+      display: none;
     }
 
     h1 {
@@ -567,6 +576,10 @@
       color: #BB6D5E;
     }
 
+    .bookhole-section .tea-actions {
+      text-align: center;
+    }
+
     .bookhole-section .tea-btn {
       color: #E5EFEC;
       background: rgba(27, 37, 91, 0.42);
@@ -727,18 +740,27 @@
         width: 100%;
       }
 
-      .intro {
-        min-width: 0;
-        padding-top: 1.35rem;
+      .portrait-wrap {
+        width: 100%;
       }
 
-      .hero-text {
-        position: relative;
-        left: auto;
-        right: auto;
-        top: auto;
+      .intro {
+        min-width: 0;
+        padding-top: 0;
+      }
+
+      .hero-text-inline {
+        display: none;
+      }
+
+      .hero-text-mobile {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
         z-index: 1;
-        margin: -6.35rem 1rem 1rem;
+        margin: 0;
         padding: 0.35rem 0.55rem 0.65rem;
         border-radius: 0.5rem;
         background: linear-gradient(180deg, rgba(4, 9, 13, 0.72),
@@ -833,12 +855,18 @@
   </style>
 </head>
 
-<body>
+  <body>
   <div class="container">
     <header class="header">
-      <img src="mxcl.webp" alt="Max Howell" class="portrait">
+      <div class="portrait-wrap">
+        <img src="mxcl.webp" alt="Max Howell" class="portrait">
+        <div class="hero-text hero-text-mobile">
+          <h1>Max <span>Howell</span></h1>
+          <p class="tagline">Open Source Legend</p>
+        </div>
+      </div>
       <div class="intro">
-        <div class="hero-text">
+        <div class="hero-text hero-text-inline">
           <h1>Max <span>Howell</span></h1>
           <p class="tagline">Open Source Legend</p>
         </div>
