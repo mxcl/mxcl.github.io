@@ -738,6 +738,7 @@
 
       .portrait {
         width: 100%;
+        display: block;
       }
 
       .portrait-wrap {
@@ -756,16 +757,18 @@
       .hero-text-mobile {
         display: block;
         position: absolute;
-        left: 1rem;
-        right: 1rem;
-        bottom: 1rem;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
         z-index: 1;
         margin: 0;
         padding: 0.35rem 0.55rem 0.65rem;
-        border-radius: 0.5rem;
+        /* border-radius: 0.5rem; */
         background: linear-gradient(180deg, rgba(4, 9, 13, 0.72),
           rgba(4, 9, 13, 0.06));
         backdrop-filter: blur(2px);
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
       }
 
       .hero-text h1,
@@ -774,14 +777,15 @@
       }
 
       .hero-text .tagline {
-        display: inline-block;
         padding: 0.08rem 0.4rem;
         border-radius: 0.28rem;
-        background: rgba(0, 0, 0, 0.5);
+        /* background: rgba(0, 0, 0, 0.5); */
         color: #D7ECF6;
         text-shadow:
           0 3px 22px rgba(0, 0, 0, 0.95),
           0 0 18px rgba(0, 0, 0, 0.85);
+        margin-bottom: 0.15em;
+        margin-top: -1em;
       }
 
       h1 {
@@ -941,15 +945,9 @@
               Supermassive Book Hole
             </a>
           </p>
-          <p class="tea-copy"><strong>Because Goodreads Sucks</strong></p>
-          <p class="tea-copy">
-            Supermassive Book Hole is your personal media universe — all in one place.
-          </p>
+          <p class="tea-copy"><strong>Your taste. Your shelf. Your people.</strong></p>
           <p class="tea-copy">
             You know that feeling when your bookshelf just gets you? We bring that to the web. Track books, movies, games, and albums together on beautiful shelves, add your own notes, and see what the people you actually trust are reading, watching, and playing right now.
-          </p>
-          <p class="tea-copy">
-            It's not another algorithm telling you what to consume. It's your taste, curated by you — and shared with your people.
           </p>
           <p class="tea-actions">
             <a class="slop-btn slop-btn-secondary tea-btn"
