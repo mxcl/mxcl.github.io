@@ -238,10 +238,11 @@
     }
 
     .social-links {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      margin-top: 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      width: 100%;
     }
 
     .social-links li {
@@ -254,14 +255,16 @@
     }
 
     .social-links a {
-      display: inline-block;
-      padding: 0.4rem 0.8rem;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.42rem 0.5rem;
       background: rgba(89, 145, 155, 0.15);
       border: 1px solid rgba(89, 145, 155, 0.3);
       border-radius: 4px;
       font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
     }
 
     .social-links a:hover {
@@ -941,7 +944,7 @@
       }
 
       .social-links {
-        justify-content: center;
+        gap: 0.4rem;
       }
 
       section {
@@ -1021,6 +1024,11 @@
           <h1>Max <span>Howell</span></h1>
           <p class="tagline">Open Source Legend</p>
         </div>
+        <ul class="social-links">
+          <li><a href="https://github.com/mxcl">GitHub</a></li>
+          <li><a href="https://www.twitter.com/mxcl">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/mxcl">LinkedIn</a></li>
+        </ul>
       </div>
       <div class="intro">
         <div class="hero-text hero-text-inline">
@@ -1051,11 +1059,6 @@
             </p>
           </div>
         </section>
-        <ul class="social-links">
-          <li><a href="https://github.com/mxcl">GitHub</a></li>
-          <li><a href="https://www.twitter.com/mxcl">Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/mxcl">LinkedIn</a></li>
-        </ul>
       </div>
     </header>
 
@@ -1069,16 +1072,12 @@
             rel="noopener noreferrer">BYOClaw</a>
         </p>
         <p class="byoclaw-copy">
-          Bring your <em>own</em> OpenClaw to the web.
-        </p>
-        <p class="byoclaw-copy">
-          Bring Your Own Claw is a specification that lets a human request
-          temporary access to a restricted API on a website for their OpenClaw.
+          Bring your <em>own</em> OpenClaw to the web and unlock its ninja powers on your favorite sites.
         </p>
         <p class="byoclaw-actions">
           <a class="slop-btn slop-btn-secondary" href="https://byoclaw.dev"
             target="_blank" rel="noopener noreferrer">
-            Visit Official Site
+            The Future is App-less
           </a>
         </p>
       </div>
