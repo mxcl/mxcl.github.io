@@ -674,14 +674,52 @@
       margin: 1.8rem auto 0;
     }
 
-    .hire-actions {
-      margin-top: 1.1rem;
+    .hire-link-section {
+      margin-top: 2.7rem;
     }
 
-    .hire-cta {
-      font-size: 1.08rem;
-      padding: 1rem 1.8rem;
-      box-shadow: 0 12px 30px rgba(247, 67, 210, 0.36);
+    .hire-link-card {
+      width: fit-content;
+      max-width: 100%;
+      margin-inline: auto;
+      background: rgba(13, 21, 22, 0.92);
+      border: 1px solid rgba(151, 93, 49, 0.45);
+      border-radius: 18px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+      padding: 1.35rem 1.5rem;
+      color: var(--cream);
+    }
+
+    .hire-link-title {
+      margin: 0;
+      font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
+      font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .hire-link-title a {
+      color: inherit;
+      border-bottom: 0;
+    }
+
+    .hire-link-title a:hover,
+    .hire-link-title a:focus-visible {
+      color: var(--golden);
+    }
+
+    .hire-link-copy {
+      margin: 0.45rem 0 0;
+      max-width: 46ch;
+      color: color-mix(in srgb, var(--cream) 88%, transparent);
+      line-height: 1.5;
+      text-wrap: pretty;
+    }
+
+    .hire-link-actions {
+      margin-top: 0.9rem;
+      margin-bottom: 0;
     }
 
     @media (max-width: 900px) {
@@ -977,67 +1015,21 @@
       </div>
     </section>
 
-    <section class="hire-section">
-      <h2>Hire Max Howell</h2>
-      <p>
-        I build products that actually ship and get used. If you need someone
-        who can take an idea from zero to a working system without a committee,
-        I do that.
-      </p>
-      <p>
-        I&rsquo;m the creator of Homebrew and a longtime startup founder and
-        product builder. I specialize in turning vague ideas into real
-        software, quickly, and in making complex systems understandable and
-        usable.
-      </p>
-
-      <p><strong>I&rsquo;m available for work like:</strong></p>
-      <ul>
-        <li>
-          Building and shipping new products from scratch (web apps, developer
-          tools, AI products, mobile apps, desktop apps, backend systems, you
-          name it I've dabbled in it or excelled in it)
-        </li>
-        <li>
-          Acting as a <strong>fractional CTO</strong> to help early-stage
-          companies make the right technical decisions
-        </li>
-        <li>
-          Rapid prototyping of new ideas to determine if they&rsquo;re worth
-          investing in
-        </li>
-        <li>
-          Architecting systems that scale without turning into a maintenance
-          nightmare
-        </li>
-        <li>
-          Fixing or simplifying overly complex codebases and developer tooling
-        </li>
-        <li>
-          Advising founders on product direction, developer experience, and
-          technical strategy
-        </li>
-      </ul>
-
-      <p><strong>Best fit</strong></p>
-      <p>
-        I work best with small teams, founders, or companies that need someone
-        who can move fast and make decisions. If you&rsquo;re stuck turning an
-        idea into a real product, or your technical direction has become messy
-        and slow, that&rsquo;s where I&rsquo;m most useful. I prefer practical
-        work that leads to shipped software and measurable progress.
-      </p>
-
-      <p><strong>Interested in working together?</strong></p>
-      <p>
-        Reach out with a short description of the problem you&rsquo;re trying
-        to solve and what outcome you want. If it sounds like something I can
-        materially improve, we&rsquo;ll talk.
-      </p>
-      <p class="hire-actions">
-        <a class="slop-btn slop-btn-primary hire-cta"
-          href="mailto:mxcl@me.com">Hire Max Howell</a>
-      </p>
+    <section class="hire-link-section">
+      <div class="hire-link-card">
+        <p class="hire-link-title">
+          <a href="/hire-me/">Hire Max Howell</a>
+        </p>
+        <p class="hire-link-copy">
+          Fractional CTO support, rapid prototypes, product architecture, and
+          direct execution to get meaningful software shipped.
+        </p>
+        <p class="hire-link-actions">
+          <a class="slop-btn slop-btn-secondary" href="/hire-me/">
+            Open Hire Me Page
+          </a>
+        </p>
+      </div>
     </section>
 
     <!--

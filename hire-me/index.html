@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Hire Me — Max Howell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&family=Prociono&family=Source+Serif+Pro:wght@300;400;600&display=swap">
+  <style>
+    :root {
+      --bg-deep: #0C1819;
+      --amber: #975D31;
+      --copper: #AF7449;
+      --teal: #59919B;
+      --cream: #D3CAB9;
+      --golden: #CD8F60;
+      --warm-highlight: #E8D5C4;
+      --panel: rgba(10, 16, 17, 0.9);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      background: linear-gradient(135deg, var(--bg-deep) 0%, #0f1f21 40%,
+          #162526 100%);
+      color: var(--cream);
+      font-family: 'Source Serif Pro', Georgia, serif;
+    }
+
+    body {
+      padding: max(2rem, env(safe-area-inset-top)) max(1.2rem,
+          env(safe-area-inset-right)) max(2.2rem, env(safe-area-inset-bottom))
+        max(1.2rem, env(safe-area-inset-left));
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(151, 93, 49, 0.42);
+      border-radius: 16px;
+      padding: clamp(1.3rem, 3vw, 2.1rem);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
+    }
+
+    h1 {
+      font-family: 'Prociono', Georgia, serif;
+      font-size: clamp(2rem, 6vw, 2.7rem);
+      font-weight: 400;
+      color: var(--warm-highlight);
+      margin-bottom: 0.2rem;
+    }
+
+    .eyebrow {
+      font-family: 'Hind Madurai', sans-serif;
+      font-size: 0.86rem;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 0.19em;
+      margin-bottom: 1.35rem;
+    }
+
+    p {
+      font-size: 1.08rem;
+      margin-bottom: 1.1rem;
+      max-width: 62ch;
+    }
+
+    h2 {
+      font-family: 'Prociono', Georgia, serif;
+      font-size: 1.38rem;
+      font-weight: 400;
+      margin-top: 1.8rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(151, 93, 49, 0.35);
+      padding-bottom: 0.2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.1rem;
+    }
+
+    li {
+      margin-bottom: 0.58rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+      font-weight: bold;
+    }
+
+    strong {
+      color: var(--golden);
+    }
+
+    .actions {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.82rem 1.35rem;
+      font-family: 'Hind Madurai', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .btn-primary {
+      color: #0A0D0D;
+      background: linear-gradient(100deg, #FFF1CB, #fcd8ff);
+      box-shadow: 0 10px 24px rgba(247, 67, 210, 0.28);
+      border: 0;
+    }
+
+    .btn-secondary {
+      color: var(--golden);
+      background: rgba(89, 145, 155, 0.12);
+      border: 1px solid rgba(89, 145, 155, 0.38);
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      p {
+        font-size: 1.02rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <article class="card">
+      <h1>Hire Max Howell</h1>
+      <p class="eyebrow">Open Source Legend</p>
+
+      <p>
+        I build products that actually ship and get used. If you need someone
+        who can take an idea from zero to a working system without a committee,
+        I do that.
+      </p>
+      <p>
+        I&rsquo;m the creator of Homebrew and a longtime startup founder and
+        product builder. I specialize in turning vague ideas into real
+        software, quickly, and in making complex systems understandable and
+        usable.
+      </p>
+
+      <h2>I&rsquo;m available for work like:</h2>
+      <ul>
+        <li>
+          Building and shipping new products from scratch (web apps, developer
+          tools, AI products, mobile apps, desktop apps, backend systems, and
+          more)
+        </li>
+        <li>
+          Acting as a <strong>fractional CTO</strong> to help early-stage
+          companies make the right technical decisions
+        </li>
+        <li>
+          Rapid prototyping of new ideas to determine if they&rsquo;re worth
+          investing in
+        </li>
+        <li>
+          Architecting systems that scale without turning into a maintenance
+          nightmare
+        </li>
+        <li>
+          Fixing or simplifying overly complex codebases and developer tooling
+        </li>
+        <li>
+          Advising founders on product direction, developer experience, and
+          technical strategy
+        </li>
+      </ul>
+
+      <h2>Best fit</h2>
+      <p>
+        I work best with small teams, founders, or companies that need someone
+        who can move fast and make decisions. If you&rsquo;re stuck turning an
+        idea into a real product, or your technical direction has become messy
+        and slow, that&rsquo;s where I&rsquo;m most useful. I prefer practical
+        work that leads to shipped software and measurable progress.
+      </p>
+
+      <h2>Interested in working together?</h2>
+      <p>
+        Reach out with a short description of the problem you&rsquo;re trying
+        to solve and what outcome you want. If it sounds like something I can
+        materially improve, we&rsquo;ll talk.
+      </p>
+
+      <p class="actions">
+        <a class="btn btn-primary" href="mailto:mxcl@me.com">Hire Max Howell</a>
+        <a class="btn btn-secondary" href="/">Back to Homepage</a>
+      </p>
+    </article>
+  </main>
+</body>
+
+</html>
