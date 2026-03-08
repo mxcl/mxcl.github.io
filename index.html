@@ -686,6 +686,62 @@
       margin-top: 2.7rem;
     }
 
+    .projects-divider {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin: 1.9rem 0 0.2rem;
+      color: color-mix(in srgb, var(--cream) 68%, transparent);
+    }
+
+    .projects-divider-word {
+      font-family: 'Hind Madurai', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.75rem;
+      color: color-mix(in srgb, var(--cream) 70%, transparent);
+      white-space: nowrap;
+    }
+
+    .projects-divider-line {
+      flex: 1;
+      position: relative;
+      height: 22px;
+      min-width: 48px;
+    }
+
+    .projects-divider-line::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      right: 12px;
+      border-top: 1px solid rgba(211, 202, 185, 0.42);
+      transform: translateY(-50%);
+    }
+
+    .projects-divider-line::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      border: 1px solid rgba(211, 202, 185, 0.48);
+      border-radius: 50% 50% 50% 0;
+      transform: translateY(-50%) rotate(45deg);
+      opacity: 0.85;
+    }
+
+    .projects-divider-line-left::after {
+      left: 0;
+    }
+
+    .projects-divider-line-right::after {
+      right: 0;
+      transform: translateY(-50%) scaleX(-1) rotate(45deg);
+    }
+
     .byoclaw-card {
       width: fit-content;
       max-width: min(680px, 100%);
@@ -947,6 +1003,15 @@
         gap: 0.4rem;
       }
 
+      .projects-divider {
+        gap: 0.6rem;
+      }
+
+      .projects-divider-word {
+        letter-spacing: 0.18em;
+        font-size: 0.68rem;
+      }
+
       section {
         margin-left: 0;
       }
@@ -1061,6 +1126,12 @@
         </section>
       </div>
     </header>
+
+    <div class="projects-divider" role="separator" aria-label="Projects">
+      <span class="projects-divider-line projects-divider-line-left"></span>
+      <span class="projects-divider-word">Projects</span>
+      <span class="projects-divider-line projects-divider-line-right"></span>
+    </div>
 
     <section class="byoclaw-section">
       <div class="byoclaw-card">
