@@ -675,7 +675,8 @@
     }
 
     .hire-link-section {
-      margin-top: 2.7rem;
+      margin-top: 1rem;
+      margin-bottom: 0.4rem;
     }
 
     .byoclaw-section {
@@ -757,23 +758,22 @@
     }
 
     .hire-link-card {
-      width: fit-content;
-      max-width: 100%;
+      width: min(680px, 100%);
       margin-inline: auto;
-      background: rgba(13, 21, 22, 0.92);
-      border: 1px solid rgba(151, 93, 49, 0.45);
-      border-radius: 18px;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
-      padding: 1.35rem 1.5rem;
+      background: rgba(12, 24, 25, 0.52);
+      border: 1px dashed rgba(211, 202, 185, 0.3);
+      border-radius: 14px;
+      box-shadow: none;
+      padding: 1rem 1.2rem;
       color: var(--cream);
     }
 
     .hire-link-title {
       margin: 0;
       font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
-      font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
       line-height: 1.2;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 0.01em;
     }
 
@@ -788,30 +788,30 @@
     }
 
     .hire-link-copy {
-      margin: 0.45rem 0 0;
+      margin: 0.38rem 0 0;
       max-width: 46ch;
-      color: color-mix(in srgb, var(--cream) 88%, transparent);
+      color: color-mix(in srgb, var(--cream) 78%, transparent);
       line-height: 1.5;
       text-wrap: pretty;
     }
 
     .hire-link-actions {
-      margin-top: 0.9rem;
+      margin-top: 0.72rem;
       margin-bottom: 0;
     }
 
     .hire-link-actions .slop-btn {
-      color: var(--golden);
-      background: rgba(151, 93, 49, 0.14);
-      border: 1px solid rgba(151, 93, 49, 0.5);
-      box-shadow: inset 0 0 0 1px rgba(211, 202, 185, 0.08);
+      color: color-mix(in srgb, var(--cream) 82%, transparent);
+      background: transparent;
+      border: 1px dashed rgba(89, 145, 155, 0.36);
+      box-shadow: none;
     }
 
     .hire-link-actions .slop-btn:hover,
     .hire-link-actions .slop-btn:focus-visible {
       color: var(--warm-highlight);
-      background: rgba(151, 93, 49, 0.22);
-      border-color: rgba(175, 116, 73, 0.82);
+      background: rgba(89, 145, 155, 0.08);
+      border-color: rgba(151, 93, 49, 0.52);
     }
 
     @media (max-width: 900px) {
@@ -1043,6 +1043,23 @@
       </div>
     </header>
 
+    <section class="hire-link-section">
+      <div class="hire-link-card">
+        <p class="hire-link-title">
+          <a href="/hire-me/">Hire Max Howell</a>
+        </p>
+        <p class="hire-link-copy">
+          Fractional CTO support, rapid prototypes, product architecture, and
+          direct execution to get meaningful software shipped.
+        </p>
+        <p class="hire-link-actions">
+          <a class="slop-btn slop-btn-secondary" href="/hire-me/">
+            See How I Can Help Your Business
+          </a>
+        </p>
+      </div>
+    </section>
+
     <section class="byoclaw-section">
       <div class="byoclaw-card">
         <img src="images/byoclaw-plushie.webp"
@@ -1133,23 +1150,6 @@
               rel="noopener noreferrer">Visit Official Site</a>
           </p>
         </div>
-      </div>
-    </section>
-
-    <section class="hire-link-section">
-      <div class="hire-link-card">
-        <p class="hire-link-title">
-          <a href="/hire-me/">Hire Max Howell</a>
-        </p>
-        <p class="hire-link-copy">
-          Fractional CTO support, rapid prototypes, product architecture, and
-          direct execution to get meaningful software shipped.
-        </p>
-        <p class="hire-link-actions">
-          <a class="slop-btn slop-btn-secondary" href="/hire-me/">
-            See How I Can Help Your Business
-          </a>
-        </p>
       </div>
     </section>
 
