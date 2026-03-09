@@ -4,7 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Hire Me — Max Howell</title>
+  <title>Hire Max Howell — AI Implementation Consultant & Fractional Head of Agent Systems</title>
+  <meta name="description" content="Hire Max Howell for AI implementation consulting: agent architecture, reliability, evals, and production execution.">
+  <link rel="canonical" href="https://mxcl.dev/hire-me/">
+  <meta property="og:title" content="Hire Max Howell — AI Implementation Consultant">
+  <meta property="og:description" content="Fractional Head of Agent Systems for companies shipping AI in production.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mxcl.dev/hire-me/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Max Howell","url":"https://mxcl.dev","jobTitle":"AI Implementation Consultant","sameAs":["https://github.com/mxcl","https://www.linkedin.com/in/mxcl"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
@@ -218,11 +226,23 @@
       </p>
 
       <p class="actions">
-        <a class="btn btn-primary" href="mailto:mxcl@me.com">Hire Max Howell</a>
+        <a class="btn btn-primary" href="mailto:mxcl@me.com" data-cta="hire-me">Hire Max Howell</a>
         <a class="btn btn-secondary" href="/">Back to Homepage</a>
+      </p>
+      <p>
+        Related: <a href="/ai-implementation-consultant/">AI implementation consultant</a> ·
+        <a href="/fractional-head-of-ai/">fractional head of AI</a> ·
+        <a href="/enterprise-agent-architecture/">enterprise agent architecture</a>
       </p>
     </article>
   </main>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-36JRFY9GL7');
+    document.querySelectorAll('a[data-cta]').forEach(a=>a.addEventListener('click',()=>gtag('event','hire_cta_click',{page:'hire-me',label:a.dataset.cta})));
+  </script>
 </body>
 
 </html>
