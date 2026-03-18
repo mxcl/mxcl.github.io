@@ -617,6 +617,56 @@
       box-shadow: 0 10px 22px rgba(10, 9, 22, 0.48);
     }
 
+    .clawlicious-section .tea-card {
+      background: linear-gradient(165deg, rgba(24, 14, 10, 0.96), rgba(57, 32, 19, 0.92) 52%, rgba(17, 20, 16, 0.98));
+      border: 1px solid rgba(205, 143, 96, 0.55);
+      box-shadow: 0 18px 36px rgba(18, 11, 8, 0.52);
+    }
+
+    .clawlicious-section .tea-badge {
+      border-color: rgba(205, 143, 96, 0.65);
+      background: radial-gradient(circle at 50% 40%, rgba(255, 241, 203, 0.2), rgba(25, 17, 11, 0.92));
+    }
+
+    .clawlicious-section .tea-badge::before {
+      background: conic-gradient(from 0deg, rgba(205, 143, 96, 0), rgba(205, 143, 96, 0.72), rgba(151, 93, 49, 0.42), rgba(205, 143, 96, 0.2), rgba(205, 143, 96, 0));
+      opacity: 0.65;
+    }
+
+    .clawlicious-section .tea-logo {
+      width: 54px;
+      filter: drop-shadow(0 0 8px rgba(255, 202, 155, 0.32));
+    }
+
+    .clawlicious-section .tea-eyebrow {
+      color: #E4B58D;
+      text-shadow: 0 0 12px rgba(205, 143, 96, 0.34);
+    }
+
+    .clawlicious-section .tea-content {
+      color: #F4E8DD;
+    }
+
+    .clawlicious-section .tea-title-link:hover,
+    .clawlicious-section .tea-title-link:focus-visible {
+      color: #FFD4AF;
+      text-shadow: 0 0 12px rgba(255, 212, 175, 0.32);
+    }
+
+    .clawlicious-section .tea-btn {
+      color: #FFE4CE;
+      background: rgba(205, 143, 96, 0.12);
+      border-color: rgba(205, 143, 96, 0.62);
+      box-shadow: inset 0 0 0 1px rgba(255, 228, 206, 0.1);
+    }
+
+    .clawlicious-section .tea-btn:hover,
+    .clawlicious-section .tea-btn:focus-visible {
+      color: #FFF6EE;
+      border-color: rgba(255, 212, 175, 0.85);
+      box-shadow: 0 10px 22px rgba(22, 14, 10, 0.5);
+    }
+
     .tea-content {
       display: grid;
       gap: 0.45rem;
@@ -1182,7 +1232,8 @@
       <div class="tea-card">
         <a class="tea-badge" href="https://clawlicio.us" target="_blank"
           rel="noopener noreferrer" aria-label="Open Clawlicious website">
-          <span style="font-family:'Chakra Petch','Eurostile',sans-serif;font-weight:700;letter-spacing:0.08em;color:#98F7D3;font-size:0.8rem;">CLAW</span>
+          <img class="tea-logo" src="images/clawlicious-logo.webp"
+            alt="Clawlicious logo">
         </a>
         <div class="tea-content">
           <p class="tea-eyebrow">Clawlicious</p>
