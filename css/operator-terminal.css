@@ -68,6 +68,7 @@ a {
 }
 
 .brand,
+.back-link,
 .site-nav,
 .site-footer,
 .eyebrow,
@@ -81,6 +82,7 @@ a {
 }
 
 .brand,
+.back-link,
 .site-nav a,
 .site-footer a {
   font-size: 0.9rem;
@@ -89,6 +91,10 @@ a {
 .brand {
   font-weight: 600;
   letter-spacing: 0.04em;
+}
+
+.back-link {
+  color: var(--muted);
 }
 
 .site-nav,
@@ -104,6 +110,7 @@ a {
 
 .site-nav a,
 .site-footer a,
+.back-link,
 .section-link,
 .cta-link,
 .email-link {
@@ -117,6 +124,8 @@ a {
 .site-nav a:focus-visible,
 .site-footer a:hover,
 .site-footer a:focus-visible,
+.back-link:hover,
+.back-link:focus-visible,
 .section-link:hover,
 .section-link:focus-visible,
 .cta-link:hover,
@@ -224,8 +233,21 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.section-copy {
+  max-width: 42rem;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .panel-stack {
   display: grid;
+  gap: 1rem;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -248,6 +270,19 @@ h1 {
   display: grid;
   gap: 0.5rem;
   margin-top: 1rem;
+}
+
+.panel ul li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.panel ul li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
 }
 
 .section-link {
@@ -313,6 +348,10 @@ h1 {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .panel-grid {
+    grid-template-columns: 1fr;
   }
 
   .panel {

@@ -7,7 +7,7 @@
   <title>Enterprise Agent Architecture | Max Howell</title>
   <meta name="description"
     content="Enterprise agent architecture consulting for companies that need
-      clearer boundaries, safer tool use, and production-ready rollout rules.">
+      clearer boundaries, safer tool use, and rollout rules that hold.">
   <link rel="canonical" href="https://mxcl.dev/enterprise-agent-architecture/">
   <meta property="og:title" content="Enterprise Agent Architecture">
   <meta property="og:description"
@@ -17,112 +17,108 @@
     content="https://mxcl.dev/enterprise-agent-architecture/">
   <meta property="og:image" content="https://mxcl.dev/avatar.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#08161b">
-  <link rel="stylesheet" href="/css/nocturne.css">
+  <meta name="theme-color" content="#0b0f0c">
+  <link rel="stylesheet" href="/css/operator-terminal.css">
 </head>
 
-<body>
+<body class="operator-terminal">
   <main class="page-shell">
-    <header class="site-bar">
+    <header class="site-header">
       <a class="back-link" href="/">Back to mxcl.dev</a>
       <nav class="site-nav" aria-label="Related pages">
-        <a href="/hire-me/">Hire Max</a>
-        <a href="/ai-implementation-consultant/">AI Implementation</a>
-        <a href="/fractional-head-of-ai/">Fractional Head of AI</a>
+        <a href="/hire-me/">Hire</a>
+        <a href="/ai-implementation-consultant/">Implementation</a>
+        <a href="/fractional-head-of-ai/">Leadership</a>
         <a href="/homebrew/">Homebrew</a>
       </nav>
     </header>
 
-    <section class="hero hero-service" aria-labelledby="architecture-title">
-      <figure class="portrait-panel compact hero-panel">
-        <img src="/avatar.webp"
-          alt="Close portrait of Max Howell in front of a city skyline">
-        <div class="window-tag">
-          <span class="window-label">Complex environments</span>
-          <span class="window-label">Safe rollout, clean boundaries</span>
-        </div>
-      </figure>
-
-      <article class="hero-copy hero-panel">
-        <p class="eyebrow">Enterprise agent architecture</p>
-        <h1 class="display medium" id="architecture-title">
-          Architect the system before it architects your incidents
-        </h1>
-        <p class="lede">
-          Larger agent systems fail in predictable ways: too many moving parts,
-          unclear tool permissions, weak ownership, and no rollout discipline.
-          I help teams design the structure before scale turns those issues into
-          policy and operational pain.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:mxcl@me.com"
-            data-cta="enterprise-agent-architecture">
-            Get architecture help
-          </a>
-          <a class="btn btn-secondary"
-            href="/fractional-head-of-ai/">Leadership model</a>
-        </div>
-      </article>
-    </section>
-
-    <section class="section">
-      <div class="service-grid">
-        <article class="service-card">
-          <p class="micro-label">Boundaries</p>
-          <h3 class="service-title">Agent and tool routing</h3>
-          <p class="service-copy">
-            Which agent does what, which tools are exposed, and where policy
-            has to be enforced instead of implied.
-          </p>
-        </article>
-        <article class="service-card">
-          <p class="micro-label">Safety</p>
-          <h3 class="service-title">Failure and escalation design</h3>
-          <p class="service-copy">
-            Retries, human handoff, auditability, and the situations where the
-            system should stop rather than improvise.
-          </p>
-        </article>
-        <article class="service-card">
-          <p class="micro-label">Operability</p>
-          <h3 class="service-title">Observability and incident readiness</h3>
-          <p class="service-copy">
-            Better traces, better diagnostics, and runbooks that make incidents
-            shorter and less mysterious.
-          </p>
-        </article>
-        <article class="service-card">
-          <p class="micro-label">Rollout</p>
-          <h3 class="service-title">Phased release strategy</h3>
-          <p class="service-copy">
-            I help teams introduce agent systems in controllable steps instead
-            of giant launches with vague confidence.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="quote-card">
-        <p class="micro-label">Design principle</p>
-        <blockquote>Defaults beat options. Boundaries beat hope.</blockquote>
-        <p class="card-copy">
-          Enterprise AI platforms get brittle when every team can configure its
-          own universe. I prefer strong primitives, fewer escape hatches, and
-          clearer responsibility.
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer-row">
-      <p class="footer-note">
-        Need broader organizational coverage? Pair this with a fractional role.
+    <section class="hero section" aria-labelledby="architecture-title">
+      <p class="eyebrow">architecture / systems design</p>
+      <h1 id="architecture-title">Enterprise agent architecture.</h1>
+      <h2>Boundaries before scale.</h2>
+      <p class="lede">
+        Large agent systems fail in predictable ways: too many moving parts,
+        vague tool permissions, weak ownership, and rollout rules that do not
+        exist. I fix the structure before those failures become routine.
       </p>
-      <div class="mini-nav">
-        <a class="back-link" href="/fractional-head-of-ai/">
-          See fractional leadership
+      <ul class="focus-list" aria-label="Focus areas">
+        <li>&rarr; Tool routing</li>
+        <li>&rarr; Permission boundaries</li>
+        <li>&rarr; Fallback design</li>
+        <li>&rarr; Rollout strategy</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="cta-link" href="mailto:mxcl@me.com"
+          data-cta="enterprise-agent-architecture">
+          [ Get architecture help ]
         </a>
+        <a class="email-link" href="mailto:mxcl@me.com">mxcl@me.com</a>
       </div>
+    </section>
+
+    <section class="section" aria-labelledby="design-title">
+      <div class="section-heading">
+        <h2 id="design-title">What I design</h2>
+      </div>
+      <div class="panel-grid">
+        <article class="panel">
+          <h3>Agent and tool routing</h3>
+          <ul>
+            <li>which agent does what</li>
+            <li>which tools are exposed</li>
+            <li>where policy is enforced instead of implied</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h3>Failure and escalation design</h3>
+          <ul>
+            <li>retries and human handoff</li>
+            <li>auditability and stop conditions</li>
+            <li>fallbacks for when the model should not improvise</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h3>Observability and incident readiness</h3>
+          <ul>
+            <li>traces that explain behavior</li>
+            <li>diagnostics that point to the failure</li>
+            <li>runbooks that shorten incidents</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h3>Phased rollout strategy</h3>
+          <ul>
+            <li>controlled release steps</li>
+            <li>eval-backed expansion</li>
+            <li>less confidence theater</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="break-title">
+      <div class="section-heading">
+        <h2 id="break-title">What breaks first</h2>
+      </div>
+      <div class="panel">
+        <ul>
+          <li>every team gets its own routing logic</li>
+          <li>tool permissions exist only in people&apos;s heads</li>
+          <li>fallback paths appear after incidents</li>
+          <li>rollout policy is just optimism with a calendar</li>
+        </ul>
+        <p class="statement">Defaults beat options. Boundaries beat hope.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <a href="https://github.com/mxcl" target="_blank"
+        rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/mxcl" target="_blank"
+        rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.twitter.com/mxcl" target="_blank"
+        rel="noopener noreferrer">Twitter</a>
     </footer>
   </main>
 
