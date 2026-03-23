@@ -4,247 +4,187 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Hire Max Howell — AI Implementation Consultant & Fractional Head of AI</title>
-  <meta name="description" content="Hire Max Howell for AI implementation consulting: agent architecture, reliability, evals, and production execution.">
+  <title>Hire Max Howell | Production AI Consulting</title>
+  <meta name="description"
+    content="Hire Max Howell for AI implementation consulting, fractional AI
+      leadership, and agent architecture work that is operable in production.">
   <link rel="canonical" href="https://mxcl.dev/hire-me/">
-  <meta property="og:title" content="Hire Max Howell — AI Implementation Consultant">
-  <meta property="og:description" content="Fractional Head of Agent Systems for companies shipping AI in production.">
+  <meta property="og:title" content="Hire Max Howell">
+  <meta property="og:description"
+    content="Production AI consulting with cleaner architecture, eval
+      discipline, and fewer moving parts.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mxcl.dev/hire-me/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://mxcl.dev/mxcl.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#08161b">
+  <link rel="stylesheet" href="/css/nocturne.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Max Howell","url":"https://mxcl.dev","jobTitle":"AI Implementation Consultant","sameAs":["https://github.com/mxcl","https://www.linkedin.com/in/mxcl"]}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&family=Prociono&family=Source+Serif+Pro:wght@300;400;600&display=swap">
-  <style>
-    :root {
-      --bg-deep: #0C1819;
-      --amber: #975D31;
-      --copper: #AF7449;
-      --teal: #59919B;
-      --cream: #D3CAB9;
-      --golden: #CD8F60;
-      --warm-highlight: #E8D5C4;
-      --panel: rgba(10, 16, 17, 0.9);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html,
-    body {
-      min-height: 100%;
-      background: linear-gradient(135deg, var(--bg-deep) 0%, #0f1f21 40%,
-          #162526 100%);
-      color: var(--cream);
-      font-family: 'Source Serif Pro', Georgia, serif;
-    }
-
-    body {
-      padding: max(2rem, env(safe-area-inset-top)) max(1.2rem,
-          env(safe-area-inset-right)) max(2.2rem, env(safe-area-inset-bottom))
-        max(1.2rem, env(safe-area-inset-left));
-      line-height: 1.7;
-    }
-
-    .container {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid rgba(151, 93, 49, 0.42);
-      border-radius: 16px;
-      padding: clamp(1.3rem, 3vw, 2.1rem);
-      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
-    }
-
-    h1 {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: clamp(2rem, 6vw, 2.7rem);
-      font-weight: 400;
-      color: var(--warm-highlight);
-      margin-bottom: 0.2rem;
-    }
-
-    .eyebrow {
-      font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.86rem;
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: 0.19em;
-      margin-bottom: 1.35rem;
-    }
-
-    p {
-      font-size: 1.08rem;
-      margin-bottom: 1.1rem;
-      max-width: 62ch;
-    }
-
-    h2 {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: 1.38rem;
-      font-weight: 400;
-      margin-top: 1.8rem;
-      margin-bottom: 0.75rem;
-      border-bottom: 1px solid rgba(151, 93, 49, 0.35);
-      padding-bottom: 0.2rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1.1rem;
-    }
-
-    li {
-      margin-bottom: 0.58rem;
-      position: relative;
-      padding-left: 1.2rem;
-    }
-
-    li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: var(--amber);
-      font-weight: bold;
-    }
-
-    strong {
-      color: var(--golden);
-    }
-
-    .actions {
-      margin-top: 1.2rem;
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      border-radius: 999px;
-      padding: 0.82rem 1.35rem;
-      font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      transition: transform 200ms ease, box-shadow 200ms ease;
-    }
-
-    .btn-primary {
-      color: #0A0D0D;
-      background: linear-gradient(100deg, #FFF1CB, #fcd8ff);
-      box-shadow: 0 10px 24px rgba(247, 67, 210, 0.28);
-      border: 0;
-    }
-
-    .btn-secondary {
-      color: var(--golden);
-      background: rgba(89, 145, 155, 0.12);
-      border: 1px solid rgba(89, 145, 155, 0.38);
-    }
-
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 600px) {
-      p {
-        font-size: 1.02rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <main class="container">
-    <article class="card">
-      <h1>Hire Max Howell for AI Implementation Consulting</h1>
-      <p class="eyebrow">Agent Systems & Product Reliability</p>
+  <main class="page-shell">
+    <header class="site-bar">
+      <a class="back-link" href="/">Back to mxcl.dev</a>
+      <nav class="site-nav" aria-label="Related pages">
+        <a href="/ai-implementation-consultant/">AI Implementation</a>
+        <a href="/fractional-head-of-ai/">Fractional Head of AI</a>
+        <a href="/enterprise-agent-architecture/">Architecture</a>
+        <a href="/homebrew/">Homebrew</a>
+      </nav>
+    </header>
 
-      <p>
-        I help teams turn AI-agent demos into reliable production systems.
-        My specialty is practical execution: clear architecture, strong defaults,
-        and fewer moving parts.
-      </p>
-      <p>
-        I&rsquo;ve spent years building software used
-        by millions, and I bring that same maintainer discipline to agentic
-        products: avoid config sprawl, reduce operational surprises, and ship
-        systems that keep working.
-      </p>
+    <section class="hero hero-service" aria-labelledby="hire-title">
+      <figure class="portrait-panel hero-panel">
+        <img src="/mxcl.png"
+          alt="Max Howell standing in a suit against a nighttime skyline">
+        <div class="window-tag">
+          <span class="window-label">Agent systems · reliability · execution</span>
+          <span class="window-label">Available for select engagements</span>
+        </div>
+        <div class="window-stats">
+          <div class="stat">
+            <strong>Architecture</strong>
+            <span>Sharper boundaries, less agent sprawl, cleaner operating
+              rules.</span>
+          </div>
+          <div class="stat">
+            <strong>Reliability</strong>
+            <span>Evals, release gates, fallback design, and incident
+              readiness.</span>
+          </div>
+          <div class="stat">
+            <strong>Leadership</strong>
+            <span>Senior technical judgment without a full-time executive
+              hire.</span>
+          </div>
+        </div>
+      </figure>
 
-      <h2>I&rsquo;m available for work like:</h2>
-      <ul>
-        <li>
-          Acting as a <strong>fractional Head of Agent Systems</strong> for teams
-          adopting AI in production
-        </li>
-        <li>
-          Designing agent architecture and boundaries (where agents should and
-          shouldn&rsquo;t be used)
-        </li>
-        <li>
-          Establishing reliability foundations: retries, timeouts, fallbacks,
-          observability, and incident runbooks
-        </li>
-        <li>
-          Building evaluation loops and release gates so quality improves over time
-        </li>
-        <li>
-          Simplifying over-configured platforms and replacing complexity with
-          maintainable defaults
-        </li>
-        <li>
-          Advising founders and engineering leaders on product and platform strategy
-        </li>
-      </ul>
+      <article class="hero-copy hero-panel">
+        <p class="eyebrow">Hire Max Howell</p>
+        <h1 class="display medium" id="hire-title">
+          Executive help for AI systems that have to work
+        </h1>
+        <p class="lede">
+          I step in when the prototype is promising, the stakes are rising, and
+          the product now needs discipline. The brief is usually the same:
+          reduce complexity, define the architecture, install quality controls,
+          and get the team shipping with less drama.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Fractional Head of AI</span>
+          <span class="chip">Architecture reset</span>
+          <span class="chip">Reliability overhaul</span>
+          <span class="chip">Product-minded execution</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:mxcl@me.com"
+            data-cta="hire-me">mxcl@me.com</a>
+          <a class="btn btn-secondary"
+            href="/ai-implementation-consultant/">Implementation scope</a>
+          <a class="btn btn-secondary"
+            href="/fractional-head-of-ai/">Leadership model</a>
+        </div>
+      </article>
+    </section>
 
-      <h2>Best fit</h2>
-      <p>
-        I work best with founders and product-minded engineering teams who are
-        past the prototype stage and need dependable execution. If your agent
-        roadmap is exciting but messy, I help you get to production outcomes
-        without burning the team.
-      </p>
+    <section class="section" aria-labelledby="services-title">
+      <div class="section-heading">
+        <h2 class="section-title" id="services-title">What I do</h2>
+        <p class="section-note">High-leverage work, not ornamental AI theater.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <p class="micro-label">System shape</p>
+          <h3 class="service-title">Define where agents belong</h3>
+          <p class="service-copy">
+            I help teams decide what should be agentic, what should be
+            deterministic, and where simple software still wins.
+          </p>
+        </article>
+        <article class="service-card">
+          <p class="micro-label">Quality control</p>
+          <h3 class="service-title">Install eval and release discipline</h3>
+          <p class="service-copy">
+            Every important model or tool change needs tests, baselines, and a
+            clean path to rollback when quality slips.
+          </p>
+        </article>
+        <article class="service-card">
+          <p class="micro-label">Platform restraint</p>
+          <h3 class="service-title">Cut config sprawl</h3>
+          <p class="service-copy">
+            When internal AI platforms start growing switches and policy
+            matrices instead of outcomes, I simplify the operating surface.
+          </p>
+        </article>
+        <article class="service-card">
+          <p class="micro-label">Leadership</p>
+          <h3 class="service-title">Guide teams through the messy phase</h3>
+          <p class="service-copy">
+            Founders and engineering leaders use me when they want senior
+            judgment, sharper defaults, and faster decisions.
+          </p>
+        </article>
+      </div>
+    </section>
 
-      <h2>Interested in working together?</h2>
-      <p>
-        Reach out with a short description of the problem you&rsquo;re trying
-        to solve and what outcome you want. If it sounds like something I can
-        materially improve, we&rsquo;ll talk.
-      </p>
+    <section class="section" aria-labelledby="fit-title">
+      <div class="stat-grid">
+        <article class="stat-card">
+          <p class="micro-label">Best fit</p>
+          <h3 class="stat-title">Past the demo stage</h3>
+          <p class="stat-copy">
+            Your team already believes in the opportunity. The issue is turning
+            that momentum into a system that remains operable after launch.
+          </p>
+        </article>
+        <article class="stat-card">
+          <p class="micro-label">Engagements</p>
+          <h3 class="stat-title">90-day mandates</h3>
+          <p class="stat-copy">
+            I work well in targeted advisory or build-heavy engagements with
+            concrete outcomes and clear ownership.
+          </p>
+        </article>
+        <article class="stat-card">
+          <p class="micro-label">Output</p>
+          <h3 class="stat-title">Less noise, more signal</h3>
+          <p class="stat-copy">
+            The result is usually simpler systems, better failure handling, and
+            a team that can move without breaking itself.
+          </p>
+        </article>
+      </div>
+    </section>
 
-      <p class="actions">
-        <a class="btn btn-primary" href="mailto:mxcl@me.com" data-cta="hire-me">Hire Max Howell</a>
-        <a class="btn btn-secondary" href="/">Back to Homepage</a>
+    <footer class="footer-row">
+      <p class="footer-note">
+        Reach out with the problem, the current state, and the outcome you want.
       </p>
-      <p>
-        <a href="/ai-implementation-consultant/">AI implementation consultant</a> ·
-        <a href="/fractional-head-of-ai/">fractional head of AI</a> ·
-        <a href="/enterprise-agent-architecture/">enterprise agent architecture</a>
-      </p>
-      <p>
-        I created <a href="/homebrew/">Homebrew</a> and now help teams ship production AI systems with agent architecture, evals, and reliability.
-      </p>
-    </article>
+      <div class="mini-nav">
+        <a class="back-link" href="mailto:mxcl@me.com" data-cta="hire-me-footer">
+          Email Max
+        </a>
+      </div>
+    </footer>
   </main>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-36JRFY9GL7');
-    document.querySelectorAll('a[data-cta]').forEach(a=>a.addEventListener('click',()=>gtag('event','hire_cta_click',{page:'hire-me',label:a.dataset.cta})));
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-36JRFY9GL7');
+    document.querySelectorAll('a[data-cta]').forEach((anchor) => {
+      anchor.addEventListener('click', () => {
+        gtag('event', 'hire_cta_click', {
+          page: 'hire-me',
+          label: anchor.dataset.cta
+        });
+      });
+    });
   </script>
 </body>
 

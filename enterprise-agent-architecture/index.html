@@ -1,2 +1,146 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Enterprise Agent Architecture — Max Howell</title><meta name="description" content="Enterprise agent architecture consulting: boundaries, tool routing, observability, and safe production rollout."><link rel="canonical" href="https://mxcl.dev/enterprise-agent-architecture/"><style>body{font-family:system-ui,-apple-system,sans-serif;max-width:860px;margin:40px auto;padding:0 16px;line-height:1.6}a{color:#0b66c3}.cta{display:inline-block;margin-top:10px;padding:10px 14px;border:1px solid #0b66c3;border-radius:8px;text-decoration:none}</style></head><body><h1>Enterprise Agent Architecture Consulting</h1><p>For teams moving from AI experiments to production: I design agent architecture that is robust, operable, and maintainable.</p><h2>Scope</h2><ul><li>Agent/tool boundaries and policy model</li><li>Failure handling and incident readiness</li><li>Rollout strategy and quality gates</li><li>Defaults-first platform design (avoid config explosion)</li></ul><p>For ongoing leadership, see <a href="/fractional-head-of-ai/">Fractional Head of AI</a>.</p><p><a class="cta" href="mailto:mxcl@me.com" data-cta="enterprise-agent-architecture">Get architecture help</a></p><p><a href="/ai-implementation-consultant/">AI implementation consultant</a> · <a href="/hire-me/">Hire page</a></p><p>I created <a href="/homebrew/">Homebrew</a> and now help teams ship production AI systems with agent architecture, evals, and reliability.</p><script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-36JRFY9GL7');document.querySelectorAll('a[data-cta]').forEach(a=>a.addEventListener('click',()=>gtag('event','hire_cta_click',{page:'enterprise-agent-architecture',label:a.dataset.cta})));</script></body></html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Enterprise Agent Architecture | Max Howell</title>
+  <meta name="description"
+    content="Enterprise agent architecture consulting for companies that need
+      clearer boundaries, safer tool use, and production-ready rollout rules.">
+  <link rel="canonical" href="https://mxcl.dev/enterprise-agent-architecture/">
+  <meta property="og:title" content="Enterprise Agent Architecture">
+  <meta property="og:description"
+    content="Architecture consulting for complex agent systems in production.">
+  <meta property="og:type" content="website">
+  <meta property="og:url"
+    content="https://mxcl.dev/enterprise-agent-architecture/">
+  <meta property="og:image" content="https://mxcl.dev/avatar.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#08161b">
+  <link rel="stylesheet" href="/css/nocturne.css">
+</head>
+
+<body>
+  <main class="page-shell">
+    <header class="site-bar">
+      <a class="back-link" href="/">Back to mxcl.dev</a>
+      <nav class="site-nav" aria-label="Related pages">
+        <a href="/hire-me/">Hire Max</a>
+        <a href="/ai-implementation-consultant/">AI Implementation</a>
+        <a href="/fractional-head-of-ai/">Fractional Head of AI</a>
+        <a href="/homebrew/">Homebrew</a>
+      </nav>
+    </header>
+
+    <section class="hero hero-service" aria-labelledby="architecture-title">
+      <figure class="portrait-panel compact hero-panel">
+        <img src="/avatar.webp"
+          alt="Close portrait of Max Howell in front of a city skyline">
+        <div class="window-tag">
+          <span class="window-label">Complex environments</span>
+          <span class="window-label">Safe rollout, clean boundaries</span>
+        </div>
+      </figure>
+
+      <article class="hero-copy hero-panel">
+        <p class="eyebrow">Enterprise agent architecture</p>
+        <h1 class="display medium" id="architecture-title">
+          Architect the system before it architects your incidents
+        </h1>
+        <p class="lede">
+          Larger agent systems fail in predictable ways: too many moving parts,
+          unclear tool permissions, weak ownership, and no rollout discipline.
+          I help teams design the structure before scale turns those issues into
+          policy and operational pain.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:mxcl@me.com"
+            data-cta="enterprise-agent-architecture">
+            Get architecture help
+          </a>
+          <a class="btn btn-secondary"
+            href="/fractional-head-of-ai/">Leadership model</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="service-grid">
+        <article class="service-card">
+          <p class="micro-label">Boundaries</p>
+          <h3 class="service-title">Agent and tool routing</h3>
+          <p class="service-copy">
+            Which agent does what, which tools are exposed, and where policy
+            has to be enforced instead of implied.
+          </p>
+        </article>
+        <article class="service-card">
+          <p class="micro-label">Safety</p>
+          <h3 class="service-title">Failure and escalation design</h3>
+          <p class="service-copy">
+            Retries, human handoff, auditability, and the situations where the
+            system should stop rather than improvise.
+          </p>
+        </article>
+        <article class="service-card">
+          <p class="micro-label">Operability</p>
+          <h3 class="service-title">Observability and incident readiness</h3>
+          <p class="service-copy">
+            Better traces, better diagnostics, and runbooks that make incidents
+            shorter and less mysterious.
+          </p>
+        </article>
+        <article class="service-card">
+          <p class="micro-label">Rollout</p>
+          <h3 class="service-title">Phased release strategy</h3>
+          <p class="service-copy">
+            I help teams introduce agent systems in controllable steps instead
+            of giant launches with vague confidence.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="quote-card">
+        <p class="micro-label">Design principle</p>
+        <blockquote>Defaults beat options. Boundaries beat hope.</blockquote>
+        <p class="card-copy">
+          Enterprise AI platforms get brittle when every team can configure its
+          own universe. I prefer strong primitives, fewer escape hatches, and
+          clearer responsibility.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer-row">
+      <p class="footer-note">
+        Need broader organizational coverage? Pair this with a fractional role.
+      </p>
+      <div class="mini-nav">
+        <a class="back-link" href="/fractional-head-of-ai/">
+          See fractional leadership
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-36JRFY9GL7');
+    document.querySelectorAll('a[data-cta]').forEach((anchor) => {
+      anchor.addEventListener('click', () => {
+        gtag('event', 'hire_cta_click', {
+          page: 'enterprise-agent-architecture',
+          label: anchor.dataset.cta
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

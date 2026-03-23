@@ -4,193 +4,137 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Max Howell (Creator of Homebrew) — AI Implementation Consultant</title>
-  <meta name="description" content="I created Homebrew. Today I help companies ship production AI systems with agent architecture, reliability guardrails, and evaluation workflows.">
+  <title>Max Howell, Creator of Homebrew</title>
+  <meta name="description"
+    content="Homebrew established Max Howell's reputation for defaults,
+      maintainability, and developer experience. Those same instincts now shape
+      his AI consulting work.">
   <link rel="canonical" href="https://mxcl.dev/homebrew/">
-  <meta property="og:title" content="Max Howell – creator of Homebrew">
-  <meta property="og:description" content="What happened after Homebrew. Projects I’m building now.">
+  <meta property="og:title" content="Max Howell, Creator of Homebrew">
+  <meta property="og:description"
+    content="What Homebrew taught Max Howell, and why that matters for AI
+      systems today.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mxcl.dev/homebrew/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://mxcl.dev/images/mxcl.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#08161b">
+  <link rel="stylesheet" href="/css/nocturne.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Max Howell","url":"https://mxcl.dev","description":"Creator of Homebrew","sameAs":["https://github.com/mxcl","https://www.linkedin.com/in/mxcl"]}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&family=Prociono&family=Source+Serif+Pro:wght@300;400;600&display=swap">
-  <style>
-    :root {
-      --bg-deep: #0C1819;
-      --amber: #975D31;
-      --copper: #AF7449;
-      --teal: #59919B;
-      --cream: #D3CAB9;
-      --golden: #CD8F60;
-      --warm-highlight: #E8D5C4;
-      --panel: rgba(10, 16, 17, 0.9);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html, body {
-      min-height: 100%;
-      background: linear-gradient(135deg, var(--bg-deep) 0%, #0f1f21 40%, #162526 100%);
-      color: var(--cream);
-      font-family: 'Source Serif Pro', Georgia, serif;
-    }
-
-    body {
-      padding: max(2rem, env(safe-area-inset-top)) max(1.2rem, env(safe-area-inset-right)) max(2.2rem, env(safe-area-inset-bottom)) max(1.2rem, env(safe-area-inset-left));
-      line-height: 1.7;
-    }
-
-    .container { max-width: 820px; margin: 0 auto; }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid rgba(151, 93, 49, 0.42);
-      border-radius: 16px;
-      padding: clamp(1.3rem, 3vw, 2.1rem);
-      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
-    }
-
-    h1 {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: clamp(2rem, 6vw, 2.7rem);
-      font-weight: 400;
-      color: var(--warm-highlight);
-      margin-bottom: 0.2rem;
-    }
-
-    .eyebrow {
-      font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.86rem;
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: 0.19em;
-      margin-bottom: 1.35rem;
-    }
-
-    p { font-size: 1.08rem; margin-bottom: 1.1rem; max-width: 62ch; }
-
-    h2 {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: 1.38rem;
-      font-weight: 400;
-      margin-top: 1.8rem;
-      margin-bottom: 0.75rem;
-      border-bottom: 1px solid rgba(151, 93, 49, 0.35);
-      padding-bottom: 0.2rem;
-    }
-
-    ul { list-style: none; padding: 0; margin-bottom: 1.1rem; }
-
-    li {
-      margin-bottom: 0.58rem;
-      position: relative;
-      padding-left: 1.2rem;
-    }
-
-    li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: var(--amber);
-      font-weight: bold;
-    }
-
-    a { color: #f2d8bc; }
-
-    .actions { margin-top: 1.2rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      border-radius: 999px;
-      padding: 0.82rem 1.35rem;
-      font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      transition: transform 200ms ease, box-shadow 200ms ease;
-    }
-
-    .btn-primary {
-      color: #0A0D0D;
-      background: linear-gradient(100deg, #FFF1CB, #fcd8ff);
-      box-shadow: 0 10px 24px rgba(247, 67, 210, 0.28);
-      border: 0;
-    }
-
-    .btn-secondary {
-      color: var(--golden);
-      background: rgba(89, 145, 155, 0.12);
-      border: 1px solid rgba(89, 145, 155, 0.38);
-    }
-
-    .btn:hover, .btn:focus-visible { transform: translateY(-2px); }
-
-    @media (max-width: 600px) { p { font-size: 1.02rem; } }
-  </style>
 </head>
 
 <body>
-  <main class="container">
-    <article class="card">
-      <h1>Max Howell – creator of Homebrew</h1>
-      <p class="eyebrow">What happened after Homebrew · Projects I’m building now</p>
+  <main class="page-shell">
+    <header class="site-bar">
+      <a class="back-link" href="/">Back to mxcl.dev</a>
+      <nav class="site-nav" aria-label="Related pages">
+        <a href="/hire-me/">Hire Max</a>
+        <a href="/ai-implementation-consultant/">AI Implementation</a>
+        <a href="/fractional-head-of-ai/">Fractional Head of AI</a>
+        <a href="/enterprise-agent-architecture/">Architecture</a>
+      </nav>
+    </header>
 
-      <p>
-        Homebrew started as a side project and grew into infrastructure used by millions of developers.
-        After stepping back from day-to-day maintainership, I shifted my focus to the next wave of software systems:
-        practical AI and agent products that are reliable enough for production.
-      </p>
+    <section class="hero hero-service" aria-labelledby="homebrew-title">
+      <figure class="portrait-panel compact hero-panel">
+        <img src="/images/mxcl.jpg"
+          alt="Black-and-white portrait of Max Howell wearing sunglasses">
+        <div class="window-tag">
+          <span class="window-label">Creator of Homebrew</span>
+          <span class="window-label">Still building</span>
+        </div>
+      </figure>
 
-      <h2>What happened after Homebrew</h2>
-      <p>
-        I kept doing what I’ve always done best: shipping tools people depend on, and improving systems where
-        complexity has outpaced reliability. The lessons from Homebrew still shape everything I build:
-        defaults over configuration, clear ownership, and maintainability over hype.
-      </p>
+      <article class="hero-copy hero-panel">
+        <p class="eyebrow">Max Howell · creator of Homebrew</p>
+        <h1 class="display medium" id="homebrew-title">
+          Homebrew was the proving ground
+        </h1>
+        <p class="lede">
+          Homebrew turned into infrastructure used by millions because it was
+          practical, legible, and relentlessly maintained. The same instincts
+          still drive my work: defaults over sprawl, strong ergonomics, and
+          systems that stay serviceable as they grow.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/hire-me/">Work with Max</a>
+          <a class="btn btn-secondary"
+            href="mailto:mxcl@me.com">mxcl@me.com</a>
+        </div>
+      </article>
+    </section>
 
-      <h2>Projects I’m building now</h2>
-      <ul>
-        <li>
-          <strong>AI implementation consulting</strong> for teams moving from demos to dependable production systems.
-        </li>
-        <li>
-          <strong>Fractional Head of Agent Systems</strong> engagements with founders and engineering leaders.
-        </li>
-        <li>
-          <strong>Enterprise agent architecture</strong> work focused on boundaries, reliability, and operability.
-        </li>
-        <li>
-          Ongoing product and infrastructure experiments where maintainability and developer UX matter.
-        </li>
-      </ul>
+    <section class="section">
+      <div class="story-grid">
+        <article class="story-card">
+          <p class="micro-label">What carried forward</p>
+          <h3 class="card-title">Defaults, maintainability, and user empathy</h3>
+          <p class="card-copy">
+            Homebrew taught me that the software people trust most is rarely
+            the most complicated. It is the one that stays understandable while
+            doing serious work.
+          </p>
+        </article>
+        <article class="story-card">
+          <p class="micro-label">What I do now</p>
+          <h3 class="card-title">Apply that standard to AI products</h3>
+          <p class="card-copy">
+            Today I help companies build AI systems that are easier to reason
+            about, safer to ship, and less dependent on operational heroics.
+          </p>
+        </article>
+      </div>
+    </section>
 
-      <h2>If you’re here from Homebrew</h2>
-      <p>
-        Thanks. That project changed my life, and I still care deeply about the craft behind it.
-        If you’re building AI products now and want systems that keep working after launch, I can help.
-      </p>
-
-      <p class="actions">
-        <a class="btn btn-primary" href="/hire-me/">Work with Max</a>
-        <a class="btn btn-secondary" href="mailto:mxcl@me.com">Email Max</a>
-      </p>
-
-      <p>
-        <a href="/ai-implementation-consultant/">AI implementation consultant</a> ·
-        <a href="/fractional-head-of-ai/">fractional head of AI</a> ·
-        <a href="/enterprise-agent-architecture/">enterprise agent architecture</a>
-      </p>
-    </article>
+    <section class="section" aria-labelledby="now-title">
+      <div class="section-heading">
+        <h2 class="section-title" id="now-title">Current work</h2>
+        <p class="section-note">Same bar, different domain.</p>
+      </div>
+      <div class="grid-3">
+        <article class="project-card">
+          <p class="micro-label">Consulting</p>
+          <h3 class="card-title">AI implementation</h3>
+          <p class="card-copy">
+            Build-side work for product teams going from prototype to
+            production reality.
+          </p>
+          <a class="card-link" href="/ai-implementation-consultant/">
+            See implementation work
+          </a>
+        </article>
+        <article class="project-card">
+          <p class="micro-label">Leadership</p>
+          <h3 class="card-title">Fractional Head of AI</h3>
+          <p class="card-copy">
+            Senior technical direction for teams that need sharper standards and
+            faster decisions.
+          </p>
+          <a class="card-link" href="/fractional-head-of-ai/">
+            See the fractional model
+          </a>
+        </article>
+        <article class="project-card">
+          <p class="micro-label">Architecture</p>
+          <h3 class="card-title">Enterprise agent systems</h3>
+          <p class="card-copy">
+            Boundary design, rollout discipline, and operability for more
+            complex environments.
+          </p>
+          <a class="card-link" href="/enterprise-agent-architecture/">
+            See architecture work
+          </a>
+        </article>
+      </div>
+    </section>
   </main>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-36JRFY9GL7');
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-36JRFY9GL7');
   </script>
 </body>
 

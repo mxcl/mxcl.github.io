@@ -1,1407 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-  <title>Max Howell — AI Implementation Consultant & Fractional Head of AI</title>
-  <meta name="description" content="AI implementation consultant Max Howell helps teams ship production AI systems: agent architecture, eval loops, and reliability guardrails. Creator of Homebrew.">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <title>Max Howell | Production AI Consultant</title>
+  <meta name="description"
+    content="Max Howell helps teams turn promising AI demos into production
+      systems with cleaner architecture, stronger evals, and fewer moving
+      parts.">
   <link rel="canonical" href="https://mxcl.dev/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&family=Prociono&family=Source+Serif+Pro:wght@300;400;600&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Sora:wght@300;400;600;800&display=swap">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="mxcl">
-  <meta property="og:description" content="Big‑web Expat">
-  <meta property="og:image" content="https://mxcl.dev/apple-touch-icon.png" />
+  <meta property="og:title" content="Max Howell">
+  <meta property="og:description"
+    content="Creator of Homebrew. Fractional AI leadership, architecture, and
+      reliability consulting.">
+  <meta property="og:image" content="https://mxcl.dev/mxcl.png">
   <meta property="og:url" content="https://mxcl.dev/">
-  <meta property="og:image:width" content="180" />
-  <meta property="og:image:height" content="180" />
-  <meta name="twitter:card" content="summary">
-  <meta name="theme-color" content="#0C1819">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --bg-deep: #0C1819;
-      --amber: #975D31;
-      --copper: #AF7449;
-      --teal: #59919B;
-      --cream: #D3CAB9;
-      --golden: #CD8F60;
-      --warm-highlight: #E8D5C4;
-      --neon-pink: #F743D2;
-      --neon-cyan: #47D9FF;
-      --neon-sand: #FFF1CB;
-      --tea-highlight: #98F7D3;
-      --tea-text: #BBC5E2;
-      --panel: rgba(7, 7, 18, 0.72);
-      --shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
-    }
-
-    ::selection {
-      background: rgba(89, 145, 155, 0.5);
-    }
-
-    html {
-      min-height: 100%;
-      font-family: 'Source Serif Pro', Georgia, serif;
-      background: var(--bg-deep);
-      color: var(--cream);
-    }
-
-    body {
-      min-height: 100vh;
-      padding: 3rem;
-      padding: max(3rem, env(safe-area-inset-top)) max(3rem,
-        env(safe-area-inset-right)) max(3rem, env(safe-area-inset-bottom))
-        max(3rem, env(safe-area-inset-left));
-      line-height: 1.7;
-      position: relative;
-      background: linear-gradient(135deg, var(--bg-deep) 0%, #0f1f21 40%,
-        #162526 100%);
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background:
-        radial-gradient(ellipse at 20% 20%, rgba(89, 145, 155, 0.08) 0%,
-          transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(151, 93, 49, 0.06) 0%,
-          transparent 50%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .header {
-      display: flex;
-      align-items: stretch;
-      gap: 2.5rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .portrait-wrap {
-      width: 290px;
-      flex-shrink: 0;
-      position: relative;
-    }
-
-    .portrait {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border: 3px solid var(--copper);
-      border-radius: 0.5em;
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.5),
-        0 2px 8px rgba(89, 145, 155, 0.2),
-        inset 0 0 0 1px rgba(211, 202, 185, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      max-height: 600px;
-    }
-
-    .portrait:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 12px 40px rgba(0, 0, 0, 0.6),
-        0 4px 16px rgba(89, 145, 155, 0.25),
-        inset 0 0 0 1px rgba(211, 202, 185, 0.15);
-    }
-
-    .intro {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .hero-text-mobile {
-      display: none;
-    }
-
-    h1 {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: 2.5rem;
-      font-weight: 400;
-      color: var(--warm-highlight);
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.05em;
-      text-shadow: 0 2px 20px rgba(175, 116, 73, 0.3);
-    }
-
-    h1 span {
-      color: var(--teal);
-    }
-
-    .mobile-title {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: 2.5rem;
-      font-weight: 400;
-      color: var(--warm-highlight);
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.05em;
-      text-shadow: 0 2px 20px rgba(175, 116, 73, 0.3);
-    }
-
-    .mobile-title span {
-      color: var(--teal);
-    }
-
-    p.tagline {
-      font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.9rem;
-      color: var(--teal);
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      margin-bottom: 1.5rem;
-      margin-top: -0.8em;
-      opacity: 0.9;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: var(--cream);
-      max-width: 600px;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    }
-
-    p strong {
-      color: var(--golden);
-      font-weight: 600;
-    }
-
-    p.prose {
-      color: inherit;
-      text-shadow: none;
-    }
-
-    p.prose strong {
-      color: inherit;
-    }
-
-    h2 {
-      font-family: 'Prociono', Georgia, serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      margin-top: 4.5rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.2rem;
-      border-bottom: 1px solid rgba(107, 74, 43, 0.4);
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 0.6rem;
-      padding-left: 1.2rem;
-      position: relative;
-    }
-
-    li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: var(--amber);
-      font-weight: bold;
-    }
-
-    a {
-      color: var(--teal);
-      text-decoration: none;
-      transition: color 0.2s ease, text-shadow 0.2s ease;
-      border-bottom: 1px solid transparent;
-    }
-
-    a:hover {
-      color: var(--golden);
-      text-shadow: 0 0 12px rgba(205, 143, 96, 0.4);
-      border-bottom-color: var(--golden);
-    }
-
-    section {
-      margin-left: 0;
-    }
-
-    .links-section a {
-      font-weight: 400;
-      color: color-mix(in srgb, var(--golden) 80%, transparent);
-    }
-
-    .links-section a:hover {
-      color: var(--golden);
-    }
-
-    .social-links {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-      width: 100%;
-    }
-
-    .social-links li {
-      padding-left: 0;
-      margin-bottom: 0;
-    }
-
-    .social-links li::before {
-      display: none;
-    }
-
-    .social-links a {
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding: 0.42rem 0.5rem;
-      background: rgba(89, 145, 155, 0.15);
-      border: 1px solid rgba(89, 145, 155, 0.3);
-      border-radius: 4px;
-      font-family: 'Hind Madurai', sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.03em;
-    }
-
-    .social-links a:hover {
-      background: rgba(175, 116, 73, 0.25);
-      border-color: var(--copper);
-      color: var(--golden);
-    }
-
-    .slop-section {
-      position: relative;
-      margin-top: 2rem;
-    }
-
-    .slop-card {
-      width: min(1080px, 100%);
-      display: grid;
-      grid-template-columns: minmax(280px, 1.1fr) minmax(260px, 0.9fr);
-      gap: clamp(1rem, 3vw, 2rem);
-      background: linear-gradient(140deg, rgba(11, 9, 23, 0.86),
-        rgba(10, 8, 19, 0.7));
-      border: 1px solid rgba(241, 246, 255, 0.2);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-      overflow: clip;
-    }
-
-    .slop-visual {
-      padding: clamp(1rem, 2.2vw, 1.8rem);
-      display: grid;
-      place-items: center;
-      background: linear-gradient(160deg, rgba(18, 14, 36, 0.85),
-        rgba(8, 8, 19, 0.55));
-    }
-
-    .slop-link {
-      border: 0;
-      width: min(100%, 460px);
-      display: block;
-      position: relative;
-      border-radius: 24px;
-      transition: transform 260ms ease;
-      outline: none;
-    }
-
-    .slop-link:hover,
-    .slop-link:focus-visible {
-      transform: translateY(-4px) scale(1.01);
-    }
-
-    .slop-link::before,
-    .slop-link::after {
-      content: '';
-      position: absolute;
-      inset: -14px;
-      border-radius: 28px;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    .slop-link::before {
-      background: conic-gradient(from 0deg, rgba(247, 67, 210, 0),
-        rgba(247, 67, 210, 0.5), rgba(71, 217, 255, 0.52),
-        rgba(255, 241, 203, 0.36), rgba(247, 67, 210, 0));
-      filter: blur(14px);
-      opacity: 0.65;
-      animation: spin 18s linear infinite;
-    }
-
-    .slop-link::after {
-      background: radial-gradient(circle at 50% 20%, rgba(255, 241, 203, 0.25),
-        rgba(247, 67, 210, 0.1) 45%, transparent 75%);
-      animation: pulse 9s ease-in-out infinite;
-    }
-
-    .slop-poster {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      box-shadow: 0 28px 46px rgba(2, 0, 8, 0.62);
-    }
-
-    .slop-content {
-      padding: clamp(1.4rem, 4vw, 2.8rem) clamp(1.2rem, 3vw, 2.1rem);
-      display: grid;
-      align-content: center;
-      gap: 1.25rem;
-      background: linear-gradient(180deg, rgba(10, 10, 22, 0.6),
-        rgba(8, 8, 17, 0.85));
-    }
-
-    .slop-eyebrow {
-      margin: 0;
-      color: var(--neon-cyan);
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      font-family: 'Chakra Petch', 'Eurostile', sans-serif;
-      font-size: 0.78rem;
-      text-shadow: 0 0 14px rgba(71, 217, 255, 0.42);
-    }
-
-    .slop-title {
-      margin: 0;
-      font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
-      font-size: clamp(2rem, 3.3vw, 2.65rem);
-      line-height: 1.06;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-      text-wrap: balance;
-      color: #f4f5ff;
-      text-shadow: 0 0 28px rgba(247, 67, 210, 0.28);
-    }
-
-    .slop-accent {
-      color: var(--neon-sand);
-      text-shadow: 0 0 18px rgba(255, 241, 203, 0.5);
-      font-style: italic;
-    }
-
-    .slop-copy {
-      color: #b8bada;
-      max-width: 42ch;
-      line-height: 1.65;
-      font-size: clamp(0.95rem, 2vw, 1.08rem);
-      text-wrap: pretty;
-      margin: 0;
-    }
-
-    .slop-copy strong {
-      color: inherit;
-    }
-
-    .slop-actions {
-      display: flex;
-      gap: 0.9rem;
-      flex-wrap: wrap;
-      margin-top: 0.25rem;
-    }
-
-    .slop-btn {
-      display: inline-block;
-      text-decoration: none;
-      border-radius: 99px;
-      padding: 0.78rem 1.25rem;
-      font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      transition: transform 200ms ease, box-shadow 200ms ease,
-        background-color 200ms ease;
-      font-size: 0.95rem;
-      border: 0;
-      border-bottom: 0;
-    }
-
-    .slop-btn-primary {
-      color: #05050d;
-      background: linear-gradient(100deg, var(--neon-sand), #fcd8ff);
-      box-shadow: 0 8px 28px rgba(247, 67, 210, 0.34);
-    }
-
-    .slop-btn-secondary {
-      color: #f4f5ff;
-      background: var(--panel);
-      border: 1px solid rgba(71, 217, 255, 0.35);
-      box-shadow: inset 0 0 0 1px rgba(71, 217, 255, 0.08);
-    }
-
-    .slop-btn:hover,
-    .slop-btn:focus-visible {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 22px rgba(6, 4, 18, 0.45);
-      border-bottom-color: transparent;
-    }
-
-    .slop-btn-primary:hover,
-    .slop-btn-primary:focus-visible {
-      color: #05050d;
-    }
-
-    .slop-btn-secondary:hover,
-    .slop-btn-secondary:focus-visible {
-      color: #f4f5ff;
-    }
-
-    .slop-note {
-      color: rgba(198, 202, 231, 0.85);
-      font-size: 0.83rem;
-      letter-spacing: 0.02em;
-      margin: 0;
-    }
-
-    .tea-section {
-      margin-top: 2.7rem;
-    }
-
-    .tea-card {
-      width: fit-content;
-      margin-inline: auto;
-      display: grid;
-      grid-template-columns: 72px 1fr;
-      gap: 1rem;
-      /* align-items: center; */
-      background: rgb(14, 14, 22);
-      border: 1px solid rgba(241, 246, 255, 0.16);
-      border-radius: 20px;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
-      padding: 1.5rem;
-    }
-
-    .tea-badge {
-      width: 72px;
-      aspect-ratio: 1;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      text-decoration: none;
-      border: 1px solid rgba(152, 247, 211, 0.36);
-      background: linear-gradient(160deg, rgba(18, 14, 36, 0.9),
-        rgba(8, 8, 19, 0.62));
-      position: relative;
-      transition: transform 220ms ease;
-      outline: none;
-    }
-
-    .tea-badge:hover,
-    .tea-badge:focus-visible {
-      transform: translateY(-2px);
-    }
-
-    .tea-badge::before {
-      content: '';
-      position: absolute;
-      inset: -8px;
-      border-radius: 20px;
-      background: conic-gradient(from 0deg, rgba(152, 247, 211, 0),
-        rgba(152, 247, 211, 0.58), rgba(152, 247, 211, 0.36),
-        rgba(152, 247, 211, 0.2), rgba(152, 247, 211, 0));
-      filter: blur(10px);
-      opacity: 0.55;
-      z-index: -1;
-      animation: spin 20s linear infinite;
-      pointer-events: none;
-    }
-
-    .tea-logo {
-      width: 52px;
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 0 8px rgba(152, 247, 211, 0.25));
-    }
-
-    .bookhole-logo {
-      width: 52px;
-      height: 52px;
-      aspect-ratio: 1 / 1;
-      object-fit: contain;
-    }
-
-    .bookhole-section .tea-card {
-      --bookhole-logo-height: 9.5rem;
-      grid-template-columns: max-content 1fr;
-      align-items: stretch;
-      gap: 1.4rem;
-      background: linear-gradient(165deg, rgba(10, 9, 22, 0.98),
-        rgba(27, 37, 91, 0.9) 52%, rgba(12, 18, 45, 0.98));
-      border: 1px solid rgba(93, 161, 200, 0.42);
-      box-shadow: 0 18px 36px rgba(10, 9, 22, 0.55);
-    }
-
-    .bookhole-section .tea-badge {
-      width: auto;
-      height: var(--bookhole-logo-height);
-      aspect-ratio: auto;
-      align-self: start;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      padding: 0;
-    }
-
-    .bookhole-section .tea-badge::before {
-      content: none;
-    }
-
-    .bookhole-section .tea-logo {
-      filter: drop-shadow(0 0 10px rgba(93, 161, 200, 0.35));
-    }
-
-    .bookhole-section .bookhole-logo {
-      width: auto;
-      height: var(--bookhole-logo-height);
-      box-sizing: border-box;
-      padding: 0.35rem;
-      border: 1px solid rgba(93, 161, 200, 0.58);
-      border-radius: 14px;
-      background: rgba(10, 9, 22, 0.45);
-    }
-
-    .bookhole-section .tea-content {
-      color: #E5EFEC;
-    }
-
-    .bookhole-section .tea-title-link:hover,
-    .bookhole-section .tea-title-link:focus-visible {
-      color: #5DA1C8;
-      text-shadow: 0 0 14px rgba(93, 161, 200, 0.4);
-    }
-
-    .bookhole-section .tea-copy strong {
-      color: #BB6D5E;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
-      font-size: 0.78rem;
-    }
-
-    .bookhole-section .tea-actions {
-      text-align: left;
-    }
-
-    .bookhole-section .tea-btn {
-      color: #E5EFEC;
-      background: rgba(27, 37, 91, 0.42);
-      border: 1px solid rgba(93, 161, 200, 0.58);
-      box-shadow: inset 0 0 0 1px rgba(229, 239, 236, 0.1);
-    }
-
-    .bookhole-section .tea-btn:hover,
-    .bookhole-section .tea-btn:focus-visible {
-      color: #E5EFEC;
-      border-color: rgba(187, 109, 94, 0.82);
-      box-shadow: 0 10px 22px rgba(10, 9, 22, 0.48);
-    }
-
-    .clawlicious-section .tea-card {
-      background: linear-gradient(165deg, rgba(24, 14, 10, 0.96), rgba(57, 32, 19, 0.92) 52%, rgba(17, 20, 16, 0.98));
-      border: 1px solid rgba(205, 143, 96, 0.55);
-      box-shadow: 0 18px 36px rgba(18, 11, 8, 0.52);
-    }
-
-    .clawlicious-section .tea-badge {
-      border-color: rgba(205, 143, 96, 0.65);
-      background: radial-gradient(circle at 50% 40%, rgba(255, 241, 203, 0.2), rgba(25, 17, 11, 0.92));
-    }
-
-    .clawlicious-section .tea-badge::before {
-      background: conic-gradient(from 0deg, rgba(205, 143, 96, 0), rgba(205, 143, 96, 0.72), rgba(151, 93, 49, 0.42), rgba(205, 143, 96, 0.2), rgba(205, 143, 96, 0));
-      opacity: 0.65;
-    }
-
-    .clawlicious-section .tea-logo {
-      width: 54px;
-      filter: drop-shadow(0 0 8px rgba(255, 202, 155, 0.32));
-    }
-
-    .clawlicious-section .tea-eyebrow {
-      color: #E4B58D;
-      text-shadow: 0 0 12px rgba(205, 143, 96, 0.34);
-    }
-
-    .clawlicious-section .tea-content {
-      color: #F4E8DD;
-    }
-
-    .clawlicious-section .tea-title-link:hover,
-    .clawlicious-section .tea-title-link:focus-visible {
-      color: #FFD4AF;
-      text-shadow: 0 0 12px rgba(255, 212, 175, 0.32);
-    }
-
-    .clawlicious-section .tea-btn {
-      color: #FFE4CE;
-      background: rgba(205, 143, 96, 0.12);
-      border-color: rgba(205, 143, 96, 0.62);
-      box-shadow: inset 0 0 0 1px rgba(255, 228, 206, 0.1);
-    }
-
-    .clawlicious-section .tea-btn:hover,
-    .clawlicious-section .tea-btn:focus-visible {
-      color: #FFF6EE;
-      border-color: rgba(255, 212, 175, 0.85);
-      box-shadow: 0 10px 22px rgba(22, 14, 10, 0.5);
-    }
-
-    .tea-content {
-      display: grid;
-      gap: 0.45rem;
-      padding: 0 0 0 0.4rem;
-      color: var(--tea-text);
-    }
-
-    .tea-eyebrow {
-      margin: 0;
-      color: var(--tea-highlight);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-family: 'Chakra Petch', 'Eurostile', sans-serif;
-      font-size: 0.72rem;
-      text-shadow: 0 0 12px rgba(152, 247, 211, 0.36);
-    }
-
-    .tea-title {
-      margin: 0;
-      font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
-      font-size: clamp(1.1rem, 2.6vw, 1.55rem);
-      line-height: 1.15;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      color: inherit;
-    }
-
-    .tea-title-link {
-      color: inherit;
-      border-bottom: 0;
-      text-decoration: none;
-    }
-
-    .tea-title-link:hover,
-    .tea-title-link:focus-visible {
-      color: var(--tea-highlight);
-      border-bottom-color: transparent;
-      text-shadow: 0 0 14px rgba(152, 247, 211, 0.36);
-    }
-
-    .tea-copy {
-      margin: 0;
-      color: inherit;
-      max-width: 48ch;
-      line-height: 1.5;
-      font-size: 0.95rem;
-      text-wrap: pretty;
-    }
-
-    .tea-actions {
-      margin-top: 0.2rem;
-      margin-bottom: 0;
-    }
-
-    .tea-btn {
-      padding: 0.56rem 0.95rem;
-      font-size: 0.84rem;
-      color: var(--tea-highlight);
-      background: rgba(152, 247, 211, 0.08);
-      border: 1px solid rgba(152, 247, 211, 0.45);
-      box-shadow: inset 0 0 0 1px rgba(152, 247, 211, 0.1);
-    }
-
-    .tea-btn:hover,
-    .tea-btn:focus-visible {
-      color: var(--tea-highlight);
-      border-color: rgba(152, 247, 211, 0.72);
-      box-shadow: 0 10px 22px rgba(6, 4, 18, 0.45);
-    }
-
-    .projects-section {
-      width: fit-content;
-      max-width: min(680px, 100%);
-      margin: 4rem auto 0;
-    }
-
-    .projects-section .projects-divider {
-      margin: 0 0 1.05rem;
-    }
-
-    .hire-link-section {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .byoclaw-section {
-      margin-top: clamp(6.9rem, 12vw, 8.5rem);
-    }
-
-    .projects-divider {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      margin: 1.9rem 0 0.2rem;
-      color: color-mix(in srgb, var(--cream) 68%, transparent);
-    }
-
-    .projects-divider-word {
-      font-family: 'Hind Madurai', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.24em;
-      font-size: 0.75rem;
-      color: color-mix(in srgb, var(--cream) 70%, transparent);
-      white-space: nowrap;
-    }
-
-    .projects-divider-line {
-      flex: 1;
-      position: relative;
-      height: 22px;
-      min-width: 48px;
-    }
-
-    .projects-divider-line::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 12px;
-      right: 12px;
-      border-top: 1px solid rgba(211, 202, 185, 0.42);
-      transform: translateY(-50%);
-    }
-
-    .projects-divider-line::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 12px;
-      height: 12px;
-      border: 1px solid rgba(211, 202, 185, 0.48);
-      border-radius: 50% 50% 50% 0;
-      transform: translateY(-50%) rotate(45deg);
-      opacity: 0.85;
-    }
-
-    .projects-divider-line-left::after {
-      left: 0;
-    }
-
-    .projects-divider-line-right::after {
-      right: 0;
-      transform: translateY(-50%) scaleX(-1) rotate(45deg);
-    }
-
-    .byoclaw-card {
-      width: fit-content;
-      max-width: min(680px, 100%);
-      margin-inline: auto;
-      position: relative;
-      padding: 5.1rem 1.5rem 1.45rem;
-      background: linear-gradient(170deg, rgba(18, 20, 41, 0.94),
-        rgba(10, 11, 24, 0.96) 58%, rgba(18, 39, 46, 0.92));
-      border: 1px solid rgba(113, 209, 236, 0.45);
-      border-radius: 20px;
-      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.42);
-      text-align: center;
-      color: #E8EEF8;
-      overflow: visible;
-    }
-
-    .byoclaw-plushie {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: clamp(120px, 24vw, 172px);
-      height: auto;
-      transform: translate(-50%, -56%);
-      pointer-events: none;
-      filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.42));
-    }
-
-    .byoclaw-title {
-      margin: 0;
-      font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
-      font-size: clamp(1.15rem, 2.6vw, 1.48rem);
-      line-height: 1.2;
-      font-weight: 700;
-    }
-
-    .byoclaw-title a {
-      color: #C4EAFF;
-      border-bottom: 0;
-      text-decoration: none;
-    }
-
-    .byoclaw-title a:hover,
-    .byoclaw-title a:focus-visible {
-      color: #E6F7FF;
-      text-shadow: 0 0 16px rgba(113, 209, 236, 0.35);
-    }
-
-    .byoclaw-copy {
-      margin: 0.55rem auto 0;
-      max-width: 45ch;
-      color: rgba(232, 238, 248, 0.92);
-      line-height: 1.45;
-      text-wrap: pretty;
-    }
-
-    .byoclaw-actions {
-      margin-top: 1rem;
-      margin-bottom: 0;
-    }
-
-    .byoclaw-actions .slop-btn {
-      color: #DDF5FF;
-      background: rgba(71, 217, 255, 0.13);
-      border: 1px solid rgba(113, 209, 236, 0.52);
-      box-shadow: inset 0 0 0 1px rgba(221, 245, 255, 0.08);
-    }
-
-    .byoclaw-actions .slop-btn:hover,
-    .byoclaw-actions .slop-btn:focus-visible {
-      color: #F6FDFF;
-      border-color: rgba(113, 209, 236, 0.82);
-      background: rgba(71, 217, 255, 0.2);
-    }
-
-    .hire-link-card {
-      width: 100%;
-      margin-inline: 0;
-      background: rgba(12, 24, 25, 0.52);
-      border: 1px dashed rgba(211, 202, 185, 0.3);
-      border-radius: 14px;
-      box-shadow: none;
-      padding: 1rem 1.2rem;
-      color: var(--cream);
-    }
-
-    .hire-link-title {
-      margin: 0;
-      font-family: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
-      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
-      line-height: 1.2;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-    }
-
-    .hire-link-title a {
-      color: inherit;
-      border-bottom: 0;
-    }
-
-    .hire-link-title a:hover,
-    .hire-link-title a:focus-visible {
-      color: var(--golden);
-    }
-
-    .hire-link-copy {
-      margin: 0.38rem 0 0;
-      max-width: 46ch;
-      color: color-mix(in srgb, var(--cream) 78%, transparent);
-      line-height: 1.5;
-      text-wrap: pretty;
-    }
-
-    .hire-link-actions {
-      margin-top: 0.72rem;
-      margin-bottom: 0;
-    }
-
-    .hire-link-actions .slop-btn {
-      color: color-mix(in srgb, var(--cream) 82%, transparent);
-      background: transparent;
-      border: 1px dashed rgba(89, 145, 155, 0.36);
-      box-shadow: none;
-    }
-
-    .hire-link-actions .slop-btn:hover,
-    .hire-link-actions .slop-btn:focus-visible {
-      color: var(--warm-highlight);
-      background: rgba(89, 145, 155, 0.08);
-      border-color: rgba(151, 93, 49, 0.52);
-    }
-
-    @media (max-width: 900px) {
-      .slop-card {
-        grid-template-columns: 1fr;
-      }
-
-      .slop-content {
-        text-align: center;
-        justify-items: center;
-      }
-
-      .slop-actions {
-        justify-content: center;
-      }
-
-      .tea-card {
-        width: 100%;
-      }
-
-      .byoclaw-card {
-        width: 100%;
-      }
-
-      .bookhole-section .tea-card {
-        grid-template-columns: max-content 1fr;
-      }
-
-      .bookhole-section .tea-badge {
-        width: auto;
-      }
-
-      .bookhole-section .bookhole-logo {
-        width: auto;
-        height: var(--bookhole-logo-height);
-      }
-    }
-
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes pulse {
-      0%,
-      100% {
-        opacity: 0.58;
-      }
-
-      50% {
-        opacity: 0.9;
-      }
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 2rem 1.5rem;
-      }
-
-      .header {
-        position: relative;
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-        gap: 2rem;
-      }
-
-      .portrait {
-        width: 100%;
-        display: block;
-      }
-
-      .portrait-wrap {
-        width: 100%;
-      }
-
-      .intro {
-        min-width: 0;
-        padding-top: 0;
-      }
-
-      .hero-text-inline {
-        display: none;
-      }
-
-      .hero-text-mobile {
-        display: block;
-        position: absolute;
-        left: 3px;
-        right: 3px;
-        bottom: 3px;
-        z-index: 1;
-        margin: 0;
-        padding: 0.35rem 0.55rem 0.65rem;
-        /* border-radius: 0.5rem; */
-        background: linear-gradient(180deg, rgba(4, 9, 13, 0.72),
-          rgba(4, 9, 13, 0.06));
-        backdrop-filter: blur(2px);
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-      }
-
-      .hero-text h1,
-      .hero-text .tagline {
-        text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
-      }
-
-      .hero-text .tagline {
-        padding: 0.08rem 0.4rem;
-        border-radius: 0.28rem;
-        /* background: rgba(0, 0, 0, 0.5); */
-        color: #D7ECF6;
-        text-shadow:
-          0 3px 22px rgba(0, 0, 0, 0.95),
-          0 0 18px rgba(0, 0, 0, 0.85);
-        margin-bottom: 0.15em;
-        margin-top: -1em;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .social-links {
-        gap: 0.4rem;
-      }
-
-      .projects-divider {
-        gap: 0.6rem;
-      }
-
-      .projects-divider-word {
-        letter-spacing: 0.18em;
-        font-size: 0.68rem;
-      }
-
-      section {
-        margin-left: 0;
-      }
-
-      p.prose {
-        text-align: justify;
-      }
-
-      .slop-card {
-        grid-template-columns: 1fr;
-        max-width: none;
-      }
-
-      .slop-content {
-        justify-items: center;
-        text-align: center;
-      }
-
-      .tea-card {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-      }
-
-      .bookhole-section .tea-card {
-        grid-template-columns: 1fr;
-        justify-items: stretch;
-        text-align: center;
-      }
-
-      .bookhole-section .tea-badge {
-        width: 100%;
-        height: auto;
-      }
-
-      .bookhole-section .bookhole-logo {
-        width: 100%;
-        height: auto;
-      }
-
-      .tea-content {
-        padding: 0.15rem 0 0 0;
-      }
-
-      .bookhole-section .tea-content {
-        width: 100%;
-        padding: 0.15rem 0 0 0;
-      }
-
-      .bookhole-section .tea-actions {
-        text-align: center;
-        margin-top: 0.3rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .slop-link::before,
-      .slop-link::after,
-      .tea-badge::before,
-      .slop-btn,
-      .slop-link {
-        animation: none;
-        transition: none;
-      }
-    }
-  </style>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#08161b">
+  <link rel="stylesheet" href="/css/nocturne.css">
 </head>
 
-  <body>
-  <div class="container">
-    <header class="header">
-      <div class="portrait-wrap">
-        <div style="position: relative">
-          <img src="mxcl.webp" alt="Max Howell" class="portrait">
-          <div class="hero-text hero-text-mobile">
-            <p class="mobile-title">Max <span>Howell</span></p>
-            <p class="tagline">Fractional CTO · Builder · Open Source Legend</p>
-          </div>
-        </div>
-        <ul class="social-links">
-          <li><a href="https://github.com/mxcl">GitHub</a></li>
-          <li><a href="https://www.twitter.com/mxcl">Twitter</a></li>
-          <li><a href="https://www.linkedin.com/in/mxcl">LinkedIn</a></li>
-        </ul>
-      </div>
-      <div class="intro">
-        <div class="hero-text hero-text-inline">
-          <h1>Max Howell — AI Implementation Consultant</h1>
-          <p class="tagline">Fractional CTO · Builder · Open Source Legend</p>
-        </div>
-        <p class="prose">
-          Howell, Max (fl. early 21st century), British–American software engineer and open-source developer, best known as the creator of <a href="/homebrew/">Homebrew</a>, a package management system for macOS and Linux that achieved widespread adoption among software developers globally, with an estimated user base numbering in the tens of millions.
-        <p class="prose">
-          Howell's most consequential technical contribution, and the subject of some professional controversy, was his introduction of the curl-based one-liner installation method, a convention subsequently adopted across a broad range of software projects. He is further credited with popularizing the doctor subcommand pattern in command-line interfaces — a diagnostic utility designed to identify and resolve common configuration errors — and with pioneering automated issue-tracker integration, whereby a tool, upon encountering an error, would query public repositories such as GitHub to surface relevant existing discussions, thereby directing users toward self-directed problem resolution.
-        </p>
-        <p class="prose">
-          Howell has remained a prominent advocate for the open-source software movement throughout his career, contributing to a culture of collaborative, freely distributed software development.
-        </p>
-        <section class="hire-link-section">
-          <div class="hire-link-card">
-            <p class="hire-link-title">
-              <a href="/hire-me/">Hire Max Howell</a>
-            </p>
-            <p class="hire-link-copy">
-              Fractional Head of Agent Systems: production AI reliability,
-              strong defaults over config sprawl, and architecture that ships.
-            </p>
-            <p class="hire-link-actions">
-              <a class="slop-btn slop-btn-secondary" href="/hire-me/">
-                See How I Can Help Your Business
-              </a>
-            </p>
-            <p class="hire-link-copy" style="margin-top:0.6rem;">
-              <a href="/ai-implementation-consultant/">AI Implementation Consultant for Product Teams</a> ·
-              <a href="/fractional-head-of-ai/">Fractional Head of AI for Scaling Companies</a> ·
-              <a href="/enterprise-agent-architecture/">Enterprise Agent Architecture Consulting</a>
-            </p>
-          </div>
-        </section>
-      </div>
+<body>
+  <main class="page-shell">
+    <header class="site-bar">
+      <a class="brand" href="/">mxcl.dev</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/hire-me/">Hire Max</a>
+        <a href="/ai-implementation-consultant/">AI Implementation</a>
+        <a href="/fractional-head-of-ai/">Fractional Head of AI</a>
+        <a href="/enterprise-agent-architecture/">Architecture</a>
+        <a href="/homebrew/">Homebrew</a>
+      </nav>
     </header>
 
-    <div class="projects-divider" role="separator" aria-label="Projects">
-      <span class="projects-divider-line projects-divider-line-left"></span>
-      <span class="projects-divider-word">Projects</span>
-      <span class="projects-divider-line projects-divider-line-right"></span>
-    </div>
-
-    <section class="byoclaw-section">
-      <div class="byoclaw-card">
-        <img src="images/byoclaw-plushie.webp"
-          alt="BYOC Law plushie mascot sitting on the card"
-          class="byoclaw-plushie">
-        <p class="byoclaw-title">
-          <a href="https://byoclaw.dev" target="_blank"
-            rel="noopener noreferrer">BYOClaw</a>
-        </p>
-        <p class="byoclaw-copy">
-          Bring your <em>own</em> OpenClaw to the web and unlock its ninja powers on your favorite sites.
-        </p>
-        <p class="byoclaw-actions">
-          <a class="slop-btn slop-btn-secondary" href="https://byoclaw.dev"
-            target="_blank" rel="noopener noreferrer">
-            The Future is App-less
-          </a>
-        </p>
-      </div>
-    </section>
-
-    <section class="tea-section clawlicious-section">
-      <div class="tea-card">
-        <a class="tea-badge" href="https://clawlicio.us" target="_blank"
-          rel="noopener noreferrer" aria-label="Open Clawlicious website">
-          <img class="tea-logo" src="images/clawlicious-logo.webp"
-            alt="Clawlicious logo">
-        </a>
-        <div class="tea-content">
-          <p class="tea-eyebrow">Clawlicious</p>
-          <p class="tea-title">
-            <a class="tea-title-link" href="https://clawlicio.us" target="_blank" rel="noopener noreferrer">clawlicio.us</a>
-          </p>
-          <p class="tea-copy">
-            Save Links.
-          </p>
-          <p class="tea-copy">
-            Your OpenClaw curates them.
-          </p>
-          <p class="tea-copy">
-            The Claw‐Network collaborates to find deeper patterns and connections.
-          </p>
-          <p class="tea-actions">
-            <a class="slop-btn slop-btn-secondary tea-btn" href="https://clawlicio.us" target="_blank" rel="noopener noreferrer">Visit Official Site</a>
-          </p>
+    <section class="hero" aria-labelledby="hero-title">
+      <figure class="portrait-panel hero-panel">
+        <img src="/mxcl.png"
+          alt="Max Howell in a tan suit against a nighttime city skyline">
+        <div class="window-tag">
+          <span class="window-label">New York cadence. Production standards.</span>
+          <span class="window-label">Creator of Homebrew</span>
         </div>
-      </div>
-    </section>
-
-    <section class="slop-section">
-      <div class="slop-card">
-        <div class="slop-visual">
-          <a class="slop-link" href="https://gamestudiosimulator.com"
-            target="_blank" rel="noopener noreferrer"
-            aria-label="Open Game Studio Simulator">
-            <img src="images/be-one-sword.webp" class="slop-poster"
-              alt="Be One w/the Slop key art glowing in neon style">
-          </a>
-        </div>
-        <div class="slop-content">
-          <p class="slop-eyebrow">Game Studio Simulator</p>
-          <p class="slop-title">Be One w/the
-            <span class="slop-accent">Slop</span></p>
-          <p class="slop-copy">
-            You have a game idea.
-          </p>
-          <p class="slop-copy" style="margin-top: -0.6em;">
-            We have the agents.
-          </p>
-          <p class="slop-copy" style="margin-top: -0.6em;">
-            Prompt it, watch it come to life, iterate like crazy, and actually
-            finish something for once in your very busy <i>human</i> life.
-          </p>
-          <div class="slop-actions">
-            <a class="slop-btn slop-btn-secondary"
-              href="https://gamestudiosimulator.com"
-              target="_blank">
-              Visit Official Site
-            </a>
+        <div class="window-stats">
+          <div class="stat">
+            <strong>Fractional leadership</strong>
+            <span>For teams that need senior judgment without a full-time hire.</span>
           </div>
-          <p class="slop-note">
-            <b>Prompt. Play. Publish.</b>
-            Build the game of your dreams.
-          </p>
+          <div class="stat">
+            <strong>Architecture discipline</strong>
+            <span>Cleaner boundaries, fewer agents, sharper operating rules.</span>
+          </div>
+          <div class="stat">
+            <strong>Reliability pressure</strong>
+            <span>Evals, fallbacks, ownership, and systems that keep working.</span>
+          </div>
         </div>
+      </figure>
+
+      <article class="hero-copy hero-panel">
+        <p class="eyebrow">Max Howell · AI implementation consultant</p>
+        <h1 class="display" id="hero-title">
+          Production AI
+          <small>with fewer moving parts</small>
+        </h1>
+        <p class="lede">
+          I help companies turn promising agent demos into dependable products.
+          The work is practical: architecture that stays legible, release
+          discipline that catches regressions, and operating defaults that do
+          not collapse under real traffic.
+        </p>
+        <div class="chip-row" aria-label="Specialties">
+          <span class="chip">Agent architecture</span>
+          <span class="chip">Eval loops</span>
+          <span class="chip">Reliability systems</span>
+          <span class="chip">Fractional AI leadership</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/hire-me/">Hire Max Howell</a>
+          <a class="btn btn-secondary"
+            href="mailto:mxcl@me.com">mxcl@me.com</a>
+          <a class="btn btn-secondary" href="/homebrew/">Why Homebrew matters</a>
+        </div>
+        <div class="inline-links">
+          <a href="https://github.com/mxcl">GitHub</a>
+          <a href="https://www.linkedin.com/in/mxcl">LinkedIn</a>
+          <a href="https://www.twitter.com/mxcl">Twitter</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="tracks-title">
+      <div class="section-heading">
+        <h2 class="section-title" id="tracks-title">Consulting tracks</h2>
+        <p class="section-note">Shorter copy. Tighter scope. Clear entry points.</p>
+      </div>
+      <div class="grid-4">
+        <article class="project-card">
+          <p class="micro-label">Start here</p>
+          <h3 class="card-title">Hire Max Howell</h3>
+          <p class="card-copy">
+            The general brief: where I fit best, what I do, and how to get in
+            touch.
+          </p>
+          <a class="card-link" href="/hire-me/">Open hire page</a>
+        </article>
+        <article class="project-card">
+          <p class="micro-label">Execution</p>
+          <h3 class="card-title">AI implementation consultant</h3>
+          <p class="card-copy">
+            Hands-on architecture, evals, release gates, and production
+            delivery for product teams.
+          </p>
+          <a class="card-link" href="/ai-implementation-consultant/">
+            See implementation work
+          </a>
+        </article>
+        <article class="project-card">
+          <p class="micro-label">Leadership</p>
+          <h3 class="card-title">Fractional Head of AI</h3>
+          <p class="card-copy">
+            Senior guidance for teams that need direction, standards, and a
+            sharper operating model.
+          </p>
+          <a class="card-link" href="/fractional-head-of-ai/">
+            See the leadership model
+          </a>
+        </article>
+        <article class="project-card">
+          <p class="micro-label">Systems</p>
+          <h3 class="card-title">Enterprise agent architecture</h3>
+          <p class="card-copy">
+            Boundaries, tool routing, failure modes, and rollout strategy for
+            more complex environments.
+          </p>
+          <a class="card-link" href="/enterprise-agent-architecture/">
+            See architecture scope
+          </a>
+        </article>
       </div>
     </section>
 
-    <section class="tea-section bookhole-section">
-      <div class="tea-card">
-        <a class="tea-badge" href="https://supermassivebookhole.com"
-          target="_blank" rel="noopener noreferrer"
-          aria-label="Open Supermassive Book Hole website">
-          <img class="tea-logo bookhole-logo"
-            src="images/supermassivebookhole-logo.webp"
-            alt="Supermassive Book Hole logo">
-        </a>
-        <div class="tea-content">
-          <p class="tea-title">
-            <a class="tea-title-link" href="https://supermassivebookhole.com"
-              target="_blank" rel="noopener noreferrer">
-              Supermassive Book Hole
-            </a>
+    <section class="section" aria-labelledby="story-title">
+      <div class="story-grid">
+        <article class="quote-card">
+          <p class="micro-label">Track record</p>
+          <blockquote>Homebrew made the reputation. Operability kept it.</blockquote>
+          <p class="card-copy">
+            I learned early that widely used software survives on defaults,
+            clarity, and maintenance discipline. That is exactly the lens I
+            bring to AI systems now.
           </p>
-          <p class="tea-copy"><strong>Your taste. Your shelf. Your people.</strong></p>
-          <p class="tea-copy">
-            You know that feeling when your bookshelf just gets you? We bring that to the web. Track books, movies, games, and albums together on beautiful shelves, add your own notes, and see what the people you actually trust are reading, watching, and playing right now.
+          <a class="card-link" href="/homebrew/">Read the Homebrew story</a>
+        </article>
+        <article class="story-card">
+          <p class="micro-label">Best fit</p>
+          <h3 class="card-title">Teams that are past the demo stage</h3>
+          <p class="card-copy">
+            If the prototype is exciting but the system is turning into a pile
+            of prompts, flags, and hope, I help reduce the surface area and get
+            it shipping cleanly.
           </p>
-          <p class="tea-actions">
-            <a class="slop-btn slop-btn-secondary tea-btn"
-              href="https://supermassivebookhole.com" target="_blank"
-              rel="noopener noreferrer">Visit Official Site</a>
-          </p>
-        </div>
+          <div class="chip-row">
+            <span class="chip">Founder-led teams</span>
+            <span class="chip">Product-minded engineering</span>
+            <span class="chip">90-day outcomes</span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!--
-    <section class="tea-section">
-      <div class="tea-card">
-        <a class="tea-badge" href="https://tea.xyz"
-          target="_blank" rel="noopener noreferrer"
-          aria-label="Open Tea Protocol website">
-          <img class="tea-logo" src="tea.svg" alt="Tea Protocol logo">
-        </a>
-        <div class="tea-content">
-          <p class="tea-eyebrow">Tea Protocol</p>
-          <p class="tea-copy">
-            Max Howell founded tea in 2021 with the goal of remunerating open source maintainers sustainably.
+    <section class="section" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 class="section-title" id="projects-title">Current ventures</h2>
+        <p class="section-note">A tighter set of things I’m building.</p>
+      </div>
+      <div class="grid-3">
+        <article class="project-card">
+          <p class="micro-label">BYOClaw</p>
+          <h3 class="card-title">App-less software, pointed in a new direction</h3>
+          <p class="card-copy">
+            OpenClaw on the web, with a lighter interaction model and a sharper
+            product thesis.
           </p>
-          <p class="tea-actions">
-            <a class="slop-btn slop-btn-secondary tea-btn"
-              href="https://tea.xyz" target="_blank"
-              rel="noopener noreferrer">Visit Official Site</a>
+          <a class="card-link" href="https://byoclaw.dev" target="_blank"
+            rel="noopener noreferrer">Visit BYOClaw</a>
+        </article>
+        <article class="project-card">
+          <p class="micro-label">Clawlicious</p>
+          <h3 class="card-title">Save links. Let the network deepen them.</h3>
+          <p class="card-copy">
+            A shared layer for curation and connection rather than another dead
+            read-later queue.
           </p>
-        </div>
+          <a class="card-link" href="https://clawlicio.us" target="_blank"
+            rel="noopener noreferrer">Visit Clawlicious</a>
+        </article>
+        <article class="project-card">
+          <p class="micro-label">Supermassive Book Hole</p>
+          <h3 class="card-title">Taste graphs for books, films, games, and music</h3>
+          <p class="card-copy">
+            Shelves, notes, and recommendations built around the people whose
+            taste you already trust.
+          </p>
+          <a class="card-link" href="https://supermassivebookhole.com"
+            target="_blank" rel="noopener noreferrer">
+            Visit Supermassive Book Hole
+          </a>
+        </article>
       </div>
     </section>
-    -->
 
-    <section class="projects-section">
-      <div class="projects-divider" role="separator"
-        aria-label="Other Projects">
-        <span class="projects-divider-line projects-divider-line-left"></span>
-        <span class="projects-divider-word">Other Projects</span>
-        <span class="projects-divider-line projects-divider-line-right"></span>
+    <footer class="footer-row">
+      <p class="footer-note">
+        Based in New York. Available for consulting, architecture work, and
+        fractional leadership engagements.
+      </p>
+      <div class="mini-nav">
+        <a class="back-link" href="/hire-me/">Work together</a>
+        <a class="back-link" href="mailto:mxcl@me.com">Email Max</a>
       </div>
-      <ul class="links-section">
-        <li><a href="https://inthebook.co">In The Book</a> — Custom
-          children’s books with your kids in them</li>
-        <li><a href="https://nextbookafter.com">NextBookAfter</a> — Specific
-          book recs for previously loved reads</li>
-        <li><a href="https://getchorale.com">Chorale</a> — Scheduling for
-          small businesses with AI assistance</li>
-        <li><a href="https://stageofplay.com">Stage of Play</a> —
-          Montessori-inspired play kits</li>
-      </ul>
-    </section>
-  </div>
+    </footer>
+  </main>
 </body>
 
 </html>
-
-<script>
-  (() => {
-    const section = document.querySelector('.bookhole-section');
-    if (!section) return;
-
-    const content = section.querySelector('.tea-content');
-    if (!content) return;
-
-    const syncBookholeLogoHeight = () => {
-      const contentHeight = Math.ceil(content.getBoundingClientRect().height);
-      if (contentHeight > 0) {
-        section.style.setProperty('--bookhole-logo-height', `${contentHeight}px`);
-      }
-    };
-
-    syncBookholeLogoHeight();
-
-    if ('ResizeObserver' in window) {
-      const observer = new ResizeObserver(syncBookholeLogoHeight);
-      observer.observe(content);
-    }
-
-    window.addEventListener('load', syncBookholeLogoHeight, { once: true });
-  })();
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-36JRFY9GL7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'G-36JRFY9GL7');
-</script>
