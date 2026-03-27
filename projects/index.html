@@ -394,20 +394,27 @@
         rgba(27, 37, 91, 0.9) 52%, rgba(12, 18, 45, 0.98));
     }
 
-    .bookhole-logo-frame {
-      width: clamp(7.25rem, 18vw, 10.5rem);
-      padding: 0.45rem;
-      border: 1px solid rgba(93, 161, 200, 0.58);
-      border-radius: 1rem;
-      background: rgba(10, 9, 22, 0.45);
-      box-shadow: 0 0 0 1px rgba(229, 239, 236, 0.08) inset;
-      animation: shelf-glow 6s ease-in-out infinite;
+    .tile-bookhole::before {
+      content: "";
+      position: absolute;
+      inset: -8%;
+      background:
+        radial-gradient(circle, rgba(229, 239, 236, 0.08), transparent 62%),
+        url("/images/supermassivebookhole-logo.webp") center / 88% no-repeat;
+      filter: drop-shadow(0 0 18px rgba(93, 161, 200, 0.24));
+      opacity: 0.3;
+      transform-origin: center;
+      animation: bookhole-spin 42s linear infinite;
+      z-index: 0;
     }
 
-    .bookhole-logo-frame img {
-      display: block;
-      width: 100%;
-      filter: drop-shadow(0 0 10px rgba(93, 161, 200, 0.35));
+    .tile-bookhole::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 9, 22, 0.36),
+        rgba(10, 9, 22, 0.18) 30%, rgba(10, 9, 22, 0.58) 100%);
+      z-index: 0;
     }
 
     .tile-bookhole .tile-tag {
@@ -564,16 +571,13 @@
       }
     }
 
-    @keyframes shelf-glow {
-      0%,
-      100% {
-        box-shadow: 0 0 0 1px rgba(229, 239, 236, 0.08) inset;
+    @keyframes bookhole-spin {
+      from {
+        transform: rotate(0deg);
       }
 
-      50% {
-        box-shadow:
-          0 0 0 1px rgba(229, 239, 236, 0.12) inset,
-          0 0 26px rgba(93, 161, 200, 0.24);
+      to {
+        transform: rotate(360deg);
       }
     }
 
@@ -654,7 +658,7 @@
       .gss-poster-wrap::before,
       .gss-poster-wrap::after,
       .byoclaw-plushie,
-      .bookhole-logo-frame,
+      .tile-bookhole::before,
       .tile-next::before,
       .claw-marks span {
         animation: none;
@@ -766,9 +770,6 @@
           <div>
             <p class="tile-tag">Supermassive Book Hole</p>
             <p class="tile-domain">supermassivebookhole.com</p>
-          </div>
-          <div class="bookhole-logo-frame" aria-hidden="true">
-            <img src="/images/supermassivebookhole-logo.webp" alt="">
           </div>
         </div>
         <div class="tile-body">
