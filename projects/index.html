@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <title>Active Projects | mxcl.dev</title>
+  <meta name="description"
+    content="An active project wall for Max Howell, rebuilt from archived homepage treatments and current project links.">
+  <link rel="canonical" href="https://mxcl.dev/projects/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Active Projects">
+  <meta property="og:description"
+    content="Archived visual treatments, rebuilt into one contiguous project wall.">
+  <meta property="og:image" content="https://mxcl.dev/mxcl.png">
+  <meta property="og:url" content="https://mxcl.dev/projects/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#090d0f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="/css/operator-terminal.css">
+  <style>
+    :root {
+      --projects-bg:
+        radial-gradient(circle at top, rgba(74, 222, 128, 0.06),
+          transparent 32%),
+        linear-gradient(180deg, #090d0f 0%, #0c1114 100%);
+      --wall-line: rgba(255, 255, 255, 0.1);
+      --wall-text: #edf1f3;
+      --wall-muted: rgba(237, 241, 243, 0.7);
+      --display-font: "Sora", "Avenir Next", "Segoe UI", sans-serif;
+      --tech-font: "Chakra Petch", "Avenir Next Condensed", sans-serif;
+    }
+
+    html {
+      background: #090d0f;
+    }
+
+    body {
+      background: var(--projects-bg);
+    }
+
+    .page-shell.projects-shell {
+      width: min(1400px, calc(100vw - 2rem));
+      padding-bottom: max(2rem, env(safe-area-inset-bottom));
+    }
+
+    .projects-hero {
+      margin-top: 2.4rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .projects-hero h1 {
+      max-width: 12ch;
+      font-size: clamp(3.5rem, 7vw, 6.4rem);
+      line-height: 0.9;
+    }
+
+    .projects-hero p {
+      max-width: 48rem;
+      margin: 0;
+      color: var(--wall-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .projects-hero .hero-note {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .project-wall {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      overflow: hidden;
+    }
+
+    .project-tile {
+      position: relative;
+      aspect-ratio: 5 / 4;
+      min-height: 23rem;
+      margin-left: -1px;
+      margin-top: -1px;
+      padding: 1.35rem;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 1rem;
+      overflow: hidden;
+      border: 1px solid var(--wall-line);
+      color: var(--wall-text);
+      background: #101612;
+      isolation: isolate;
+    }
+
+    .project-tile::selection,
+    .project-tile *::selection {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .project-tile:hover .tile-cta,
+    .project-tile:focus-visible .tile-cta {
+      color: #fff;
+      border-color: currentColor;
+    }
+
+    .project-tile:focus-visible {
+      outline: 0;
+      z-index: 2;
+    }
+
+    .tile-top,
+    .tile-bottom {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tile-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .tile-tag,
+    .tile-domain,
+    .tile-cta {
+      font-family: var(--font-mono);
+    }
+
+    .tile-tag {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .tile-domain {
+      margin: 0.2rem 0 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.82rem;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    .tile-cta {
+      align-self: end;
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      gap: 0.5rem;
+      padding-bottom: 0.2rem;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+      transition:
+        color 160ms ease,
+        border-color 160ms ease,
+        transform 160ms ease;
+    }
+
+    .project-tile:hover .tile-cta,
+    .project-tile:focus-visible .tile-cta {
+      transform: translateX(0.15rem);
+    }
+
+    .tile-body {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      align-content: end;
+      gap: 0.75rem;
+    }
+
+    .tile-title,
+    .tile-kicker {
+      margin: 0;
+      font-family: var(--display-font);
+      letter-spacing: -0.04em;
+    }
+
+    .tile-title {
+      font-size: clamp(1.65rem, 2.3vw, 2.7rem);
+      line-height: 0.95;
+      font-weight: 700;
+      max-width: 11ch;
+    }
+
+    .tile-kicker {
+      font-size: clamp(0.92rem, 1.4vw, 1.02rem);
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 28ch;
+    }
+
+    .tile-copy {
+      margin: 0;
+      max-width: 30ch;
+      color: rgba(255, 255, 255, 0.74);
+      line-height: 1.55;
+      text-wrap: pretty;
+    }
+
+    .tile-copy-stack {
+      display: grid;
+      gap: 0.28rem;
+    }
+
+    .tile-copy-stack .tile-copy {
+      max-width: none;
+    }
+
+    .tile-byoclaw {
+      background: linear-gradient(170deg, rgba(18, 20, 41, 0.96),
+        rgba(10, 11, 24, 0.97) 58%, rgba(18, 39, 46, 0.94));
+    }
+
+    .tile-byoclaw::before {
+      content: "";
+      position: absolute;
+      inset: auto -6rem -7rem auto;
+      width: 17rem;
+      height: 17rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(71, 217, 255, 0.3), transparent 70%);
+      filter: blur(24px);
+      opacity: 0.8;
+    }
+
+    .tile-byoclaw .tile-tag {
+      color: rgba(196, 234, 255, 0.82);
+    }
+
+    .tile-byoclaw .tile-title {
+      color: #d9f5ff;
+    }
+
+    .tile-byoclaw .tile-kicker,
+    .tile-byoclaw .tile-copy {
+      color: rgba(232, 238, 248, 0.9);
+    }
+
+    .byoclaw-plushie {
+      position: absolute;
+      top: 0.8rem;
+      right: 1rem;
+      width: clamp(7rem, 15vw, 9.75rem);
+      filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.46));
+      transform-origin: center bottom;
+      animation: plushie-bob 6.2s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .tile-clawlicious {
+      background: linear-gradient(165deg, rgba(24, 14, 10, 0.98),
+        rgba(57, 32, 19, 0.94) 52%, rgba(17, 20, 16, 0.98));
+    }
+
+    .tile-clawlicious::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05),
+        transparent 34%, transparent 66%, rgba(255, 255, 255, 0.04));
+      opacity: 0.5;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .clawlicious-badge {
+      position: relative;
+      width: 4.8rem;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 1rem;
+      border: 1px solid rgba(205, 143, 96, 0.68);
+      background: radial-gradient(circle at 50% 40%, rgba(255, 241, 203, 0.22),
+        rgba(25, 17, 11, 0.94));
+      overflow: visible;
+    }
+
+    .clawlicious-badge::before {
+      content: "";
+      position: absolute;
+      inset: -0.7rem;
+      border-radius: 1.35rem;
+      background: conic-gradient(from 0deg, rgba(205, 143, 96, 0),
+        rgba(205, 143, 96, 0.72), rgba(151, 93, 49, 0.42),
+        rgba(205, 143, 96, 0.18), rgba(205, 143, 96, 0));
+      filter: blur(10px);
+      opacity: 0.72;
+      animation: orbit 18s linear infinite;
+      z-index: -1;
+    }
+
+    .clawlicious-badge img {
+      width: 3.4rem;
+      filter: drop-shadow(0 0 10px rgba(255, 202, 155, 0.34));
+    }
+
+    .tile-clawlicious .tile-tag {
+      color: #e4b58d;
+    }
+
+    .tile-clawlicious .tile-title,
+    .tile-clawlicious .tile-kicker,
+    .tile-clawlicious .tile-copy {
+      color: #f4e8dd;
+    }
+
+    .tile-gss {
+      background: linear-gradient(140deg, rgba(11, 9, 23, 0.9),
+        rgba(10, 8, 19, 0.76));
+    }
+
+    .tile-gss::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(71, 217, 255, 0.18),
+          transparent 28%),
+        radial-gradient(circle at 82% 84%, rgba(247, 67, 210, 0.22),
+          transparent 28%);
+      pointer-events: none;
+    }
+
+    .gss-poster-wrap {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.3rem;
+      width: min(40%, 12rem);
+      border-radius: 1.2rem;
+      isolation: isolate;
+    }
+
+    .gss-poster-wrap::before,
+    .gss-poster-wrap::after {
+      content: "";
+      position: absolute;
+      inset: -0.8rem;
+      border-radius: 1.5rem;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .gss-poster-wrap::before {
+      background: conic-gradient(from 0deg, rgba(247, 67, 210, 0),
+        rgba(247, 67, 210, 0.56), rgba(71, 217, 255, 0.58),
+        rgba(255, 241, 203, 0.34), rgba(247, 67, 210, 0));
+      filter: blur(12px);
+      opacity: 0.72;
+      animation: orbit 20s linear infinite;
+    }
+
+    .gss-poster-wrap::after {
+      background: radial-gradient(circle at 50% 20%, rgba(255, 241, 203, 0.28),
+        rgba(247, 67, 210, 0.1) 45%, transparent 72%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+
+    .gss-poster {
+      display: block;
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 28px 46px rgba(2, 0, 8, 0.62);
+      transform: rotate(-4deg);
+    }
+
+    .tile-gss .tile-tag {
+      color: #47d9ff;
+      font-family: var(--tech-font);
+    }
+
+    .tile-gss .tile-title {
+      max-width: 7.5ch;
+      color: #f4f5ff;
+    }
+
+    .tile-gss .tile-title .accent {
+      color: #f743d2;
+    }
+
+    .tile-gss .tile-kicker,
+    .tile-gss .tile-copy {
+      color: rgba(198, 202, 231, 0.9);
+    }
+
+    .tile-bookhole {
+      background: linear-gradient(165deg, rgba(10, 9, 22, 0.98),
+        rgba(27, 37, 91, 0.9) 52%, rgba(12, 18, 45, 0.98));
+    }
+
+    .bookhole-logo-frame {
+      width: clamp(7.25rem, 18vw, 10.5rem);
+      padding: 0.45rem;
+      border: 1px solid rgba(93, 161, 200, 0.58);
+      border-radius: 1rem;
+      background: rgba(10, 9, 22, 0.45);
+      box-shadow: 0 0 0 1px rgba(229, 239, 236, 0.08) inset;
+      animation: shelf-glow 6s ease-in-out infinite;
+    }
+
+    .bookhole-logo-frame img {
+      display: block;
+      width: 100%;
+      filter: drop-shadow(0 0 10px rgba(93, 161, 200, 0.35));
+    }
+
+    .tile-bookhole .tile-tag {
+      color: rgba(187, 109, 94, 0.9);
+      letter-spacing: 0.18em;
+    }
+
+    .tile-bookhole .tile-title,
+    .tile-bookhole .tile-kicker,
+    .tile-bookhole .tile-copy {
+      color: #e5efec;
+    }
+
+    .tile-next {
+      background:
+        linear-gradient(135deg, rgba(242, 232, 214, 0.96),
+          rgba(227, 211, 188, 0.92));
+      color: #281f15;
+    }
+
+    .tile-next::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.45),
+        rgba(255, 255, 255, 0.08));
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+      animation: page-turn 8s ease-in-out infinite;
+      transform-origin: right center;
+    }
+
+    .tile-next .tile-tag,
+    .tile-next .tile-domain,
+    .tile-next .tile-copy,
+    .tile-next .tile-title,
+    .tile-next .tile-kicker,
+    .tile-next .tile-cta {
+      color: #281f15;
+      border-bottom-color: rgba(40, 31, 21, 0.34);
+    }
+
+    .tile-next .tile-tag {
+      color: rgba(40, 31, 21, 0.68);
+    }
+
+    .next-rule {
+      width: 100%;
+      height: 1px;
+      background: rgba(40, 31, 21, 0.2);
+      box-shadow: 0 2.3rem 0 rgba(40, 31, 21, 0.12),
+        0 4.6rem 0 rgba(40, 31, 21, 0.08);
+    }
+
+    .tile-colossal {
+      background:
+        radial-gradient(circle at 75% 18%, rgba(255, 146, 64, 0.18),
+          transparent 26%),
+        linear-gradient(180deg, rgba(25, 15, 10, 0.98),
+          rgba(16, 12, 19, 0.98));
+    }
+
+    .tile-colossal::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 24%, rgba(255, 240, 207, 0.09),
+          transparent 18%),
+        radial-gradient(circle at 84% 72%, rgba(255, 112, 51, 0.12),
+          transparent 20%);
+      pointer-events: none;
+    }
+
+    .claw-marks {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.3rem;
+      display: grid;
+      gap: 0.35rem;
+      transform: rotate(16deg);
+    }
+
+    .claw-marks span {
+      width: 4.7rem;
+      height: 0.32rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255, 240, 207, 0.9),
+        rgba(255, 112, 51, 0.55));
+      box-shadow: 0 0 18px rgba(255, 128, 64, 0.32);
+      animation: claw-flicker 5.8s ease-in-out infinite;
+    }
+
+    .claw-marks span:nth-child(2) {
+      animation-delay: 0.35s;
+    }
+
+    .claw-marks span:nth-child(3) {
+      animation-delay: 0.7s;
+    }
+
+    .tile-colossal .tile-title {
+      max-width: 9ch;
+    }
+
+    .tile-colossal .tile-kicker {
+      max-width: 24ch;
+    }
+
+    .tile-colossal .tile-tag {
+      color: rgba(255, 214, 181, 0.72);
+    }
+
+    .projects-footer {
+      margin-top: 1.5rem;
+    }
+
+    .site-nav a[aria-current="page"] {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @keyframes orbit {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        opacity: 0.56;
+      }
+
+      50% {
+        opacity: 0.9;
+      }
+    }
+
+    @keyframes plushie-bob {
+      0%,
+      100% {
+        transform: translateY(0) rotate(-3deg);
+      }
+
+      50% {
+        transform: translateY(-0.45rem) rotate(2deg);
+      }
+    }
+
+    @keyframes shelf-glow {
+      0%,
+      100% {
+        box-shadow: 0 0 0 1px rgba(229, 239, 236, 0.08) inset;
+      }
+
+      50% {
+        box-shadow:
+          0 0 0 1px rgba(229, 239, 236, 0.12) inset,
+          0 0 26px rgba(93, 161, 200, 0.24);
+      }
+    }
+
+    @keyframes page-turn {
+      0%,
+      100% {
+        transform: perspective(36rem) rotateY(0deg);
+        opacity: 0.72;
+      }
+
+      50% {
+        transform: perspective(36rem) rotateY(-22deg);
+        opacity: 0.92;
+      }
+    }
+
+    @keyframes claw-flicker {
+      0%,
+      100% {
+        opacity: 0.72;
+        transform: translateX(0);
+      }
+
+      35% {
+        opacity: 1;
+        transform: translateX(0.18rem);
+      }
+
+      55% {
+        opacity: 0.84;
+        transform: translateX(-0.08rem);
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .project-wall {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project-tile {
+        min-height: 22rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page-shell.projects-shell {
+        width: min(100vw, calc(100vw - 1rem));
+      }
+
+      .projects-hero {
+        gap: 0.85rem;
+      }
+
+      .projects-hero h1 {
+        max-width: none;
+      }
+
+      .project-wall {
+        grid-template-columns: 1fr;
+      }
+
+      .project-tile {
+        min-height: 20rem;
+        padding: 1.05rem;
+      }
+
+      .gss-poster-wrap,
+      .byoclaw-plushie,
+      .claw-marks {
+        right: 0.9rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .project-tile,
+      .tile-cta,
+      .clawlicious-badge::before,
+      .gss-poster-wrap::before,
+      .gss-poster-wrap::after,
+      .byoclaw-plushie,
+      .bookhole-logo-frame,
+      .tile-next::before,
+      .claw-marks span {
+        animation: none;
+        transition: none;
+      }
+
+      .project-tile:hover .tile-cta,
+      .project-tile:focus-visible .tile-cta {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page-shell projects-shell">
+    <header class="site-header">
+      <a class="brand" href="/">mxcl.dev</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/hire-me/">Hire</a>
+        <a href="/ai-implementation-consultant/">Implementation</a>
+        <a href="/enterprise-agent-architecture/">Architecture</a>
+        <a href="/projects/" aria-current="page">Projects</a>
+        <a href="/homebrew/">Homebrew</a>
+      </nav>
+    </header>
+
+    <section class="projects-hero" aria-labelledby="projects-title">
+      <p class="eyebrow">active builds / archive lift</p>
+      <h1 id="projects-title">Active projects, rebuilt into one wall.</h1>
+      <p>
+        The imagery and palettes here come from older homepage project blocks
+        where they existed. The wall keeps every box the same shape, removes
+        the gaps, and lets each project keep its own temperature.
+      </p>
+      <p class="hero-note">
+        Historical art existed for BYOClaw, Clawlicious, Game Studio
+        Simulator, and Supermassive Book Hole. Next Book After and Colossal
+        Claw Adventure were text-only in archive history, so these two remain
+        typography-led.
+      </p>
+    </section>
+
+    <section class="project-wall" aria-label="Active project links">
+      <a class="project-tile tile-colossal" href="https://colossalclawadventure.com"
+        target="_blank" rel="noopener noreferrer">
+        <div class="claw-marks" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Claw Orbit</p>
+            <p class="tile-domain">colossalclawadventure.com</p>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">Colossal Claw Adventure</h2>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Open site</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-clawlicious" href="https://clawlicio.us"
+        target="_blank" rel="noopener noreferrer">
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Clawlicious</p>
+            <p class="tile-domain">clawlicio.us</p>
+          </div>
+          <div class="clawlicious-badge" aria-hidden="true">
+            <img src="/images/clawlicious-logo.webp" alt="">
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">Save links. Let the network deepen them.</h2>
+          <div class="tile-copy-stack">
+            <p class="tile-copy">Save Links.</p>
+            <p class="tile-copy">Your OpenClaw curates them.</p>
+            <p class="tile-copy">
+              The Claw-Network collaborates to find deeper patterns and
+              connections.
+            </p>
+          </div>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Visit official site</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-byoclaw" href="https://byoclaw.dev"
+        target="_blank" rel="noopener noreferrer">
+        <img class="byoclaw-plushie" src="/images/byoclaw-plushie.webp" alt="">
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">BYOClaw</p>
+            <p class="tile-domain">byoclaw.dev</p>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">App-less software, pointed in a new direction.</h2>
+          <p class="tile-kicker">
+            Bring your own OpenClaw to the web and unlock its ninja powers on
+            your favorite sites.
+          </p>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">The future is app-less</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-bookhole" href="https://supermassivebookhole.com"
+        target="_blank" rel="noopener noreferrer">
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Supermassive Book Hole</p>
+            <p class="tile-domain">supermassivebookhole.com</p>
+          </div>
+          <div class="bookhole-logo-frame" aria-hidden="true">
+            <img src="/images/supermassivebookhole-logo.webp" alt="">
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">Your taste. Your shelf. Your people.</h2>
+          <p class="tile-copy">
+            Shelves, notes, and recommendations built around the people whose
+            taste you already trust.
+          </p>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Visit official site</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-gss" href="https://gamestudiosimulator.com"
+        target="_blank" rel="noopener noreferrer">
+        <div class="gss-poster-wrap" aria-hidden="true">
+          <img class="gss-poster" src="/images/be-one-sword.webp" alt="">
+        </div>
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Game Studio Simulator</p>
+            <p class="tile-domain">gamestudiosimulator.com</p>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">Be One w/the <span class="accent">Slop</span></h2>
+          <div class="tile-copy-stack">
+            <p class="tile-copy">You have a game idea.</p>
+            <p class="tile-copy">We have the agents.</p>
+            <p class="tile-copy">Prompt. Play. Publish.</p>
+          </div>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Build the game of your dreams</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-next" href="https://nextbookafter.com"
+        target="_blank" rel="noopener noreferrer">
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Archived text listing</p>
+            <p class="tile-domain">nextbookafter.com</p>
+          </div>
+        </div>
+        <div class="tile-body">
+          <div class="next-rule" aria-hidden="true"></div>
+          <h2 class="tile-title">Next Book After</h2>
+          <p class="tile-kicker">Specific book recs for previously loved reads.</p>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Open site</span>
+        </div>
+      </a>
+    </section>
+
+    <footer class="site-footer projects-footer">
+      <a href="https://github.com/mxcl" target="_blank"
+        rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/mxcl" target="_blank"
+        rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.twitter.com/mxcl" target="_blank"
+        rel="noopener noreferrer">Twitter</a>
+    </footer>
+  </main>
+</body>
+
+</html>
