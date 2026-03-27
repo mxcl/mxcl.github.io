@@ -68,6 +68,32 @@
       line-height: 1.7;
     }
 
+    .network-section {
+      margin-top: 3.2rem;
+    }
+
+    .network-section > .eyebrow {
+      margin-bottom: 0.7rem;
+    }
+
+    .network-section > h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      max-width: 10ch;
+    }
+
+    .network-section > p {
+      max-width: 42rem;
+      margin-top: 0.8rem;
+      color: var(--wall-muted);
+      line-height: 1.7;
+    }
+
+    .network-wall {
+      margin-top: 1.4rem;
+    }
+
     .project-wall {
       margin-top: 2.5rem;
       display: grid;
@@ -530,6 +556,153 @@
       color: rgba(255, 214, 181, 0.72);
     }
 
+    .tile-darling {
+      background: linear-gradient(155deg, rgba(43, 13, 17, 0.98),
+        rgba(109, 32, 43, 0.94) 52%, rgba(242, 131, 106, 0.84));
+    }
+
+    .tile-darling::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -18% auto;
+      width: 75%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 228, 202, 0.28),
+        transparent 62%);
+      filter: blur(12px);
+      opacity: 0.92;
+    }
+
+    .darling-ring {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 6rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 228, 202, 0.42);
+      box-shadow:
+        0 0 0 0.7rem rgba(255, 228, 202, 0.06),
+        0 0 0 1.4rem rgba(255, 228, 202, 0.03);
+      animation: drift 11s ease-in-out infinite;
+    }
+
+    .darling-ring::before,
+    .darling-ring::after {
+      content: "";
+      position: absolute;
+      background: rgba(255, 241, 227, 0.8);
+      border-radius: 999px;
+    }
+
+    .darling-ring::before {
+      top: 50%;
+      left: 18%;
+      width: 64%;
+      height: 1px;
+    }
+
+    .darling-ring::after {
+      left: 50%;
+      top: 18%;
+      width: 1px;
+      height: 64%;
+    }
+
+    .tile-darling .tile-tag {
+      color: rgba(255, 228, 202, 0.74);
+    }
+
+    .tile-darling .tile-title,
+    .tile-darling .tile-kicker,
+    .tile-darling .tile-copy {
+      color: #fff0e7;
+    }
+
+    .tile-stage {
+      background: linear-gradient(155deg, rgba(21, 45, 38, 0.98),
+        rgba(92, 136, 98, 0.9) 56%, rgba(238, 208, 148, 0.82));
+    }
+
+    .tile-stage::before,
+    .tile-stage::after {
+      content: "";
+      position: absolute;
+      border-radius: 1.3rem;
+      opacity: 0.9;
+      animation: drift 12s ease-in-out infinite;
+    }
+
+    .tile-stage::before {
+      top: 1rem;
+      right: 1rem;
+      width: 4.8rem;
+      height: 4.8rem;
+      background: rgba(255, 227, 156, 0.28);
+      transform: rotate(12deg);
+    }
+
+    .tile-stage::after {
+      top: 2.8rem;
+      right: 4.7rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: rgba(255, 245, 220, 0.22);
+      animation-delay: 0.8s;
+    }
+
+    .tile-stage .tile-tag {
+      color: rgba(244, 233, 187, 0.8);
+    }
+
+    .tile-stage .tile-title,
+    .tile-stage .tile-kicker,
+    .tile-stage .tile-copy {
+      color: #f6f3e9;
+    }
+
+    .tile-chorale {
+      background: linear-gradient(155deg, rgba(12, 20, 34, 0.98),
+        rgba(20, 69, 74, 0.94) 52%, rgba(72, 143, 134, 0.86));
+    }
+
+    .chorale-grid {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 6.8rem;
+      aspect-ratio: 1;
+      border: 1px solid rgba(187, 240, 226, 0.24);
+      background:
+        linear-gradient(rgba(187, 240, 226, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(187, 240, 226, 0.1) 1px, transparent 1px);
+      background-size: 33.333% 33.333%;
+      box-shadow: 0 0 24px rgba(12, 20, 34, 0.22);
+      overflow: hidden;
+    }
+
+    .chorale-grid::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent,
+        rgba(187, 240, 226, 0.18), transparent);
+      transform: translateX(-100%);
+      animation: sweep 7s linear infinite;
+    }
+
+    .tile-chorale .tile-tag {
+      color: rgba(187, 240, 226, 0.82);
+    }
+
+    .tile-chorale .tile-title,
+    .tile-chorale .tile-kicker,
+    .tile-chorale .tile-copy {
+      color: #e7faf5;
+    }
+
     .projects-footer {
       margin-top: 1.5rem;
     }
@@ -612,6 +785,27 @@
       }
     }
 
+    @keyframes drift {
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-0.35rem) rotate(8deg);
+      }
+    }
+
+    @keyframes sweep {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(100%);
+      }
+    }
+
     @media (max-width: 1040px) {
       .project-wall {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -660,7 +854,11 @@
       .byoclaw-plushie,
       .tile-bookhole::before,
       .tile-next::before,
-      .claw-marks span {
+      .claw-marks span,
+      .darling-ring,
+      .tile-stage::before,
+      .tile-stage::after,
+      .chorale-grid::before {
         animation: none;
         transition: none;
       }
@@ -828,6 +1026,73 @@
           <span class="tile-cta">Open site</span>
         </div>
       </a>
+    </section>
+
+    <section class="network-section" aria-labelledby="network-title">
+      <p class="eyebrow">howell network</p>
+      <h2 id="network-title">Projects from the Howell Network</h2>
+      <p>
+        Three more projects, each with its own lane and its own visual system.
+      </p>
+
+      <div class="project-wall network-wall" aria-label="Howell Network project links">
+        <a class="project-tile tile-darling" href="https://dinedarling.com"
+          target="_blank" rel="noopener noreferrer">
+          <div class="darling-ring" aria-hidden="true"></div>
+          <div class="tile-top">
+            <div>
+              <p class="tile-tag">Dine Darling</p>
+              <p class="tile-domain">dinedarling.com</p>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Dine Darling</h3>
+            <p class="tile-kicker">
+              Dinner plans with sharper taste and better energy.
+            </p>
+          </div>
+          <div class="tile-bottom">
+            <span class="tile-cta">Open site</span>
+          </div>
+        </a>
+
+        <a class="project-tile tile-stage" href="https://stageofplay.com"
+          target="_blank" rel="noopener noreferrer">
+          <div class="tile-top">
+            <div>
+              <p class="tile-tag">Stage of Play</p>
+              <p class="tile-domain">stageofplay.com</p>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Stage of Play</h3>
+            <p class="tile-kicker">Montessori-inspired play kits.</p>
+          </div>
+          <div class="tile-bottom">
+            <span class="tile-cta">Open site</span>
+          </div>
+        </a>
+
+        <a class="project-tile tile-chorale" href="https://getchorale.com"
+          target="_blank" rel="noopener noreferrer">
+          <div class="chorale-grid" aria-hidden="true"></div>
+          <div class="tile-top">
+            <div>
+              <p class="tile-tag">Chorale</p>
+              <p class="tile-domain">getchorale.com</p>
+            </div>
+          </div>
+          <div class="tile-body">
+            <h3 class="tile-title">Chorale</h3>
+            <p class="tile-kicker">
+              Scheduling for small businesses with AI assistance.
+            </p>
+          </div>
+          <div class="tile-bottom">
+            <span class="tile-cta">Open site</span>
+          </div>
+        </a>
+      </div>
     </section>
 
     <footer class="site-footer projects-footer">
