@@ -497,6 +497,52 @@
         0 4.6rem 0 rgba(40, 31, 21, 0.08);
     }
 
+    .tile-pincer {
+      background:
+        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.12),
+          transparent 24%),
+        radial-gradient(circle at 78% 20%, rgba(93, 121, 255, 0.3),
+          transparent 30%),
+        linear-gradient(155deg, rgba(10, 12, 28, 0.98),
+          rgba(18, 22, 56, 0.96) 52%, rgba(8, 11, 28, 0.98));
+    }
+
+    .tile-pincer::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(125deg, rgba(255, 255, 255, 0.08), transparent 36%),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px,
+          transparent 1px 3.3rem),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px,
+          transparent 1px 3.3rem);
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.94),
+        rgba(0, 0, 0, 0.5));
+      pointer-events: none;
+    }
+
+    .tile-pincer .tile-tag {
+      color: rgba(189, 203, 255, 0.84);
+      font-family: var(--tech-font);
+    }
+
+    .tile-pincer .tile-title {
+      max-width: 8ch;
+      color: #f6f7ff;
+    }
+
+    .tile-pincer .tile-kicker,
+    .tile-pincer .tile-copy {
+      color: rgba(218, 223, 248, 0.9);
+    }
+
+    .tile-pincer .tile-domain,
+    .tile-pincer .tile-cta {
+      color: rgba(228, 233, 255, 0.82);
+      border-bottom-color: rgba(228, 233, 255, 0.34);
+    }
+
     .tile-colossal {
       background:
         radial-gradient(circle at 75% 18%, rgba(255, 146, 64, 0.18),
@@ -1021,6 +1067,25 @@
           <div class="next-rule" aria-hidden="true"></div>
           <h2 class="tile-title">Next Book After</h2>
           <p class="tile-kicker">Specific book recs for previously loved reads.</p>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Open site</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-pincer" href="https://www.pincerspace.com"
+        target="_blank" rel="noopener noreferrer">
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">PincerSpace</p>
+            <p class="tile-domain">pincerspace.com</p>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">v0, but bring your own AI.</h2>
+          <p class="tile-kicker">
+            Publish websites with your own AI agents.
+          </p>
         </div>
         <div class="tile-bottom">
           <span class="tile-cta">Open site</span>
