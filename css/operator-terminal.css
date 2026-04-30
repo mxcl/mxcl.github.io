@@ -9,7 +9,8 @@
   --muted: #9ca3af;
   --accent: #4ade80;
   --accent-soft: rgba(74, 222, 128, 0.12);
-  --font-sans: Inter, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+  --font-sans: Satoshi, Geist, "SF Pro Display", "Segoe UI", system-ui,
+    sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", "SF Mono", Consolas,
     "Liberation Mono", Menlo, monospace;
 }
@@ -370,5 +371,279 @@ h1 {
   .cta-link,
   .email-link {
     transition: none;
+  }
+}
+
+.home-bio {
+  --bg: #10120f;
+  --panel: #171a15;
+  --panel-strong: #1d211a;
+  --line: rgba(222, 215, 199, 0.16);
+  --line-strong: rgba(222, 215, 199, 0.26);
+  --text: #e9e1d2;
+  --muted: #a9aa9f;
+  --accent: #b47a4c;
+  --accent-soft: rgba(180, 122, 76, 0.16);
+  background:
+    linear-gradient(90deg, rgba(222, 215, 199, 0.035) 1px, transparent 1px)
+      0 0 / 4.75rem 4.75rem,
+    radial-gradient(circle at 85% 12%, rgba(180, 122, 76, 0.12),
+      transparent 30rem),
+    var(--bg);
+}
+
+.home-bio::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 100% 9px, 11px 100%;
+  mix-blend-mode: soft-light;
+}
+
+.home-bio .page-shell {
+  width: min(1280px, calc(100vw - 2rem));
+  padding-top: max(1.25rem, env(safe-area-inset-top));
+}
+
+.home-bio .site-header {
+  border-bottom-color: transparent;
+}
+
+.home-bio .brand {
+  color: var(--text);
+}
+
+.home-bio .site-nav {
+  gap: 0.7rem 1.1rem;
+}
+
+.bio-hero {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(1.5rem, 5vw, 5.5rem);
+  align-items: center;
+  min-height: calc(100dvh - 6rem);
+  padding: clamp(1.75rem, 3vw, 3rem) 0 clamp(2rem, 3vw, 3rem);
+}
+
+.bio-image-panel {
+  position: relative;
+  align-self: stretch;
+  min-height: clamp(30rem, 64dvh, 36rem);
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 2.5rem 5rem rgba(4, 5, 4, 0.35);
+  animation: bio-rise 720ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.bio-image-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 48%, rgba(16, 18, 15, 0.72)),
+    linear-gradient(90deg, rgba(16, 18, 15, 0.24), transparent 42%);
+}
+
+.bio-image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.78) contrast(1.04);
+  transform: scale(1.02);
+}
+
+.bio-index {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid rgba(233, 225, 210, 0.18);
+  background: rgba(16, 18, 15, 0.64);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.bio-index span {
+  min-width: 0;
+  padding: 0.72rem 0.6rem;
+  border-right: 1px solid rgba(233, 225, 210, 0.14);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: clamp(0.68rem, 1vw, 0.78rem);
+  letter-spacing: 0.04em;
+  overflow-wrap: anywhere;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bio-index span:last-child {
+  border-right: 0;
+}
+
+.bio-copy {
+  padding-bottom: clamp(0rem, 4vw, 3rem);
+  animation: bio-rise 900ms 90ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.bio-copy h1 {
+  max-width: 8ch;
+  margin-top: 0.8rem;
+  font-size: clamp(4.4rem, 9.5vw, 8.25rem);
+  line-height: 0.8;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+
+.bio-kicker {
+  max-width: 34rem;
+  margin-top: 1rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: clamp(0.92rem, 1.6vw, 1.12rem);
+  letter-spacing: 0.01em;
+}
+
+.bio-prose {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 0.8rem 1.35rem;
+  max-width: 46rem;
+  margin-top: clamp(1.25rem, 2.4vw, 1.9rem);
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+.bio-prose p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(0.9rem, 1.05vw, 1rem);
+  line-height: 1.56;
+}
+
+.bio-prose p:first-child {
+  grid-row: span 2;
+  color: var(--text);
+  font-size: clamp(1rem, 1.24vw, 1.1rem);
+}
+
+.bio-prose a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+.bio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.home-bio .cta-link,
+.home-bio .email-link,
+.home-bio .section-link {
+  transition:
+    color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home-bio .cta-link:active,
+.home-bio .email-link:active,
+.home-bio .section-link:active {
+  transform: translateY(1px);
+}
+
+@keyframes bio-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .bio-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 2rem;
+  }
+
+  .bio-image-panel {
+    min-height: 26rem;
+    order: 2;
+  }
+
+  .bio-copy {
+    order: 1;
+    padding-bottom: 0;
+  }
+
+  .bio-copy h1 {
+    max-width: 7ch;
+  }
+
+  .bio-prose {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-prose p:first-child {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-bio .page-shell {
+    width: min(100vw, calc(100vw - 1rem));
+  }
+
+  .bio-hero {
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .bio-copy h1 {
+    font-size: clamp(4rem, 22vw, 6rem);
+  }
+
+  .bio-image-panel {
+    min-height: 22rem;
+  }
+
+  .bio-index {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-index span {
+    border-right: 0;
+    border-bottom: 1px solid rgba(233, 225, 210, 0.14);
+  }
+
+  .bio-index span:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bio-image-panel,
+  .bio-copy {
+    animation: none;
   }
 }
