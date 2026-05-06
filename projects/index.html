@@ -497,6 +497,76 @@
         0 4.6rem 0 rgba(40, 31, 21, 0.08);
     }
 
+    .tile-automic {
+      background:
+        radial-gradient(circle at 78% 22%, rgba(86, 255, 188, 0.16),
+          transparent 28%),
+        radial-gradient(circle at 18% 80%, rgba(95, 139, 255, 0.2),
+          transparent 30%),
+        linear-gradient(145deg, rgba(7, 12, 13, 0.98),
+          rgba(10, 22, 24, 0.96) 54%, rgba(7, 11, 16, 0.98));
+    }
+
+    .tile-automic::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(120, 255, 205, 0.05) 1px,
+          transparent 1px),
+        linear-gradient(rgba(120, 255, 205, 0.04) 1px, transparent 1px);
+      background-size: 2.7rem 2.7rem;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.88),
+        rgba(0, 0, 0, 0.25));
+      pointer-events: none;
+    }
+
+    .vault-core {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.1rem;
+      width: 6.4rem;
+      aspect-ratio: 1;
+      border: 1px solid rgba(120, 255, 205, 0.36);
+      display: grid;
+      place-items: center;
+      transform: rotate(45deg);
+      box-shadow:
+        0 0 0 0.7rem rgba(120, 255, 205, 0.05),
+        0 0 32px rgba(75, 255, 194, 0.12);
+      animation: drift 10s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .vault-core span {
+      width: 42%;
+      aspect-ratio: 1;
+      border: 1px solid rgba(230, 255, 247, 0.62);
+      background: rgba(120, 255, 205, 0.12);
+      box-shadow: inset 0 0 18px rgba(120, 255, 205, 0.18);
+    }
+
+    .tile-automic .tile-tag {
+      color: rgba(120, 255, 205, 0.82);
+      font-family: var(--tech-font);
+    }
+
+    .tile-automic .tile-title {
+      max-width: 10ch;
+      color: #f1fff9;
+    }
+
+    .tile-automic .tile-kicker,
+    .tile-automic .tile-copy {
+      color: rgba(222, 241, 237, 0.9);
+    }
+
+    .tile-automic .tile-domain,
+    .tile-automic .tile-cta {
+      color: rgba(222, 255, 244, 0.84);
+      border-bottom-color: rgba(222, 255, 244, 0.34);
+    }
+
     .tile-pincer {
       background:
         radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.12),
@@ -901,6 +971,7 @@
       .tile-bookhole::before,
       .tile-next::before,
       .claw-marks span,
+      .vault-core,
       .darling-ring,
       .tile-stage::before,
       .tile-stage::after,
@@ -934,7 +1005,7 @@
       <p class="eyebrow">active projects</p>
       <h1 id="projects-title">Active projects in one wall.</h1>
       <p>
-        Six current builds, one contiguous grid, six different moods.
+        Eight current builds, one contiguous grid, eight different moods.
       </p>
     </section>
 
@@ -1070,6 +1141,29 @@
         </div>
         <div class="tile-bottom">
           <span class="tile-cta">Open site</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-automic" href="https://www.automicvault.com"
+        target="_blank" rel="noopener noreferrer">
+        <div class="vault-core" aria-hidden="true">
+          <span></span>
+        </div>
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Automic Vault</p>
+            <p class="tile-domain">automicvault.com</p>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">Run powerful agents. Don't lose control.</h2>
+          <p class="tile-kicker">
+            A secure runtime for agent execution: permissioned actions,
+            immutable tools, and zero key exposure.
+          </p>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Open vault</span>
         </div>
       </a>
 
