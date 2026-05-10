@@ -1483,6 +1483,10 @@ h1 {
   min-height: clamp(25rem, 33vw, 30rem);
 }
 
+.vault-screen {
+  transform: none;
+}
+
 .vault-logo {
   animation: home-float 7.5s ease-in-out infinite;
 }
