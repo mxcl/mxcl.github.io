@@ -19,18 +19,21 @@
   <meta property="og:image" content="https://mxcl.dev/mxcl.png">
   <meta property="og:url" content="https://mxcl.dev/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#10120f">
+  <meta name="theme-color" content="#07090c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap">
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Sora:wght@400;600;700;800&amp;display=swap">
   <link rel="stylesheet" href="/css/operator-terminal.css">
 </head>
 
 <body class="operator-terminal home-bio">
   <main class="page-shell">
     <header class="site-header">
-      <a class="brand" href="/">mxcl.dev</a>
+      <a class="brand" href="/" aria-label="mxcl.dev home">
+        <span class="brand-mark" aria-hidden="true">A_</span>
+        <span>mxcl.dev</span>
+      </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="/hire-me/">Hire</a>
         <a href="/ai-implementation-consultant/">Implementation</a>
@@ -41,50 +44,68 @@
     </header>
 
     <section class="bio-hero" aria-labelledby="hero-title">
+      <div class="hero-portrait" aria-label="Portrait of Max Howell">
+        <img src="/images/automic-avatar.png" alt="Max Howell">
+        <div class="portrait-reticle" aria-hidden="true">
+          <span>A_</span>
+        </div>
+        <div class="portrait-command" aria-hidden="true">
+          <span>&gt;_</span>
+        </div>
+      </div>
+
       <article class="bio-copy">
-        <p class="eyebrow">British-American software engineer</p>
-        <h1 id="hero-title">Max Howell builds developer tools and agent systems.</h1>
+        <p class="eyebrow">Automic thinking</p>
+        <h1 id="hero-title">Security. Simplicity. Systems that think.</h1>
         <p class="bio-kicker">
-          Creator of <a href="/homebrew/">Homebrew</a>. Open-source maintainer,
-          founder, and production AI consultant.
+          I build tools and frameworks for the agent era: secure by default,
+          sharp under load, and designed for people who operate real systems.
         </p>
         <div class="bio-actions">
-          <a class="cta-link" href="/projects/">View projects</a>
+          <a class="cta-link" href="/hire-me/">Talk about a system</a>
           <a class="email-link" href="mailto:mxcl@me.com">mxcl@me.com</a>
         </div>
       </article>
 
       <aside class="bio-brief" aria-label="About Max Howell">
-        <img class="bio-avatar" src="/avatar.webp" alt="Max Howell">
-        <div class="bio-brief-copy">
-          <p>
-            I make software with sharp edges removed: Homebrew, apps,
-            developer infrastructure, and agent products that have to survive
-            contact with real users.
-          </p>
-          <dl class="bio-facts">
-            <div>
-              <dt>Known for</dt>
-              <dd>Homebrew, CLI conventions, open-source tooling</dd>
-            </div>
-            <div>
-              <dt>Current work</dt>
-              <dd>Agent runtimes, claw-network apps, advisory builds</dd>
-            </div>
-          </dl>
+        <div class="signature-lockup">
+          <span class="signature-mark" aria-hidden="true">A_</span>
+          <span>Automic Object</span>
         </div>
+        <p>
+          Creator of <a href="/homebrew/">Homebrew</a>. British-American
+          software engineer, open-source developer, founder, and production AI
+          consultant.
+        </p>
+        <dl class="bio-facts">
+          <div>
+            <dt>Known for</dt>
+            <dd>Homebrew, CLI conventions, developer tooling</dd>
+          </div>
+          <div>
+            <dt>Current work</dt>
+            <dd>Agent runtimes, secure execution, advisory builds</dd>
+          </div>
+        </dl>
       </aside>
     </section>
 
-    <section class="featured-projects" aria-labelledby="projects-title">
+    <section class="operator-strip" aria-label="Operating principles">
+      <p>Security by default.</p>
+      <p>Power by design.</p>
+      <p>Built in public.</p>
+      <p>Clear &gt; clever.</p>
+    </section>
+
+    <section class="systems-section" aria-labelledby="systems-title">
       <div class="section-kicker">
-        <p class="eyebrow">selected projects</p>
-        <h2 id="projects-title">Current builds with different teeth.</h2>
+        <p class="eyebrow">application examples</p>
+        <h2 id="systems-title">Current builds with strict boundaries.</h2>
         <a class="section-link" href="/projects/">See every project</a>
       </div>
 
-      <div class="project-showcase">
-        <a class="project-feature project-automic"
+      <div class="systems-grid">
+        <a class="system-panel system-vault"
           href="https://www.automicvault.com" target="_blank"
           rel="noopener noreferrer">
           <div class="project-copy">
@@ -103,9 +124,10 @@
           </div>
         </a>
 
-        <article class="project-pair" aria-label="More highlighted projects">
-          <a class="project-card project-clawlicious" href="https://clawlicio.us"
-            target="_blank" rel="noopener noreferrer">
+        <article class="system-stack" aria-label="More highlighted projects">
+          <a class="system-panel system-compact system-clawlicious"
+            href="https://clawlicio.us" target="_blank"
+            rel="noopener noreferrer">
             <div class="project-card-top">
               <p class="project-label">Clawlicious</p>
               <img src="/images/clawlicious-logo.webp" alt="" aria-hidden="true">
@@ -118,13 +140,13 @@
             <span class="project-cta">Visit Clawlicious</span>
           </a>
 
-          <a class="project-card project-colossal"
+          <a class="system-panel system-compact system-colossal"
             href="https://colossalclawadventure.com" target="_blank"
             rel="noopener noreferrer">
-            <div class="claw-slashes" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div class="terminal-grid" aria-hidden="true">
+              <span>[router]</span>
+              <span>[choice]</span>
+              <span>[branch]</span>
             </div>
             <p class="project-label">Colossal Claw Adventure</p>
             <h3>A massively branching story game.</h3>
@@ -138,16 +160,75 @@
       </div>
     </section>
 
-    <section class="hire-band" aria-labelledby="hire-title">
-      <div>
-        <p class="eyebrow">available selectively</p>
-        <h2 id="hire-title">Hire me as a fractional CTO or fractional agent officer.</h2>
+    <section class="workflow-section" aria-labelledby="workflow-title">
+      <div class="section-kicker">
+        <p class="eyebrow">operator protocol</p>
+        <h2 id="workflow-title">How I harden agent systems.</h2>
       </div>
+
+      <div class="workflow-grid">
+        <div class="workflow-panel">
+          <p class="project-label">Typical failure map</p>
+          <pre class="diagram" aria-label="Typical AI system diagram">[Input]
+   |
+[Router] --- [Tools]
+   |           |
+[Eval]    [Fallbacks]
+   |
+[Output]</pre>
+        </div>
+        <ol class="work-list workflow-steps">
+          <li>Understand the operating surface.</li>
+          <li>Identify hidden failure paths.</li>
+          <li>Reduce tool and routing complexity.</li>
+          <li>Add evals that catch regressions.</li>
+          <li>Ship with boundaries people can audit.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="hire-band" aria-labelledby="hire-title">
+      <p class="eyebrow">available selectively</p>
+      <h2 id="hire-title">Fractional CTO, fractional agent officer, or difficult-system mechanic.</h2>
       <p>
         I help teams choose the right technical bets, harden agent systems,
         and get expensive ambiguity out of the product path.
       </p>
       <a class="cta-link" href="/hire-me/">Hire Max Howell</a>
+    </section>
+
+    <section class="bio-dossier" aria-labelledby="dossier-title">
+      <div class="section-kicker">
+        <p class="eyebrow">archival biography</p>
+        <h2 id="dossier-title">The earlier Homebrew note, preserved.</h2>
+      </div>
+      <div class="bio-prose">
+        <p>
+          Howell, Max (fl. early 21st century), British-American software
+          engineer and open-source developer, best known as the creator of
+          <a href="/homebrew/">Homebrew</a>, a package management system for
+          macOS and Linux that achieved widespread adoption among software
+          developers globally, with an estimated user base numbering in the
+          tens of millions.
+        </p>
+        <p>
+          Howell's most consequential technical contribution, and the subject
+          of some professional controversy, was his introduction of the
+          curl-based one-liner installation method, a convention subsequently
+          adopted across a broad range of software projects. He is further
+          credited with popularizing the doctor subcommand pattern in
+          command-line interfaces, a diagnostic utility designed to identify
+          and resolve common configuration errors, and with pioneering
+          automated issue-tracker integration, whereby a tool, upon
+          encountering an error, would query public repositories such as GitHub
+          to surface relevant existing discussions.
+        </p>
+        <p>
+          Howell has remained a prominent advocate for the open-source
+          software movement throughout his career, contributing to a culture of
+          collaborative, freely distributed software development.
+        </p>
+      </div>
     </section>
 
     <footer class="site-footer">
