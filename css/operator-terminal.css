@@ -34,6 +34,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.splash-cursor-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -365,6 +376,10 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .splash-cursor-canvas {
+    display: none;
+  }
+
   .site-nav a,
   .site-footer a,
   .section-link,
