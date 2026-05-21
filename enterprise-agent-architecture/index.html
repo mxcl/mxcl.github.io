@@ -18,7 +18,72 @@
   <meta property="og:image" content="https://mxcl.dev/avatar.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b0f0c">
-  <link rel="stylesheet" href="/css/operator-terminal.css">
+  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260516">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://mxcl.dev/enterprise-agent-architecture/#service",
+          "name": "Enterprise agent architecture",
+          "serviceType": "Enterprise agent architecture consulting",
+          "url": "https://mxcl.dev/enterprise-agent-architecture/",
+          "description": "Architecture consulting for complex agent systems that need clearer boundaries, safer tool use, observability, and rollout rules that hold.",
+          "areaServed": "Global",
+          "provider": {
+            "@type": "Person",
+            "@id": "https://mxcl.dev/#max-howell",
+            "name": "Max Howell",
+            "url": "https://mxcl.dev/",
+            "sameAs": [
+              "https://github.com/mxcl",
+              "https://www.linkedin.com/in/mxcl",
+              "https://www.wikidata.org/wiki/Q64850138"
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://mxcl.dev/enterprise-agent-architecture/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is enterprise agent architecture?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Enterprise agent architecture is the design of boundaries, tool permissions, routing, observability, fallback behavior, and rollout rules for agent systems that operate across teams or business processes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What breaks first in enterprise agent systems?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The first failures are usually duplicated routing logic, vague tool permissions, missing fallback paths, weak observability, and rollout policies that depend on confidence instead of evidence."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does agent architecture consulting produce?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The work produces routing decisions, permission boundaries, failure and escalation paths, auditability rules, eval-backed rollout steps, and operational runbooks for live agent systems."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://mxcl.dev/enterprise-agent-architecture/#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mxcl.dev/"},
+            {"@type": "ListItem", "position": 2, "name": "Enterprise Agent Architecture", "item": "https://mxcl.dev/enterprise-agent-architecture/"}
+          ]
+        }
+      ]
+    }
+  </script>
 </head>
 
 <body class="operator-terminal">
@@ -57,6 +122,23 @@
       </div>
     </section>
 
+    <section class="section" aria-labelledby="definition-title">
+      <div class="section-heading">
+        <h2 id="definition-title">What enterprise agent architecture means</h2>
+      </div>
+      <article class="panel answer-panel">
+        <h3>Boundaries, permissions, and rollout rules for agent systems</h3>
+        <p>
+          Enterprise agent architecture is the design of boundaries, tool
+          permissions, routing, observability, fallback behavior, and rollout
+          rules for agent systems that operate across teams or business
+          processes. The goal is to make agent behavior inspectable,
+          permissioned, recoverable, and easier to change without multiplying
+          hidden failure paths.
+        </p>
+      </article>
+    </section>
+
     <section class="section" aria-labelledby="design-title">
       <div class="section-heading">
         <h2 id="design-title">What I design</h2>
@@ -93,6 +175,39 @@
             <li>eval-backed expansion</li>
             <li>less confidence theater</li>
           </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="architecture-faq-title">
+      <div class="section-heading">
+        <h2 id="architecture-faq-title">Enterprise agent architecture questions</h2>
+      </div>
+      <div class="faq-list">
+        <article class="panel">
+          <h3>What is enterprise agent architecture?</h3>
+          <p>
+            Enterprise agent architecture is the design of boundaries, tool
+            permissions, routing, observability, fallback behavior, and rollout
+            rules for agent systems that operate across teams or business
+            processes.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What breaks first in enterprise agent systems?</h3>
+          <p>
+            The first failures are usually duplicated routing logic, vague
+            tool permissions, missing fallback paths, weak observability, and
+            rollout policies that depend on confidence instead of evidence.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What does agent architecture consulting produce?</h3>
+          <p>
+            The work produces routing decisions, permission boundaries,
+            failure and escalation paths, auditability rules, eval-backed
+            rollout steps, and operational runbooks for live agent systems.
+          </p>
         </article>
       </div>
     </section>

@@ -270,6 +270,52 @@ h1 {
   background: var(--panel);
 }
 
+.answer-panel {
+  border-color: var(--line-strong);
+  background: var(--panel-strong);
+}
+
+.answer-panel p + p,
+.faq-list article p + p,
+.source-list p + p {
+  margin-top: 0.75rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comparison-table td {
+  color: var(--text);
+}
+
+.faq-list,
+.source-list {
+  display: grid;
+  gap: 1rem;
+}
+
 .panel h3 {
   font-size: 1.15rem;
   line-height: 1.25;
@@ -368,6 +414,24 @@ h1 {
 
   .panel {
     padding: 1rem;
+  }
+
+  .comparison-table,
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table th,
+  .comparison-table td {
+    display: block;
+  }
+
+  .comparison-table tr + tr {
+    border-top: 1px solid var(--line-strong);
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    border: 0;
   }
 
   .diagram {

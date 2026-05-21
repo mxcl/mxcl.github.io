@@ -21,7 +21,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap">
-  <link rel="stylesheet" href="/css/operator-terminal.css">
+  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260516">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://mxcl.dev/projects/#collection",
+          "name": "Active Projects",
+          "url": "https://mxcl.dev/projects/",
+          "description": "An active project wall for Max Howell with current project links and distinct visual treatments.",
+          "author": {"@id": "https://mxcl.dev/#max-howell"},
+          "mainEntity": {"@id": "https://mxcl.dev/projects/#items"}
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://mxcl.dev/projects/#items",
+          "name": "Active projects from Max Howell",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Colossal Claw Adventure", "url": "https://colossalclawadventure.com"},
+            {"@type": "ListItem", "position": 2, "name": "Clawlicious", "url": "https://clawlicio.us"},
+            {"@type": "ListItem", "position": 3, "name": "BYOClaw", "url": "https://byoclaw.dev"},
+            {"@type": "ListItem", "position": 4, "name": "Supermassive Book Hole", "url": "https://supermassivebookhole.com"},
+            {"@type": "ListItem", "position": 5, "name": "Game Studio Simulator", "url": "https://gamestudiosimulator.com"},
+            {"@type": "ListItem", "position": 6, "name": "Next Book After", "url": "https://nextbookafter.com"},
+            {"@type": "ListItem", "position": 7, "name": "Automic Vault", "url": "https://www.automicvault.com"},
+            {"@type": "ListItem", "position": 8, "name": "PincerSpace", "url": "https://www.pincerspace.com"}
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://mxcl.dev/projects/#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mxcl.dev/"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://mxcl.dev/projects/"}
+          ]
+        }
+      ]
+    }
+  </script>
   <style>
     :root {
       --projects-bg:

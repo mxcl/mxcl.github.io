@@ -19,8 +19,72 @@
   <meta property="og:image" content="https://mxcl.dev/avatar.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b0f0c">
-  <link rel="stylesheet" href="/css/operator-terminal.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Max Howell","url":"https://mxcl.dev/ai-implementation-consultant/","serviceType":"AI implementation consulting","areaServed":"Global"}</script>
+  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260516">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://mxcl.dev/ai-implementation-consultant/#service",
+          "name": "AI implementation consulting",
+          "serviceType": "AI implementation consulting",
+          "url": "https://mxcl.dev/ai-implementation-consultant/",
+          "description": "Hands-on AI implementation work for product teams that need routing, eval loops, release discipline, fallback paths, and systems that stay up.",
+          "areaServed": "Global",
+          "provider": {
+            "@type": "Person",
+            "@id": "https://mxcl.dev/#max-howell",
+            "name": "Max Howell",
+            "url": "https://mxcl.dev/",
+            "sameAs": [
+              "https://github.com/mxcl",
+              "https://www.linkedin.com/in/mxcl",
+              "https://www.wikidata.org/wiki/Q64850138"
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://mxcl.dev/ai-implementation-consultant/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is an AI implementation consultant?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An AI implementation consultant helps product and engineering teams turn AI prototypes into production systems by designing routing, eval loops, fallback paths, release gates, observability, and operational runbooks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does AI implementation consulting deliver?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Typical deliverables include a system map, release controls, eval test sets, fallback design, operational runbooks, tool boundary decisions, and cleanup of platform primitives that slow the team down."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When is implementation work better than strategy work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Implementation work is the better fit when the problem is inside the product: unreliable routing, weak evaluation, missing failure handling, unclear tool exposure, or releases that regress without warning."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://mxcl.dev/ai-implementation-consultant/#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mxcl.dev/"},
+            {"@type": "ListItem", "position": 2, "name": "AI Implementation Consultant", "item": "https://mxcl.dev/ai-implementation-consultant/"}
+          ]
+        }
+      ]
+    }
+  </script>
 </head>
 
 <body class="operator-terminal">
@@ -55,6 +119,22 @@
         </a>
         <a class="email-link" href="mailto:mxcl@me.com">mxcl@me.com</a>
       </div>
+    </section>
+
+    <section class="section" aria-labelledby="definition-title">
+      <div class="section-heading">
+        <h2 id="definition-title">What an AI implementation consultant does</h2>
+      </div>
+      <article class="panel answer-panel">
+        <h3>From prototype behavior to production behavior</h3>
+        <p>
+          An AI implementation consultant helps product and engineering teams
+          turn AI prototypes into production systems. The work usually covers
+          routing, tool boundaries, eval loops, fallback behavior,
+          observability, release gates, and rollback rules so teams can ship
+          AI features without relying on demos or manual inspection.
+        </p>
+      </article>
     </section>
 
     <section class="section" aria-labelledby="build-title">
@@ -132,6 +212,41 @@
           <p>
             Simpler primitives so teams can ship without adding another layer
             of prompt plumbing.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="implementation-faq-title">
+      <div class="section-heading">
+        <h2 id="implementation-faq-title">AI implementation questions</h2>
+      </div>
+      <div class="faq-list">
+        <article class="panel">
+          <h3>What is an AI implementation consultant?</h3>
+          <p>
+            An AI implementation consultant helps product and engineering
+            teams turn AI prototypes into production systems by designing
+            routing, eval loops, fallback paths, release gates, observability,
+            and operational runbooks.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What does AI implementation consulting deliver?</h3>
+          <p>
+            Typical deliverables include a system map, release controls, eval
+            test sets, fallback design, operational runbooks, tool boundary
+            decisions, and cleanup of platform primitives that slow the team
+            down.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>When is implementation work better than strategy work?</h3>
+          <p>
+            Implementation work is the better fit when the problem is inside
+            the product: unreliable routing, weak evaluation, missing failure
+            handling, unclear tool exposure, or releases that regress without
+            warning.
           </p>
         </article>
       </div>

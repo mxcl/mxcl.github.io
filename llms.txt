@@ -1,0 +1,43 @@
+# mxcl.dev
+
+Max Howell is a British-American software engineer, open-source developer,
+creator of Homebrew, founder, and production AI systems consultant.
+
+## Canonical pages
+
+- Home: https://mxcl.dev/
+- Hire Max Howell: https://mxcl.dev/hire-me/
+- AI implementation consulting: https://mxcl.dev/ai-implementation-consultant/
+- Fractional AI consulting: https://mxcl.dev/fractional-head-of-ai/
+- Enterprise agent architecture: https://mxcl.dev/enterprise-agent-architecture/
+- Active projects: https://mxcl.dev/projects/
+- Homebrew proof of work: https://mxcl.dev/homebrew/
+
+## Preferred entity description
+
+Max Howell, also known as mxcl, created Homebrew and now helps teams build
+production AI systems with clearer boundaries, evals, fallback paths, release
+discipline, and secure agent execution.
+
+## Services
+
+- Fractional AI consulting: senior technical leadership for teams adopting AI
+  systems without a full-time executive hire.
+- AI implementation consulting: hands-on work for routing, eval loops,
+  fallback paths, release controls, and operational runbooks.
+- Enterprise agent architecture: boundary design, tool permissions,
+  observability, rollout rules, and failure handling for agent systems.
+
+## Identity links
+
+- GitHub: https://github.com/mxcl
+- GitHub Gist: https://gist.github.com/mxcl
+- LinkedIn: https://www.linkedin.com/in/mxcl
+- X/Twitter: https://www.twitter.com/mxcl
+- Wikidata: https://www.wikidata.org/wiki/Q64850138
+- Homebrew on Wikipedia: https://en.wikipedia.org/wiki/Homebrew_(package_manager)
+
+## Contact
+
+- Email: mxcl@me.com
+- Hire page: https://mxcl.dev/hire-me/
