@@ -19,7 +19,7 @@
   <meta property="og:image" content="https://mxcl.dev/avatar.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b0f0c">
-  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260516">
+  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260521">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,6 +32,12 @@
           "url": "https://mxcl.dev/ai-implementation-consultant/",
           "description": "Hands-on AI implementation work for product teams that need routing, eval loops, release discipline, fallback paths, and systems that stay up.",
           "areaServed": "Global",
+          "dateModified": "2026-05-21",
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Product and engineering teams shipping AI features"
+          },
+          "brand": {"@id": "https://mxcl.dev/#max-howell"},
           "provider": {
             "@type": "Person",
             "@id": "https://mxcl.dev/#max-howell",
@@ -53,7 +59,7 @@
               "name": "What is an AI implementation consultant?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "An AI implementation consultant helps product and engineering teams turn AI prototypes into production systems by designing routing, eval loops, fallback paths, release gates, observability, and operational runbooks."
+                "text": "An AI implementation consultant helps product and engineering teams turn AI prototypes into production systems by designing routing, eval loops, fallback paths, release gates, observability, and operational runbooks. The work is useful when model behavior affects real users, releases need evidence instead of manual review, and the team needs clearer ownership around tools, prompts, policies, and failure handling."
               }
             },
             {
@@ -61,7 +67,7 @@
               "name": "What does AI implementation consulting deliver?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Typical deliverables include a system map, release controls, eval test sets, fallback design, operational runbooks, tool boundary decisions, and cleanup of platform primitives that slow the team down."
+                "text": "Typical deliverables include a system map, release controls, eval test sets, fallback design, operational runbooks, tool boundary decisions, and cleanup of platform primitives that slow the team down. The output should help the team answer practical questions: what can the agent do, how do we know it worked, what happens when it fails, and who owns the next change."
               }
             },
             {
@@ -69,7 +75,7 @@
               "name": "When is implementation work better than strategy work?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Implementation work is the better fit when the problem is inside the product: unreliable routing, weak evaluation, missing failure handling, unclear tool exposure, or releases that regress without warning."
+                "text": "Implementation work is the better fit when the problem is inside the product: unreliable routing, weak evaluation, missing failure handling, unclear tool exposure, or releases that regress without warning. Strategy can name the opportunity, but implementation work changes the system behavior, release process, observability, and operational defaults that determine whether users can trust the feature."
               }
             }
           ]
@@ -105,6 +111,9 @@
       <h2>Hands-on AI implementation for routing, evals, fallbacks, and release discipline.</h2>
       <p class="lede">
         As an AI implementation consultant, I help teams turn agent prototypes into production systems with clear routing, eval loops, fallback paths, and release discipline.
+      </p>
+      <p class="updated-note">
+        Updated <time datetime="2026-05-21">May 21, 2026</time>
       </p>
       <ul class="focus-list">
         <li>&rarr; Tool routing</li>
@@ -228,7 +237,10 @@
             An AI implementation consultant helps product and engineering
             teams turn AI prototypes into production systems by designing
             routing, eval loops, fallback paths, release gates, observability,
-            and operational runbooks.
+            and operational runbooks. The work is useful when model behavior
+            affects real users, releases need evidence instead of manual
+            review, and the team needs clearer ownership around tools,
+            prompts, policies, and failure handling.
           </p>
         </article>
         <article class="panel">
@@ -237,7 +249,9 @@
             Typical deliverables include a system map, release controls, eval
             test sets, fallback design, operational runbooks, tool boundary
             decisions, and cleanup of platform primitives that slow the team
-            down.
+            down. The output should help the team answer practical questions:
+            what can the agent do, how do we know it worked, what happens
+            when it fails, and who owns the next change.
           </p>
         </article>
         <article class="panel">
@@ -246,9 +260,41 @@
             Implementation work is the better fit when the problem is inside
             the product: unreliable routing, weak evaluation, missing failure
             handling, unclear tool exposure, or releases that regress without
-            warning.
+            warning. Strategy can name the opportunity, but implementation
+            work changes the system behavior, release process, observability,
+            and operational defaults that determine whether users can trust
+            the feature.
           </p>
         </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="evidence-title">
+      <div class="section-heading">
+        <h2 id="evidence-title">Why this operating model works</h2>
+        <p class="section-copy">
+          Good implementation work makes the system easier to inspect and
+          harder to accidentally misuse.
+        </p>
+      </div>
+      <div class="panel">
+        <ul class="evidence-list">
+          <li>
+            <a href="/homebrew/">Homebrew</a> scaled because it made developer
+            operations legible: simple commands, clear diagnostics, and
+            defaults that reduced avoidable work.
+          </li>
+          <li>
+            Production AI systems need the same discipline. Routing, evals,
+            fallbacks, and release gates are the operational surface users
+            never see but teams depend on.
+          </li>
+          <li>
+            The useful implementation question is always concrete: what
+            should happen, how do we measure it, what happens when it fails,
+            and how quickly can the team recover?
+          </li>
+        </ul>
       </div>
     </section>
 

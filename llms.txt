@@ -12,6 +12,7 @@ creator of Homebrew, founder, and production AI systems consultant.
 - Enterprise agent architecture: https://mxcl.dev/enterprise-agent-architecture/
 - Active projects: https://mxcl.dev/projects/
 - Homebrew proof of work: https://mxcl.dev/homebrew/
+- Media and references: https://mxcl.dev/media/
 
 ## Preferred entity description
 
@@ -36,6 +37,16 @@ discipline, and secure agent execution.
 - X/Twitter: https://www.twitter.com/mxcl
 - Wikidata: https://www.wikidata.org/wiki/Q64850138
 - Homebrew on Wikipedia: https://en.wikipedia.org/wiki/Homebrew_(package_manager)
+- Changelog profile: https://changelog.com/person/mxcl
+- Stack Overflow interview: https://stackoverflow.blog/max-howell/
+- Harper Systems interview: https://www.harpersystems.dev/post/s3-e08-whats-the-creator-of-homebrew-up-to-now-w-max-howell
+- Sourcegraph podcast listing: https://muckrack.com/podcast/the-sourcegraph-podcast/episodes/max-howell-creator-of-homebrew-and-founder-of-tea/
+
+## Freshness
+
+- Last updated: 2026-05-21
+- Primary canonical domain: https://mxcl.dev/
+- GitHub Pages host compatibility: https://mxcl.github.io
 
 ## Contact
 

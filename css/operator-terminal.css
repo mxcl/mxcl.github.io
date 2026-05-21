@@ -210,6 +210,15 @@ h1 {
   color: var(--muted);
 }
 
+.updated-note {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .focus-list,
 .panel ul,
 .work-list {
@@ -367,6 +376,19 @@ h1 {
 .statement {
   margin-top: 1.25rem;
   font-weight: 600;
+}
+
+.evidence-list {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.evidence-list li {
+  color: var(--text);
+  line-height: 1.65;
 }
 
 .work-list {

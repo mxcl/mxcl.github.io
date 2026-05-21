@@ -18,7 +18,7 @@
   <meta property="og:image" content="https://mxcl.dev/avatar.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b0f0c">
-  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260516">
+  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260521">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,6 +31,12 @@
           "url": "https://mxcl.dev/enterprise-agent-architecture/",
           "description": "Architecture consulting for complex agent systems that need clearer boundaries, safer tool use, observability, and rollout rules that hold.",
           "areaServed": "Global",
+          "dateModified": "2026-05-21",
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Companies building agent systems across teams or workflows"
+          },
+          "brand": {"@id": "https://mxcl.dev/#max-howell"},
           "provider": {
             "@type": "Person",
             "@id": "https://mxcl.dev/#max-howell",
@@ -52,7 +58,7 @@
               "name": "What is enterprise agent architecture?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Enterprise agent architecture is the design of boundaries, tool permissions, routing, observability, fallback behavior, and rollout rules for agent systems that operate across teams or business processes."
+                "text": "Enterprise agent architecture is the design of boundaries, tool permissions, routing, observability, fallback behavior, and rollout rules for agent systems that operate across teams or business processes. The goal is to make agent behavior permissioned, inspectable, recoverable, and easier to change as the system grows."
               }
             },
             {
@@ -60,7 +66,7 @@
               "name": "What breaks first in enterprise agent systems?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The first failures are usually duplicated routing logic, vague tool permissions, missing fallback paths, weak observability, and rollout policies that depend on confidence instead of evidence."
+                "text": "The first failures are usually duplicated routing logic, vague tool permissions, missing fallback paths, weak observability, and rollout policies that depend on confidence instead of evidence. As more teams add agents, unclear ownership and tool exposure become operational risks, not just architecture preferences."
               }
             },
             {
@@ -68,7 +74,7 @@
               "name": "What does agent architecture consulting produce?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The work produces routing decisions, permission boundaries, failure and escalation paths, auditability rules, eval-backed rollout steps, and operational runbooks for live agent systems."
+                "text": "The work produces routing decisions, permission boundaries, failure and escalation paths, auditability rules, eval-backed rollout steps, and operational runbooks for live agent systems. A useful architecture engagement leaves teams with fewer ambiguous permissions, clearer release stages, and a shared model for debugging agent behavior."
               }
             }
           ]
@@ -106,6 +112,9 @@
         Large agent systems fail in predictable ways: too many moving parts,
         vague tool permissions, weak ownership, and rollout rules that do not
         exist. I fix the structure before those failures become routine.
+      </p>
+      <p class="updated-note">
+        Updated <time datetime="2026-05-21">May 21, 2026</time>
       </p>
       <ul class="focus-list" aria-label="Focus areas">
         <li>&rarr; Tool routing</li>
@@ -190,7 +199,8 @@
             Enterprise agent architecture is the design of boundaries, tool
             permissions, routing, observability, fallback behavior, and rollout
             rules for agent systems that operate across teams or business
-            processes.
+            processes. The goal is to make agent behavior permissioned,
+            inspectable, recoverable, and easier to change as the system grows.
           </p>
         </article>
         <article class="panel">
@@ -199,6 +209,8 @@
             The first failures are usually duplicated routing logic, vague
             tool permissions, missing fallback paths, weak observability, and
             rollout policies that depend on confidence instead of evidence.
+            As more teams add agents, unclear ownership and tool exposure
+            become operational risks, not just architecture preferences.
           </p>
         </article>
         <article class="panel">
@@ -206,9 +218,42 @@
           <p>
             The work produces routing decisions, permission boundaries,
             failure and escalation paths, auditability rules, eval-backed
-            rollout steps, and operational runbooks for live agent systems.
+            rollout steps, and operational runbooks for live agent systems. A
+            useful architecture engagement leaves teams with fewer ambiguous
+            permissions, clearer release stages, and a shared model for
+            debugging agent behavior.
           </p>
         </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="evidence-title">
+      <div class="section-heading">
+        <h2 id="evidence-title">Architecture principles behind the work</h2>
+        <p class="section-copy">
+          Agent architecture is not about making more agents. It is about
+          deciding where autonomy belongs and where deterministic control has
+          to win.
+        </p>
+      </div>
+      <div class="panel">
+        <ul class="evidence-list">
+          <li>
+            <a href="/homebrew/">Homebrew</a> proved the value of simple,
+            legible operational surfaces. Complex systems survive when routine
+            actions are understandable and failure states are diagnosable.
+          </li>
+          <li>
+            Enterprise agents need explicit tool permissions, routing policy,
+            escalation paths, and rollout stages because ambiguity compounds
+            across teams.
+          </li>
+          <li>
+            The architecture should make it obvious which parts are agentic,
+            which parts are deterministic, which actions are auditable, and
+            what happens when the model should stop.
+          </li>
+        </ul>
       </div>
     </section>
 
