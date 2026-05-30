@@ -13,6 +13,9 @@ creator of Homebrew, founder, and production AI systems consultant.
 - Active projects: https://mxcl.dev/projects/
 - Homebrew proof of work: https://mxcl.dev/homebrew/
 - Media and references: https://mxcl.dev/media/
+- PromiseKit docs: https://mxcl.dev/PromiseKit/
+- Path.swift docs: https://mxcl.dev/Path.swift/
+- YOLOKit docs: https://mxcl.dev/YOLOKit/
 
 ## Preferred entity description
 
@@ -41,10 +44,13 @@ discipline, and secure agent execution.
 - Stack Overflow interview: https://stackoverflow.blog/max-howell/
 - Harper Systems interview: https://www.harpersystems.dev/post/s3-e08-whats-the-creator-of-homebrew-up-to-now-w-max-howell
 - Sourcegraph podcast listing: https://muckrack.com/podcast/the-sourcegraph-podcast/episodes/max-howell-creator-of-homebrew-and-founder-of-tea/
+- PromiseKit GitHub repository: https://github.com/mxcl/PromiseKit
+- Path.swift GitHub repository: https://github.com/mxcl/Path.swift
+- YOLOKit GitHub repository: https://github.com/mxcl/YOLOKit
 
 ## Freshness
 
-- Last updated: 2026-05-21
+- Last updated: 2026-05-30
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 

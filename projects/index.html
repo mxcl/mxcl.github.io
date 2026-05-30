@@ -7,7 +7,7 @@
     content="width=device-width,initial-scale=1.0,viewport-fit=cover">
   <title>Active Projects | mxcl.dev</title>
   <meta name="description"
-    content="An active project wall for Max Howell with current project links and distinct visual treatments.">
+    content="Current and archived project links for Max Howell, including active products, PromiseKit, Path.swift, YOLOKit, and open-source software.">
   <link rel="canonical" href="https://mxcl.dev/projects/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Active Projects">
@@ -49,8 +49,38 @@
             {"@type": "ListItem", "position": 5, "name": "Game Studio Simulator", "url": "https://gamestudiosimulator.com"},
             {"@type": "ListItem", "position": 6, "name": "Next Book After", "url": "https://nextbookafter.com"},
             {"@type": "ListItem", "position": 7, "name": "Automic Vault", "url": "https://www.automicvault.com"},
-            {"@type": "ListItem", "position": 8, "name": "PincerSpace", "url": "https://www.pincerspace.com"}
+            {"@type": "ListItem", "position": 8, "name": "PincerSpace", "url": "https://www.pincerspace.com"},
+            {"@type": "ListItem", "position": 9, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
+            {"@type": "ListItem", "position": 10, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
+            {"@type": "ListItem", "position": 11, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
           ]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://mxcl.dev/PromiseKit/#software",
+          "name": "PromiseKit",
+          "codeRepository": "https://github.com/mxcl/PromiseKit",
+          "programmingLanguage": "Swift",
+          "url": "https://mxcl.dev/PromiseKit/",
+          "author": {"@id": "https://mxcl.dev/#max-howell"}
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://mxcl.dev/Path.swift/#software",
+          "name": "Path.swift",
+          "codeRepository": "https://github.com/mxcl/Path.swift",
+          "programmingLanguage": "Swift",
+          "url": "https://mxcl.dev/Path.swift/",
+          "author": {"@id": "https://mxcl.dev/#max-howell"}
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://mxcl.dev/YOLOKit/#software",
+          "name": "YOLOKit",
+          "codeRepository": "https://github.com/mxcl/YOLOKit",
+          "programmingLanguage": "Objective-C",
+          "url": "https://mxcl.dev/YOLOKit/",
+          "author": {"@id": "https://mxcl.dev/#max-howell"}
         },
         {
           "@type": "BreadcrumbList",
@@ -1043,10 +1073,11 @@
     </header>
 
     <section class="projects-hero" aria-labelledby="projects-title">
-      <p class="eyebrow">active projects</p>
-      <h1 id="projects-title">Active projects in one wall.</h1>
+      <p class="eyebrow">current and archived projects</p>
+      <h1 id="projects-title">Projects in one wall.</h1>
       <p>
-        Eight current builds, one contiguous grid, eight different moods.
+        Current builds up front, with indexed open-source references for
+        PromiseKit, Path.swift, YOLOKit, and older developer tools below.
       </p>
     </section>
 
@@ -1292,6 +1323,74 @@
             <span class="tile-cta">Open site</span>
           </div>
         </a>
+      </div>
+    </section>
+
+    <section class="network-section" aria-labelledby="open-source-title">
+      <p class="eyebrow">open source archive</p>
+      <h2 id="open-source-title">Developer tools people still search for</h2>
+      <p>
+        Older generated docs and release notes are still useful references.
+        These links keep the canonical mxcl.dev paths discoverable from the
+        active project index.
+      </p>
+
+      <div class="panel-grid">
+        <article class="panel">
+          <h3>PromiseKit</h3>
+          <p>
+            PromiseKit is a Swift promises library for asynchronous programming
+            on Apple platforms. Current searches land on both the v4 and v7
+            generated references.
+          </p>
+          <a class="section-link" href="https://mxcl.dev/PromiseKit/">
+            [ PromiseKit docs ]
+          </a>
+          <a class="section-link"
+            href="https://mxcl.dev/PromiseKit/reference/v7/">
+            [ PromiseKit v7 reference ]
+          </a>
+          <a class="section-link"
+            href="https://mxcl.dev/PromiseKit/reference/v4/">
+            [ PromiseKit v4 reference ]
+          </a>
+        </article>
+        <article class="panel">
+          <h3>PromiseKit release notes</h3>
+          <p>
+            Versioned release pages explain the Swift API changes people search
+            for, including PromiseKit 6, PromiseKit 4, and earlier migration
+            notes.
+          </p>
+          <a class="section-link"
+            href="https://mxcl.dev/PromiseKit/news/2018/02/PromiseKit-6.0-Released/">
+            [ PromiseKit 6.0 released ]
+          </a>
+          <a class="section-link"
+            href="https://mxcl.dev/PromiseKit/news/2016/09/PromiseKit-4.0-Released/">
+            [ PromiseKit 4.0 released ]
+          </a>
+        </article>
+        <article class="panel">
+          <h3>Path.swift</h3>
+          <p>
+            Path.swift is a small Swift path library with generated reference
+            pages for path types and dynamic path handling.
+          </p>
+          <a class="section-link" href="https://mxcl.dev/Path.swift/">
+            [ Path.swift docs ]
+          </a>
+        </article>
+        <article class="panel">
+          <h3>YOLOKit</h3>
+          <p>
+            YOLOKit is an older Objective-C collection utility project that
+            remains indexed under the mxcl.dev archive.
+          </p>
+          <a class="section-link" href="https://mxcl.dev/YOLOKit/">
+            [ YOLOKit docs ]
+          </a>
+        </article>
       </div>
     </section>
 
