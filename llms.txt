@@ -50,7 +50,7 @@ discipline, and secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-05-30
+- Last updated: 2026-06-01
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
