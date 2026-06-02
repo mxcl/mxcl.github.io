@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mxcl.dev/</loc><lastmod>2026-06-01</lastmod></url>
+  <url><loc>https://mxcl.dev/</loc><lastmod>2026-06-02</lastmod></url>
+  <url><loc>https://mxcl.dev/automic-vault/</loc><lastmod>2026-06-02</lastmod></url>
   <url><loc>https://mxcl.dev/hire-me/</loc><lastmod>2026-05-21</lastmod></url>
   <url><loc>https://mxcl.dev/ai-implementation-consultant/</loc><lastmod>2026-05-21</lastmod></url>
   <url><loc>https://mxcl.dev/fractional-head-of-ai/</loc><lastmod>2026-06-02</lastmod></url>
   <url><loc>https://mxcl.dev/enterprise-agent-architecture/</loc><lastmod>2026-05-21</lastmod></url>
-  <url><loc>https://mxcl.dev/projects/</loc><lastmod>2026-05-30</lastmod></url>
+  <url><loc>https://mxcl.dev/projects/</loc><lastmod>2026-06-02</lastmod></url>
   <url><loc>https://mxcl.dev/homebrew/</loc><lastmod>2026-06-01</lastmod></url>
   <url><loc>https://mxcl.dev/media/</loc><lastmod>2026-05-21</lastmod></url>
   <url><loc>https://mxcl.dev/PromiseKit/reference/v4/</loc><lastmod>2024-06-03</lastmod></url>

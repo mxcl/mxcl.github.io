@@ -10,6 +10,7 @@ creator of Homebrew, founder, and production AI systems consultant.
 - AI implementation consulting: https://mxcl.dev/ai-implementation-consultant/
 - Fractional AI consulting: https://mxcl.dev/fractional-head-of-ai/
 - Enterprise agent architecture: https://mxcl.dev/enterprise-agent-architecture/
+- Automic Vault founder note: https://mxcl.dev/automic-vault/
 - Active projects: https://mxcl.dev/projects/
 - Homebrew proof of work: https://mxcl.dev/homebrew/
 - Media and references: https://mxcl.dev/media/
@@ -33,6 +34,16 @@ discipline, and secure agent execution.
   fallback paths, release controls, and operational runbooks.
 - Enterprise agent architecture: boundary design, tool permissions,
   observability, rollout rules, and failure handling for agent systems.
+- Automic Vault: Max Howell's founder note on securing local developer tools,
+  package managers, secrets, and command approval for AI coding agents.
+
+## Current projects
+
+- Automic Vault: https://www.automicvault.com/ - a macOS package manager,
+  secrets manager, and command approval system for AI coding agents.
+- Automic Vault source: https://github.com/automic-vault/automic-vault
+- Automic Vault docs: https://www.automicvault.com/docs/
+- Automic Vault download: https://www.automicvault.com/download/
 
 ## Identity links
 

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Automic Vault and Secure Agent Tool Use | Max Howell</title>
+  <meta name="description"
+    content="Max Howell, creator of Homebrew, explains Automic Vault: a local macOS boundary for AI coding agents, developer secrets, package tools, and command approval.">
+  <link rel="canonical" href="https://mxcl.dev/automic-vault/">
+  <meta property="og:title"
+    content="Automic Vault and Secure Agent Tool Use">
+  <meta property="og:description"
+    content="Why I built Automic Vault, how AI agents changed local developer tool risk, and where the product controls secrets, packages, and commands.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mxcl.dev/automic-vault/">
+  <meta property="og:image"
+    content="https://mxcl.dev/images/automic-vault/gui-promo.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b0f0c">
+  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260521">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://mxcl.dev/automic-vault/#article",
+          "headline": "Automic Vault and Secure Agent Tool Use",
+          "description": "Max Howell explains why he built Automic Vault, a local macOS boundary for AI coding agents, developer secrets, package tools, and command approval.",
+          "url": "https://mxcl.dev/automic-vault/",
+          "datePublished": "2026-06-02",
+          "dateModified": "2026-06-02",
+          "image": "https://mxcl.dev/images/automic-vault/gui-promo.webp",
+          "author": {"@id": "https://mxcl.dev/#max-howell"},
+          "publisher": {"@id": "https://mxcl.dev/#max-howell"},
+          "mainEntityOfPage": "https://mxcl.dev/automic-vault/",
+          "about": [
+            {"@id": "https://www.automicvault.com/#software"},
+            {"@type": "Thing", "name": "AI coding agents"},
+            {"@type": "Thing", "name": "local developer secrets"},
+            {"@type": "Thing", "name": "secure agent tool use"}
+          ],
+          "mentions": [
+            "https://www.automicvault.com/",
+            "https://github.com/automic-vault/automic-vault",
+            "https://www.automicvault.com/docs/",
+            "https://www.automicvault.com/download/"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://www.automicvault.com/#software",
+          "name": "Automic Vault",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "macOS",
+          "url": "https://www.automicvault.com/",
+          "downloadUrl": "https://www.automicvault.com/download/",
+          "codeRepository": "https://github.com/automic-vault/automic-vault",
+          "description": "Automic Vault is a macOS package manager, secrets manager, and command approval system for AI coding agents.",
+          "license": "https://www.apache.org/licenses/LICENSE-2.0",
+          "author": {"@id": "https://mxcl.dev/#max-howell"}
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://mxcl.dev/automic-vault/#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mxcl.dev/"},
+            {"@type": "ListItem", "position": 2, "name": "Automic Vault", "item": "https://mxcl.dev/automic-vault/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://mxcl.dev/automic-vault/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Automic Vault?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Automic Vault is a macOS package manager, secrets manager, and command approval system for AI coding agents. It controls local packages, developer secrets, credential injection, and sensitive command execution below the agent session."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why did Max Howell build Automic Vault?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Max Howell built Automic Vault because Homebrew-era developer tooling assumed a trusted human operator. AI coding agents can read files and run tools, so local secrets and package-manager authority need a more explicit runtime boundary."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Automic Vault replace an enterprise secrets manager?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Automic Vault complements central secret managers by controlling what local agents and local command-line tools can read, which commands can execute, and when approved processes receive secrets."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+  <style>
+    .vault-article .page-shell {
+      width: min(1080px, calc(100vw - 2rem));
+    }
+
+    .vault-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(18rem, 0.78fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .vault-hero-copy {
+      min-width: 0;
+    }
+
+    .vault-hero h1 {
+      max-width: 10ch;
+    }
+
+    .vault-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .vault-actions .cta-link {
+      padding: 0.72rem 0.95rem;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      background: rgba(74, 222, 128, 0.08);
+      text-decoration: none;
+    }
+
+    .vault-media-panel {
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--panel);
+      overflow: hidden;
+    }
+
+    .vault-media-panel img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .vault-media-panel figcaption {
+      padding: 0.8rem 1rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.55;
+      border-top: 1px solid var(--line);
+    }
+
+    .callout-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .link-panel {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .link-panel a {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+    }
+
+    .article-prose {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .article-prose p {
+      max-width: 48rem;
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .article-prose p + h3 {
+      margin-top: 0.8rem;
+    }
+
+    @media (max-width: 840px) {
+      .vault-hero,
+      .callout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .vault-hero h1 {
+        max-width: 11ch;
+      }
+    }
+  </style>
+</head>
+
+<body class="operator-terminal vault-article">
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="back-link" href="/">Back to mxcl.dev</a>
+      <nav class="site-nav" aria-label="Related pages">
+        <a href="/projects/">Projects</a>
+        <a href="/homebrew/">Homebrew</a>
+        <a href="/enterprise-agent-architecture/">Architecture</a>
+        <a href="/media/">Media</a>
+      </nav>
+    </header>
+
+    <section class="hero vault-hero" aria-labelledby="vault-title">
+      <div class="vault-hero-copy">
+        <p class="eyebrow">founder note / local agent security</p>
+        <h1 id="vault-title">Automic Vault secures the tools you brew install.</h1>
+        <h2>Homebrew was built before AI agents existed.</h2>
+        <p class="lede">
+          Developer tools still assume a trusted human is at the keyboard. AI
+          coding agents changed that assumption. Automic Vault puts a local
+          boundary under the tools, secrets, and commands those agents use.
+        </p>
+        <p class="updated-note">
+          Published <time datetime="2026-06-02">June 2, 2026</time>
+        </p>
+        <div class="vault-actions">
+          <a class="cta-link" href="https://www.automicvault.com/download/"
+            target="_blank" rel="noopener noreferrer">Download Automic Vault</a>
+          <a class="section-link" href="https://www.automicvault.com/docs/"
+            target="_blank" rel="noopener noreferrer">Read docs</a>
+          <a class="section-link"
+            href="https://github.com/automic-vault/automic-vault"
+            target="_blank" rel="noopener noreferrer">View source</a>
+        </div>
+      </div>
+
+      <figure class="vault-media-panel">
+        <img src="/images/automic-vault/gui-promo.webp"
+          alt="Automic Vault app showing local package and security state">
+        <figcaption>
+          Automic Vault shows packages, local hazards, approval prompts, and
+          the paths where developer-tool risk actually appears.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section" aria-labelledby="why-title">
+      <div class="section-heading">
+        <p class="eyebrow">why this exists</p>
+        <h2 id="why-title">The old local trust model no longer fits.</h2>
+      </div>
+      <article class="panel answer-panel article-prose">
+        <p>
+          I built <a href="/homebrew/">Homebrew</a> to make installing developer
+          tools on macOS ordinary. That worked because the expected operator was
+          a person: a developer who installed a tool, read a command, and used
+          local credentials with human context.
+        </p>
+        <p>
+          AI coding agents are different. They can read files, call CLIs, run
+          package managers, inspect configuration, and pass data between tools.
+          A file like <code>.env</code>, <code>~/.netrc</code>,
+          <code>.npmrc</code>, <code>~/.aws/credentials</code>, GitHub CLI
+          config, or MCP server config is no longer just local developer state.
+          It can become model-readable authority.
+        </p>
+        <p>
+          Automic Vault exists because the boundary has to move down to the
+          layer where the agent acts: packages, paths, secrets, credential
+          injection, and command execution.
+        </p>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="does-title">
+      <div class="section-heading">
+        <p class="eyebrow">what it does</p>
+        <h2 id="does-title">A local boundary for packages, secrets, and commands.</h2>
+      </div>
+      <div class="callout-grid">
+        <article class="panel">
+          <h3>Scan the machine</h3>
+          <p>
+            Automic Vault finds plaintext credential exposure in local
+            developer-tool files before an agent reads or uses it.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Move secrets out of easy-read files</h3>
+          <p>
+            Supported secrets can live in the Automic Vault keychain and be
+            injected into an approved process only when the tool needs them.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Gate risky commands</h3>
+          <p>
+            Package publishing, cloud mutation, credential use, and sensitive
+            tool actions can ask for human approval before they continue.
+          </p>
+        </article>
+      </div>
+      <article class="panel article-prose" style="margin-top: 1rem;">
+        <p>
+          The point is not to claim agents are safe. The point is to remove
+          ambient privilege. A useful agent should still be able to use
+          <code>gh</code>, <code>aws</code>, <code>npm</code>,
+          <code>uv</code>, <code>docker</code>, and the rest of the open-source
+          toolchain. It should not silently inherit every credential and every
+          writable package path on the machine.
+        </p>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="not-title">
+      <div class="section-heading">
+        <p class="eyebrow">scope</p>
+        <h2 id="not-title">What Automic Vault is not.</h2>
+      </div>
+      <div class="panel article-prose">
+        <p>
+          Automic Vault is not a cryptocurrency project, a hosted enterprise
+          vault, a cloud policy engine, or a prompt-layer safety product. It
+          complements central secret managers by controlling what local agents
+          and local tools can read, which commands can execute, and when
+          approved tools receive secrets.
+        </p>
+        <p>
+          That local layer matters because many real failures happen before a
+          cloud vault is involved. A compromised package, VS Code extension,
+          shell installer, or command-line tool can steal from the developer
+          workstation if useful credentials are sitting in readable files.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="links-title">
+      <div class="section-heading">
+        <p class="eyebrow">canonical links</p>
+        <h2 id="links-title">Where to inspect it.</h2>
+      </div>
+      <div class="callout-grid">
+        <article class="panel link-panel">
+          <h3>Official site</h3>
+          <p>Product overview, download path, docs, pricing, and AI-readable pages.</p>
+          <a href="https://www.automicvault.com/" target="_blank"
+            rel="noopener noreferrer">automicvault.com</a>
+        </article>
+        <article class="panel link-panel">
+          <h3>Documentation</h3>
+          <p>CLI commands for package, secret, approval, containment, and trace workflows.</p>
+          <a href="https://www.automicvault.com/docs/" target="_blank"
+            rel="noopener noreferrer">automicvault.com/docs</a>
+        </article>
+        <article class="panel link-panel">
+          <h3>Source</h3>
+          <p>Apache 2.0 source code, releases, issues, and package-security work.</p>
+          <a href="https://github.com/automic-vault/automic-vault"
+            target="_blank" rel="noopener noreferrer">GitHub repository</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <p class="eyebrow">direct answers</p>
+        <h2 id="faq-title">Automic Vault questions.</h2>
+      </div>
+      <div class="faq-list">
+        <article class="panel answer-panel">
+          <h3>What is Automic Vault?</h3>
+          <p>
+            Automic Vault is a macOS package manager, secrets manager, and
+            command approval system for AI coding agents. It controls local
+            packages, developer secrets, credential injection, and sensitive
+            command execution below the agent session.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Why did I build it?</h3>
+          <p>
+            Homebrew-era developer tooling assumed a trusted human operator.
+            AI coding agents can read files and run tools, so local secrets and
+            package-manager authority need a more explicit runtime boundary.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Does it replace an enterprise secrets manager?</h3>
+          <p>
+            No. Automic Vault complements central secret managers by controlling
+            what local agents and local command-line tools can read, which
+            commands can execute, and when approved processes receive secrets.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <a href="/">mxcl.dev</a>
+      <a href="/projects/">Projects</a>
+      <a href="/homebrew/">Homebrew</a>
+      <a href="https://www.automicvault.com/download/" target="_blank"
+        rel="noopener noreferrer">Download Automic Vault</a>
+    </footer>
+  </main>
+</body>
+
+</html>
