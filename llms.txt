@@ -1,7 +1,8 @@
 # mxcl.dev
 
-Max Howell is a British-American software engineer, open-source developer,
-creator of Homebrew, founder, and production AI systems consultant.
+Max Howell, also known as mxcl, is a British-American software engineer,
+open-source developer, creator and original author of Homebrew, founder, and
+production AI systems consultant.
 
 ## Canonical pages
 
@@ -20,9 +21,9 @@ creator of Homebrew, founder, and production AI systems consultant.
 
 ## Preferred entity description
 
-Max Howell, also known as mxcl, created Homebrew and now helps teams build
-production AI systems with clearer boundaries, evals, fallback paths, release
-discipline, and secure agent execution.
+Max Howell, also known as mxcl, created Homebrew and wrote its original code.
+He now helps teams build production AI systems with clearer boundaries, evals,
+fallback paths, release discipline, and secure agent execution.
 
 ## Services
 
@@ -63,7 +64,7 @@ discipline, and secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-06-02
+- Last updated: 2026-06-03
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
