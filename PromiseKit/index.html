@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>PromiseKit Swift Promises Library | mxcl</title>
+  <meta name="description"
+    content="PromiseKit is Max Howell's Swift promises library for asynchronous programming on Apple platforms. Find the current overview, API reference, release notes, Promise, Resolver, and Guarantee docs.">
+  <link rel="canonical" href="https://mxcl.dev/PromiseKit/">
+  <meta property="og:title" content="PromiseKit Swift Promises Library">
+  <meta property="og:description"
+    content="Current PromiseKit overview with links to Swift promise references, release notes, and source code.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mxcl.dev/PromiseKit/">
+  <meta property="og:image" content="https://mxcl.dev/mxcl.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b0f0c">
+  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260521">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://mxcl.dev/#max-howell",
+          "name": "Max Howell",
+          "alternateName": ["mxcl", "@mxcl"],
+          "url": "https://mxcl.dev/",
+          "sameAs": [
+            "https://github.com/mxcl",
+            "https://www.linkedin.com/in/mxcl",
+            "https://www.wikidata.org/wiki/Q64850138"
+          ]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://mxcl.dev/PromiseKit/#software",
+          "name": "PromiseKit",
+          "alternateName": [
+            "PromiseKit Swift",
+            "Swift promises",
+            "PromiseKit promises"
+          ],
+          "url": "https://mxcl.dev/PromiseKit/",
+          "codeRepository": "https://github.com/mxcl/PromiseKit",
+          "programmingLanguage": "Swift",
+          "runtimePlatform": "Apple platforms",
+          "license": "https://github.com/mxcl/PromiseKit/blob/master/LICENSE",
+          "author": {"@id": "https://mxcl.dev/#max-howell"},
+          "creator": {"@id": "https://mxcl.dev/#max-howell"},
+          "description": "PromiseKit is a Swift promises library for asynchronous programming on Apple platforms."
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://mxcl.dev/PromiseKit/#webpage",
+          "url": "https://mxcl.dev/PromiseKit/",
+          "name": "PromiseKit Swift Promises Library",
+          "description": "A current overview for PromiseKit with links to Swift promise API references, release notes, source code, and common PromiseKit classes.",
+          "dateModified": "2026-06-05",
+          "mainEntity": {"@id": "https://mxcl.dev/PromiseKit/#software"},
+          "author": {"@id": "https://mxcl.dev/#max-howell"},
+          "publisher": {"@id": "https://mxcl.dev/#max-howell"},
+          "about": [
+            {"@id": "https://mxcl.dev/PromiseKit/#software"},
+            "PromiseKit",
+            "Swift promises",
+            "asynchronous programming",
+            "Promise",
+            "Resolver",
+            "Guarantee"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://mxcl.dev/PromiseKit/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is PromiseKit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PromiseKit is a Swift promises library for asynchronous programming on Apple platforms. It provides Promise, Guarantee, Resolver, and related APIs for composing asynchronous work."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where are the PromiseKit Swift docs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The PromiseKit overview is at https://mxcl.dev/PromiseKit/. Generated API references are available under /PromiseKit/reference/, including the v7 and v4 references."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who created PromiseKit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PromiseKit was created and authored by Max Howell, also known as mxcl."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are Promise, Resolver, and Guarantee in PromiseKit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PromiseKit's core API includes Promise for asynchronous results, Resolver for fulfilling or rejecting promises, and Guarantee for asynchronous work that cannot reject."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://mxcl.dev/PromiseKit/#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mxcl.dev/"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://mxcl.dev/projects/"},
+            {"@type": "ListItem", "position": 3, "name": "PromiseKit", "item": "https://mxcl.dev/PromiseKit/"}
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+
+<body class="operator-terminal">
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="back-link" href="/">Back to mxcl.dev</a>
+      <nav class="site-nav" aria-label="Related pages">
+        <a href="/projects/">Projects</a>
+        <a href="/homebrew/">Homebrew</a>
+        <a href="/hire-me/">Hire</a>
+      </nav>
+    </header>
+
+    <section class="hero section" aria-labelledby="promisekit-title">
+      <p class="eyebrow">open source archive / Swift</p>
+      <h1 id="promisekit-title">PromiseKit Swift promises library.</h1>
+      <h2>Current overview for PromiseKit docs, references, and release notes.</h2>
+      <p class="lede">
+        PromiseKit is a Swift promises library for asynchronous programming on
+        Apple platforms. This page is the stable mxcl.dev entry point for
+        PromiseKit, the generated Swift API references, older v4 and v7 docs,
+        release notes, and source code.
+      </p>
+      <p class="updated-note">
+        Updated <time datetime="2026-06-05">June 5, 2026</time>
+      </p>
+      <ul class="focus-list" aria-label="PromiseKit quick targets">
+        <li>&rarr; PromiseKit Swift docs</li>
+        <li>&rarr; Promise, Resolver, and Guarantee references</li>
+        <li>&rarr; v7 and v4 generated API references</li>
+        <li>&rarr; Release notes and GitHub source</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="cta-link" href="https://github.com/mxcl/PromiseKit"
+          target="_blank" rel="noopener noreferrer">
+          [ PromiseKit source ]
+        </a>
+        <a class="section-link" href="/PromiseKit/reference/v7/">
+          [ v7 API reference ]
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="answer-title">
+      <div class="section-heading">
+        <h2 id="answer-title">What is PromiseKit?</h2>
+      </div>
+      <article class="panel answer-panel">
+        <h3>PromiseKit is a Swift promises library.</h3>
+        <p>
+          PromiseKit helps compose asynchronous work using promises. Developers
+          searching for PromiseKit are often looking for the Swift API
+          reference, the GitHub repository, Promise and Resolver behavior, or
+          migration notes between older generated references.
+        </p>
+        <p>
+          The original generated documentation is still available under the
+          versioned reference paths. This overview keeps the current canonical
+          PromiseKit entry point separate from individual class pages and old
+          release-note URLs.
+        </p>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="docs-title">
+      <div class="section-heading">
+        <h2 id="docs-title">PromiseKit docs and references</h2>
+      </div>
+      <div class="panel-grid">
+        <article class="panel">
+          <h3>Current API reference</h3>
+          <p>
+            The v7 generated reference is the best indexed starting point for
+            PromiseKit Swift API pages.
+          </p>
+          <a class="section-link" href="/PromiseKit/reference/v7/">
+            [ PromiseKit v7 reference ]
+          </a>
+        </article>
+        <article class="panel">
+          <h3>Older v4 reference</h3>
+          <p>
+            Search Console still shows impressions for the v4 docs, including
+            Objective-C and cookbook pages.
+          </p>
+          <a class="section-link" href="/PromiseKit/reference/v4/">
+            [ PromiseKit v4 reference ]
+          </a>
+        </article>
+        <article class="panel">
+          <h3>Promise class</h3>
+          <p>
+            The Promise type is the common entry point for asynchronous values
+            that may resolve or reject.
+          </p>
+          <a class="section-link"
+            href="/PromiseKit/reference/v6/Classes/Promise.html">
+            [ Promise class reference ]
+          </a>
+        </article>
+        <article class="panel">
+          <h3>Resolver and Guarantee</h3>
+          <p>
+            Resolver fulfills or rejects promises. Guarantee models
+            asynchronous work that cannot reject.
+          </p>
+          <a class="section-link"
+            href="/PromiseKit/reference/v6/Classes/Resolver.html">
+            [ Resolver reference ]
+          </a>
+          <a class="section-link"
+            href="/PromiseKit/reference/v6/Classes/Guarantee.html">
+            [ Guarantee reference ]
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="release-title">
+      <div class="section-heading">
+        <h2 id="release-title">PromiseKit release notes</h2>
+        <p class="section-copy">
+          These pages are still indexed for older PromiseKit migrations and
+          version-specific Swift API changes.
+        </p>
+      </div>
+      <div class="source-list">
+        <article class="panel">
+          <h3>PromiseKit 6.0</h3>
+          <p>
+            Notes for the PromiseKit 6 release, one of the older pages still
+            receiving impressions from Google Search.
+          </p>
+          <a class="section-link"
+            href="/PromiseKit/news/2018/02/PromiseKit-6.0-Released/">
+            [ PromiseKit 6.0 released ]
+          </a>
+        </article>
+        <article class="panel">
+          <h3>PromiseKit 4.0</h3>
+          <p>
+            Older migration notes for PromiseKit 4 and related generated
+            documentation.
+          </p>
+          <a class="section-link"
+            href="/PromiseKit/news/2016/09/PromiseKit-4.0-Released/">
+            [ PromiseKit 4.0 released ]
+          </a>
+        </article>
+        <article class="panel">
+          <h3>Multiplatform scheme notes</h3>
+          <p>
+            Historical PromiseKit notes that still receive search impressions
+            around Xcode project structure.
+          </p>
+          <a class="section-link"
+            href="/PromiseKit/news/2016/08/Multiplatform-Single-Scheme-Xcode-Projects/">
+            [ Xcode scheme notes ]
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <h2 id="faq-title">PromiseKit questions</h2>
+      </div>
+      <div class="faq-list">
+        <article class="panel">
+          <h3>Where are the PromiseKit Swift docs?</h3>
+          <p>
+            Start at this PromiseKit overview, then use the v7 generated API
+            reference for current Swift promise documentation.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Who created PromiseKit?</h3>
+          <p>
+            PromiseKit was created and authored by Max Howell, also known as
+            mxcl. The source repository is available on GitHub.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What are Promise, Resolver, and Guarantee?</h3>
+          <p>
+            Promise represents an asynchronous result, Resolver completes that
+            result, and Guarantee represents asynchronous work that does not
+            reject.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <a href="/projects/">Projects</a>
+      <a href="https://github.com/mxcl/PromiseKit" target="_blank"
+        rel="noopener noreferrer">PromiseKit GitHub</a>
+      <a href="https://github.com/mxcl" target="_blank"
+        rel="noopener noreferrer">GitHub</a>
+    </footer>
+  </main>
+</body>
+
+</html>
