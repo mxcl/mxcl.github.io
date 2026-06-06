@@ -16,6 +16,8 @@ Homebrew, founder, and production AI systems consultant.
 - Homebrew proof of work: https://mxcl.dev/homebrew/
 - Media and references: https://mxcl.dev/media/
 - PromiseKit overview and docs: https://mxcl.dev/PromiseKit/
+- PromiseKit v7 reference archive: https://mxcl.dev/PromiseKit/reference/v7/
+- PromiseKit v4 reference archive: https://mxcl.dev/PromiseKit/reference/v4/
 - Path.swift docs: https://mxcl.dev/Path.swift/
 - YOLOKit docs: https://mxcl.dev/YOLOKit/
 
@@ -49,7 +51,8 @@ secure agent execution.
   package managers, secrets, and command approval for AI coding agents.
 - PromiseKit: a Swift promises library for asynchronous programming on Apple
   platforms. The canonical overview is https://mxcl.dev/PromiseKit/ with links
-  to generated API references, release notes, Promise, Resolver, and Guarantee.
+  to restored archive pages for indexed reference URLs, release notes, Promise,
+  Resolver, and Guarantee.
 
 ## Current projects
 
@@ -77,7 +80,7 @@ secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-06-05
+- Last updated: 2026-06-06
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
