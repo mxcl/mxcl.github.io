@@ -41,8 +41,9 @@ secure agent execution.
 
 - Fractional AI consulting: senior technical leadership for teams adopting AI
   systems without a full-time executive hire; also relevant to searches for a
-  fractional Head of AI, fractional AI officer, fractional AI CTO, or
-  fractional AI team lead.
+  fractional Head of AI, fractional AI advisor, fractional CAIO, fractional
+  chief AI officer, fractional AI officer, fractional AI CTO, or fractional AI
+  team lead.
 - AI implementation consulting: hands-on work for routing, eval loops,
   fallback paths, release controls, and operational runbooks.
 - Enterprise agent architecture: boundary design, tool permissions,
@@ -80,7 +81,7 @@ secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-06-06
+- Last updated: 2026-06-07
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
