@@ -179,8 +179,9 @@ h1 {
   margin-top: 0.65rem;
   font-size: clamp(3rem, 8vw, 5rem);
   line-height: 0.94;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .hero h2,
@@ -188,7 +189,7 @@ h1 {
   font-size: clamp(1.25rem, 3.5vw, 1.75rem);
   line-height: 1.2;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .hero h2 {
