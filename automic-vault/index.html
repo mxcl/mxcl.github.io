@@ -4,21 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Automic Vault and Secure Agent Tool Use | Max Howell</title>
+  <title>Automic Vault | Harden Your Mac Before the Agent Runs</title>
   <meta name="description"
-    content="Max Howell, creator of Homebrew, explains Automic Vault: a local macOS boundary for AI coding agents, developer secrets, package tools, and command approval.">
+    content="From the creator of Homebrew: Automic Vault hardens your Mac before AI agents run, protecting plaintext keys with encrypted secrets, sealed tools, and approval before execution.">
   <link rel="canonical" href="https://mxcl.dev/automic-vault/">
   <meta property="og:title"
-    content="Automic Vault and Secure Agent Tool Use">
+    content="Automic Vault | Harden Your Mac Before the Agent Runs">
   <meta property="og:description"
-    content="Why I built Automic Vault, how AI agents changed local developer tool risk, and where the product controls secrets, packages, and commands.">
+    content="Automic Vault protects plaintext keys with encrypted secrets, sealed tools, and approval before execution.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://mxcl.dev/automic-vault/">
   <meta property="og:image"
-    content="https://mxcl.dev/images/automic-vault/gui-promo.webp">
+    content="https://mxcl.dev/images/automic-vault/preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b0f0c">
-  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260521">
+  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260612">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -26,12 +26,12 @@
         {
           "@type": "Article",
           "@id": "https://mxcl.dev/automic-vault/#article",
-          "headline": "Automic Vault and Secure Agent Tool Use",
-          "description": "Max Howell explains why he built Automic Vault, a local macOS boundary for AI coding agents, developer secrets, package tools, and command approval.",
+          "headline": "Automic Vault | Harden Your Mac Before the Agent Runs",
+          "description": "Max Howell explains why he built Automic Vault, a local macOS boundary that protects plaintext keys with encrypted secrets, sealed tools, and approval before execution.",
           "url": "https://mxcl.dev/automic-vault/",
           "datePublished": "2026-06-02",
-          "dateModified": "2026-06-02",
-          "image": "https://mxcl.dev/images/automic-vault/gui-promo.webp",
+          "dateModified": "2026-06-12",
+          "image": "https://mxcl.dev/images/automic-vault/preview.jpg",
           "author": {"@id": "https://mxcl.dev/#max-howell"},
           "publisher": {"@id": "https://mxcl.dev/#max-howell"},
           "mainEntityOfPage": "https://mxcl.dev/automic-vault/",
@@ -57,7 +57,7 @@
           "url": "https://www.automicvault.com/",
           "downloadUrl": "https://www.automicvault.com/download/",
           "codeRepository": "https://github.com/automic-vault/automic-vault",
-          "description": "Automic Vault is a macOS package manager, secrets manager, and command approval system for AI coding agents.",
+          "description": "Automic Vault hardens Macs before AI agents run by protecting plaintext keys with encrypted secrets, sealed tools, and approval before execution.",
           "license": "https://www.apache.org/licenses/LICENSE-2.0",
           "author": {"@id": "https://mxcl.dev/#max-howell"}
         },
@@ -78,7 +78,7 @@
               "name": "What is Automic Vault?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Automic Vault is a macOS package manager, secrets manager, and command approval system for AI coding agents. It controls local packages, developer secrets, credential injection, and sensitive command execution below the agent session."
+                "text": "Automic Vault is a macOS hardening layer for AI coding agents. It protects plaintext keys with encrypted secrets, sealed tools, and approval before execution."
               }
             },
             {
@@ -220,16 +220,16 @@
 
     <section class="hero vault-hero" aria-labelledby="vault-title">
       <div class="vault-hero-copy">
-        <p class="eyebrow">founder note / local agent security</p>
-        <h1 id="vault-title">Automic Vault secures the tools you brew install.</h1>
-        <h2>Homebrew was built before AI agents existed.</h2>
+        <p class="eyebrow">From the creator of Homebrew</p>
+        <h1 id="vault-title">Harden your Mac before the agent runs.</h1>
+        <h2>Secure the tools you brew install.</h2>
         <p class="lede">
-          Developer tools still assume a trusted human is at the keyboard. AI
-          coding agents changed that assumption. Automic Vault puts a local
-          boundary under the tools, secrets, and commands those agents use.
+          Your Mac is full of plaintext keys an agent can read, leak, or hand
+          to malware. Automic Vault protects credentials with encrypted
+          secrets, sealed tools, and approval before execution.
         </p>
         <p class="updated-note">
-          Published <time datetime="2026-06-02">June 2, 2026</time>
+          Updated <time datetime="2026-06-12">June 12, 2026</time>
         </p>
         <div class="vault-actions">
           <a class="cta-link" href="https://www.automicvault.com/download/"
@@ -243,11 +243,11 @@
       </div>
 
       <figure class="vault-media-panel">
-        <img src="/images/automic-vault/gui-promo.webp"
-          alt="Automic Vault app showing local package and security state">
+        <img src="/images/automic-vault/app-hazard-journey.webp"
+          alt="Automic Vault app showing a plaintext credential hazard beside a package homepage">
         <figcaption>
-          Automic Vault shows packages, local hazards, approval prompts, and
-          the paths where developer-tool risk actually appears.
+          Automic Vault shows package hazards, plaintext credential exposure,
+          and the developer-tool paths an agent can reach.
         </figcaption>
       </figure>
     </section>
@@ -378,10 +378,9 @@
         <article class="panel answer-panel">
           <h3>What is Automic Vault?</h3>
           <p>
-            Automic Vault is a macOS package manager, secrets manager, and
-            command approval system for AI coding agents. It controls local
-            packages, developer secrets, credential injection, and sensitive
-            command execution below the agent session.
+            Automic Vault is a macOS hardening layer for AI coding agents. It
+            protects plaintext keys with encrypted secrets, sealed tools, and
+            approval before execution.
           </p>
         </article>
         <article class="panel">
