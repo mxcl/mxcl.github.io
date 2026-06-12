@@ -45,7 +45,8 @@ secure agent execution.
   fractional CAIO, fractional chief AI officer, fractional AI officer,
   fractional AI officer for B2B organizations, fractional AI CTO, AI
   consultant vs fractional Head of AI, or fractional AI team lead. The canonical
-  comparison page is
+  comparison page defines the title differences and 90-day fractional AI
+  mandate expectations:
   https://mxcl.dev/fractional-head-of-ai/
 - AI implementation consulting: hands-on work for routing, eval loops,
   fallback paths, release controls, and operational runbooks.
@@ -84,7 +85,7 @@ secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-06-11
+- Last updated: 2026-06-12
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
