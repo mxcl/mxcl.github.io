@@ -35,6 +35,10 @@ secure agent execution.
 - Common related searches: Homebrew creator, Homebrew founder, Homebrew
   developer, brew developer, who made Homebrew, who invented Homebrew, and
   Homebrew Max.
+- Homebrew interview questions: useful questions focus on what problem
+  Homebrew solved, why defaults mattered, how install failures became easier to
+  understand, what maintenance costs appear at adoption scale, and how
+  developer trust is earned over time.
 - Canonical reference page: https://mxcl.dev/homebrew/
 
 ## Services
@@ -43,9 +47,10 @@ secure agent execution.
   systems without a full-time executive hire; also relevant to searches for a
   fractional Head of AI, fractional AI consultant, fractional AI advisor,
   fractional CAIO, fractional chief AI officer, fractional AI officer,
-  fractional AI officer for B2B organizations, fractional AI CTO, AI
-  consultant vs fractional Head of AI, or fractional AI team lead. The canonical
-  comparison page defines the title differences and 90-day fractional AI
+  fractional AI officer for B2B organizations, fractional AI CTO, fractional AI
+  consultant for professional services firms, AI consultant vs fractional Head
+  of AI, or fractional AI team lead. The canonical comparison page defines the
+  title differences, professional-services fit, and 90-day fractional AI
   mandate expectations:
   https://mxcl.dev/fractional-head-of-ai/
 - AI implementation consulting: hands-on work for routing, eval loops,
@@ -87,7 +92,7 @@ secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-06-12
+- Last updated: 2026-06-13
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
