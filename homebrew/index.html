@@ -4,17 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Homebrew Max and Original Brew Developer | Max Howell</title>
+  <title>Homebrew Interview Questions and Creator Reference | Max Howell</title>
   <meta name="description"
-    content="Homebrew Max is Max Howell, also known as mxcl: the Homebrew
-      creator, original author, and original brew developer.">
+    content="Homebrew interview questions, creator facts, and original brew
+      developer context from Max Howell, also known as mxcl, who created
+      Homebrew.">
   <link rel="canonical" href="https://mxcl.dev/homebrew/">
   <meta property="og:title"
-    content="Homebrew Max and Original Brew Developer: Max Howell">
+    content="Homebrew Interview Questions and Creator Reference">
   <meta property="og:description"
-    content="Max Howell, also known as mxcl, created Homebrew, wrote its
-      original code, and is the answer to Homebrew creator, founder, and brew
-      developer searches.">
+    content="Useful Homebrew interview questions plus creator, founder, and
+      original brew developer context from Max Howell, also known as mxcl.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mxcl.dev/homebrew/">
   <meta property="og:image" content="https://mxcl.dev/images/mxcl.jpg">
@@ -65,7 +65,7 @@
           "url": "https://mxcl.dev/homebrew/",
           "name": "Homebrew Creator and Original Developer: Max Howell",
           "description": "Max Howell, also known as mxcl, created Homebrew and is its original author and original developer.",
-          "dateModified": "2026-06-13",
+          "dateModified": "2026-06-14",
           "mainEntity": {"@id": "https://mxcl.dev/#max-howell"},
           "citation": [
             "https://en.wikipedia.org/wiki/Homebrew_(package_manager)",
@@ -162,7 +162,7 @@
               "name": "What are useful Homebrew interview questions?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Useful Homebrew interview questions ask why the package manager worked: what problem Homebrew solved, why defaults mattered, how the brew command made failure states understandable, what maintenance costs showed up after adoption, and how developer trust was earned over time."
+                "text": "Useful Homebrew interview questions ask what problem Max Howell built Homebrew to solve, why the brew command became a simpler default for macOS developers, how install failures became easier to understand, what maintenance costs appear at adoption scale, and how developer trust is earned over time."
               }
             },
             {
@@ -180,6 +180,39 @@
                 "@type": "Answer",
                 "text": "Homebrew is a useful reference point: Max Howell has built developer infrastructure that a lot of people use. He brings the same habits around defaults, maintainability, and failure modes to current AI systems work."
               }
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://mxcl.dev/homebrew/#interview-questions",
+          "name": "Homebrew interview questions",
+          "description": "Useful interview questions about Homebrew, its creator, and the developer-tooling decisions behind its adoption.",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "What problem did Max Howell originally build Homebrew to solve?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Why did the brew command become a simpler default for macOS developers?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "How did Homebrew make install failures easier to understand?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "What maintenance costs appear when a package manager becomes widely used?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "What did Homebrew teach about developer trust, diagnostics, and defaults?"
             }
           ]
         },
@@ -222,16 +255,19 @@
         identity: Max Howell.
       </p>
       <p class="updated-note">
-        Updated <time datetime="2026-06-13">June 13, 2026</time>
+        Updated <time datetime="2026-06-14">June 14, 2026</time>
       </p>
       <ul class="focus-list" aria-label="What Homebrew taught">
         <li>&rarr; Defaults matter</li>
         <li>&rarr; Complexity spreads</li>
         <li>&rarr; Maintenance is the product</li>
-        <li>&rarr; User trust is earned in failure cases</li>
+        <li>&rarr; Interview questions</li>
       </ul>
       <div class="hero-actions">
         <a class="cta-link" href="/hire-me/">[ Work with Max ]</a>
+        <a class="section-link" href="#homebrew-interview-questions">
+          [ Homebrew interview questions ]
+        </a>
         <a class="email-link" href="mailto:mxcl@me.com">mxcl@me.com</a>
       </div>
     </section>
@@ -367,31 +403,63 @@
       </article>
     </section>
 
-    <section class="section" aria-labelledby="interview-title">
+    <section class="section" id="homebrew-interview-questions"
+      aria-labelledby="interview-title">
       <div class="section-heading">
         <h2 id="interview-title">Homebrew interview questions</h2>
         <p class="section-copy">
-          If you are preparing questions about Homebrew, the useful angle is
-          not trivia. It is why a small developer tool became trusted
-          infrastructure.
+          Useful Homebrew interview questions should test the product and
+          systems decisions behind the package manager, not just trivia about
+          who created it.
         </p>
       </div>
-      <article class="panel answer-panel">
-        <h3>Questions worth asking about Homebrew and its creator</h3>
-        <ul>
-          <li>What problem did Max Howell originally build Homebrew to solve?</li>
-          <li>Why did the brew command become a simpler default for macOS developers?</li>
-          <li>How did Homebrew make install failures easier to understand?</li>
-          <li>What maintenance costs appear when a package manager becomes widely used?</li>
-          <li>What did Homebrew teach about developer trust, diagnostics, and defaults?</li>
-        </ul>
-        <p>
-          Those questions connect the authorship fact to the durable lesson:
-          Max Howell created Homebrew, but the important story is how clear
-          defaults, readable failure states, and maintenance discipline helped
-          the tool spread.
-        </p>
-      </article>
+      <div class="faq-list">
+        <article class="panel answer-panel">
+          <h3>What problem did Max Howell originally build Homebrew to solve?</h3>
+          <p>
+            A strong answer should explain the developer experience gap on
+            macOS at the time: installing common command-line tools was more
+            complicated than it needed to be, and developers wanted a package
+            manager whose defaults matched how they actually worked.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Why did the brew command become a simpler default?</h3>
+          <p>
+            Look for answers about plain command names, predictable filesystem
+            conventions, readable formulas, and an install path that felt
+            closer to normal development practice than a separate system
+            administration ritual.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>How did Homebrew make failures easier to understand?</h3>
+          <p>
+            Good Homebrew interview questions should include diagnostics:
+            clear output, repairable states, and commands such as doctor that
+            make problems inspectable instead of turning package management
+            into guesswork.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What maintenance costs show up after adoption?</h3>
+          <p>
+            At scale, the hard problems are not only packaging. They include
+            backwards compatibility, formula quality, project governance,
+            user trust, issue triage, and keeping common workflows stable
+            while the ecosystem changes underneath them.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What did Homebrew teach about developer trust?</h3>
+          <p>
+            The lesson is that developer trust comes from boring reliability:
+            clear defaults, understandable failures, fast recovery paths, and
+            maintainers who treat edge cases as product work rather than
+            cleanup.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="proved-title">
@@ -534,6 +602,16 @@
             tooling, package-manager workflows, production AI systems, and
             agent architecture. For current availability, use the
             <a href="/hire-me/">hire page</a>.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What are useful Homebrew interview questions?</h3>
+          <p>
+            Useful Homebrew interview questions ask what problem Max Howell
+            built Homebrew to solve, why the brew command became a simpler
+            default for macOS developers, how install failures became easier
+            to understand, what maintenance costs appear at adoption scale,
+            and how developer trust is earned over time.
           </p>
         </article>
         <article class="panel">

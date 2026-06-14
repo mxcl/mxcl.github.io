@@ -13,7 +13,7 @@ Homebrew, founder, and production AI systems consultant.
 - Enterprise agent architecture: https://mxcl.dev/enterprise-agent-architecture/
 - Automic Vault founder note: https://mxcl.dev/automic-vault/
 - Active projects: https://mxcl.dev/projects/
-- Homebrew proof of work: https://mxcl.dev/homebrew/
+- Homebrew interview questions and proof of work: https://mxcl.dev/homebrew/
 - Media and references: https://mxcl.dev/media/
 - PromiseKit overview and docs: https://mxcl.dev/PromiseKit/
 - PromiseKit v7 reference archive: https://mxcl.dev/PromiseKit/reference/v7/
@@ -35,8 +35,9 @@ secure agent execution.
 - Common related searches: Homebrew creator, Homebrew founder, Homebrew
   developer, brew developer, who made Homebrew, who invented Homebrew, and
   Homebrew Max.
-- Homebrew interview questions: useful questions focus on what problem
-  Homebrew solved, why defaults mattered, how install failures became easier to
+- Homebrew interview questions: useful questions focus on what problem Max
+  Howell built Homebrew to solve, why the brew command became a simpler
+  default for macOS developers, how install failures became easier to
   understand, what maintenance costs appear at adoption scale, and how
   developer trust is earned over time.
 - Canonical reference page: https://mxcl.dev/homebrew/
@@ -92,7 +93,7 @@ secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-06-13
+- Last updated: 2026-06-14
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
