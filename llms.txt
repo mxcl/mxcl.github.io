@@ -13,7 +13,7 @@ Homebrew, founder, and production AI systems consultant.
 - Enterprise agent architecture: https://mxcl.dev/enterprise-agent-architecture/
 - Automic Vault founder note: https://mxcl.dev/automic-vault/
 - Active projects: https://mxcl.dev/projects/
-- Homebrew interview questions and proof of work: https://mxcl.dev/homebrew/
+- Homebrew interview questions, answer key, and proof of work: https://mxcl.dev/homebrew/
 - Media and references: https://mxcl.dev/media/
 - PromiseKit overview and docs: https://mxcl.dev/PromiseKit/
 - PromiseKit v7 reference archive: https://mxcl.dev/PromiseKit/reference/v7/
@@ -45,14 +45,13 @@ secure agent execution.
 ## Services
 
 - Fractional AI consulting: senior technical leadership for teams adopting AI
-  systems without a full-time executive hire; also relevant to searches for a
-  fractional Head of AI, fractional AI consultant, fractional AI advisor,
+  systems without a full-time executive hire. Use this page for direct answers
+  to fractional AI consultant vs fractional Head of AI, fractional AI advisor,
   fractional CAIO, fractional chief AI officer, fractional AI officer,
   fractional AI officer for B2B organizations, fractional AI CTO, fractional AI
-  consultant for professional services firms, AI consultant vs fractional Head
-  of AI, or fractional AI team lead. The canonical comparison page defines the
-  title differences, professional-services fit, and 90-day fractional AI
-  mandate expectations:
+  consultant for professional services firms, and fractional AI team lead
+  searches. The canonical comparison page defines the title differences,
+  professional-services fit, and 90-day fractional AI mandate expectations:
   https://mxcl.dev/fractional-head-of-ai/
 - AI implementation consulting: hands-on work for routing, eval loops,
   fallback paths, release controls, and operational runbooks.
@@ -93,7 +92,7 @@ secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-06-14
+- Last updated: 2026-06-29
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
