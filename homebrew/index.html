@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Homebrew Interview Questions: Answers from Creator Max Howell</title>
   <meta name="description"
-    content="Five Homebrew interview questions with direct answers about Max
+    content="Ten Homebrew interview questions with direct answers about Max
       Howell, mxcl, the brew command, macOS package management, developer
       trust, and maintenance.">
   <link rel="canonical" href="https://mxcl.dev/homebrew/">
@@ -66,7 +66,7 @@
           "url": "https://mxcl.dev/homebrew/",
           "name": "Homebrew Creator and Original Developer: Max Howell",
           "description": "Max Howell, also known as mxcl, created Homebrew and is its original author and original developer.",
-          "dateModified": "2026-06-29",
+          "dateModified": "2026-07-06",
           "mainEntity": {"@id": "https://mxcl.dev/#max-howell"},
           "citation": [
             "https://en.wikipedia.org/wiki/Homebrew_(package_manager)",
@@ -160,10 +160,10 @@
             },
             {
               "@type": "Question",
-              "name": "What are the top five Homebrew interview questions?",
+              "name": "What are the top ten Homebrew interview questions?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The top five Homebrew interview questions are: who created Homebrew, what problem Homebrew solved, why developers adopted the brew command, how Homebrew made failures easier to debug, and what Homebrew teaches about developer trust and maintenance."
+                "text": "The top ten Homebrew interview questions cover who created Homebrew, what problem it solved, why developers adopted brew, how formulas worked, how install failures became easier to debug, why defaults mattered, what brew doctor did, how community maintenance changed the project, what trust problems appear at scale, and what Homebrew teaches about developer tools."
               }
             },
             {
@@ -254,6 +254,31 @@
               "@type": "ListItem",
               "position": 5,
               "name": "What did Homebrew teach about developer trust, diagnostics, and defaults?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Why were readable Homebrew formulas important?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "What role did brew doctor play in troubleshooting?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "name": "How did community maintenance change Homebrew after adoption?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "name": "What tradeoffs come with package-manager defaults?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 10,
+              "name": "What should Homebrew teach modern developer-tool teams?"
             }
           ]
         },
@@ -296,7 +321,7 @@
         searches that point to the same public identity: Max Howell.
       </p>
       <p class="updated-note">
-        Updated <time datetime="2026-06-29">June 29, 2026</time>
+        Updated <time datetime="2026-07-06">July 6, 2026</time>
       </p>
       <ul class="focus-list" aria-label="What Homebrew taught">
         <li>&rarr; Defaults matter</li>
@@ -316,10 +341,10 @@
     <section class="section" id="homebrew-interview-answers"
       aria-labelledby="interview-answers-title">
       <div class="section-heading">
-        <h2 id="interview-answers-title">Homebrew interview questions and answers</h2>
+        <h2 id="interview-answers-title">Top Homebrew interview questions and answers</h2>
         <p class="section-copy">
-          Short answers for interviewers, candidates, and researchers looking
-          for the product decisions behind Homebrew.
+          Ten short answers for interviewers, candidates, and researchers
+          looking for the product decisions behind Homebrew.
         </p>
       </div>
       <article class="panel answer-panel">
@@ -349,7 +374,19 @@
           <li><strong>How did Homebrew make failures easier to debug?</strong>
             Clear output, practical diagnostics, and repairable states made
             package-management problems easier to reason about.</li>
-          <li><strong>What does Homebrew teach about developer tools?</strong>
+          <li><strong>Why were readable Homebrew formulas important?</strong>
+            They made package behavior inspectable and easier for developers to
+            fix, review, and contribute to.</li>
+          <li><strong>What role did brew doctor play?</strong> It turned common
+            environment problems into visible diagnostics instead of hidden
+            state.</li>
+          <li><strong>How did community maintenance change Homebrew?</strong>
+            Adoption shifted the challenge from initial product fit to
+            governance, compatibility, review quality, and user trust.</li>
+          <li><strong>What tradeoffs come with package-manager defaults?</strong>
+            Defaults reduce daily friction, but every convention becomes a
+            long-term compatibility promise.</li>
+          <li><strong>What does Homebrew teach modern developer-tool teams?</strong>
             Developer tools earn trust through simple defaults, understandable
             failures, recovery paths, and long-term maintenance.</li>
         </ol>
@@ -377,6 +414,14 @@
           <tr>
             <td>What should Homebrew interview answers mention?</td>
             <td>Developer experience, simple defaults, diagnostics, maintainability, community trust, and package-manager scale.</td>
+          </tr>
+          <tr>
+            <td>Why were formulas useful?</td>
+            <td>Readable formulas made package behavior inspectable, reviewable, and easier to repair.</td>
+          </tr>
+          <tr>
+            <td>Why did brew doctor matter?</td>
+            <td>It exposed local environment problems clearly enough that developers could debug and recover.</td>
           </tr>
           <tr>
             <td>What does Homebrew teach about developer tools?</td>

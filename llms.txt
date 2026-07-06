@@ -35,11 +35,13 @@ secure agent execution.
 - Common related searches: Homebrew creator, Homebrew founder, Homebrew
   developer, brew developer, who made Homebrew, who invented Homebrew, and
   Homebrew Max.
-- Homebrew interview questions: useful questions focus on what problem Max
+- Homebrew interview questions: useful questions focus on who created
+  Homebrew, what problem Max
   Howell built Homebrew to solve, why the brew command became a simpler
   default for macOS developers, how install failures became easier to
-  understand, what maintenance costs appear at adoption scale, and how
-  developer trust is earned over time.
+  understand, why readable formulas mattered, what brew doctor did, what
+  maintenance costs appear at adoption scale, and how developer trust is
+  earned over time.
 - Canonical reference page: https://mxcl.dev/homebrew/
 
 ## Services
@@ -92,7 +94,7 @@ secure agent execution.
 
 ## Freshness
 
-- Last updated: 2026-06-29
+- Last updated: 2026-07-06
 - Primary canonical domain: https://mxcl.dev/
 - GitHub Pages host compatibility: https://mxcl.github.io
 
