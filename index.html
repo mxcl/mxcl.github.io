@@ -24,8 +24,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Sora:wght@400;600;700;800&amp;display=swap">
-  <link rel="stylesheet" href="/css/operator-terminal.css?v=20260612">
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <link rel="preload" as="image" href="/assets/avatar-swiss-editorial.webp"
+    type="image/webp">
+  <link rel="stylesheet" href="/css/swiss-editorial.css?v=20260713b">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -154,312 +156,129 @@
   </script>
 </head>
 
-<body class="operator-terminal home-bio">
-  <main class="page-shell">
-    <header class="site-header">
-      <a class="brand" href="/" aria-label="mxcl.dev home">
-        <span class="brand-mark" aria-hidden="true">A_</span>
-        <span>mxcl.dev</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="/hire-me/">Hire</a>
-        <a href="/fractional-head-of-ai/">Leadership</a>
-        <a href="/ai-implementation-consultant/">Implementation</a>
-        <a href="/enterprise-agent-architecture/">Architecture</a>
-        <a href="/projects/">Projects</a>
-        <a href="/homebrew/">Homebrew creator</a>
-        <a href="/media/">Media</a>
-      </nav>
-    </header>
+<body>
+  <header class="site-header page-grid">
+    <a class="brand" href="/" aria-label="mxcl.dev home"><span>mxcl.</span>dev</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/hire-me/">Hire</a>
+      <a href="/fractional-head-of-ai/">Leadership</a>
+      <a href="/ai-implementation-consultant/">Implementation</a>
+      <a href="/enterprise-agent-architecture/">Architecture</a>
+      <a href="/projects/">Projects</a>
+      <a href="/homebrew/">Homebrew creator</a>
+      <a href="/media/">Media</a>
+    </nav>
+  </header>
 
-    <section class="bio-hero" aria-labelledby="hero-title">
-      <div class="hero-portrait">
-        <img src="/assets/avatar.webp" alt="Max Howell">
+  <main>
+    <section class="hero page-grid" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Max<br>Howell</h1>
+        <p>Creator of Homebrew. Builder of production AI systems.</p>
+        <div class="hero-actions">
+          <a class="button" href="/hire-me/">Talk about a system</a>
+          <a class="text-link" href="mailto:mxcl@me.com">mxcl@me.com</a>
+        </div>
       </div>
+      <figure class="hero-portrait">
+        <img src="/assets/avatar-swiss-editorial.webp"
+          alt="Engraved portrait of Max Howell in a charcoal jacket and cream knit">
+      </figure>
+    </section>
 
-      <article class="bio-copy">
-        <p class="eyebrow">Automic thinking</p>
-        <h1 id="hero-title">Max Howell, creator of Homebrew.</h1>
-        <p class="bio-kicker">
-          Known online as mxcl, I wrote Homebrew's original code. Now I build
-          production AI systems that are secure by default, hold up under load,
-          and stay usable for people running real systems.
-        </p>
-        <p class="updated-note">
-          Updated <time datetime="2026-06-14">June 14, 2026</time>
-        </p>
-        <div class="bio-actions">
-          <a class="cta-link" href="/hire-me/">Talk about a system</a>
-          <a class="email-link" href="mailto:mxcl@me.com">mxcl@me.com</a>
-        </div>
-      </article>
+    <section class="principles page-grid" aria-label="Operating principles">
+      <strong>Systems shipped.<br>Trust earned.</strong>
+      <p>Millions of developers use Homebrew every day.</p>
+      <p>Production AI systems in sensitive environments.</p>
+      <p>Security-first architecture and threat modeling.</p>
+      <p>Clear systems people can audit.</p>
+    </section>
 
-      <aside class="bio-brief" aria-label="About Max Howell">
-        <div class="signature-lockup">
-          <span class="signature-mark" aria-hidden="true">A_</span>
-          <span>Automic Object</span>
+    <section class="work page-grid" aria-labelledby="work-title">
+      <header class="work-heading">
+        <p class="eyebrow">Current work</p>
+        <h2 id="work-title">Selected<br>systems</h2>
+        <a class="text-link" href="/projects/">See every project</a>
+      </header>
+
+      <a class="feature feature-vault" href="/automic-vault/">
+        <div class="feature-copy">
+          <h3>Automic Vault</h3>
+          <p>Encrypted secrets, sealed tools, and approval before execution.</p>
+          <span class="text-link">Read the founder note</span>
         </div>
-        <p>
-          Creator and original author of <a href="/homebrew/">Homebrew</a>.
-          British-American software engineer, open-source developer, founder,
-          and fractional AI consultant.
-        </p>
-        <dl class="bio-facts">
-          <div>
-            <dt>Known for</dt>
-            <dd>Homebrew, CLI conventions, developer tooling</dd>
-          </div>
-          <div>
-            <dt>Current work</dt>
-            <dd>Agent runtimes, secure execution, fractional AI consulting</dd>
-          </div>
-        </dl>
+        <img src="/images/automic-vault/app-hazard-journey.webp"
+          alt="Automic Vault approval interface">
+      </a>
+
+      <aside class="feature feature-consulting">
+        <div>
+          <h3>Production AI</h3>
+          <p>I help teams choose technical bets, reduce hidden failure paths, and ship boundaries people can audit.</p>
+        </div>
+        <a class="text-link" href="/fractional-head-of-ai/">See fractional leadership</a>
       </aside>
     </section>
 
-    <section class="operator-strip" aria-label="Operating principles">
-      <p>Security by default.</p>
-      <p>Power by design.</p>
-      <p>Built in public.</p>
-      <p>Clear &gt; clever.</p>
+    <section class="method page-grid" aria-labelledby="method-title">
+      <div class="method-intro">
+        <h2 id="method-title">Build the boundary before the agent.</h2>
+        <p>Secure execution starts with a smaller operating surface and ends with evidence that survives production.</p>
+      </div>
+      <ol class="method-list">
+        <li><span>Understand</span> the operating surface.</li>
+        <li><span>Reduce</span> routing and tool complexity.</li>
+        <li><span>Measure</span> failures with useful evals.</li>
+        <li><span>Ship</span> boundaries people can inspect.</li>
+      </ol>
     </section>
 
-    <section class="systems-section" aria-labelledby="systems-title">
-      <div class="section-kicker">
-        <p class="eyebrow">application examples</p>
-        <h2 id="systems-title">Current builds with strict boundaries.</h2>
-        <a class="section-link" href="/projects/">See every project</a>
+    <section class="dossier page-grid" aria-labelledby="dossier-title">
+      <header>
+        <p class="eyebrow">Biography</p>
+        <h2 id="dossier-title">Open source,<br>then and now.</h2>
+      </header>
+      <div class="dossier-copy">
+        <p>Max Howell is a British-American software engineer and open-source developer. He created <a href="/homebrew/">Homebrew</a> and wrote its original code under the mxcl handle.</p>
+        <p>His other open-source work includes <a href="https://mxcl.dev/PromiseKit/">PromiseKit</a>, Path.swift, and YOLOKit. His current work focuses on agent runtimes, secure execution, and production AI systems.</p>
       </div>
-
-      <div class="systems-grid">
-        <a class="system-panel system-vault" href="/automic-vault/">
-          <div class="project-copy">
-            <p class="project-label">From the creator of Homebrew</p>
-            <h3>Harden your Mac before the agent runs.</h3>
-            <p>
-              Automic Vault protects plaintext keys with encrypted secrets,
-              sealed tools, and approval before execution.
-            </p>
-            <span class="project-cta">Read the founder note</span>
-          </div>
-          <div class="vault-media" aria-hidden="true">
-            <img class="vault-logo" src="/images/automic-vault/icon-2x.webp"
-              alt="">
-            <img class="vault-screen"
-              src="/images/automic-vault/app-hazard-journey.webp" alt="">
-          </div>
-        </a>
-
-        <aside class="system-vault-notes" aria-label="Automic Vault quick scan">
-          <p class="project-label">Quick scan</p>
-          <ul>
-            <li>
-              <strong>Built on top of Homebrew</strong>
-              <span>Hardens packages without replacing the workflow.</span>
-            </li>
-            <li>
-              <strong>Secret protection for packages</strong>
-              <span>Keychain-backed credentials instead of agent-readable files.</span>
-            </li>
-            <li>
-              <strong>Execution control for agents</strong>
-              <span>Human approval at the layer where local tools act.</span>
-            </li>
-          </ul>
-          <a class="section-link" href="https://www.automicvault.com/"
-            target="_blank" rel="noopener noreferrer">Visit Automic Vault</a>
-        </aside>
-      </div>
-
-      <aside class="experiment-strip" aria-label="Playful project archive">
-        <p>Playful experiments live outside the main consulting narrative.</p>
-        <a href="https://clawlicio.us" target="_blank"
-          rel="noopener noreferrer">Clawlicious</a>
-        <a href="https://colossalclawadventure.com" target="_blank"
-          rel="noopener noreferrer">Colossal Claw Adventure</a>
-      </aside>
+      <img src="/images/automic-vault/preview.jpg"
+        alt="Automic Vault visual showing an AI agent security warning">
     </section>
 
-    <section class="workflow-section" aria-labelledby="workflow-title">
-      <div class="section-kicker">
-        <p class="eyebrow">operator protocol</p>
-        <h2 id="workflow-title">How I harden agent systems.</h2>
-      </div>
-
-      <div class="workflow-grid">
-        <div class="workflow-panel">
-          <p class="project-label">Typical failure map</p>
-          <pre class="diagram" role="img" aria-label="Typical AI system diagram">[Input]
-   |
-[Router] --- [Tools]
-   |           |
-[Eval]    [Fallbacks]
-   |
-[Output]</pre>
-        </div>
-        <ol class="work-list workflow-steps">
-          <li>Understand the operating surface.</li>
-          <li>Identify hidden failure paths.</li>
-          <li>Reduce tool and routing complexity.</li>
-          <li>Add evals that catch regressions.</li>
-          <li>Ship with boundaries people can audit.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="hire-band" aria-labelledby="hire-title">
-      <p class="eyebrow">available selectively</p>
-      <h2 id="hire-title">Fractional AI consultant, CTO, or difficult-system mechanic.</h2>
-      <p>
-        I help teams choose the right technical bets, harden agent systems,
-        and get expensive ambiguity out of the product path.
-      </p>
-      <a class="cta-link" href="/hire-me/">Hire Max Howell</a>
-      <a class="section-link" href="/fractional-head-of-ai/">
-        See fractional AI consulting
-      </a>
-    </section>
-
-    <section class="bio-dossier" aria-labelledby="dossier-title">
-      <div class="section-kicker">
-        <p class="eyebrow">biography</p>
-        <h2 id="dossier-title">Max Howell, open-source developer.</h2>
-      </div>
-      <div class="bio-prose">
-        <p>
-          Max Howell is a British-American software engineer and open-source
-          developer. He created <a href="/homebrew/">Homebrew</a>, the package
-          manager for macOS and Linux, and wrote the first version under the
-          mxcl handle. For interview prep or authorship research, see the
-          <a href="/homebrew/#homebrew-interview-questions">Homebrew interview
-          questions</a> and creator reference. Tens of millions of developers
-          have used Homebrew.
-        </p>
-        <p>
-          Some Homebrew habits later became common in developer tools:
-          curl-based one-line installs, doctor commands that explain what is
-          wrong, and tools that search existing GitHub issues when something
-          breaks.
-        </p>
-        <p>
-          His other open-source work includes
-          <a href="https://mxcl.dev/PromiseKit/">PromiseKit</a>, Path.swift,
-          and YOLOKit.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="answers-title">
-      <div class="section-kicker">
-        <p class="eyebrow">direct answers</p>
-        <h2 id="answers-title">Common searches about Max Howell.</h2>
-      </div>
-      <div class="faq-list">
-        <article class="panel answer-panel">
-          <h3>Who is Max Howell?</h3>
-          <p>
-            Max Howell created Homebrew and wrote its original code. He is a
-            British-American software engineer, open-source developer, founder,
-            and production AI systems consultant.
-          </p>
-        </article>
-        <article class="panel">
+    <section class="answers page-grid" aria-labelledby="answers-title">
+      <h2 id="answers-title">Direct answers</h2>
+      <div class="answer-grid">
+        <article>
           <h3>Who created Homebrew?</h3>
-          <p>
-            Max Howell created Homebrew and is listed by public references as
-            its original author. Homebrew is the package manager many developers
-            use on macOS and Linux.
-          </p>
-          <a class="section-link" href="/homebrew/">
-            See Homebrew creator reference
-          </a>
+          <p>Max Howell created Homebrew and wrote its original code.</p>
+          <a class="text-link" href="/homebrew/">Homebrew creator reference</a>
         </article>
-        <article class="panel">
+        <article>
           <h3>What is mxcl?</h3>
-          <p>
-            mxcl is Max Howell's long-running developer handle and the domain
-            for his work on production AI systems, open-source software,
-            Homebrew history, and current projects.
-          </p>
+          <p>mxcl is Max Howell's long-running developer handle and the home of his current work.</p>
         </article>
-        <article class="panel">
-          <h3>Is Max Howell mxcl?</h3>
-          <p>
-            Yes. Max Howell is also known as mxcl, his long-running developer
-            handle on GitHub, GitHub Gist, X/Twitter, and this domain.
-          </p>
-        </article>
-        <article class="panel">
-          <h3>What open-source projects is Max Howell known for?</h3>
-          <p>
-            Max Howell is known for creating Homebrew and for open-source
-            projects including
-            <a href="https://mxcl.dev/PromiseKit/">PromiseKit</a>,
-            <a href="https://mxcl.dev/Path.swift/">Path.swift</a>, and
-            <a href="https://mxcl.dev/YOLOKit/">YOLOKit</a>.
-          </p>
-          <a class="section-link" href="/projects/">
-            See current and archived projects
-          </a>
+        <article>
+          <h3>What does Max build now?</h3>
+          <p>Secure agent runtimes, production AI systems, and tools that remain usable under real operating pressure.</p>
         </article>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="sources-title">
-      <div class="section-kicker">
-        <p class="eyebrow">entity anchors</p>
-        <h2 id="sources-title">Public identity references.</h2>
-      </div>
-      <div class="source-list">
-        <article class="panel">
-          <h3>Homebrew</h3>
-          <p>
-            The <a href="https://en.wikipedia.org/wiki/Homebrew_(package_manager)"
-              target="_blank" rel="noopener noreferrer">Homebrew Wikipedia
-              article</a> identifies Max Howell as the original author, and
-            <a href="https://www.wikidata.org/wiki/Q64850138" target="_blank"
-              rel="noopener noreferrer">Wikidata</a> records the same
-            creator relationship.
-          </p>
-        </article>
-        <article class="panel">
-          <h3>Developer graph</h3>
-          <p>
-            Public profiles on <a href="https://github.com/mxcl"
-              target="_blank" rel="noopener noreferrer">GitHub</a>,
-            <a href="https://gist.github.com/mxcl" target="_blank"
-              rel="noopener noreferrer">GitHub Gist</a>, and
-            <a href="https://www.linkedin.com/in/mxcl" target="_blank"
-              rel="noopener noreferrer">LinkedIn</a> connect Max Howell,
-            mxcl, Homebrew, and this domain.
-          </p>
-          <a class="section-link" href="/media/">[ See media references ]</a>
-        </article>
-        <article class="panel">
-          <h3>Media graph</h3>
-          <p>
-            Interviews and podcast profiles from
-            <a href="https://www.harpersystems.dev/post/s3-e08-whats-the-creator-of-homebrew-up-to-now-w-max-howell"
-              target="_blank" rel="noopener noreferrer">Harper Systems</a>,
-            <a href="https://muckrack.com/podcast/the-sourcegraph-podcast/episodes/max-howell-creator-of-homebrew-and-founder-of-tea/"
-              target="_blank" rel="noopener noreferrer">Sourcegraph</a>, and
-            <a href="https://stackoverflow.blog/max-howell/" target="_blank"
-              rel="noopener noreferrer">Stack Overflow</a> point to the same
-            public identity.
-          </p>
-        </article>
-      </div>
+    <section class="contact page-grid" aria-labelledby="contact-title">
+      <h2 id="contact-title">Have a difficult system?</h2>
+      <a class="button" href="/hire-me/">Talk about a system</a>
     </section>
-
-    <footer class="site-footer">
-      <a href="https://github.com/mxcl" target="_blank"
-        rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/mxcl" target="_blank"
-        rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://www.twitter.com/mxcl" target="_blank"
-        rel="noopener noreferrer">Twitter</a>
-    </footer>
   </main>
+
+  <footer class="site-footer page-grid">
+    <p>Max Howell, creator of Homebrew.</p>
+    <div>
+      <a href="https://github.com/mxcl" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/mxcl" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.twitter.com/mxcl" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </div>
+  </footer>
 </body>
 
 </html>
