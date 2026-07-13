@@ -4,18 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Homebrew Interview Questions: Answers from Creator Max Howell</title>
+  <title>Homebrew Interview Questions: Technical Answers from Creator Max Howell</title>
   <meta name="description"
-    content="Ten Homebrew interview questions with direct answers about Max
-      Howell, mxcl, the brew command, macOS package management, developer
-      trust, and maintenance.">
+    content="Homebrew interview questions with technical and creator answers
+      about formulas, casks, taps, brew install, brew doctor, Max Howell,
+      mxcl, macOS package management, and maintenance.">
   <link rel="canonical" href="https://mxcl.dev/homebrew/">
   <meta property="og:title"
-    content="Homebrew Interview Questions: Answers from Creator Max Howell">
+    content="Homebrew Interview Questions: Technical Answers from Creator Max Howell">
   <meta property="og:description"
-    content="Useful Homebrew interview questions and answers plus creator,
-      founder, and original brew developer context from Max Howell, also
-      known as mxcl.">
+    content="Useful Homebrew interview questions and technical answers plus
+      creator, founder, and original brew developer context from Max Howell,
+      also known as mxcl.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mxcl.dev/homebrew/">
   <meta property="og:image" content="https://mxcl.dev/images/mxcl.jpg">
@@ -66,7 +66,7 @@
           "url": "https://mxcl.dev/homebrew/",
           "name": "Homebrew Creator and Original Developer: Max Howell",
           "description": "Max Howell, also known as mxcl, created Homebrew and is its original author and original developer.",
-          "dateModified": "2026-07-06",
+          "dateModified": "2026-07-13",
           "mainEntity": {"@id": "https://mxcl.dev/#max-howell"},
           "citation": [
             "https://en.wikipedia.org/wiki/Homebrew_(package_manager)",
@@ -200,6 +200,54 @@
             },
             {
               "@type": "Question",
+              "name": "What is the difference between a Homebrew formula and a cask?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Homebrew formula installs command-line software and libraries from a Ruby package definition. A cask installs macOS applications, fonts, plugins, and other binary artifacts that usually behave more like desktop apps than command-line packages."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is a Homebrew tap?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Homebrew tap is an additional Git repository of formulas or casks. Taps let teams publish packages outside the main Homebrew repositories while still using brew install and related commands."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the Homebrew Cellar and prefix?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Cellar is where Homebrew stores versioned package installations. The prefix is the root Homebrew exposes to users, with symlinks to the active versions so tools can be found predictably."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do brew update and brew upgrade differ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "brew update refreshes Homebrew's package definitions and repository metadata. brew upgrade installs newer versions of already installed packages when updated formulas are available."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How should you debug a failed brew install?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Start by reading the error output, running brew doctor, checking whether Homebrew and formulas are updated, confirming the package issue is not already reported, and isolating whether the failure is local environment state or a formula problem."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When should you use brew bundle?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use brew bundle when you want a reproducible list of Homebrew dependencies in a Brewfile, such as for onboarding a machine, documenting project tools, or keeping team environments closer together."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "What did Homebrew change for macOS developers?",
               "acceptedAnswer": {
                 "@type": "Answer",
@@ -228,7 +276,7 @@
           "@type": "ItemList",
           "@id": "https://mxcl.dev/homebrew/#interview-questions",
           "name": "Homebrew interview questions",
-          "description": "Useful interview questions about Homebrew, its creator, and the developer-tooling decisions behind its adoption.",
+          "description": "Useful technical and product interview questions about Homebrew, its creator, and the developer-tooling decisions behind its adoption.",
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -279,6 +327,36 @@
               "@type": "ListItem",
               "position": 10,
               "name": "What should Homebrew teach modern developer-tool teams?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 11,
+              "name": "What is the difference between a Homebrew formula and a cask?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 12,
+              "name": "What is a Homebrew tap?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 13,
+              "name": "What are the Homebrew Cellar and prefix?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 14,
+              "name": "How do brew update and brew upgrade differ?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 15,
+              "name": "How should you debug a failed brew install?"
+            },
+            {
+              "@type": "ListItem",
+              "position": 16,
+              "name": "When should you use brew bundle?"
             }
           ]
         },
@@ -315,24 +393,28 @@
       <h2>Who created Homebrew? Max Howell, also known as mxcl.</h2>
       <p class="lede">
         Max Howell, also known as mxcl, created Homebrew and wrote its original
-        code. This page collects direct answers for Homebrew interview
-        questions, plus the creator, founder, Homebrew developer, original brew
-        developer, who made Homebrew, who invented Homebrew, and "Homebrew Max"
-        searches that point to the same public identity: Max Howell.
+        code. This page collects direct technical answers for Homebrew
+        interview questions, plus the creator, founder, Homebrew developer,
+        original brew developer, who made Homebrew, who invented Homebrew, and
+        "Homebrew Max" searches that point to the same public identity: Max
+        Howell.
       </p>
       <p class="updated-note">
-        Updated <time datetime="2026-07-06">July 6, 2026</time>
+        Updated <time datetime="2026-07-13">July 13, 2026</time>
       </p>
       <ul class="focus-list" aria-label="What Homebrew taught">
         <li>&rarr; Defaults matter</li>
         <li>&rarr; Complexity spreads</li>
         <li>&rarr; Maintenance is the product</li>
-        <li>&rarr; Interview questions</li>
+        <li>&rarr; Technical Q&amp;A</li>
       </ul>
       <div class="hero-actions">
         <a class="cta-link" href="/hire-me/">[ Work with Max ]</a>
         <a class="section-link" href="#homebrew-interview-questions">
           [ Homebrew interview questions ]
+        </a>
+        <a class="section-link" href="#technical-homebrew-interview-questions">
+          [ Technical answers ]
         </a>
         <a class="email-link" href="mailto:mxcl@me.com">mxcl@me.com</a>
       </div>
@@ -343,8 +425,9 @@
       <div class="section-heading">
         <h2 id="interview-answers-title">Top Homebrew interview questions and answers</h2>
         <p class="section-copy">
-          Ten short answers for interviewers, candidates, and researchers
-          looking for the product decisions behind Homebrew.
+          Short answers for interviewers, candidates, and researchers looking
+          for both technical Homebrew knowledge and the product decisions
+          behind the package manager.
         </p>
       </div>
       <article class="panel answer-panel">
@@ -389,6 +472,9 @@
           <li><strong>What does Homebrew teach modern developer-tool teams?</strong>
             Developer tools earn trust through simple defaults, understandable
             failures, recovery paths, and long-term maintenance.</li>
+          <li><strong>What technical topics should Homebrew interview questions cover?</strong>
+            Formulas, casks, taps, the Cellar, the prefix, update versus
+            upgrade, brew doctor, install debugging, and Brewfile workflows.</li>
         </ol>
       </article>
       <table class="comparison-table">
@@ -429,6 +515,86 @@
           </tr>
         </tbody>
       </table>
+    </section>
+
+    <section class="section" id="technical-homebrew-interview-questions"
+      aria-labelledby="technical-interview-title">
+      <div class="section-heading">
+        <h2 id="technical-interview-title">Technical Homebrew interview questions</h2>
+        <p class="section-copy">
+          These answers cover the Homebrew concepts candidates are usually
+          expected to understand when an interview asks about brew, macOS
+          package management, or developer tooling.
+        </p>
+      </div>
+      <div class="faq-list">
+        <article class="panel answer-panel">
+          <h3>What is Homebrew?</h3>
+          <p>
+            Homebrew is a package manager for macOS and Linux. It gives
+            developers a consistent brew command for installing, updating, and
+            managing command-line tools, libraries, and desktop-app packages.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What happens when you run brew install?</h3>
+          <p>
+            Homebrew reads a package definition, resolves dependencies,
+            fetches the source or binary artifact, installs it into Homebrew's
+            managed directories, and exposes usable commands or apps through
+            predictable links.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What is the difference between a formula and a cask?</h3>
+          <p>
+            A formula usually installs command-line software or libraries. A
+            cask usually installs macOS applications, fonts, plugins, and other
+            binary artifacts that behave more like desktop software.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What is a tap?</h3>
+          <p>
+            A tap is an additional Git repository of formulas or casks. It
+            lets a project or company publish Homebrew packages outside the
+            main repositories while keeping the same brew workflow.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>What are the Cellar and prefix?</h3>
+          <p>
+            The Cellar stores versioned package installations. The prefix is
+            the Homebrew root exposed to users, where symlinks point at the
+            active versions so commands and libraries can be found
+            consistently.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>How do brew update and brew upgrade differ?</h3>
+          <p>
+            brew update refreshes Homebrew's package definitions and metadata.
+            brew upgrade installs newer versions of packages that are already
+            installed when updated formulas are available.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>How should you debug a failed brew install?</h3>
+          <p>
+            Read the error output first, run brew doctor, update Homebrew,
+            check whether the formula has an open issue, and separate local
+            machine state from a package-definition or upstream build problem.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>When should you use brew bundle?</h3>
+          <p>
+            Use brew bundle when dependencies should be documented and
+            reproducible in a Brewfile, such as for setting up a new machine,
+            onboarding a project, or keeping a team environment consistent.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="homebrew-max-title">
