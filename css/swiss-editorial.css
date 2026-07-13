@@ -128,8 +128,6 @@ img { display: block; max-width: 100%; }
 
 .hero-portrait {
   grid-column: 7 / -1;
-  display: grid;
-  place-items: center;
   min-width: 0;
   margin: 0;
   border-left: 1px solid var(--ink);
@@ -137,8 +135,10 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-portrait img {
-  width: 84%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.24);
 }
 
 .principles {
@@ -331,7 +331,7 @@ img { display: block; max-width: 100%; }
   .hero-copy > p { margin-top: 24px; padding-top: 16px; }
   .hero-actions { align-items: flex-start; flex-direction: row; flex-wrap: wrap; margin-top: 20px; }
   .hero-portrait { order: -1; height: 250px; min-height: 0; flex: 0 0 250px; border: 0; border-bottom: 1px solid var(--ink); }
-  .hero-portrait img { width: 100%; height: 250px; object-fit: cover; object-position: center 28%; }
+  .hero-portrait img { width: 100%; height: 250px; object-fit: cover; object-position: center 28%; transform: none; }
   .principles,
   .work,
   .method,
