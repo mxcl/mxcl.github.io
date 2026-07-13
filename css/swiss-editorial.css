@@ -63,8 +63,8 @@ img { display: block; max-width: 100%; }
 .text-link:hover { color: var(--green-dark); text-decoration: underline; }
 
 .hero {
-  height: clamp(640px, calc(100dvh - 72px), 900px);
-  min-height: 640px;
+  height: clamp(540px, 72dvh, 680px);
+  min-height: 540px;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   border-bottom: 1px solid var(--ink);
@@ -138,7 +138,6 @@ img { display: block; max-width: 100%; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.24);
 }
 
 .principles {
@@ -308,7 +307,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 1000px) {
   .site-header { align-items: flex-start; flex-direction: column; padding-block: 18px; }
   .site-nav { width: 100%; overflow-x: auto; padding-bottom: 6px; }
-  .hero { height: min(760px, calc(100dvh - 118px)); min-height: 600px; }
+  .hero { height: min(650px, calc(100dvh - 118px)); min-height: 540px; }
   .hero-copy { grid-column: 1 / span 7; }
   .hero-portrait { grid-column: 8 / -1; }
   .hero h1 { font-size: clamp(4.5rem, 12vw, 7rem); }
