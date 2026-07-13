@@ -63,15 +63,15 @@ img { display: block; max-width: 100%; }
 .text-link:hover { color: var(--green-dark); text-decoration: underline; }
 
 .hero {
-  height: clamp(540px, 72dvh, 680px);
-  min-height: 540px;
+  height: clamp(500px, 60dvh, 560px);
+  min-height: 500px;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   border-bottom: 1px solid var(--ink);
 }
 
 .hero-copy {
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,7 +127,7 @@ img { display: block; max-width: 100%; }
 }
 
 .hero-portrait {
-  grid-column: 7 / -1;
+  grid-column: 8 / -1;
   min-width: 0;
   margin: 0;
   border-left: 1px solid var(--ink);
@@ -307,7 +307,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 1000px) {
   .site-header { align-items: flex-start; flex-direction: column; padding-block: 18px; }
   .site-nav { width: 100%; overflow-x: auto; padding-bottom: 6px; }
-  .hero { height: min(650px, calc(100dvh - 118px)); min-height: 540px; }
+  .hero { height: min(560px, calc(100dvh - 118px)); min-height: 500px; }
   .hero-copy { grid-column: 1 / span 7; }
   .hero-portrait { grid-column: 8 / -1; }
   .hero h1 { font-size: clamp(4.5rem, 12vw, 7rem); }
