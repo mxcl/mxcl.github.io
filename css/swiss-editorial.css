@@ -217,9 +217,16 @@ img { display: block; max-width: 100%; }
 .feature-pmm {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 22px;
   padding: 28px;
   background: #e5e1d7;
+}
+
+.feature-pmm img {
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+  border: 1px solid var(--ink);
 }
 
 .feature-pmm:hover { background: #dcd8cc; }
