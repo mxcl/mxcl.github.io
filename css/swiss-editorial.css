@@ -196,16 +196,23 @@ img { display: block; max-width: 100%; }
 
 .feature-vault {
   display: grid;
-  grid-template-rows: auto 1fr;
-  background: var(--ink);
-  color: var(--paper);
+  place-items: center;
+  padding: clamp(12px, 2vw, 24px);
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  overflow: hidden;
 }
 
-.feature-copy { padding: 28px; }
 .feature h3 { margin: 0; font-size: clamp(1.8rem, 3vw, 3rem); letter-spacing: -.045em; }
 .feature p { max-width: 34ch; margin: 14px 0 24px; line-height: 1.55; }
-.feature-vault img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
-.feature-vault .text-link { color: #65d596; }
+.feature-vault img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ink);
+  object-fit: contain;
+  transition: opacity 160ms ease;
+}
+.feature-vault:hover img { opacity: .88; }
 
 .feature-consulting {
   display: flex;
