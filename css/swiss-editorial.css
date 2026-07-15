@@ -214,13 +214,15 @@ img { display: block; max-width: 100%; }
 }
 .feature-vault:hover img { opacity: .88; }
 
-.feature-consulting {
+.feature-pmm {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 28px;
   background: #e5e1d7;
 }
+
+.feature-pmm:hover { background: #dcd8cc; }
 
 .method {
   display: grid;
