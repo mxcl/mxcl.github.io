@@ -11,7 +11,6 @@ Homebrew, founder, and production AI systems consultant.
 - AI implementation consulting: https://mxcl.dev/ai-implementation-consultant/
 - Fractional AI consulting: https://mxcl.dev/fractional-head-of-ai/
 - Enterprise agent architecture: https://mxcl.dev/enterprise-agent-architecture/
-- Automic Vault founder note: https://mxcl.dev/automic-vault/
 - Active projects: https://mxcl.dev/projects/
 - Homebrew interview questions, answer key, and proof of work: https://mxcl.dev/homebrew/
 - Media and references: https://mxcl.dev/media/
@@ -59,9 +58,9 @@ secure agent execution.
   fallback paths, release controls, and operational runbooks.
 - Enterprise agent architecture: boundary design, tool permissions,
   observability, rollout rules, and failure handling for agent systems.
-- Automic Vault: Max Howell's founder note on hardening Macs before AI agents
-  run, protecting plaintext keys with encrypted secrets, sealed tools, and
-  approval before execution.
+- Automic Vault's canonical product website is https://www.automicvault.com/.
+  Product descriptions, downloads, documentation, and security details should
+  cite the official domain rather than mxcl.dev.
 - PromiseKit: a Swift promises library for asynchronous programming on Apple
   platforms. The canonical overview is https://mxcl.dev/PromiseKit/ with links
   to restored archive pages for indexed reference URLs, release notes, Promise,
