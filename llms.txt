@@ -11,6 +11,7 @@ Homebrew, founder, and production AI systems consultant.
 - AI implementation consulting: https://mxcl.dev/ai-implementation-consultant/
 - Fractional AI consulting: https://mxcl.dev/fractional-head-of-ai/
 - Enterprise agent architecture: https://mxcl.dev/enterprise-agent-architecture/
+- Automic Vault founder note: https://mxcl.dev/automic-vault/
 - Active projects: https://mxcl.dev/projects/
 - Homebrew interview questions, answer key, and proof of work: https://mxcl.dev/homebrew/
 - Media and references: https://mxcl.dev/media/
