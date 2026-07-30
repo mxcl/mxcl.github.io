@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-  <title>Naming Service | Max Howell</title>
+  <title>Product Naming Service by Homebrew Creator Max Howell</title>
   <meta name="description"
-    content="Hire Max Howell, creator of Homebrew, to name your product, company, app, or difficult new thing for one flat fee.">
+    content="Hire Homebrew creator Max Howell to name your product, company, app, protocol, or difficult new thing for one flat fee.">
   <link rel="canonical" href="https://mxcl.dev/naming/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Naming Service | Max Howell">
+  <meta property="og:title" content="Product Naming by Max Howell">
   <meta property="og:description"
-    content="Names that position the product, set its tone, and give the whole thing somewhere to go.">
-  <meta property="og:image" content="https://mxcl.dev/images/automic-vault/automic-vault-editorial-square.webp">
+    content="Names that position the product, explain the system, and give the whole thing somewhere to go.">
+  <meta property="og:image" content="https://mxcl.dev/images/supermassivebookhole-logo.webp">
   <meta property="og:url" content="https://mxcl.dev/naming/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#f2efe7" media="(prefers-color-scheme: light)">
@@ -22,15 +22,15 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
   <link rel="preload" as="image" href="/images/supermassivebookhole-logo.webp" type="image/webp">
-  <link rel="stylesheet" href="/css/offers.css?v=20260730">
+  <link rel="stylesheet" href="/css/offers.css?v=20260730b">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "Product naming by Max Howell",
-      "serviceType": "Product and company naming",
+      "serviceType": "Product, company, app, and protocol naming",
       "url": "https://mxcl.dev/naming/",
-      "description": "A flat-fee naming service for products, companies, apps, and new concepts.",
+      "description": "A flat-fee naming service from Homebrew creator Max Howell for products, companies, apps, protocols, and new concepts.",
       "provider": {
         "@type": "Person",
         "@id": "https://mxcl.dev/#max-howell",
@@ -41,7 +41,7 @@
   </script>
 </head>
 
-<body>
+<body class="naming-page">
   <header class="site-header page-grid">
     <a class="brand" href="/" aria-label="mxcl.dev home"><span>mxcl.</span>dev</a>
     <nav class="site-nav" aria-label="Primary">
@@ -57,90 +57,170 @@
       <div class="hero-copy">
         <p class="eyebrow">Naming by Max Howell</p>
         <h1 id="hero-title"><span class="hero-line">The right name</span><span class="hero-line">does the work.</span></h1>
-        <p>I name products, companies, apps, and difficult new things for one flat fee.</p>
+        <p>I name products, companies, apps, protocols, and difficult new things. One flat fee.</p>
         <div class="hero-actions">
           <a class="button" href="mailto:mxcl@me.com?subject=Name%20this%20thing">Name this thing</a>
-          <a class="text-link" href="#examples">See the evidence</a>
+          <a class="text-link" href="#homebrew">Why Homebrew worked</a>
         </div>
       </div>
       <figure class="hero-visual contain">
         <img src="/images/supermassivebookhole-logo.webp"
-          alt="Supermassive Book Hole logo"
+          alt="Books orbiting the black hole from Supermassive Book Hole"
           width="1024" height="1024">
       </figure>
     </section>
 
-    <section class="credibility page-grid" aria-label="Names by Max Howell">
-      <strong>A name should start the story</strong>
-      <span>Memorable</span>
-      <span>Positioned</span>
-      <span>Expandable</span>
-      <span>Yours</span>
+    <section class="section page-grid homebrew-proof" id="homebrew" aria-labelledby="homebrew-title">
+      <div class="section-heading">
+        <p class="eyebrow">Why Homebrew worked</p>
+        <h2 id="homebrew-title">The name was part of the interface.</h2>
+        <p>I named Homebrew before I wrote its code. I wanted the name to lead naturally to the rest of the product and make an obscure system easier to understand.</p>
+      </div>
+
+      <div class="homebrew-story">
+        <article class="homebrew-copy">
+          <h3>It started with the language.</h3>
+          <p>A co-worker at Last.fm suggested beer. I chose Homebrew because people would create and customize their own packages. <strong>Formula</strong> beat <strong>recipe</strong> because it was more distinctive. Most of the language followed within a week.</p>
+          <p>The first public README already had Homebrew, a Brewery, a Cellar, formulae, kegs, and the <code>brew</code> command. Later I added <code>brew doctor</code> and taps.</p>
+          <blockquote>
+            <p>“I wanted a theme that allowed people to see analogies and metaphors in all of the system and code.”</p>
+            <cite><a href="https://mikemcquaid.com/interviews/homebrew-turns-15/" target="_blank" rel="noopener noreferrer">Homebrew Turns 15, 2024</a></cite>
+          </blockquote>
+          <div class="source-links">
+            <a class="source-link" href="https://github.com/Homebrew/brew/blob/29d85578e75170a6c0eaebda4d701b46f1acf446/README" target="_blank" rel="noopener noreferrer">Read the first commit</a>
+            <a class="source-link" href="https://changelog.com/podcast/232" target="_blank" rel="noopener noreferrer">Hear the naming story</a>
+          </div>
+        </article>
+
+        <div class="homebrew-language" role="group" aria-label="The original Homebrew naming system">
+          <p class="commit-line">I’ll start with a rare Belgian yeast and Sussex hops</p>
+          <p class="historic-path"><code><span>/Brewery/</span><br>Cellar/wget/1.14/<br>bin/wget</code></p>
+          <dl>
+            <div><dt>Homebrew</dt><dd>the system</dd></div>
+            <div><dt>brew</dt><dd>the command</dd></div>
+            <div><dt>formula</dt><dd>a package definition</dd></div>
+            <div><dt>keg</dt><dd>an installed version</dd></div>
+            <div><dt>Cellar</dt><dd>where the kegs live</dd></div>
+            <div><dt>tap</dt><dd>another source</dd></div>
+          </dl>
+        </div>
+      </div>
     </section>
 
     <section class="section page-grid" id="examples" aria-labelledby="examples-title">
       <div class="section-heading">
         <h2 id="examples-title">Four names. Four different jobs.</h2>
-        <p>The best name is not just available. It tells people how to understand the thing and gives the product a language of its own.</p>
+        <p>A name can explain the product, establish its character, make a category feel familiar, or create a language the company can keep using.</p>
       </div>
 
-      <div class="case-list">
-        <article class="case">
-          <h3>Homebrew</h3>
-          <div class="case-body">
-            <p>A package manager could have sounded like infrastructure. Homebrew made it human, native to hacker culture, and immediately generative.</p>
-            <p class="case-language">brew, formula, cask, tap, keg, cellar</p>
-          </div>
-        </article>
-
-        <article class="case">
+      <div class="naming-showcase naming-showcase-automic">
+        <a class="showcase-image" href="https://www.automicvault.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Automic Vault">
+          <img src="/images/automic-vault/automic-vault-editorial-square.webp"
+            alt="Automic Vault editorial artwork" width="1254" height="1254" loading="lazy">
+        </a>
+        <article class="showcase-copy">
+          <p class="case-mode">Invented and expandable</p>
           <h3>Automic Vault</h3>
-          <div class="case-body">
-            <p>A compact invented name for a security product that protects tools and credentials from automated actors. Serious, ownable, and product-shaped.</p>
-            <p class="case-language">authority, automation, containment</p>
+          <p><strong>Vault</strong> says what is protected. <strong>Automic</strong> makes the territory ownable. Its public vocabulary now includes isotopes, gates, hardening, and blessed scripts.</p>
+          <a class="source-link" href="https://www.automicvault.com/" target="_blank" rel="noopener noreferrer">See the product</a>
+        </article>
+      </div>
+
+      <div class="naming-pair">
+        <article class="name-case name-case-supermassive">
+          <a class="name-case-image" href="https://supermassivebookhole.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Supermassive Book Hole">
+            <img src="/images/supermassivebookhole-logo.webp"
+              alt="Books spiralling into the Supermassive Book Hole" width="1024" height="1024" loading="lazy">
+          </a>
+          <div class="name-case-copy">
+            <p class="case-mode">A vivid metaphor</p>
+            <h3>Supermassive Book Hole</h3>
+            <p>A personal shelf for books, films, games, and albums. The function is ordinary. The name supplies the image, the attitude, and the reason you remember it.</p>
           </div>
         </article>
 
-        <article class="case">
-          <h3>Supermassive Book Hole</h3>
-          <div class="case-body">
-            <p>A ridiculous name for a delightful product. It makes the metaphor instant, creates a visual identity, and is nearly impossible to forget.</p>
-            <p class="case-language">books go in, gravity does the rest</p>
+        <article class="name-case name-case-promisekit">
+          <div class="promisekit-wordmark" aria-hidden="true">Promise<span>Kit</span></div>
+          <div class="name-case-copy">
+            <p class="case-mode">Familiar on purpose</p>
+            <h3>PromiseKit</h3>
+            <p>Bland by design. <strong>Promise</strong> says exactly what the framework implements. <strong>Kit</strong> copies Apple’s naming pattern so it already feels like a fundamental part of the ecosystem.</p>
+            <a class="source-link" href="https://github.com/mxcl/PromiseKit" target="_blank" rel="noopener noreferrer">See PromiseKit</a>
           </div>
         </article>
+      </div>
 
-        <article class="case">
-          <h3>PromiseKit</h3>
-          <div class="case-body">
-            <p>Deliberately plain. It positions the framework as fundamental and borrows Apple's familiar Kit pattern so developers know where it belongs.</p>
-            <p class="case-language">a foundational framework for Apple platforms</p>
-          </div>
+      <div class="naming-showcase naming-showcase-pmm">
+        <a class="showcase-image" href="https://github.com/mxcl/package-manager-manager" target="_blank" rel="noopener noreferrer" aria-label="See Package Manager Manager on GitHub">
+          <img src="/images/package-manager-manager-editorial.webp"
+            alt="Package Manager Manager macOS app" width="1448" height="1086" loading="lazy">
+        </a>
+        <article class="showcase-copy">
+          <p class="case-mode">Literal until it becomes funny</p>
+          <h3>Package Manager Manager</h3>
+          <p>It manages package managers. The repetition is both the explanation and the joke. Then <strong>pkg⋅mgr²</strong> compresses the long name into a compact product mark.</p>
+          <a class="source-link" href="https://github.com/mxcl/package-manager-manager" target="_blank" rel="noopener noreferrer">See the product</a>
         </article>
       </div>
     </section>
 
-    <section class="section page-grid" aria-labelledby="principles-title">
+    <section class="section page-grid naming-archive" aria-labelledby="archive-title">
       <div class="section-heading">
-        <h2 id="principles-title">A name with somewhere to go.</h2>
+        <h2 id="archive-title">A long record, not a lucky hit.</h2>
+        <p>Across my public projects, the right answer is sometimes plain, sometimes ridiculous, and sometimes a system that can keep naming itself.</p>
       </div>
-      <div class="principle-grid">
-        <article class="principle">
-          <h3>Positioning is inside it.</h3>
-          <p>The name should reduce the amount of explanation your product needs, not create a new explanation problem.</p>
+
+      <div class="archive-groups">
+        <article class="archive-row">
+          <h3>Use the grammar</h3>
+          <p>
+            <a href="https://github.com/mxcl/Chalk" target="_blank" rel="noopener noreferrer">Chalk</a>,
+            <a href="https://github.com/mxcl/Path.swift" target="_blank" rel="noopener noreferrer">Path.swift</a>,
+            <a href="https://github.com/mxcl/swift-sh" target="_blank" rel="noopener noreferrer">swift-sh</a>,
+            <a href="https://github.com/mxcl/LegibleError" target="_blank" rel="noopener noreferrer">LegibleError</a>,
+            <a href="https://github.com/mxcl/AppUpdater" target="_blank" rel="noopener noreferrer">AppUpdater</a>
+          </p>
         </article>
-        <article class="principle">
-          <h3>It sounds good aloud.</h3>
-          <p>People have to recommend it, introduce it, search for it, and remember it later.</p>
+        <article class="archive-row">
+          <h3>Give it character</h3>
+          <p>
+            <a href="https://github.com/mxcl/Cake" target="_blank" rel="noopener noreferrer">Cake</a>,
+            <a href="https://github.com/mxcl/YOLOKit" target="_blank" rel="noopener noreferrer">YOLOKit</a>,
+            <a href="https://github.com/mxcl/OMGHTTPURLRQ" target="_blank" rel="noopener noreferrer">OMGHTTPURLRQ</a>,
+            <a href="https://github.com/mxcl/yoink" target="_blank" rel="noopener noreferrer">yoink</a>,
+            <a href="https://github.com/mxcl/git-cryobank" target="_blank" rel="noopener noreferrer">git cryobank</a>
+          </p>
         </article>
-        <article class="principle">
-          <h3>It creates language.</h3>
-          <p>The strongest names make features, commands, campaigns, and future products easier to name too.</p>
+        <article class="archive-row">
+          <h3>Build a world</h3>
+          <p>
+            <a href="https://byoclaw.dev/" target="_blank" rel="noopener noreferrer">BYOClaw</a>,
+            <a href="https://clawlicio.us/" target="_blank" rel="noopener noreferrer">Clawlicious</a>,
+            <a href="https://colossalclawadventure.com/" target="_blank" rel="noopener noreferrer">Colossal Claw Adventure</a>,
+            <a href="https://www.automicvault.com/" target="_blank" rel="noopener noreferrer">Automic isotopes</a>,
+            <a href="https://docs.brew.sh/Formula-Cookbook#homebrew-terminology" target="_blank" rel="noopener noreferrer">Homebrew vocabulary</a>
+          </p>
         </article>
+      </div>
+    </section>
+
+    <section class="section page-grid naming-engagement" aria-labelledby="engagement-title">
+      <div class="engagement-copy">
+        <h2 id="engagement-title">Bring me the difficult one.</h2>
+        <p>The working title everyone hates. The product no category quite fits. The company whose old name has become a liability.</p>
+        <p>I will find the idea the name has to carry and make the case for the name that carries it.</p>
+      </div>
+      <div class="engagement-brief">
+        <dl>
+          <div><dt>Send</dt><dd>What it is, who it is for, the constraints, and the names you have already rejected.</dd></div>
+          <div><dt>Fee</dt><dd>One flat fee, scoped and agreed before we begin.</dd></div>
+        </dl>
+        <a class="button" href="mailto:mxcl@me.com?subject=Name%20this%20thing">Name this thing</a>
       </div>
     </section>
 
     <section class="contact page-grid" aria-labelledby="contact-title">
-      <h2 id="contact-title">Tell me what needs a name.</h2>
+      <h2 id="contact-title">Give it a name people can build on.</h2>
       <a class="button" href="mailto:mxcl@me.com?subject=Name%20this%20thing">Email Max</a>
     </section>
   </main>
