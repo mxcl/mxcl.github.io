@@ -755,6 +755,52 @@ img { display: block; max-width: 100%; }
 
 .promisekit-wordmark span { font-weight: 300; }
 
+.naming-origins .section-heading { max-width: 860px; }
+
+.origin-list {
+  margin-top: clamp(54px, 8vw, 88px);
+  border-top: 1px solid var(--ink);
+}
+
+.origin-row {
+  display: grid;
+  grid-template-columns: minmax(180px, .55fr) minmax(220px, .7fr) minmax(300px, 1.25fr);
+  gap: clamp(28px, 6vw, 88px);
+  align-items: start;
+  padding: clamp(34px, 5vw, 58px) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.origin-name .case-mode { margin-bottom: 18px; }
+
+.origin-name h3 {
+  margin: 0;
+  font-size: clamp(2.7rem, 5.3vw, 5.8rem);
+  letter-spacing: -.07em;
+  line-height: .84;
+}
+
+.origin-name a:hover { color: var(--accent-strong); }
+
+.origin-thesis {
+  max-width: 13ch;
+  margin: 2px 0 0;
+  font-size: clamp(1.7rem, 3.2vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -.05em;
+  line-height: .96;
+}
+
+.origin-story > p {
+  max-width: 54ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.65;
+}
+
+.origin-story .source-link { margin-top: 26px; }
+
 .archive-groups {
   margin-top: clamp(48px, 7vw, 76px);
   border-top: 1px solid var(--ink);
@@ -890,6 +936,7 @@ img { display: block; max-width: 100%; }
   .naming-showcase { grid-template-columns: minmax(0, 1fr) minmax(280px, .7fr); }
   .naming-showcase-pmm { grid-template-columns: minmax(280px, .7fr) minmax(0, 1fr); }
   .archive-row { grid-template-columns: 150px minmax(0, 1fr); }
+  .origin-row { grid-template-columns: minmax(150px, .45fr) minmax(180px, .65fr) minmax(260px, 1.1fr); gap: 34px; }
   .naming-engagement { gap: 52px; }
   .build-standard,
   .build-scale,
@@ -926,6 +973,7 @@ img { display: block; max-width: 100%; }
   .naming-showcase,
   .naming-pair,
   .archive-row,
+  .origin-row,
   .naming-engagement,
   .build-standard,
   .build-scale,
@@ -956,6 +1004,8 @@ img { display: block; max-width: 100%; }
   .naming-showcase-pmm { margin-top: 14px; }
   .promisekit-wordmark { min-height: 210px; }
   .archive-row { gap: 14px; padding: 28px 0; }
+  .origin-row { gap: 22px; padding: 38px 0; }
+  .origin-thesis { max-width: 18ch; }
   .engagement-brief { min-height: 0; }
   .build-standard-intro { position: static; }
   .direction-ledger article { grid-template-columns: 62px minmax(0, 1fr); gap: 10px 20px; }

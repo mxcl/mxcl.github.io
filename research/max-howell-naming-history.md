@@ -41,6 +41,9 @@ The wider record shows several repeatable naming modes:
    `initWith...FuckIt`.
 6. **A broad physical metaphor that leaves room to grow:** Workbench, Canopy,
    Cake.
+7. **A name chosen for strategic continuity:** tea inherits Homebrew's drink
+   metaphor; Filelight combines utility with a visual direction; Podium names
+   the social act at the center of an unlaunched product concept.
 
 ## Source policy and confidence
 
@@ -51,9 +54,10 @@ score.
 
 Project ownership or an early commit does **not**, by itself, prove sole naming
 authorship. The current brief directly confirms that Max presents **Homebrew**,
-**Automic Vault**, **Supermassive Book Hole**, and **PromiseKit** as his naming
-work. Other entries below are labelled where public evidence establishes only
-creation, ownership, or close association.
+**Automic Vault**, **Supermassive Book Hole**, **PromiseKit**, **Filelight**,
+**tea**, and **Podium** as his naming work. Other entries below are labelled
+where public evidence establishes only creation, ownership, or close
+association.
 
 ## The anchor case: Homebrew
 
@@ -262,6 +266,25 @@ These examples are strongly associated with Max through repository ownership,
 first commits, or first-person product pages. Unless stated otherwise, public
 evidence does not independently establish sole naming authorship.
 
+### Filelight — a functional name that supplies its own imagery
+
+Filelight is KDE's disk-usage visualization app. Max says the name came from
+thinking about **flashlight** and **firelight**. The combination carries both
+function and art direction: it suggests revealing what is hidden while giving
+the product an immediate visual metaphor based on light.
+
+The official KDE description confirms that the app visualizes disk usage with
+concentric rings and helps users free space. The origin story comes directly
+from Max.
+
+Sources:
+
+- Max Howell, direct clarification in this project conversation, July 30, 2026
+- [Official Filelight page](https://apps.kde.org/filelight/)
+
+**Page-ready lesson:** A name can do more than describe the utility. It can
+give the interface and identity a visual material to work with.
+
 ### tea — another metaphorical package ecosystem
 
 The public repository now called `pkgx` began as `tea`, with its first
@@ -274,11 +297,18 @@ source structure. It is both a continuation of the Homebrew instinct and a
 distinct system: a short command, a universally understood object, and a
 vocabulary that makes technical machinery more tangible.
 
+Max says **tea** was intended as Homebrew's successor and that its important
+job was to reference its predecessor. You brew tea, it is another drink, and
+tea can suggest what a person matures into after drinking too much beer. Max
+does not consider it one of his best names, but that honesty strengthens the
+strategic lesson: continuity and recognition can matter more than isolated
+cleverness.
+
 The repository later became `pkgx`; Max's 2023 rename commit is simply titled
 “pkgx.” The current repository describes pkgx as “Run Anything” and had about
 9.9k GitHub stars on the research date. The public history confirms Max's
-technical authorship and the language; ask Max whether he personally chose
-**tea** and **pkgx**, and what prompted the rename.
+technical authorship and the language. Max directly confirms that he chose
+**tea**; the reason for the later `pkgx` rename remains undocumented here.
 
 Sources:
 
@@ -287,6 +317,24 @@ Sources:
 - [The `pkgx` rename commit](https://github.com/pkgxdev/pkgx/commit/683319bbb0deeb34687f7cf7190fefd66ee03237)
 - [Current pkgx repository](https://github.com/pkgxdev/pkgx)
 - [GitHub repository API](https://api.github.com/repos/pkgxdev/pkgx)
+- Max Howell, direct clarification in this project conversation, July 30, 2026
+
+### Podium — name the act, not the machinery
+
+**Podium** was an unlaunched startup concept for agent-enabled developers to
+show their work to a feed of people eager to respond, with an AI-enabled loop
+for consuming that feedback and improving the work.
+
+The name avoids describing agents, feeds, or feedback infrastructure. It names
+the human act at the center of the product: presenting work in public, being
+seen, and inviting response. Because the concept was not launched, it should
+always be labelled as an unlaunched concept rather than a shipped product.
+
+Source: Max Howell, direct clarification in this project conversation, July
+30, 2026
+
+**Page-ready lesson:** When the machinery is likely to change, name the durable
+behavior the product exists to enable.
 
 ### Chalk — familiarity can be the strategy
 
@@ -506,6 +554,14 @@ is generic. Their structure tells the story.
 Examples: Supermassive Book Hole, Package Manager Manager, Clawlicious,
 LegibleError.
 
+### 6. Give the product a visual or social center
+
+Use Filelight and Podium to show that naming can provide art direction or name
+the core act rather than the implementation.
+
+Examples: Filelight → flashlight/firelight; Podium → presenting work and
+receiving public response.
+
 ### 5. Let tone do positioning work
 
 Use one or two of the developer-library names to show that naming can signal the
@@ -544,13 +600,19 @@ Examples: YOLOKit, OMGHTTPURLRQ, SuperGoodDeleteWiggle,
   framework naming grammar.
 - Max named Supermassive Book Hole after the Black Hole pun and product
   metaphor came to him in the shower.
+- Max named Filelight while thinking about flashlight and firelight, choosing
+  a metaphor that could supply the product's imagery.
+- Max named tea as a successor to Homebrew, prioritizing continuity with its
+  predecessor over pure novelty.
+- Max named Podium for an unlaunched agent-enabled developer showcase and
+  feedback-loop concept.
 
 ### Strong inferences that should be reviewed by Max before publication
 
 - The isotope vocabulary was part of choosing Automic Vault rather than a
   system developed after the name.
 - Canopy was chosen to support “stay on top of development.”
-- Max personally coined tea, pkgx, Package Manager Manager, `pkg⋅mgr²`, and all
+- Max personally coined pkgx, Package Manager Manager, `pkg⋅mgr²`, and all
   three Claw-family names.
 
 ## Suggested core narrative
@@ -582,7 +644,7 @@ demonstrate range.
 ## Focused questions for Max
 
 1. **Authorship:** Which of these did you personally name, co-name, or merely
-   build: tea, pkgx, Canopy, Cake, Workbench, Package Manager Manager and
+   build: pkgx, Canopy, Cake, Workbench, Package Manager Manager and
    `pkg⋅mgr²`, BYOClaw, Clawlicious, Colossal Claw Adventure, PincerSpace, Next
    Book After, Dine Darling, Stage of Play, and Chorale?
 2. **Automic vocabulary:** Did the isotope vocabulary follow Automic, or was
