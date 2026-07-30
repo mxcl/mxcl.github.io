@@ -235,18 +235,26 @@ can still support a usable verbal world: vault, gates, harden, bless, isotopes.
 
 ### Supermassive Book Hole — the product explanation becomes the joke
 
-**Confirmed by:** the current brief and its official public site.  
-**Etymology and sole authorship:** not documented on the public site.
+**Confirmed by:** the current brief, its official public site, and a direct
+clarification from Max on July 30, 2026.
+
+**Etymology:** The name came to Max in the shower. He saw the pun on
+**Supermassive Black Hole**, followed by the product metaphor: “sucking books
+into a place where you can find loadsa info on them.”
 
 The official description is a personal shelf for books, movies, games, and
 albums. The name turns “a place that consumes your media” into an immediate
 image. It is excessive on purpose, carries its own visual direction, and is
 difficult to confuse with a generic reading tracker.
 
-Source: [Official Supermassive Book Hole site](https://supermassivebookhole.com/)
+Sources:
 
-**Page-ready lesson:** A delightful product sometimes deserves a name people
-repeat because it is a little ridiculous.
+- Max Howell, direct clarification in this project conversation, July 30, 2026
+- [Official Supermassive Book Hole site](https://supermassivebookhole.com/)
+
+**Page-ready lesson:** A good pun can do practical product work. This one
+explains what the product does, supplies its visual identity, and gives people
+a name they want to repeat.
 
 ## Strong associated examples
 
@@ -534,10 +542,8 @@ Examples: YOLOKit, OMGHTTPURLRQ, SuperGoodDeleteWiggle,
   evokes automations and automatons.
 - Max named PromiseKit to position promises as fundamental and to echo Apple's
   framework naming grammar.
-
-### Confirmed by Max's current brief, but needing his story
-
-- Max named Supermassive Book Hole.
+- Max named Supermassive Book Hole after the Black Hole pun and product
+  metaphor came to him in the shower.
 
 ### Strong inferences that should be reviewed by Max before publication
 
@@ -579,9 +585,8 @@ demonstrate range.
    build: tea, pkgx, Canopy, Cake, Workbench, Package Manager Manager and
    `pkg⋅mgr²`, BYOClaw, Clawlicious, Colossal Claw Adventure, PincerSpace, Next
    Book After, Dine Darling, Stage of Play, and Chorale?
-2. **Stories:** What was the actual moment or rejected alternative behind
-   **Supermassive Book Hole**? Did the isotope vocabulary follow Automic, or
-   was it part of choosing it?
+2. **Automic vocabulary:** Did the isotope vocabulary follow Automic, or was
+   it part of choosing it?
 3. **PromiseKit:** Can the page state in first person that `Kit` was chosen to
    make the framework feel native to Apple's ecosystem and that “Promise” was
    deliberately fundamental rather than distinctive?
