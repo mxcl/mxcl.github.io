@@ -8,8 +8,8 @@
 
   const link = document.createElement('a');
   link.href = '/build/';
-  link.textContent = 'Hire Max';
-  text.append(link, '.');
+  link.textContent = 'Hire Max.';
+  text.append(link);
   banner.append(text);
 
   const styles = document.createElement('style');
