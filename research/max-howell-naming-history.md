@@ -203,9 +203,13 @@ borrows the right grammar so the product feels native on day one.
 
 ### Automic Vault — an ownable name with room for a system
 
-**Confirmed by:** the current brief; official product and repository are
-first-person Max work.  
-**Etymology:** not publicly confirmed.
+**Confirmed by:** the current brief and a direct clarification from Max on
+July 30, 2026; the official product and repository are first-person Max work.
+
+**Etymology:** Max began with **Atomic Vault** because it carried the imagery
+of a safe place against the worst possible attack. He changed one letter to
+make the name ownable. **Automic** can then be read as a novel abbreviation of
+either **automations** or **automatons** while retaining the atomic imagery.
 
 The product describes itself as a secrets manager and security layer for tools
 used by developers and agents. The compact `av` command works naturally, while
@@ -217,20 +221,17 @@ and tool-specific integrations live under **isotopes**. Its Homebrew Tap is
 named `homebrew-isotopes`. This is exactly the kind of evidence a naming page
 should show: the name gives future features somewhere coherent to go.
 
-It is tempting to explain **Automic** as a fusion involving “atomic,”
-“automatic,” or “autonomous.” No first-party public source found in this pass
-states the intended construction, so the page should ask Max rather than
-invent an etymology.
-
 Sources:
 
+- Max Howell, direct clarification in this project conversation, July 30, 2026
 - [Official Automic Vault site](https://www.automicvault.com/)
 - [Official Automic Vault repository and README](https://github.com/automic-vault/automic-vault)
 - [Official Homebrew Isotopes Tap](https://github.com/automic-vault/homebrew-isotopes)
 - [GitHub repository API](https://api.github.com/repos/automic-vault/automic-vault)
 
-**Page-ready lesson:** A serious security name can still create a usable verbal
-world: vault, gates, harden, bless, isotopes.
+**Page-ready lesson:** One changed letter can preserve a powerful metaphor,
+create an ownable word, and introduce multiple relevant readings. The result
+can still support a usable verbal world: vault, gates, harden, bless, isotopes.
 
 ### Supermassive Book Hole — the product explanation becomes the joke
 
@@ -527,16 +528,21 @@ Examples: YOLOKit, OMGHTTPURLRQ, SuperGoodDeleteWiggle,
 - **Chalk explicitly reused an established package name so developers would
   inherit the right mental connection.**
 
-### Confirmed by Max's current brief, but needing his story
+### Confirmed directly by Max
 
-- Max named Automic Vault.
-- Max named Supermassive Book Hole.
+- Max named Automic Vault by evolving **Atomic Vault** into a word that also
+  evokes automations and automatons.
 - Max named PromiseKit to position promises as fundamental and to echo Apple's
   framework naming grammar.
 
+### Confirmed by Max's current brief, but needing his story
+
+- Max named Supermassive Book Hole.
+
 ### Strong inferences that should be reviewed by Max before publication
 
-- Automic Vault's name was designed to support the isotope vocabulary.
+- The isotope vocabulary was part of choosing Automic Vault rather than a
+  system developed after the name.
 - Canopy was chosen to support “stay on top of development.”
 - Max personally coined tea, pkgx, Package Manager Manager, `pkg⋅mgr²`, and all
   three Claw-family names.
@@ -558,7 +564,6 @@ demonstrate range.
 ## Claims to avoid or qualify
 
 - Do not list **Cask** as a Max-coined Homebrew term.
-- Do not claim an Automic etymology until Max states it.
 - Do not imply GitHub ownership proves sole naming authorship.
 - Do not over-rely on star counts. They establish reach, not that a name caused
   adoption.
@@ -574,9 +579,9 @@ demonstrate range.
    build: tea, pkgx, Canopy, Cake, Workbench, Package Manager Manager and
    `pkg⋅mgr²`, BYOClaw, Clawlicious, Colossal Claw Adventure, PincerSpace, Next
    Book After, Dine Darling, Stage of Play, and Chorale?
-2. **Stories:** What is the intended construction of **Automic**? What was the
-   actual moment or rejected alternative behind **Supermassive Book Hole**?
-   Did the isotope vocabulary follow Automic, or was it part of choosing it?
+2. **Stories:** What was the actual moment or rejected alternative behind
+   **Supermassive Book Hole**? Did the isotope vocabulary follow Automic, or
+   was it part of choosing it?
 3. **PromiseKit:** Can the page state in first person that `Kit` was chosen to
    make the framework feel native to Apple's ecosystem and that “Promise” was
    deliberately fundamental rather than distinctive?
