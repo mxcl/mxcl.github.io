@@ -91,6 +91,36 @@ the implementation, and use it to reduce the user's conceptual burden**.
 
 Source: [Homebrew Turns 15 — interview and transcript](https://mikemcquaid.com/interviews/homebrew-turns-15/), especially 19:50–23:00.
 
+### The original naming process, in Max's own account
+
+A 2016 Changelog interview contains the most detailed public account found in
+this pass:
+
+- Max says names matter in code as well as marketing. When a responsibility is
+  clear and well named, explanatory comments become less necessary.
+- He says a generic name such as “Package Manager X” would not inspire people
+  to talk about the project.
+- His stated objective was: “I want the name to then lead to other names.”
+- A Last.fm co-worker suggested a beer theme. Max chose **Homebrew** because he
+  wanted the system to feel like a platform where people could create and
+  customize their own packages—not because of an Apple “homebrew” connotation.
+- He considered **recipe** for package definitions, then selected **formula**
+  because it was more distinctive.
+- After the theme suggestion, Homebrew took a couple of days to choose and most
+  of the surrounding names followed within roughly a week.
+- Max says he sometimes cannot start building until the name makes the product
+  clear in his own head.
+- He also argues that a name should provide a mnemonic for the product's
+  purpose, rather than being random distinctiveness.
+- He says the keg/formula/rack/Cellar model helped him design Homebrew, not just
+  market it, and notes that he later added Taps.
+
+This source is extraordinarily useful for the service page because it joins
+four claims that naming agencies often separate: architecture, comprehension,
+memorability, and talk value. In Max's account, the same system did all four.
+
+Source: [Homebrew and Swift — Changelog Interviews #232](https://changelog.com/podcast/232), especially 20:04–29:30.
+
 ### Taps made the language—and the product—expand
 
 - Max's 2012 commit introduces `brew tap` and `brew untap`, the `Taps`
@@ -484,6 +514,10 @@ Examples: YOLOKit, OMGHTTPURLRQ, SuperGoodDeleteWiggle,
   formulae.**
 - **Max says he designed the theme to make a hard system understandable through
   analogy and metaphor.**
+- **Max says Homebrew was chosen to lead naturally to the other names in the
+  product; most of that vocabulary followed within about a week.**
+- **He considered recipe, chose formula because it was more distinctive, and
+  says the naming model helped him design the system.**
 - **Max later created Taps; Homebrew's long-time project lead describes Taps as
   the feature that turned Homebrew into an ecosystem.**
 - **The vocabulary survived for fifteen-plus years and is still the official
@@ -567,6 +601,7 @@ demonstrate range.
 - https://docs.brew.sh/Formula-Cookbook
 - https://docs.brew.sh/Taps
 - https://docs.brew.sh/Manpage
+- https://changelog.com/podcast/232
 - https://mikemcquaid.com/interviews/homebrew-turns-15/
 
 ### PromiseKit and Apple naming grammar
