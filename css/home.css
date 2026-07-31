@@ -231,9 +231,6 @@ body {
   font-weight: 650;
 }
 
-.ribbon-pmm .project-link { color: var(--home-blue); }
-.ribbon-portal .project-link { color: var(--home-green); }
-
 main,
 .site-footer { background: var(--paper); color: var(--ink); }
 
