@@ -102,16 +102,6 @@ body {
   padding: clamp(52px, 8vh, 86px) 0 clamp(215px, 27vh, 294px);
 }
 
-.hero .eyebrow {
-  margin-bottom: 18px;
-  color: var(--home-ink);
-  font-family: var(--font-sans);
-  font-size: clamp(1rem, 1.3vw, 1.2rem);
-  font-weight: 650;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
 .hero h1 {
   max-width: none;
   color: var(--home-ink);
@@ -133,8 +123,6 @@ body {
   letter-spacing: 0;
   line-height: 1.25;
 }
-
-.hero-services span { white-space: nowrap; }
 
 .hero-copy .hero-description {
   max-width: 35ch;
@@ -323,9 +311,7 @@ main .offer-row:hover { color: var(--home-red); }
   .home-masthead::after { background: linear-gradient(180deg, rgb(2 5 12 / .13) 0%, rgb(2 5 12 / .08) 28vh, var(--home-bg) 51vh); }
   .hero { min-height: 700px; padding-top: 31vh; }
   .hero-copy { padding-top: 88px; }
-  .hero .eyebrow { font-size: .9rem; }
   .hero h1 { max-width: 8.5ch; font-size: clamp(3.4rem, 18vw, 4.8rem); }
-  .hero-copy .hero-services { display: flex; flex-direction: column; gap: 3px; }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .home-masthead .button { width: 100%; }
   .ribbon-project { grid-template-columns: 72px minmax(0, 1fr); padding: 20px 16px; }
