@@ -254,13 +254,11 @@ body {
 main,
 .site-footer { background: var(--paper); color: var(--ink); }
 
-main .credibility,
 main .offer-index,
 main .proof-grid,
 main .contact,
 .site-footer { border-color: var(--ink); }
 
-main .credibility > :first-child { background: #0d1b31; color: var(--ink); }
 main .offer-choice { margin: 18px 0 0; color: var(--muted); font: 600 .8rem/1 var(--font-mono); text-transform: uppercase; }
 main .button { background: var(--home-red); color: #fff8ed; }
 main .button:hover { background: #c63227; }
@@ -268,10 +266,39 @@ main .text-link { color: var(--home-red); }
 main .offer-row:hover { color: var(--home-red); }
 main .proof-card-copy { background: rgb(5 11 24 / .92); }
 
+.offer-credibility {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.35fr repeat(4, 1fr);
+  margin-top: 10px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.offer-credibility > * {
+  min-width: 0;
+  padding: 16px 18px;
+  border-left: 1px solid var(--line);
+  font: 500 .72rem/1.4 var(--font-mono);
+}
+
+.offer-credibility > :first-child {
+  border-left: 0;
+  background: #0d1b31;
+  color: var(--ink);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 @media (max-width: 1120px) {
   .ribbon-project { grid-template-columns: 76px minmax(0, 1fr); gap: 14px; padding: 20px; }
   .project-mark { width: 76px; }
   .project-copy > span:not(.project-link) { font-size: .82rem; }
+}
+
+@media (max-width: 1000px) {
+  .offer-credibility { grid-template-columns: repeat(2, 1fr); }
+  .offer-credibility > :first-child { grid-column: 1 / -1; }
 }
 
 @media (max-width: 820px) {
@@ -288,6 +315,10 @@ main .proof-card-copy { background: rgb(5 11 24 / .92); }
   .ribbon-project { min-height: 154px; grid-template-columns: 88px minmax(0, 1fr); padding: 22px max(22px, calc((100vw - 720px) / 2)); }
   .project-mark { width: 88px; }
   .ribbon-project + .ribbon-project { border-top: 1px solid var(--home-line); border-left: 0; }
+  .offer-credibility { grid-template-columns: 1fr; }
+  .offer-credibility > :first-child { grid-column: auto; }
+  .offer-credibility > * { border-top: 1px solid var(--line); border-left: 0; }
+  .offer-credibility > :first-child { border-top: 0; }
 }
 
 @media (max-width: 520px) {
