@@ -181,7 +181,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--home-line);
-  border-bottom: 0;
   border-radius: 8px 8px 0 0;
   background: rgb(3 9 21 / .82);
   box-shadow: 0 -18px 60px rgb(0 0 0 / .18);
