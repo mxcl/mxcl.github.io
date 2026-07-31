@@ -213,7 +213,6 @@ body {
 }
 
 .project-mark img { width: 100%; height: 100%; object-fit: cover; }
-.ribbon-vault .project-mark img { width: 74%; height: 74%; border-radius: 18%; }
 
 .project-copy { min-width: 0; display: flex; flex-direction: column; }
 
@@ -243,12 +242,6 @@ body {
 
 .ribbon-pmm .project-link { color: var(--home-blue); }
 .ribbon-portal .project-link { color: var(--home-green); }
-
-.portal-mark span {
-  color: var(--home-ink);
-  font: 500 2rem/1 var(--font-mono);
-  text-shadow: 0 0 18px rgb(159 219 115 / .75);
-}
 
 main,
 .site-footer { background: var(--paper); color: var(--ink); }
