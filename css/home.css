@@ -1,5 +1,13 @@
 :root {
   color-scheme: dark;
+  --paper: #050b18;
+  --paper-raised: #0b1526;
+  --ink: #fff4e7;
+  --muted: #b6bdc8;
+  --line: #42506a;
+  --accent: #ff4c39;
+  --accent-strong: #ff6c55;
+  --on-accent: #140706;
   --home-bg: #040914;
   --home-panel: #071225;
   --home-ink: #fff4e7;
@@ -20,7 +28,7 @@ body {
 
 .home-masthead {
   position: relative;
-  min-height: 100svh;
+  min-height: 100dvh;
   overflow: hidden;
   background-color: var(--home-bg);
   background-image:
@@ -81,17 +89,17 @@ body {
 .site-nav .nav-contact:hover { background: var(--home-red); color: #140706; text-decoration: none; }
 
 .hero {
-  min-height: calc(100svh - 76px);
+  min-height: calc(100dvh - 76px);
   display: block;
   border: 0;
 }
 
 .hero-copy {
-  width: min(580px, 44vw);
-  min-height: calc(100svh - 76px);
+  width: min(650px, 46vw);
+  min-height: calc(100dvh - 76px);
   display: flex;
   justify-content: center;
-  padding: clamp(52px, 8vh, 86px) 0 clamp(232px, 27vh, 294px);
+  padding: clamp(52px, 8vh, 86px) 0 clamp(215px, 27vh, 294px);
 }
 
 .hero .eyebrow {
@@ -105,16 +113,16 @@ body {
 }
 
 .hero h1 {
-  max-width: 9ch;
+  max-width: none;
   color: var(--home-ink);
-  font-size: clamp(4.2rem, 7.3vw, 7.25rem);
+  font-size: clamp(4.2rem, 6.4vw, 6.5rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: .9;
   text-wrap: balance;
 }
 
-.hero h1 strong { display: block; color: var(--home-red); font-weight: 750; }
+.hero h1 strong { display: block; color: var(--home-red); font-weight: 750; white-space: nowrap; }
 
 .hero-copy .hero-services {
   max-width: none;
@@ -244,20 +252,21 @@ body {
 }
 
 main,
-.site-footer { background: #f2efe7; color: #101310; }
+.site-footer { background: var(--paper); color: var(--ink); }
 
 main .credibility,
 main .offer-index,
 main .proof-grid,
 main .contact,
-.site-footer { border-color: #101310; }
+.site-footer { border-color: var(--ink); }
 
-main .credibility > :first-child { background: #101310; color: #f2efe7; }
-main .offer-choice { margin: 18px 0 0; color: #59605a; font: 600 .8rem/1 var(--font-mono); text-transform: uppercase; }
-main .button { background: #101310; color: #f2efe7; }
-main .button:hover { background: #bd2e24; }
-main .text-link { color: #9f261e; }
-main .offer-row:hover { color: #9f261e; }
+main .credibility > :first-child { background: #0d1b31; color: var(--ink); }
+main .offer-choice { margin: 18px 0 0; color: var(--muted); font: 600 .8rem/1 var(--font-mono); text-transform: uppercase; }
+main .button { background: var(--home-red); color: #fff8ed; }
+main .button:hover { background: #c63227; }
+main .text-link { color: var(--home-red); }
+main .offer-row:hover { color: var(--home-red); }
+main .proof-card-copy { background: rgb(5 11 24 / .92); }
 
 @media (max-width: 1120px) {
   .ribbon-project { grid-template-columns: 76px minmax(0, 1fr); gap: 14px; padding: 20px; }
