@@ -1,0 +1,260 @@
+:root {
+  color-scheme: dark;
+  --site-bg: #040914;
+  --site-panel: #091222;
+  --site-panel-strong: #0d192c;
+  --site-text: #fff4e7;
+  --site-muted: #b7becb;
+  --site-line: #44516a;
+  --site-line-strong: #72809a;
+  --site-red: #ff4c39;
+  --site-red-strong: #ff6b55;
+  --site-red-soft: rgba(255, 76, 57, 0.14);
+  --site-sans: Satoshi, Geist, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --site-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+/* Shared consultancy pages */
+body:is(.naming-page, .build-page) {
+  --paper: var(--site-bg);
+  --paper-raised: var(--site-panel);
+  --ink: var(--site-text);
+  --muted: var(--site-muted);
+  --line: var(--site-line);
+  --accent: var(--site-red);
+  --accent-strong: var(--site-red-strong);
+  --on-accent: var(--site-text);
+  min-height: 100vh;
+  background: var(--site-bg);
+  color: var(--site-text);
+  font-family: var(--site-sans);
+}
+
+body:is(.naming-page, .build-page) .site-header {
+  min-height: 82px;
+  border-bottom-color: var(--site-line-strong);
+}
+
+body:is(.naming-page, .build-page) .brand {
+  color: var(--site-red);
+  font-family: var(--site-sans);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+body:is(.naming-page, .build-page) .brand span {
+  color: var(--site-text);
+}
+
+body:is(.naming-page, .build-page) .site-nav {
+  font-family: var(--site-sans);
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-transform: none;
+}
+
+body:is(.naming-page, .build-page) .site-nav a[aria-current="page"] {
+  color: var(--site-red);
+}
+
+body:is(.naming-page, .build-page) .hero {
+  border-bottom-color: var(--site-line-strong);
+}
+
+body:is(.naming-page, .build-page) .hero h1 {
+  letter-spacing: 0;
+}
+
+body:is(.naming-page, .build-page) .hero-line:last-child {
+  color: var(--site-red);
+}
+
+body:is(.naming-page, .build-page) .hero-visual,
+body:is(.naming-page, .build-page) .showcase-image,
+body:is(.naming-page, .build-page) .build-case-wide figure,
+body:is(.naming-page, .build-page) .build-case-pair figure {
+  border-color: var(--site-line-strong);
+}
+
+body:is(.naming-page, .build-page) .button {
+  border: 1px solid var(--site-red-strong);
+  border-radius: 8px;
+  background: var(--site-red);
+  color: var(--site-text);
+  box-shadow: 0 14px 36px -22px rgba(255, 76, 57, 0.9);
+}
+
+body:is(.naming-page, .build-page) .button:hover {
+  background: var(--site-red-strong);
+  color: var(--site-text);
+}
+
+body:is(.naming-page, .build-page) :is(
+  .proof-card,
+  .principle,
+  .app-proof figure,
+  .app-proof .app-note,
+  .homebrew-language,
+  .naming-showcase,
+  .name-case,
+  .engagement-brief,
+  .build-case,
+  .scale-numbers
+) {
+  border-color: var(--site-line-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+body:is(.naming-page, .build-page) .principle:first-child {
+  background: var(--site-red);
+  color: var(--site-text);
+}
+
+body:is(.naming-page, .build-page) .app-proof .app-note,
+body:is(.naming-page, .build-page) .scale-numbers {
+  background: var(--site-text);
+  color: var(--site-bg);
+}
+
+body:is(.naming-page, .build-page) .scale-numbers > div + div {
+  border-top-color: var(--site-bg);
+}
+
+body:is(.naming-page, .build-page) :is(.section, .credibility, .proof-grid, .app-proof) {
+  border-bottom-color: var(--site-line-strong);
+}
+
+body:is(.naming-page, .build-page) :is(.source-link, .text-link, .case-mode, .eyebrow) {
+  color: var(--site-red);
+}
+
+/* Shared reference and archive pages */
+body.operator-terminal {
+  --bg: var(--site-bg);
+  --panel: var(--site-panel);
+  --panel-strong: var(--site-panel-strong);
+  --line: var(--site-line);
+  --line-strong: var(--site-line-strong);
+  --text: var(--site-text);
+  --muted: var(--site-muted);
+  --accent: var(--site-red);
+  --accent-soft: var(--site-red-soft);
+  background: var(--site-bg);
+  color: var(--site-text);
+  font-family: var(--site-sans);
+}
+
+body.operator-terminal .page-shell {
+  width: min(1120px, calc(100vw - 2rem));
+  padding-top: max(1.5rem, env(safe-area-inset-top));
+}
+
+body.operator-terminal .site-header {
+  min-height: 58px;
+  border-bottom-color: var(--site-line-strong);
+}
+
+body.operator-terminal :is(.back-link, .site-nav, .site-footer) {
+  font-family: var(--site-sans);
+  font-weight: 650;
+}
+
+body.operator-terminal .back-link {
+  color: var(--site-text);
+}
+
+body.operator-terminal .back-link::before {
+  content: "\2190";
+  margin-right: 0.55rem;
+  color: var(--site-red);
+}
+
+body.operator-terminal .site-nav {
+  color: var(--site-text);
+}
+
+body.operator-terminal .hero {
+  margin-top: clamp(3.5rem, 8vw, 7rem);
+}
+
+body.operator-terminal .hero h1 {
+  max-width: 13ch;
+  color: var(--site-red);
+  font-size: clamp(3.7rem, 8vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+body.operator-terminal :is(.hero h2, .section-heading h2) {
+  color: var(--site-text);
+}
+
+body.operator-terminal :is(.eyebrow, .subhead) {
+  color: var(--site-red);
+}
+
+body.operator-terminal :is(.panel, .diagram, .comparison-table) {
+  border-color: var(--site-line);
+  border-radius: 8px;
+}
+
+body.operator-terminal .answer-panel {
+  border-color: var(--site-line-strong);
+}
+
+body.operator-terminal .comparison-table {
+  overflow: hidden;
+}
+
+body.operator-terminal .comparison-table :is(th, td) {
+  border-color: var(--site-line);
+}
+
+body.operator-terminal :is(.cta-link, .email-link) {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--site-red-strong);
+  border-radius: 8px;
+  background: var(--site-red);
+  color: var(--site-text);
+  font-family: var(--site-sans);
+  font-weight: 750;
+}
+
+body.operator-terminal :is(.cta-link, .email-link):is(:hover, :focus-visible) {
+  background: var(--site-red-strong);
+  color: var(--site-text);
+  text-decoration: none;
+}
+
+body.operator-terminal .section-link {
+  color: var(--site-red);
+}
+
+body.operator-terminal .site-footer {
+  border-top-color: var(--site-line-strong);
+}
+
+@media (max-width: 720px) {
+  body:is(.naming-page, .build-page) .site-header {
+    min-height: 0;
+  }
+
+  body:is(.naming-page, .build-page) .site-nav {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    white-space: normal;
+  }
+
+  body.operator-terminal .page-shell {
+    width: 100%;
+    padding-inline: max(1rem, env(safe-area-inset-left));
+  }
+
+  body.operator-terminal .hero {
+    margin-top: 3rem;
+  }
+}
