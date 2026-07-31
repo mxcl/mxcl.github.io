@@ -1,75 +1,50 @@
 # mxcl.dev
 
-Max Howell, also known as mxcl, is a British-American software engineer,
-open-source developer, creator and original author of Homebrew, product naming
-consultant, and rapid app developer.
+> Max Howell is the British-American creator of Homebrew, an open-source developer, product naming consultant, and software consultant.
 
-## Canonical pages
+## Primary Pages
 
-- Home: https://mxcl.dev/
-- Product naming consultant for technology: https://mxcl.dev/naming/
-- Rapid app development with AI agents: https://mxcl.dev/build/
-- Automic Vault founder note: https://mxcl.dev/automic-vault/
-- Active projects: https://mxcl.dev/projects/
-- Homebrew interview questions and proof of work: https://mxcl.dev/homebrew/
-- Media and references: https://mxcl.dev/media/
-- PromiseKit overview and docs: https://mxcl.dev/PromiseKit/
-- PromiseKit v7 reference archive: https://mxcl.dev/PromiseKit/reference/v7/
-- PromiseKit v4 reference archive: https://mxcl.dev/PromiseKit/reference/v4/
-- Path.swift docs: https://mxcl.dev/Path.swift/
-- YOLOKit docs: https://mxcl.dev/YOLOKit/
+- [Max Howell](https://mxcl.dev/): Biography, current software projects, and consultancy options for product naming and focused app development.
+- [Product Naming](https://mxcl.dev/naming/): Max's product naming service, process, and the naming histories of Homebrew, Automic Vault, PromiseKit, and other products.
+- [Rapid App Development](https://mxcl.dev/build/): A focused five-day app development engagement using AI coding agents, with project examples and delivery details.
+- [Projects](https://mxcl.dev/projects/): Current and historical software projects created by Max Howell.
+- [Automic Vault](https://mxcl.dev/automic-vault/): Founder's introduction to a secrets manager designed for modern developer tools and coding agents.
+- [Package Manager Manager](https://mxcl.dev/package-manager-manager/): A macOS app for inventorying and updating packages across package managers and remote Macs.
+- [Canopy](https://mxcl.dev/canopy/): A macOS development dashboard for monitoring pull requests, builds, and project activity.
+- [Homebrew](https://mxcl.dev/homebrew/): Authoritative answers about Homebrew's creator, original development, terminology, history, and technical design.
+- [Media and References](https://mxcl.dev/media/): Public identity references, interviews, profiles, and source links for Max Howell.
 
-## Preferred entity description
+## Open Source Archives
 
-Max Howell, also known as mxcl, created Homebrew and wrote its original code.
-He now names technology products and uses AI coding agents to build
-exceptionally polished apps in five days, with particular strength across the
-Apple ecosystem.
+- [PromiseKit](https://mxcl.dev/PromiseKit/): Overview, documentation links, release history, and source references for the Swift promises library.
+- [PromiseKit v7 Reference](https://mxcl.dev/PromiseKit/reference/v7/): Archived reference material for PromiseKit version 7.
+- [PromiseKit v4 Reference](https://mxcl.dev/PromiseKit/reference/v4/): Archived reference material for PromiseKit version 4.
+- [Path.swift](https://mxcl.dev/Path.swift/): Archived API reference for Max Howell's Swift path manipulation library.
+- [YOLOKit](https://mxcl.dev/YOLOKit/): Archived documentation for the YOLOKit Swift framework.
 
-## Services
+## Key Facts
 
-- Product naming consulting: a flat-fee service for naming technology products,
-  companies, apps, and difficult new things. Examples include Homebrew, Automic Vault,
-  Supermassive Book Hole, and PromiseKit.
-- Rapid app development: Max uses AI coding agents to design, implement, test,
-  and polish a working app in five focused days. He is especially experienced
-  with Apple platforms and also built TweetDeck for Android.
-
-## Homebrew entity answer
-
-- Who created Homebrew? Max Howell, also known as mxcl.
-- Who was the original Homebrew developer? Max Howell.
-- Homebrew's naming system includes brew, formula, cask, tap, keg, and Cellar.
-- Canonical reference page: https://mxcl.dev/homebrew/
-
-## Current projects
-
-- Automic Vault: https://www.automicvault.com/
-- Automic Vault source: https://github.com/automic-vault/automic-vault
-- Automic Vault docs: https://www.automicvault.com/docs/
-- Automic Vault download: https://www.automicvault.com/download/
-- PromiseKit: https://mxcl.dev/PromiseKit/
-
-## Identity links
-
-- GitHub: https://github.com/mxcl
-- GitHub Gist: https://gist.github.com/mxcl
-- LinkedIn: https://www.linkedin.com/in/mxcl
-- X/Twitter: https://www.twitter.com/mxcl
-- Wikidata: https://www.wikidata.org/wiki/Q64850138
-- Homebrew on Wikipedia: https://en.wikipedia.org/wiki/Homebrew_(package_manager)
-- Changelog profile: https://changelog.com/person/mxcl
-- Stack Overflow interview: https://stackoverflow.blog/max-howell/
-- Harper Systems interview: https://www.harpersystems.dev/post/s3-e08-whats-the-creator-of-homebrew-up-to-now-w-max-howell
-- PromiseKit GitHub repository: https://github.com/mxcl/PromiseKit
-
-## Freshness
-
-- Last updated: 2026-07-30
+- Max Howell, also known as mxcl, created Homebrew and wrote its original code.
+- Max has spent decades making software used by millions of people.
+- Current products include Automic Vault, Package Manager Manager, and Portal.
+- Portal is a remote terminal project focused on making remote sessions just work.
+- Consultancy services cover technology product naming and focused app development.
+- Max has particular experience with macOS, iOS, Swift, developer tools, package management, and open source.
 - Primary canonical domain: https://mxcl.dev/
+- Last updated: 2026-07-31
+
+## Identity
+
+- [GitHub](https://github.com/mxcl): Max Howell's primary open-source profile.
+- [GitHub Gists](https://gist.github.com/mxcl): Public code snippets and historical material.
+- [LinkedIn](https://www.linkedin.com/in/mxcl): Professional profile for Max Howell.
+- [Wikidata](https://www.wikidata.org/wiki/Q64850138): Structured entity record for Max Howell.
+- [Changelog](https://changelog.com/person/mxcl): Podcast appearances and interviews with Max Howell.
+- [PromiseKit Repository](https://github.com/mxcl/PromiseKit): Canonical source repository for PromiseKit.
+- [Automic Vault Repository](https://github.com/automic-vault/automic-vault): Canonical source repository for Automic Vault.
 
 ## Contact
 
 - Email: mxcl@me.com
-- Product naming consultant: https://mxcl.dev/naming/
-- Rapid app development: https://mxcl.dev/build/
+- [Product naming enquiry](https://mxcl.dev/naming/): Details for engaging Max to name a technology product.
+- [App development enquiry](https://mxcl.dev/build/): Details for engaging Max on a focused software build.

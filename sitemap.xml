@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mxcl.dev/</loc><lastmod>2026-07-30</lastmod></url>
-  <url><loc>https://mxcl.dev/naming/</loc><lastmod>2026-07-30</lastmod></url>
-  <url><loc>https://mxcl.dev/build/</loc><lastmod>2026-07-30</lastmod></url>
-  <url><loc>https://mxcl.dev/automic-vault/</loc><lastmod>2026-07-29</lastmod></url>
-  <url><loc>https://mxcl.dev/projects/</loc><lastmod>2026-06-02</lastmod></url>
-  <url><loc>https://mxcl.dev/homebrew/</loc><lastmod>2026-07-14</lastmod></url>
-  <url><loc>https://mxcl.dev/media/</loc><lastmod>2026-05-21</lastmod></url>
+  <url><loc>https://mxcl.dev/</loc><lastmod>2026-07-31</lastmod></url>
+  <url><loc>https://mxcl.dev/naming/</loc><lastmod>2026-07-31</lastmod></url>
+  <url><loc>https://mxcl.dev/build/</loc><lastmod>2026-07-31</lastmod></url>
+  <url><loc>https://mxcl.dev/automic-vault/</loc><lastmod>2026-07-30</lastmod></url>
+  <url><loc>https://mxcl.dev/package-manager-manager/</loc><lastmod>2026-07-31</lastmod></url>
+  <url><loc>https://mxcl.dev/projects/</loc><lastmod>2026-07-30</lastmod></url>
+  <url><loc>https://mxcl.dev/canopy/</loc><lastmod>2026-07-30</lastmod></url>
+  <url><loc>https://mxcl.dev/homebrew/</loc><lastmod>2026-07-31</lastmod></url>
+  <url><loc>https://mxcl.dev/media/</loc><lastmod>2026-07-31</lastmod></url>
   <url><loc>https://mxcl.dev/PromiseKit/</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://mxcl.dev/PromiseKit/reference/v4/</loc><lastmod>2026-06-11</lastmod></url>
   <url><loc>https://mxcl.dev/PromiseKit/reference/v4/objc/</loc><lastmod>2026-06-06</lastmod></url>
