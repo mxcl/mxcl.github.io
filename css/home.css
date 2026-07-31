@@ -250,7 +250,6 @@ main,
 .site-footer { background: var(--paper); color: var(--ink); }
 
 main .offer-index,
-main .proof-grid,
 main .contact,
 .site-footer { border-color: var(--ink); }
 
@@ -259,7 +258,6 @@ main .button { background: var(--home-red); color: #fff8ed; }
 main .button:hover { background: #c63227; }
 main .text-link { color: var(--home-red); }
 main .offer-row:hover { color: var(--home-red); }
-main .proof-card-copy { background: rgb(5 11 24 / .92); }
 
 .offer-credibility {
   grid-column: 1 / -1;
