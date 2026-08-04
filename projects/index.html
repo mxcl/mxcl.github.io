@@ -32,7 +32,7 @@
           "name": "Active Projects",
           "url": "https://mxcl.dev/projects/",
           "description": "An active project wall for Max Howell with current and archived project links.",
-          "dateModified": "2026-06-02",
+          "dateModified": "2026-08-04",
           "author": {"@id": "https://mxcl.dev/#max-howell"},
           "publisher": {"@id": "https://mxcl.dev/#max-howell"},
           "mainEntity": {"@id": "https://mxcl.dev/projects/#items"}
@@ -42,17 +42,16 @@
           "@id": "https://mxcl.dev/projects/#items",
           "name": "Active projects from Max Howell",
           "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Colossal Claw Adventure", "url": "https://colossalclawadventure.com"},
-            {"@type": "ListItem", "position": 2, "name": "Clawlicious", "url": "https://clawlicio.us"},
-            {"@type": "ListItem", "position": 3, "name": "BYOClaw", "url": "https://byoclaw.dev"},
+            {"@type": "ListItem", "position": 1, "name": "Automic Vault", "url": "https://www.automicvault.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Colossal Claw Adventure", "url": "https://colossalclawadventure.com"},
+            {"@type": "ListItem", "position": 3, "name": "Clawlicious", "url": "https://clawlicio.us"},
             {"@type": "ListItem", "position": 4, "name": "Supermassive Book Hole", "url": "https://supermassivebookhole.com"},
             {"@type": "ListItem", "position": 5, "name": "Game Studio Simulator", "url": "https://gamestudiosimulator.com"},
             {"@type": "ListItem", "position": 6, "name": "Next Book After", "url": "https://nextbookafter.com"},
-            {"@type": "ListItem", "position": 7, "name": "Automic Vault", "url": "https://www.automicvault.com/"},
-            {"@type": "ListItem", "position": 8, "name": "PincerSpace", "url": "https://www.pincerspace.com"},
-            {"@type": "ListItem", "position": 9, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
-            {"@type": "ListItem", "position": 10, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
-            {"@type": "ListItem", "position": 11, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
+            {"@type": "ListItem", "position": 7, "name": "Next Movie After", "url": "https://nextmovieafter.com"},
+            {"@type": "ListItem", "position": 8, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
+            {"@type": "ListItem", "position": 9, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
+            {"@type": "ListItem", "position": 10, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
           ]
         },
         {
@@ -308,47 +307,6 @@
       max-width: none;
     }
 
-    .tile-byoclaw {
-      background: linear-gradient(170deg, rgba(18, 20, 41, 0.96),
-        rgba(10, 11, 24, 0.97) 58%, rgba(18, 39, 46, 0.94));
-    }
-
-    .tile-byoclaw::before {
-      content: "";
-      position: absolute;
-      inset: auto -6rem -7rem auto;
-      width: 17rem;
-      height: 17rem;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(71, 217, 255, 0.3), transparent 70%);
-      filter: blur(24px);
-      opacity: 0.8;
-    }
-
-    .tile-byoclaw .tile-tag {
-      color: rgba(196, 234, 255, 0.82);
-    }
-
-    .tile-byoclaw .tile-title {
-      color: #d9f5ff;
-    }
-
-    .tile-byoclaw .tile-kicker,
-    .tile-byoclaw .tile-copy {
-      color: rgba(232, 238, 248, 0.9);
-    }
-
-    .byoclaw-plushie {
-      position: absolute;
-      top: 0.8rem;
-      right: 1rem;
-      width: clamp(7rem, 15vw, 9.75rem);
-      filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.46));
-      transform-origin: center bottom;
-      animation: plushie-bob 6.2s ease-in-out infinite;
-      z-index: 1;
-    }
-
     .tile-clawlicious {
       background: linear-gradient(165deg, rgba(24, 14, 10, 0.98),
         rgba(57, 32, 19, 0.94) 52%, rgba(17, 20, 16, 0.98));
@@ -568,14 +526,51 @@
         0 4.6rem 0 rgba(40, 31, 21, 0.08);
     }
 
-    .tile-automic {
+    .tile-movie {
       background:
-        radial-gradient(circle at 78% 22%, rgba(86, 255, 188, 0.16),
-          transparent 28%),
-        radial-gradient(circle at 18% 80%, rgba(95, 139, 255, 0.2),
+        radial-gradient(circle at 84% 14%, rgba(52, 152, 219, 0.24),
           transparent 30%),
-        linear-gradient(145deg, rgba(7, 12, 13, 0.98),
-          rgba(10, 22, 24, 0.96) 54%, rgba(7, 11, 16, 0.98));
+        linear-gradient(135deg, #f4f7fc 0%, #eef2ff 48%, #fff 100%);
+      color: #1f2d3d;
+    }
+
+    .tile-movie::before {
+      content: "";
+      position: absolute;
+      top: 2.2rem;
+      right: -2.6rem;
+      width: 13rem;
+      height: 4.6rem;
+      border-block: 0.45rem dotted rgba(47, 76, 113, 0.25);
+      background: repeating-linear-gradient(90deg,
+        rgba(47, 76, 113, 0.12) 0 2.6rem,
+        transparent 2.6rem 2.85rem);
+      transform: rotate(8deg);
+    }
+
+    .tile-movie .tile-tag,
+    .tile-movie .tile-domain,
+    .tile-movie .tile-copy,
+    .tile-movie .tile-title,
+    .tile-movie .tile-kicker,
+    .tile-movie .tile-cta {
+      color: #1f2d3d;
+      border-bottom-color: rgba(31, 45, 61, 0.34);
+    }
+
+    .tile-movie .tile-tag {
+      color: #2f4c71;
+    }
+
+    .tile-automic {
+      --automic-purple: oklch(78% 0.105 297);
+      background:
+        radial-gradient(circle at 78% 22%, oklch(78% 0.105 297 / 0.22),
+          transparent 30%),
+        radial-gradient(circle at 18% 82%, oklch(68% 0.19 298 / 0.16),
+          transparent 32%),
+        linear-gradient(145deg, oklch(9% 0.014 274),
+          oklch(12.5% 0.016 274) 54%, oklch(5.5% 0.012 274));
     }
 
     .tile-automic::before {
@@ -583,105 +578,34 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(90deg, rgba(120, 255, 205, 0.05) 1px,
+        linear-gradient(90deg, oklch(78% 0.105 297 / 0.055) 1px,
           transparent 1px),
-        linear-gradient(rgba(120, 255, 205, 0.04) 1px, transparent 1px);
+        linear-gradient(oklch(78% 0.105 297 / 0.045) 1px, transparent 1px);
       background-size: 2.7rem 2.7rem;
       mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.88),
         rgba(0, 0, 0, 0.25));
       pointer-events: none;
     }
 
-    .vault-core {
-      position: absolute;
-      top: 1.1rem;
-      right: 1.1rem;
-      width: 6.4rem;
-      aspect-ratio: 1;
-      border: 1px solid rgba(120, 255, 205, 0.36);
-      display: grid;
-      place-items: center;
-      transform: rotate(45deg);
-      box-shadow:
-        0 0 0 0.7rem rgba(120, 255, 205, 0.05),
-        0 0 32px rgba(75, 255, 194, 0.12);
-      animation: drift 10s ease-in-out infinite;
-      z-index: 1;
-    }
-
-    .vault-core span {
-      width: 42%;
-      aspect-ratio: 1;
-      border: 1px solid rgba(230, 255, 247, 0.62);
-      background: rgba(120, 255, 205, 0.12);
-      box-shadow: inset 0 0 18px rgba(120, 255, 205, 0.18);
-    }
-
     .tile-automic .tile-tag {
-      color: rgba(120, 255, 205, 0.82);
+      color: var(--automic-purple);
       font-family: var(--tech-font);
     }
 
     .tile-automic .tile-title {
       max-width: 10ch;
-      color: #f1fff9;
+      color: oklch(97% 0.008 275);
     }
 
     .tile-automic .tile-kicker,
     .tile-automic .tile-copy {
-      color: rgba(222, 241, 237, 0.9);
+      color: oklch(87% 0.025 274);
     }
 
     .tile-automic .tile-domain,
     .tile-automic .tile-cta {
-      color: rgba(222, 255, 244, 0.84);
-      border-bottom-color: rgba(222, 255, 244, 0.34);
-    }
-
-    .tile-pincer {
-      background:
-        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.12),
-          transparent 24%),
-        radial-gradient(circle at 78% 20%, rgba(93, 121, 255, 0.3),
-          transparent 30%),
-        linear-gradient(155deg, rgba(10, 12, 28, 0.98),
-          rgba(18, 22, 56, 0.96) 52%, rgba(8, 11, 28, 0.98));
-    }
-
-    .tile-pincer::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(125deg, rgba(255, 255, 255, 0.08), transparent 36%),
-        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px,
-          transparent 1px 3.3rem),
-        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px,
-          transparent 1px 3.3rem);
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.94),
-        rgba(0, 0, 0, 0.5));
-      pointer-events: none;
-    }
-
-    .tile-pincer .tile-tag {
-      color: rgba(189, 203, 255, 0.84);
-      font-family: var(--tech-font);
-    }
-
-    .tile-pincer .tile-title {
-      max-width: 8ch;
-      color: #f6f7ff;
-    }
-
-    .tile-pincer .tile-kicker,
-    .tile-pincer .tile-copy {
-      color: rgba(218, 223, 248, 0.9);
-    }
-
-    .tile-pincer .tile-domain,
-    .tile-pincer .tile-cta {
-      color: rgba(228, 233, 255, 0.82);
-      border-bottom-color: rgba(228, 233, 255, 0.34);
+      color: var(--automic-purple);
+      border-bottom-color: oklch(78% 0.105 297 / 0.42);
     }
 
     .tile-colossal {
@@ -920,17 +844,6 @@
       }
     }
 
-    @keyframes plushie-bob {
-      0%,
-      100% {
-        transform: translateY(0) rotate(-3deg);
-      }
-
-      50% {
-        transform: translateY(-0.45rem) rotate(2deg);
-      }
-    }
-
     @keyframes bookhole-spin {
       from {
         transform: rotate(0deg);
@@ -1026,7 +939,6 @@
       }
 
       .gss-poster-wrap,
-      .byoclaw-plushie,
       .claw-marks {
         right: 0.9rem;
       }
@@ -1038,11 +950,9 @@
       .clawlicious-badge::before,
       .gss-poster-wrap::before,
       .gss-poster-wrap::after,
-      .byoclaw-plushie,
       .tile-bookhole::before,
       .tile-next::before,
       .claw-marks span,
-      .vault-core,
       .darling-ring,
       .tile-stage::before,
       .tile-stage::after,
@@ -1081,6 +991,26 @@
     </section>
 
     <section class="project-wall" aria-label="Active project links">
+      <a class="project-tile tile-automic" href="https://www.automicvault.com/"
+        target="_blank" rel="noopener noreferrer">
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Automic Vault</p>
+            <p class="tile-domain">automicvault.com</p>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">A new kind of secrets manager.</h2>
+          <p class="tile-kicker">
+            Moves CLI secrets out of plaintext files and controls which signed
+            app can run each tool with each credential.
+          </p>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Open official site</span>
+        </div>
+      </a>
+
       <a class="project-tile tile-colossal" href="https://colossalclawadventure.com"
         target="_blank" rel="noopener noreferrer">
         <div class="claw-marks" aria-hidden="true">
@@ -1128,26 +1058,6 @@
         </div>
         <div class="tile-bottom">
           <span class="tile-cta">Visit official site</span>
-        </div>
-      </a>
-
-      <a class="project-tile tile-byoclaw" href="https://byoclaw.dev"
-        target="_blank" rel="noopener noreferrer">
-        <img class="byoclaw-plushie" src="/images/byoclaw-plushie.webp" alt="">
-        <div class="tile-top">
-          <div>
-            <p class="tile-tag">BYOClaw</p>
-            <p class="tile-domain">byoclaw.dev</p>
-          </div>
-        </div>
-        <div class="tile-body">
-          <h2 class="tile-title">App-less software, pointed at the web.</h2>
-          <p class="tile-kicker">
-            Bring your own OpenClaw to your favorite sites.
-          </p>
-        </div>
-        <div class="tile-bottom">
-          <span class="tile-cta">Use it on the web</span>
         </div>
       </a>
 
@@ -1213,41 +1123,19 @@
         </div>
       </a>
 
-      <a class="project-tile tile-automic" href="https://www.automicvault.com/"
-        target="_blank" rel="noopener noreferrer">
-        <div class="vault-core" aria-hidden="true">
-          <span></span>
-        </div>
-        <div class="tile-top">
-          <div>
-            <p class="tile-tag">Automic Vault</p>
-            <p class="tile-domain">automicvault.com</p>
-          </div>
-        </div>
-        <div class="tile-body">
-          <h2 class="tile-title">Run agents. Keep control.</h2>
-          <p class="tile-kicker">
-            A local boundary for AI coding agents, developer secrets, package
-            tools, and command approval.
-          </p>
-        </div>
-        <div class="tile-bottom">
-          <span class="tile-cta">Open official site</span>
-        </div>
-      </a>
-
-      <a class="project-tile tile-pincer" href="https://www.pincerspace.com"
+      <a class="project-tile tile-movie" href="https://nextmovieafter.com"
         target="_blank" rel="noopener noreferrer">
         <div class="tile-top">
           <div>
-            <p class="tile-tag">PincerSpace</p>
-            <p class="tile-domain">pincerspace.com</p>
+            <p class="tile-tag">Movie picks</p>
+            <p class="tile-domain">nextmovieafter.com</p>
           </div>
         </div>
         <div class="tile-body">
-          <h2 class="tile-title">v0, but bring your own AI.</h2>
+          <h2 class="tile-title">Next Movie After</h2>
           <p class="tile-kicker">
-            Publish websites with your own AI agents.
+            Find your next watch by matching tone, themes, emotional impact,
+            pacing, and storytelling style.
           </p>
         </div>
         <div class="tile-bottom">
