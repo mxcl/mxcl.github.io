@@ -43,14 +43,15 @@
           "name": "Active projects from Max Howell",
           "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Automic Vault", "url": "https://www.automicvault.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Colossal Claw Adventure", "url": "https://colossalclawadventure.com"},
-            {"@type": "ListItem", "position": 3, "name": "Supermassive Book Hole", "url": "https://supermassivebookhole.com"},
-            {"@type": "ListItem", "position": 4, "name": "Game Studio Simulator", "url": "https://gamestudiosimulator.com"},
-            {"@type": "ListItem", "position": 5, "name": "Next Book After", "url": "https://nextbookafter.com"},
-            {"@type": "ListItem", "position": 6, "name": "Next Movie After", "url": "https://nextmovieafter.com"},
-            {"@type": "ListItem", "position": 7, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
-            {"@type": "ListItem", "position": 8, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
-            {"@type": "ListItem", "position": 9, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
+            {"@type": "ListItem", "position": 2, "name": "pkg.so", "url": "https://pkg.so/"},
+            {"@type": "ListItem", "position": 3, "name": "Colossal Claw Adventure", "url": "https://colossalclawadventure.com"},
+            {"@type": "ListItem", "position": 4, "name": "Supermassive Book Hole", "url": "https://supermassivebookhole.com"},
+            {"@type": "ListItem", "position": 5, "name": "Game Studio Simulator", "url": "https://gamestudiosimulator.com"},
+            {"@type": "ListItem", "position": 6, "name": "Next Book After", "url": "https://nextbookafter.com"},
+            {"@type": "ListItem", "position": 7, "name": "Next Movie After", "url": "https://nextmovieafter.com"},
+            {"@type": "ListItem", "position": 8, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
+            {"@type": "ListItem", "position": 9, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
+            {"@type": "ListItem", "position": 10, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
           ]
         },
         {
@@ -549,6 +550,54 @@
       border-bottom-color: oklch(78% 0.105 297 / 0.42);
     }
 
+    .tile-pkg {
+      background:
+        linear-gradient(135deg, rgba(36, 85, 255, 0.11), transparent 38%),
+        linear-gradient(180deg, rgba(202, 255, 66, 0.12), transparent 72%),
+        #e7e1d2;
+      color: #121416;
+    }
+
+    .tile-pkg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(36, 85, 255, 0.16) 1px,
+          transparent 1px),
+        linear-gradient(rgba(18, 20, 22, 0.08) 1px, transparent 1px);
+      background-size: 4rem 100%, 100% 2rem;
+      pointer-events: none;
+    }
+
+    .pkg-mark {
+      width: 3.4rem;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border: 1px solid #121416;
+      border-radius: 50%;
+      background: #caff42;
+      color: #121416;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .tile-pkg .tile-tag,
+    .tile-pkg .tile-domain,
+    .tile-pkg .tile-copy,
+    .tile-pkg .tile-title,
+    .tile-pkg .tile-kicker,
+    .tile-pkg .tile-cta {
+      color: #121416;
+      border-bottom-color: rgba(18, 20, 22, 0.4);
+    }
+
+    .tile-pkg .tile-tag {
+      color: #2455ff;
+    }
+
     .tile-colossal {
       background:
         radial-gradient(circle at 75% 18%, rgba(255, 146, 64, 0.18),
@@ -948,6 +997,27 @@
         </div>
         <div class="tile-bottom">
           <span class="tile-cta">Open official site</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-pkg" href="https://pkg.so/"
+        target="_blank" rel="noopener noreferrer">
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Package catalog</p>
+            <p class="tile-domain">pkg.so</p>
+          </div>
+          <div class="pkg-mark" aria-hidden="true">pkg</div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">Open package index.</h2>
+          <p class="tile-kicker">
+            Source-backed intelligence for executable tools, including install
+            metadata, aliases, popularity, and upstream facts.
+          </p>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Explore packages</span>
         </div>
       </a>
 
