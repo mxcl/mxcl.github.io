@@ -44,14 +44,13 @@
           "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Automic Vault", "url": "https://www.automicvault.com/"},
             {"@type": "ListItem", "position": 2, "name": "Colossal Claw Adventure", "url": "https://colossalclawadventure.com"},
-            {"@type": "ListItem", "position": 3, "name": "Clawlicious", "url": "https://clawlicio.us"},
-            {"@type": "ListItem", "position": 4, "name": "Supermassive Book Hole", "url": "https://supermassivebookhole.com"},
-            {"@type": "ListItem", "position": 5, "name": "Game Studio Simulator", "url": "https://gamestudiosimulator.com"},
-            {"@type": "ListItem", "position": 6, "name": "Next Book After", "url": "https://nextbookafter.com"},
-            {"@type": "ListItem", "position": 7, "name": "Next Movie After", "url": "https://nextmovieafter.com"},
-            {"@type": "ListItem", "position": 8, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
-            {"@type": "ListItem", "position": 9, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
-            {"@type": "ListItem", "position": 10, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
+            {"@type": "ListItem", "position": 3, "name": "Supermassive Book Hole", "url": "https://supermassivebookhole.com"},
+            {"@type": "ListItem", "position": 4, "name": "Game Studio Simulator", "url": "https://gamestudiosimulator.com"},
+            {"@type": "ListItem", "position": 5, "name": "Next Book After", "url": "https://nextbookafter.com"},
+            {"@type": "ListItem", "position": 6, "name": "Next Movie After", "url": "https://nextmovieafter.com"},
+            {"@type": "ListItem", "position": 7, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
+            {"@type": "ListItem", "position": 8, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
+            {"@type": "ListItem", "position": 9, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
           ]
         },
         {
@@ -305,64 +304,6 @@
 
     .tile-copy-stack .tile-copy {
       max-width: none;
-    }
-
-    .tile-clawlicious {
-      background: linear-gradient(165deg, rgba(24, 14, 10, 0.98),
-        rgba(57, 32, 19, 0.94) 52%, rgba(17, 20, 16, 0.98));
-    }
-
-    .tile-clawlicious::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05),
-        transparent 34%, transparent 66%, rgba(255, 255, 255, 0.04));
-      opacity: 0.5;
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-
-    .clawlicious-badge {
-      position: relative;
-      width: 4.8rem;
-      aspect-ratio: 1;
-      display: grid;
-      place-items: center;
-      border-radius: 1rem;
-      border: 1px solid rgba(205, 143, 96, 0.68);
-      background: radial-gradient(circle at 50% 40%, rgba(255, 241, 203, 0.22),
-        rgba(25, 17, 11, 0.94));
-      overflow: visible;
-    }
-
-    .clawlicious-badge::before {
-      content: "";
-      position: absolute;
-      inset: -0.7rem;
-      border-radius: 1.35rem;
-      background: conic-gradient(from 0deg, rgba(205, 143, 96, 0),
-        rgba(205, 143, 96, 0.72), rgba(151, 93, 49, 0.42),
-        rgba(205, 143, 96, 0.18), rgba(205, 143, 96, 0));
-      filter: blur(10px);
-      opacity: 0.72;
-      animation: orbit 18s linear infinite;
-      z-index: -1;
-    }
-
-    .clawlicious-badge img {
-      width: 3.4rem;
-      filter: drop-shadow(0 0 10px rgba(255, 202, 155, 0.34));
-    }
-
-    .tile-clawlicious .tile-tag {
-      color: #e4b58d;
-    }
-
-    .tile-clawlicious .tile-title,
-    .tile-clawlicious .tile-kicker,
-    .tile-clawlicious .tile-copy {
-      color: #f4e8dd;
     }
 
     .tile-gss {
@@ -947,7 +888,6 @@
     @media (prefers-reduced-motion: reduce) {
       .project-tile,
       .tile-cta,
-      .clawlicious-badge::before,
       .gss-poster-wrap::before,
       .gss-poster-wrap::after,
       .tile-bookhole::before,
@@ -1032,32 +972,6 @@
         </div>
         <div class="tile-bottom">
           <span class="tile-cta">Open site</span>
-        </div>
-      </a>
-
-      <a class="project-tile tile-clawlicious" href="https://clawlicio.us"
-        target="_blank" rel="noopener noreferrer">
-        <div class="tile-top">
-          <div>
-            <p class="tile-tag">Clawlicious</p>
-            <p class="tile-domain">clawlicio.us</p>
-          </div>
-          <div class="clawlicious-badge" aria-hidden="true">
-            <img src="/images/clawlicious-logo.webp" alt="">
-          </div>
-        </div>
-        <div class="tile-body">
-          <h2 class="tile-title">Save links. Let the network deepen them.</h2>
-          <div class="tile-copy-stack">
-            <p class="tile-copy">Save Links.</p>
-            <p class="tile-copy">Your OpenClaw curates them.</p>
-            <p class="tile-copy">
-              The Claw-Network looks for useful connections you missed.
-            </p>
-          </div>
-        </div>
-        <div class="tile-bottom">
-          <span class="tile-cta">Visit official site</span>
         </div>
       </a>
 
