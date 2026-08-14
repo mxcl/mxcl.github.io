@@ -32,7 +32,7 @@
           "name": "Active Projects",
           "url": "https://mxcl.dev/projects/",
           "description": "An active project wall for Max Howell with current and archived project links.",
-          "dateModified": "2026-08-04",
+          "dateModified": "2026-08-14",
           "author": {"@id": "https://mxcl.dev/#max-howell"},
           "publisher": {"@id": "https://mxcl.dev/#max-howell"},
           "mainEntity": {"@id": "https://mxcl.dev/projects/#items"}
@@ -49,9 +49,10 @@
             {"@type": "ListItem", "position": 5, "name": "Game Studio Simulator", "url": "https://gamestudiosimulator.com"},
             {"@type": "ListItem", "position": 6, "name": "Next Book After", "url": "https://nextbookafter.com"},
             {"@type": "ListItem", "position": 7, "name": "Next Movie After", "url": "https://nextmovieafter.com"},
-            {"@type": "ListItem", "position": 8, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
-            {"@type": "ListItem", "position": 9, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
-            {"@type": "ListItem", "position": 10, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
+            {"@type": "ListItem", "position": 8, "name": "Next Game After", "url": "https://nextgameafter.com"},
+            {"@type": "ListItem", "position": 9, "name": "PromiseKit", "url": "https://mxcl.dev/PromiseKit/"},
+            {"@type": "ListItem", "position": 10, "name": "Path.swift", "url": "https://mxcl.dev/Path.swift/"},
+            {"@type": "ListItem", "position": 11, "name": "YOLOKit", "url": "https://mxcl.dev/YOLOKit/"}
           ]
         },
         {
@@ -504,6 +505,54 @@
       color: #2f4c71;
     }
 
+    .tile-game {
+      background:
+        radial-gradient(circle at 82% 20%, rgba(94, 171, 255, 0.3),
+          transparent 27%),
+        linear-gradient(145deg, #111b34 0%, #183864 54%, #13213d 100%);
+    }
+
+    .tile-game::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(147, 205, 255, 0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(147, 205, 255, 0.09) 1px,
+          transparent 1px);
+      background-size: 2.4rem 2.4rem;
+      mask-image: linear-gradient(135deg, transparent 18%, #000 82%);
+      pointer-events: none;
+    }
+
+    .tile-game::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 5.5rem;
+      aspect-ratio: 1;
+      border: 0.7rem solid rgba(186, 225, 255, 0.22);
+      box-shadow:
+        2.7rem 0 0 -0.7rem rgba(186, 225, 255, 0.12),
+        0 2.7rem 0 -0.7rem rgba(186, 225, 255, 0.12);
+      transform: rotate(45deg);
+      animation: game-pulse 7s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .tile-game .tile-tag,
+    .tile-game .tile-domain,
+    .tile-game .tile-cta {
+      color: #a8d8ff;
+      border-bottom-color: rgba(168, 216, 255, 0.42);
+    }
+
+    .tile-game .tile-title,
+    .tile-game .tile-kicker {
+      color: #f2f7ff;
+    }
+
     .tile-automic {
       --automic-purple: oklch(78% 0.105 297);
       background:
@@ -896,6 +945,19 @@
       }
     }
 
+    @keyframes game-pulse {
+      0%,
+      100% {
+        opacity: 0.62;
+        transform: rotate(45deg) scale(0.92);
+      }
+
+      50% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+      }
+    }
+
     @media (max-width: 1040px) {
       .project-wall {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -945,7 +1007,8 @@
       .darling-ring,
       .tile-stage::before,
       .tile-stage::after,
-      .chorale-grid::before {
+      .chorale-grid::before,
+      .tile-game::after {
         animation: none;
         transition: none;
       }
@@ -1119,6 +1182,26 @@
           <h2 class="tile-title">Next Movie After</h2>
           <p class="tile-kicker">
             Find your next watch by matching tone, themes, emotional impact,
+            pacing, and storytelling style.
+          </p>
+        </div>
+        <div class="tile-bottom">
+          <span class="tile-cta">Open site</span>
+        </div>
+      </a>
+
+      <a class="project-tile tile-game" href="https://nextgameafter.com"
+        target="_blank" rel="noopener noreferrer">
+        <div class="tile-top">
+          <div>
+            <p class="tile-tag">Game picks</p>
+            <p class="tile-domain">nextgameafter.com</p>
+          </div>
+        </div>
+        <div class="tile-body">
+          <h2 class="tile-title">Next Game After</h2>
+          <p class="tile-kicker">
+            Find your next play by matching mechanics, tone, emotional impact,
             pacing, and storytelling style.
           </p>
         </div>
