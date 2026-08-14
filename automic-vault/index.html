@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Automic Vault | A new kind of secrets manager for a new era of development</title>
+  <title>Automic Vault GitHub &amp; Founder Note | Max Howell</title>
   <meta name="description"
-    content="Max Howell, creator of Homebrew, explains why he built Automic Vault and why AI agents need a local execution boundary on macOS.">
+    content="Automic Vault founder Max Howell explains the macOS security model, with the official product site and open-source GitHub repository.">
   <link rel="canonical" href="https://mxcl.dev/automic-vault/">
   <meta property="og:title" content="Why I Built Automic Vault">
   <meta property="og:description"
@@ -21,23 +21,42 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "@id": "https://mxcl.dev/automic-vault/#founder-note",
-      "headline": "Why I Built Automic Vault",
-      "description": "Max Howell explains why he built Automic Vault and why AI agents need a local execution boundary on macOS.",
-      "url": "https://mxcl.dev/automic-vault/",
-      "datePublished": "2026-06-02",
-      "dateModified": "2026-07-29",
-      "image": "https://mxcl.dev/images/automic-vault/preview.jpg",
-      "author": {"@id": "https://mxcl.dev/#max-howell"},
-      "publisher": {"@id": "https://mxcl.dev/#max-howell"},
-      "mainEntityOfPage": "https://mxcl.dev/automic-vault/",
-      "about": {
-        "@type": "SoftwareApplication",
-        "@id": "https://www.automicvault.com/#software",
-        "name": "Automic Vault",
-        "url": "https://www.automicvault.com/"
-      }
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://mxcl.dev/automic-vault/#founder-note",
+          "headline": "Why I Built Automic Vault",
+          "description": "Max Howell explains why he built Automic Vault and why AI agents need a local execution boundary on macOS.",
+          "url": "https://mxcl.dev/automic-vault/",
+          "datePublished": "2026-06-02",
+          "dateModified": "2026-08-14",
+          "image": "https://mxcl.dev/images/automic-vault/preview.jpg",
+          "author": {"@id": "https://mxcl.dev/#max-howell"},
+          "publisher": {"@id": "https://mxcl.dev/#max-howell"},
+          "mainEntityOfPage": "https://mxcl.dev/automic-vault/",
+          "about": {"@id": "https://www.automicvault.com/#software"}
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://www.automicvault.com/#software",
+          "name": "Automic Vault",
+          "url": "https://www.automicvault.com/",
+          "sameAs": "https://github.com/automic-vault/automic-vault",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "macOS",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://github.com/automic-vault/automic-vault#source",
+          "name": "Automic Vault source code",
+          "url": "https://github.com/automic-vault/automic-vault",
+          "codeRepository": "https://github.com/automic-vault/automic-vault",
+          "programmingLanguage": "Swift",
+          "license": "https://www.apache.org/licenses/LICENSE-2.0",
+          "about": {"@id": "https://www.automicvault.com/#software"}
+        }
+      ]
     }
   </script>
   <style>
@@ -142,7 +161,7 @@
 
     .vault-facts {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       border-block: 1px solid var(--line-strong);
     }
 
@@ -352,7 +371,7 @@
             target="_blank" rel="noopener noreferrer">Visit the official site</a>
           <a class="section-link"
             href="https://github.com/automic-vault/automic-vault"
-            target="_blank" rel="noopener noreferrer">View source</a>
+            target="_blank" rel="noopener noreferrer">Automic Vault on GitHub</a>
         </div>
       </div>
 
@@ -375,6 +394,11 @@
       <div>
         <dt>Platform</dt>
         <dd>macOS</dd>
+      </div>
+      <div>
+        <dt>Source</dt>
+        <dd><a href="https://github.com/automic-vault/automic-vault"
+          target="_blank" rel="noopener noreferrer">GitHub</a></dd>
       </div>
       <div>
         <dt>License</dt>
@@ -477,7 +501,10 @@
         <h2 id="official-title">See the current product at automicvault.com.</h2>
         <p>
           The official site has the current feature details, documentation,
-          download, package catalog, security model, and source links.
+          download, package catalog, and security model. The
+          <a href="https://github.com/automic-vault/automic-vault"
+            target="_blank" rel="noopener noreferrer">Automic Vault GitHub repository</a>
+          has the source code, releases, license, and issue tracker.
         </p>
       </div>
       <a class="cta-link" href="https://www.automicvault.com/"
@@ -488,8 +515,8 @@
       <a href="/">mxcl.dev</a>
       <a href="/projects/">Projects</a>
       <a href="/homebrew/">Homebrew</a>
-      <a href="https://www.automicvault.com/" target="_blank"
-        rel="noopener noreferrer">Automic Vault</a>
+      <a href="https://github.com/automic-vault/automic-vault" target="_blank"
+        rel="noopener noreferrer">Automic Vault on GitHub</a>
     </footer>
   </main>
   <script src="/js/hire-max.js" defer></script>
