@@ -29,6 +29,8 @@ body {
 .home-masthead {
   position: relative;
   min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   background-color: var(--home-bg);
   background-image:
@@ -49,7 +51,8 @@ body {
 
 .site-header,
 .hero,
-.project-ribbon { position: relative; z-index: 1; }
+.project-ribbon,
+.latest-writing { position: relative; z-index: 1; }
 
 .site-header {
   min-height: 76px;
@@ -89,17 +92,18 @@ body {
 .site-nav .nav-contact:hover { background: var(--home-red); color: #140706; text-decoration: none; }
 
 .hero {
-  min-height: calc(100dvh - 76px);
-  display: block;
+  min-height: 0;
+  flex: 1;
+  display: flex;
   border: 0;
 }
 
 .hero-copy {
   width: min(650px, 46vw);
-  min-height: calc(100dvh - 76px);
+  min-height: 0;
   display: flex;
   justify-content: center;
-  padding: clamp(52px, 8vh, 86px) 0 clamp(215px, 27vh, 294px);
+  padding: clamp(28px, 4vh, 52px) 0;
 }
 
 .hero h1 {
@@ -114,7 +118,7 @@ body {
 
 .hero h1 strong { display: block; color: var(--home-red); font-weight: 750; white-space: nowrap; }
 
-.hero-copy .hero-services {
+.hero-copy > p.hero-services {
   max-width: none;
   margin: 24px 0 0;
   color: var(--home-ink);
@@ -124,7 +128,7 @@ body {
   line-height: 1.25;
 }
 
-.hero-copy .hero-description {
+.hero-copy > p.hero-description {
   max-width: 35ch;
   margin: 22px 0 0;
   color: var(--home-muted);
@@ -162,10 +166,7 @@ body {
 .home-masthead .button-secondary:hover { background: rgb(255 244 231 / .12); }
 
 .project-ribbon {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--home-line);
@@ -231,6 +232,38 @@ body {
   font-weight: 650;
 }
 
+
+.latest-writing {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-block: 20px;
+  background: var(--home-bg);
+  box-shadow: 0 0 0 100vmax var(--home-bg);
+  clip-path: inset(0 -100vmax);
+}
+.latest-writing h2 { flex: 0 0 auto; margin: 0; font-size: .9rem; font-weight: 600; color: var(--home-red); }
+.latest-writing a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.latest-posts { flex: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 24px; }
+.latest-posts article { min-width: 0; }
+.latest-posts time { color: var(--muted); font-size: .75rem; }
+.latest-posts h3 { margin: 6px 0 0; font-size: 1rem; line-height: 1.35; }
+.latest-posts h3 span { color: var(--home-red); }
+
+/* Keep projects and writing in the first screen on typical laptop displays. */
+@media (min-width: 821px) and (max-height: 800px) {
+  .hero h1 { font-size: clamp(3.2rem, 5vw, 4rem); }
+  .hero-copy { padding-block: 20px; }
+  .hero-copy > p.hero-services { margin-top: 14px; font-size: 1.15rem; }
+  .hero-copy > p.hero-description { margin-top: 14px; font-size: 1rem; max-width: 44ch; }
+  .hero-actions { margin-top: 18px; }
+  .home-masthead .button { min-height: 44px; }
+  .ribbon-project { min-height: 154px; padding: 18px; grid-template-columns: 72px minmax(0, 1fr); }
+  .project-mark { width: 72px; }
+  .project-copy > span:not(.project-link) { font-size: .82rem; }
+  .project-copy .project-link { margin-top: 10px; }
+}
+
 main,
 .site-footer { background: var(--paper); color: var(--ink); }
 
@@ -285,10 +318,12 @@ main .offer-row:hover { color: var(--home-red); }
   .site-header { align-items: center; flex-direction: row; padding-block: 0; }
   .site-nav { width: auto; overflow: visible; padding: 0; }
   .site-nav a:not(.nav-contact):not(.nav-blog) { display: none; }
-  .hero { min-height: 760px; padding-top: 37vh; }
+  .hero { display: block; flex: none; min-height: 760px; padding-top: 37vh; }
+  .latest-writing { align-items: flex-start; flex-direction: column; gap: 18px; padding-block: 24px; }
+  .latest-posts { width: 100%; grid-template-columns: 1fr; gap: 20px; }
   .hero-copy { width: 100%; min-height: 0; justify-content: flex-start; padding: 90px 0 38px; }
   .hero h1 { font-size: clamp(3.55rem, 14vw, 6rem); }
-  .hero-copy .hero-description { max-width: 38ch; }
+  .hero-copy > p.hero-description { max-width: 38ch; }
   .project-ribbon { position: relative; grid-template-columns: 1fr; width: 100%; border-right: 0; border-left: 0; border-radius: 0; }
   .ribbon-project { min-height: 154px; grid-template-columns: 88px minmax(0, 1fr); padding: 22px max(22px, calc((100vw - 720px) / 2)); }
   .project-mark { width: 88px; }
