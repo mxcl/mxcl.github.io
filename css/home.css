@@ -284,7 +284,7 @@ main .offer-row:hover { color: var(--home-red); }
   .home-masthead::after { background: linear-gradient(180deg, rgb(2 5 12 / .22) 0%, rgb(2 5 12 / .16) 35vh, var(--home-bg) 61vh); }
   .site-header { align-items: center; flex-direction: row; padding-block: 0; }
   .site-nav { width: auto; overflow: visible; padding: 0; }
-  .site-nav a:not(.nav-contact) { display: none; }
+  .site-nav a:not(.nav-contact):not(.nav-blog) { display: none; }
   .hero { min-height: 760px; padding-top: 37vh; }
   .hero-copy { width: 100%; min-height: 0; justify-content: flex-start; padding: 90px 0 38px; }
   .hero h1 { font-size: clamp(3.55rem, 14vw, 6rem); }

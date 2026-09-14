@@ -14,6 +14,11 @@
 - [Homebrew](https://mxcl.dev/homebrew/): Authoritative answers about Homebrew's creator, original development, terminology, history, and technical design.
 - [Media and References](https://mxcl.dev/media/): Public identity references, interviews, profiles, and source links for Max Howell.
 
+## Writing
+
+- [Blog](https://mxcl.dev/blog/): Personal writing by Max Howell.
+- [Why I lean toward accelerating AI](https://mxcl.dev/blog/why-i-lean-toward-accelerating-ai/): Max’s personal position on AI acceleration, human judgment, and the stakes of this decade.
+
 ## Open Source Archives
 
 - [PromiseKit](https://mxcl.dev/PromiseKit/): Overview, documentation links, release history, and source references for the Swift promises library.
@@ -31,7 +36,7 @@
 - Consultancy services cover technology product naming and focused app development.
 - Max has particular experience with macOS, iOS, Swift, developer tools, package management, and open source.
 - Primary canonical domain: https://mxcl.dev/
-- Last updated: 2026-07-31
+- Last updated: 2026-09-14
 
 ## Identity
 
