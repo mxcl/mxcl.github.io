@@ -27,6 +27,10 @@ h1 { margin: 0; font-size: clamp(2.6rem, 5.8vw, 4.5rem); line-height: 1.05; lett
 .post-body { font-size: clamp(1.1rem, 2vw, 1.25rem); line-height: 1.75; }
 .post-body p { margin: 0 0 1.4em; }
 .post-body .lede { font-size: clamp(1.4rem, 2.5vw, 1.65rem); line-height: 1.5; font-weight: 500; }
+sup a { color: var(--site-red); }
+.post-notes { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--site-line); color: var(--site-muted); font-size: .95rem; line-height: 1.7; }
+.post-notes p { margin: 0; scroll-margin-top: 24px; }
+.post-notes a { color: var(--site-red); }
 .blog-footer { display: flex; justify-content: space-between; gap: 24px; padding-block: 28px; border-top: 1px solid var(--site-line); color: var(--site-muted); font-size: .9rem; line-height: 1.5; }
 .skip-link { position: absolute; top: -100px; left: 16px; padding: 12px; background: var(--site-bg); z-index: 2; }
 .skip-link:focus { top: 12px; }
