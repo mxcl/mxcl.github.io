@@ -25,6 +25,7 @@ h1 { margin: 0; font-size: clamp(2.6rem, 5.8vw, 4.5rem); line-height: 1.05; lett
 .post-header { margin-bottom: 44px; }
 .post-header .post-meta { margin-top: 24px; }
 .post-body { font-size: clamp(1.1rem, 2vw, 1.25rem); line-height: 1.75; }
+.post-body h2 { margin: 2.2em 0 .8em; font-size: clamp(1.55rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -.015em; }
 .post-body p { margin: 0 0 1.4em; }
 .post-body .lede { font-size: clamp(1.4rem, 2.5vw, 1.65rem); line-height: 1.5; font-weight: 500; }
 sup a { color: var(--site-red); }
