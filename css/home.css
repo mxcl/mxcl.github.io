@@ -244,7 +244,7 @@ body {
 }
 .latest-writing h2 { flex: 0 0 auto; margin: 0; font-size: .9rem; font-weight: 600; color: var(--home-red); }
 .latest-writing a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.latest-posts { flex: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 24px; }
+.latest-posts { display: flex; flex: 0 1 auto; flex-wrap: wrap; align-items: flex-start; gap: 32px; }
 .latest-posts article { min-width: 0; }
 .latest-posts time { color: var(--muted); font-size: .75rem; }
 .latest-posts h3 { margin: 6px 0 0; font-size: 1rem; line-height: 1.35; }
@@ -320,7 +320,7 @@ main .offer-row:hover { color: var(--home-red); }
   .site-nav a:not(.nav-contact):not(.nav-blog) { display: none; }
   .hero { display: block; flex: none; min-height: 760px; padding-top: 37vh; }
   .latest-writing { align-items: flex-start; flex-direction: column; gap: 18px; padding-block: 24px; }
-  .latest-posts { width: 100%; grid-template-columns: 1fr; gap: 20px; }
+  .latest-posts { width: 100%; flex-direction: column; gap: 20px; }
   .hero-copy { width: 100%; min-height: 0; justify-content: flex-start; padding: 90px 0 38px; }
   .hero h1 { font-size: clamp(3.55rem, 14vw, 6rem); }
   .hero-copy > p.hero-description { max-width: 38ch; }
