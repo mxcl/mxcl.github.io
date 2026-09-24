@@ -4,17 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Why Automic Vault Had to be Built | Max Howell, Creator of Homebrew</title>
+  <title>Why I Built Automic Vault | Max Howell, Creator of Homebrew</title>
   <meta name="description"
-    content="Automic Vault founder Max Howell explains the macOS security model, with the official product site and open-source GitHub repository.">
+    content="I created Homebrew. Now I’m fixing what happens when agents use it. Automic Vault hardens CLI tools on macOS and controls how they use your credentials.">
   <link rel="canonical" href="https://mxcl.dev/automic-vault/">
   <meta property="og:title" content="Why I Built Automic Vault">
   <meta property="og:description"
-    content="A founder note from Max Howell on moving developer secrets and command authority below the agent harness.">
+    content="A founder note from Max Howell on hardening CLI tools, protecting credentials, and deciding what agents can do.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://mxcl.dev/automic-vault/">
   <meta property="og:image"
-    content="https://mxcl.dev/images/automic-vault/preview.jpg">
+    content="https://mxcl.dev/images/automic-vault/overview-2026-09.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#090c10">
   <link rel="stylesheet" href="/css/operator-terminal.css?v=20260729">
@@ -26,11 +26,11 @@
           "@type": "Article",
           "@id": "https://mxcl.dev/automic-vault/#founder-note",
           "headline": "Why I Built Automic Vault",
-          "description": "Max Howell explains why he built Automic Vault and why AI agents need a local execution boundary on macOS.",
+          "description": "Max Howell explains why he built Automic Vault to harden CLI tools and control credential use on macOS.",
           "url": "https://mxcl.dev/automic-vault/",
           "datePublished": "2026-06-02",
-          "dateModified": "2026-08-14",
-          "image": "https://mxcl.dev/images/automic-vault/preview.jpg",
+          "dateModified": "2026-09-24",
+          "image": "https://mxcl.dev/images/automic-vault/overview-2026-09.webp",
           "author": {"@id": "https://mxcl.dev/#max-howell"},
           "publisher": {"@id": "https://mxcl.dev/#max-howell"},
           "mainEntityOfPage": "https://mxcl.dev/automic-vault/",
@@ -225,15 +225,6 @@
       line-height: 1.75;
     }
 
-    .founder-copy .pullquote {
-      margin: 1rem 0;
-      padding-left: 1.25rem;
-      border-left: 3px solid var(--accent);
-      color: var(--text);
-      font-size: clamp(1.35rem, 2.6vw, 2.25rem);
-      line-height: 1.25;
-    }
-
     .proof-section {
       grid-template-columns: minmax(0, 1.3fr) minmax(16rem, 0.7fr);
       align-items: center;
@@ -285,6 +276,48 @@
       max-width: 42rem;
       margin-top: 1rem;
       color: var(--muted);
+    }
+
+    .vault-note code {
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+      overflow-wrap: anywhere;
+    }
+
+    .command-example {
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--line-strong);
+      background: var(--panel);
+    }
+
+    .operation-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .operation-table caption {
+      padding-bottom: 1rem;
+      text-align: left;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .operation-table th,
+    .operation-table td {
+      padding: 0.85rem 0.5rem;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .operation-table th {
+      font-weight: 600;
+    }
+
+    .vault-note a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
     }
 
     @media (max-width: 880px) {
@@ -358,13 +391,14 @@
       <div class="vault-hero-copy">
         <p class="eyebrow">Founder note</p>
         <h1 id="vault-title">Automic Vault.</h1>
-        <h2>A local boundary for tools that no longer have a human at the keyboard.</h2>
+        <h2>I created Homebrew. Now I’m fixing what happens when agents use it.</h2>
         <p class="lede">
-          I built Homebrew to make the command line easier to use. I built
-          Automic Vault because AI agents changed who, or what, is using it.
+          Automic Vault hardens supported CLI tools on macOS and moves exposed
+          credentials into the Keychain. You keep using your commands.
+          You decide how much authority to give them.
         </p>
         <p class="updated-note">
-          Updated <time datetime="2026-07-29">July 29, 2026</time>
+          Updated <time datetime="2026-09-24">September 24, 2026</time>
         </p>
         <div class="vault-actions">
           <a class="cta-link" href="https://www.automicvault.com/"
@@ -376,12 +410,12 @@
       </div>
 
       <figure class="product-shot vault-hero-shot">
-        <img src="/images/automic-vault/approval-gate.png"
-          alt="Automic Vault asking for approval before ChatGPT runs an AWS command that deletes a volume"
-          width="1212" height="1112" fetchpriority="high" decoding="async">
+        <img src="/images/automic-vault/overview-2026-09.webp"
+          alt="Automic Vault overview showing hardened tools including Homebrew and GitHub, with AWS and Wrangler updates needing attention"
+          width="1944" height="1420" fetchpriority="high" decoding="async">
         <figcaption>
-          The app, command, working directory, and requested credentials are
-          visible before authority changes hands.
+          The tools you’ve hardened, their recent activity, and the things
+          that still need your attention.
         </figcaption>
       </figure>
     </section>
@@ -402,62 +436,90 @@
       </div>
       <div>
         <dt>License</dt>
-        <dd>Free and Apache 2.0</dd>
+        <dd>Mac app: free · Apache 2.0</dd>
       </div>
     </dl>
 
     <section class="founder-section" aria-labelledby="why-title">
       <div>
         <p class="eyebrow">Why I built it</p>
-        <h2 id="why-title">The operator changed.</h2>
+        <h2 id="why-title">I helped make installing tools easy.</h2>
       </div>
       <div class="founder-copy">
         <p>
-          The command line used to assume a person was present. You installed
-          a tool, read its output, and decided what to run next. Credentials in
-          dotfiles and broad package-manager access were risky, but the human
-          operator supplied context and friction.
+          Homebrew made it easier to get a tool onto your Mac. But after you
+          logged in, that tool often left a token in a dotfile or a credential
+          helper that other code running as you could read. We got used to it.
+          Then we gave agents the terminal.
         </p>
         <p>
-          An agent can read the same files, invoke the same tools, and reuse the
-          same authority at machine speed. A prompt cannot protect a secret the
-          process can already read.
-        </p>
-        <p class="pullquote">
-          Useful agents need tools. They do not need every credential those
-          tools have ever been given.
+          An agent can read those files and run those helpers too. Asking it
+          nicely to leave your credentials alone doesn’t change that. And I
+          want to use agents. I want them to do useful work without handing
+          them every credential on my machine.
         </p>
         <p>
-          Automic Vault moves supported secrets out of readable config files,
-          checks the executable and signed launcher, and applies policy when a
-          credential or sensitive command is actually requested. The boundary
-          lives beneath the harness, so it is the same for an agent, a script,
-          an editor, or Terminal.
+          The packaging layer gives me somewhere to fix this. Automic Vault
+          moves supported credentials into protected storage and reconfigures,
+          wraps, or patches the tools that use them. Each protected request
+          reaches an Authorization Gate on your Mac before the tool gets its
+          credential. Your terminal, editor, and agent keep their usual commands.
+        </p>
+        <p>
+          For GitHub, start with <code>av harden gh</code>. It installs our
+          signed, patched GitHub CLI and migrates its credentials. You still
+          type <code>gh</code>. There’s no agent plugin to persuade your harness
+          to use.
+        </p>
+        <p class="command-example"><code>av harden gh</code></p>
+        <p>
+          Homebrew needs a boundary too. Hardening protects
+          <code>/opt/homebrew</code> from changes by other code running as you.
+          At <strong>Read &amp; Update</strong>, recognized inspection commands
+          and <code>brew update</code> can run; installs and upgrades need your
+          Approval. This targets Apple Silicon Homebrew, and currently means
+          giving up services and shell completions.
+          <a href="https://www.automicvault.com/docs/hardeners/brew/">Read the tradeoffs</a>.
         </p>
       </div>
     </section>
 
     <section class="proof-section" aria-labelledby="policy-title">
       <figure class="product-shot">
-        <img src="/images/automic-vault/access-levels.png"
-          alt="Automic Vault showing different access levels for Terminal, ChatGPT, and all other apps"
-          width="1944" height="1380" loading="lazy" decoding="async">
+        <a href="/images/automic-vault/authorization-gates-2026-09.jpg">
+          <img src="/images/automic-vault/authorization-gates-2026-09.jpg"
+            alt="GitHub Authorization Gate with Write Access for ChatGPT and Approval Required for all other Verified Launchers"
+            width="982" height="748" loading="lazy" decoding="async">
+        </a>
         <figcaption>
-          Policy follows both the CLI tool and the signed app that launched it.
+          One tool, different policies for each Verified Launcher. This example
+          grants ChatGPT Write Access; other Verified Launchers must ask.
         </figcaption>
       </figure>
       <div class="proof-copy">
-        <p class="eyebrow">The control point</p>
-        <h2 id="policy-title">Authority belongs at execution.</h2>
+        <p class="eyebrow">Same token, different authority</p>
+        <h2 id="policy-title">Reading an issue isn’t publishing a release.</h2>
         <p>
-          The same CLI can be trusted in Terminal, read-only inside an agent,
-          and blocked everywhere else. Secret-revealing and mutating commands
-          can still require a native approval gate.
+          I want my secrets manager to know what the secrets <em>do</em>.
+          Reading GitHub, changing GitHub, and printing the token deserve
+          different decisions.
         </p>
+        <table class="operation-table">
+          <caption>After hardening GitHub, with a Verified Launcher set to
+            <strong>Read Only</strong>:</caption>
+          <thead><tr><th scope="col">Command</th><th scope="col">Decision</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><code>gh issue list</code></th><td>Authorized</td></tr>
+            <tr><th scope="row"><code>gh issue create</code></th><td>Approval Required</td></tr>
+            <tr><th scope="row"><code>gh auth token</code></th><td>Approval Required</td></tr>
+          </tbody>
+        </table>
         <p>
-          This is intentionally local. Cloud vaults can remain the source of
-          truth; Automic Vault controls the moment a process on your Mac tries
-          to use that authority.
+          Write Access permits recognized writes, but revealing a Secret or
+          using an elevated credential still requires Approval. Unknown
+          operations always require a human decision. AV verifies the live
+          Launcher’s software identity before applying its policy; a signature
+          establishes identity and integrity, not good intentions.
         </p>
       </div>
     </section>
@@ -465,50 +527,117 @@
     <section class="evidence-section" aria-labelledby="evidence-title">
       <div class="evidence-heading">
         <div>
-          <p class="eyebrow">What you can inspect</p>
-          <h2 id="evidence-title">Decisions and hazards stay visible.</h2>
+          <p class="eyebrow">From exposure to approval</p>
+          <h2 id="evidence-title">Start with what’s on your Mac.</h2>
         </div>
         <p>
-          Every approved or denied request leaves a local record. The app also
-          monitors developer tools for credential exposure and mutable package
-          paths, with the trigger and mitigation attached to each finding.
+          Run a Scan to find supported credential Exposures and Hazards.
+          Each Finding explains what AV checked and what you can change.
+          Choose a supported Hardener, then run <code>av doctor</code> to verify
+          the protection it installed. A clean Scan only covers the checks
+          AV supports.
         </p>
       </div>
       <div class="evidence-grid">
         <figure class="product-shot">
-          <img src="/images/automic-vault/secret-use-log.webp"
-            alt="Automic Vault secret request history with denied and approved GitHub CLI requests"
-            width="1944" height="1380" loading="lazy" decoding="async">
+          <a href="/images/automic-vault/detectors-2026-09.jpg">
+            <img src="/images/automic-vault/detectors-2026-09.jpg"
+              alt="Detectors listing supported tools and explaining the Akamai credential check and available Hardener"
+              width="982" height="748" loading="lazy" decoding="async">
+          </a>
           <figcaption>
-            A local audit trail records the launcher, command, key, working
-            directory, and decision.
+            See the credential path, the check, and the mitigation.
+            Some tools have a Detector without a Hardener.
           </figcaption>
         </figure>
         <figure class="product-shot">
-          <img src="/images/automic-vault/threat-monitor.webp"
-            alt="Automic Vault flagging a Git credential helper and showing its trigger conditions and mitigation"
-            width="2080" height="1380" loading="lazy" decoding="async">
+          <a href="/images/automic-vault/script-approval-2026-09.png">
+            <img src="/images/automic-vault/script-approval-2026-09.png"
+              alt="Approval for ChatGPT to run a Blessed Script, showing its declared capabilities, working directory, execution chain, and Touch ID action"
+              width="1452" height="1426" loading="lazy" decoding="async">
+          </a>
           <figcaption>
-            Detector findings explain what was observed and what to change.
+            Review the command and its declared capabilities before approving.
+            Here, the Mac requires Touch ID.
           </figcaption>
         </figure>
       </div>
     </section>
 
+    <section class="founder-section" aria-labelledby="workflow-title">
+      <div>
+        <p class="eyebrow">Let the agent get on with it</p>
+        <h2 id="workflow-title">I don’t want to approve every command either.</h2>
+      </div>
+      <div class="founder-copy">
+        <p>
+          Policy handles recognized operations within the access you’ve chosen.
+          For an eligible agent task, you can grant ten active minutes of
+          Write Access at one tool’s gate. Extend it, suspend it, or end it
+          from the visible controls. Suspending the timer suspends the authority
+          too; disclosure and elevated credential use stay outside the grant.
+        </p>
+        <p>
+          For repeatable work, review a script and its declared capabilities,
+          then bless it. A Blessed Script binds that review to its exact
+          contents. Editing it invalidates the Blessing. I can let an agent
+          prepare a release while giving a reviewed script the authority to
+          publish it.
+        </p>
+        <p>
+          You can enable Touch ID Approval on your Mac, or send Approval
+          requests to your iPhone. The Mac still holds the Secrets and enforces
+          the decision. Optional iPhone Approval needs an active subscription
+          to send allow responses; the Mac app is free.
+          <a href="https://www.automicvault.com/docs/">See the setup and current features</a>.
+        </p>
+        <p>
+          Authorization History lets you inspect local decisions. AV records
+          and verifies an allowed Secret Use before releasing the Secret.
+          History has retention limits, and denial records are best effort.
+          It isn’t a tamper-proof forensic log.
+        </p>
+      </div>
+    </section>
+
+    <section class="founder-section" aria-labelledby="limits-title">
+      <div>
+        <p class="eyebrow">The boundary matters</p>
+        <h2 id="limits-title">I’m hardening tools, not promising a safe agent.</h2>
+      </div>
+      <div class="founder-copy">
+        <p>
+          Protection covers supported credentials and gated operations. AV
+          doesn’t intercept every command, sandbox the whole agent, or stop
+          arbitrary local file changes. Once a tool receives a Secret, it can
+          leak it. Root and kernel compromise are outside this boundary too.
+        </p>
+        <p>
+          Those limits matter as much as the feature list. The project’s
+          <a href="https://github.com/automic-vault/automic-vault/blob/main/docs/domain-language.md">domain definitions</a>
+          and <a href="https://github.com/automic-vault/automic-vault/blob/main/docs/architecture.md">architecture</a>
+          spell out the model. The
+          <a href="https://www.automicvault.com/docs/security/">security guide</a>
+          explains what it means for your setup.
+        </p>
+      </div>
+    </section>
+
     <section class="official-cta" aria-labelledby="official-title">
       <div>
-        <p class="eyebrow">The product lives elsewhere</p>
-        <h2 id="official-title">See the current product at automicvault.com.</h2>
+        <p class="eyebrow">Try it on your tools</p>
+        <h2 id="official-title">Start with a Scan.</h2>
         <p>
-          The official site has the current feature details, documentation,
-          download, package catalog, and security model. The
+          The <a href="https://www.automicvault.com/">official site</a> has
+          the download, a standalone scanner, and the supported Hardeners.
+          The
           <a href="https://github.com/automic-vault/automic-vault"
             target="_blank" rel="noopener noreferrer">Automic Vault GitHub repository</a>
           has the source code, releases, license, and issue tracker.
         </p>
       </div>
       <a class="cta-link" href="https://www.automicvault.com/"
-        target="_blank" rel="noopener noreferrer">Open Automic Vault</a>
+        target="_blank" rel="noopener noreferrer">Get Automic Vault</a>
     </section>
 
     <footer class="site-footer">

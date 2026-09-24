@@ -8,7 +8,7 @@
 - [Product Naming](https://mxcl.dev/naming/): Max's product naming service, process, and the naming histories of Homebrew, Automic Vault, PromiseKit, and other products.
 - [Rapid App Development](https://mxcl.dev/build/): A focused five-day app development engagement using AI coding agents, with project examples and delivery details.
 - [Projects](https://mxcl.dev/projects/): Current and historical software projects created by Max Howell.
-- [Automic Vault](https://mxcl.dev/automic-vault/): Founder's introduction to a secrets manager designed for modern developer tools and coding agents.
+- [Automic Vault](https://mxcl.dev/automic-vault/): Max Howell’s founder note on hardening CLI tools on macOS and controlling how agents use developer credentials.
 - [Package Manager Manager](https://mxcl.dev/package-manager-manager/): A macOS app for inventorying and updating packages across package managers and remote Macs.
 - [Canopy](https://mxcl.dev/canopy/): A macOS development dashboard for monitoring pull requests, builds, and project activity.
 - [Homebrew](https://mxcl.dev/homebrew/): Authoritative answers about Homebrew's creator, original development, terminology, history, and technical design.
