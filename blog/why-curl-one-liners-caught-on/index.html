@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <title>Why curl one-liners caught on | Max Howell</title>
+  <meta name="description" content="The Homebrew installation tradeoff, the security concerns that matter, and what I would ship today.">
+  <link rel="canonical" href="https://mxcl.dev/blog/why-curl-one-liners-caught-on/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Why curl one-liners caught on">
+  <meta property="og:description" content="The Homebrew installation tradeoff, the security concerns that matter, and what I would ship today.">
+  <meta property="og:url" content="https://mxcl.dev/blog/why-curl-one-liners-caught-on/">
+  <meta property="og:image" content="https://mxcl.dev/assets/avatar-comic-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#040914">
+  <link rel="icon" href="/favicon.ico?v=20260731">
+  <link rel="stylesheet" href="/css/site-theme.css?v=20260731">
+  <link rel="stylesheet" href="/css/blog.css?v=20260924">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Why curl one-liners caught on", "description": "The Homebrew installation tradeoff, the security concerns that matter, and what I would ship today.", "url": "https://mxcl.dev/blog/why-curl-one-liners-caught-on/", "author": {"@type": "Person", "name": "Max Howell", "url": "https://mxcl.dev/"}, "datePublished": "2026-11-04", "mainEntityOfPage": "https://mxcl.dev/blog/why-curl-one-liners-caught-on/"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="blog-nav shell">
+    <a class="brand" href="/" aria-label="mxcl.dev home"><span>mxcl.</span>dev</a>
+    <nav aria-label="Primary">
+      <a href="/projects/">Work</a>
+      <a href="/blog/" aria-current="true">Blog</a>
+      <a href="mailto:mxcl@me.com">Email Max</a>
+    </nav>
+  </header>
+  <main id="main" class="reading-column">
+    <article>
+      <header class="post-header">
+        <a class="back-link" href="/blog/">← All posts</a>
+        <h1>Why curl one-liners caught on</h1>
+        <p class="post-meta">Max Howell · <time datetime="2026-11-04">November 4, 2026</time></p>
+      </header>
+      <div class="post-body">
+        <p class="lede">A tool that is never installed can never succeed. That is why I introduced a one-line installer for Homebrew, and why I still think the compromise made sense.</p>
+
+        <p>Curl one-liners still upset people. You offer a command to paste into a terminal, and someone asks for a proper installer. Preferably a <code>.pkg</code>. Something respectable.</p>
+
+        <p>There are good reasons to prefer that package. There are also good reasons the one-liner caught on. Both deserve a better explanation than “never pipe curl into a shell.”</p>
+
+        <h2>Getting from interested to installed</h2>
+
+        <p>When I created Homebrew in 2009, installation was the problem I was trying to make disappear. Dependencies, build tools, files in the right directories: the work between wanting some software and actually using it.</p>
+
+        <p>Homebrew itself needed to cross that gap. A package manager has an awkward first dependency: you have to install the package manager.</p>
+
+        <p>The one-line installer made that first step small. Copy. Paste. Return. Let the computer do the tedious part.</p>
+
+        <p>The familiar shorthand is <code>curl | sh</code>, though the precise interpreter and syntax vary. The idea is to fetch an installer and execute it in one command. <a href="https://brew.sh/">Homebrew still offers that experience today</a>.</p>
+
+        <p>That convenience matters most when someone is merely curious. They have not yet decided your tool is worth their afternoon. Give them a page of prerequisites and manual setup, and you may never get the chance to demonstrate that it is.</p>
+
+        <p>The enduring popularity of the one-liner tells me the compromise met a real need. It does not prove it is the safest option, or the best option for every machine. It shows that people value getting started enough to accept some tradeoffs. Sometimes convenience wins.</p>
+
+        <h2>What the security objection gets right</h2>
+
+        <p>A package can execute code during installation too. Apple explicitly supports <a href="https://developer.apple.com/documentation/xcode/packaging-mac-software-for-distribution">custom installation code in a <code>.pkg</code></a>. Putting a script inside an installer does not make its author benevolent.</p>
+
+        <p>But a signed package adds something important: a way to verify who signed the artifact and whether it has changed. In the normal macOS download-and-open flow, <a href="https://support.apple.com/guide/security-pdf/gatekeeper-and-runtime-protection-sec5599b66df/web">Gatekeeper checks developer identity, integrity, and notarization</a>. Those are real protections.</p>
+
+        <p>This is the distinction that “I trust the vendor” can miss. I can trust the developer and still receive malicious bytes from a compromised download server. If the attacker cannot produce a signature from the expected publisher, signature verification can catch that substitution. An ordinary curl-to-shell command has no equivalent check. HTTPS protects the connection; it does not make a compromised endpoint honest.</p>
+
+        <p>Inspection is another difference. Reading a script in your browser and then fetching it again to execute does not guarantee you run what you read. The response can change between requests, or differ by client. Downloading once, inspecting that file, and executing that same file closes that particular gap. If the script fetches more code, you still have more to verify.</p>
+
+        <p>Nor does every installed program have the same authority. A sandboxed app, a command running as your user, and an installer running as root have different reach. macOS also <a href="https://support.apple.com/guide/security/controlling-app-access-to-files-secddd1d86a6/web">restricts access to protected data through TCC</a>. Signing, sandboxing, and privacy permissions are distinct mechanisms; a signature alone is not a sandbox. “It can run code” does not mean “it can do whatever it wants.”</p>
+
+        <p>So yes: a typical curl one-liner gives up protections that other installation paths can provide. Calling every objection superstition would be wrong.</p>
+
+        <h2>The compromise I still defend</h2>
+
+        <p>Once you have established that you are receiving the vendor’s actual code, and compared the permissions it will have, the underlying decision becomes familiar: do you trust this software enough to run it?</p>
+
+        <p>A signature helps establish provenance. It does not promise that the software is wise, harmless, or free of bugs. A friendly installer window cannot make that promise either.</p>
+
+        <p>For a developer trying a command-line tool from a vendor they trust, a one-liner can be a reasonable choice. For a managed fleet or a production build, reproducible versions and verified artifacts may matter much more than shaving a minute off setup. Those are different circumstances, not a contradiction.</p>
+
+        <p>I would make the convenience tradeoff again. I would also offer other installation methods. The quick path should help someone try your thing; it should not force everyone to accept the same policy for installing it.</p>
+
+        <h2>What I would ship today</h2>
+
+        <p>The irony is that many tools need less installation machinery now.</p>
+
+        <p>The problem Homebrew addressed involved source trees, libraries, dependencies, and files scattered across a filesystem. Plenty of software still looks like that. But for many modern command-line tools, the deliverable is a single executable. Installation can be as simple as putting the right binary somewhere on <code>PATH</code>.</p>
+
+        <p>If that describes your tool, consider whether you need an installer script at all. For a release archive containing one executable at its root, the basic operation looks like this:</p>
+
+        <pre style="overflow-x: auto; font-size: .8em; line-height: 1.6;"><code>mkdir -p "$HOME/.local/bin"
+curl -fsSL https://example.com/tool-v1.2.3-PLATFORM.tar.gz \
+  | tar -xz -f - -C "$HOME/.local/bin" tool</code></pre>
+
+        <p>That is an illustrative URL: substitute the release for the user’s operating system and architecture. The archive must contain an executable named <code>tool</code> with executable permissions, and <code>~/.local/bin</code> needs to be on <code>PATH</code>. The <code>-f -</code> tells tar to read the archive from standard input.</p>
+
+        <p>This avoids executing a downloaded installer script. It does not authenticate the binary, make arbitrary archives safe, or prevent a failed download from leaving a partial installation. For a verified installation, download to a temporary location, check the signature or attestation against the expected publisher, then extract and install the verified artifact. A checksum is useful only to the extent that you trust where you got the expected checksum.</p>
+
+        <p>Offer a package-manager route where one makes sense, and signed, notarized distribution on macOS. Publish direct, versioned downloads. Make updates and removal straightforward. If a bootstrap script still earns its place by selecting the platform or handling setup, keep its job small and avoid asking for elevated privileges unnecessarily.</p>
+
+        <p><a href="https://packslip.sh">Packslip</a> is worth a look here. Its <a href="https://packslip.dev/docs/install/">installation options</a> include package managers, direct downloads, and a short shell installer. It also provides release verification. The shell installer checks its downloaded executable against a digest embedded in the script, and the script itself can be downloaded and verified through a GitHub attestation. Piping the live script straight into a shell still means trusting that initial download; verification has to happen before execution to protect that step.</p>
+
+        <p>That is the direction I want installation to take: fewer moving parts, verifiable releases, and a first step small enough that people will actually take it.</p>
+
+        <p>I still want you to be able to try the thing. These days, we can often make that easier without asking quite so much trust along the way.</p>
+      </div>
+    </article>
+  </main>
+  <footer class="blog-footer shell">
+    <a href="/">Max Howell, creator of Homebrew.</a>
+    <a href="/blog/">All posts</a>
+  </footer>
+</body>
+</html>
